@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
-  </div>
-</main>
+  <main>
+    <div class="wrapper">
+      <img class="product-image" src="../../product-images/image_2022-04-18_14-22-40.png" alt="laptop">
+      <div class="product-rating-and-price">
+        <div class="product-rating">
+          <span class="product-rating-number">1.23</span>
+          <svg class="star-icon" width="14" height="12" viewbox="0 0 14 12" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 0.940965L8.8394 3.87345L8.95364 4.05557L9.16441 4.09795L12.6648 4.80181L10.3013 7.25805L10.1392 7.42652L10.1645 7.65893L10.5264 10.9777L7.18936 9.61224L7 9.53476L6.81064 9.61224L3.47361 10.9777L3.83549 7.65893L3.86083 7.42652L3.69872 7.25805L1.3352 4.80181L4.83559 4.09795L5.04636 4.05557L5.1606 3.87345L7 0.940965Z"
+              stroke="white" />
+          </svg>
+        </div>
+        <span class="product-price">15999</span>
+      </div>
+      <span class="product-description">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</span>
+      <span class="product-category">laptops</span>
+      <button class="add-to-cart-btn">
+        <span class="cart-button-text">add to cart</span>
+      </button>
+    </div>
+  </main>
 </body>
+
 </html>
