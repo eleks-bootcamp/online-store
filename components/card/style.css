@@ -1,0 +1,59 @@
+body {font-family: 'Montserrat', sans-serif; font-size: 13px; color: #2C2C2C}
+a {text-decoration: none; color: #2C2C2C}
+p {margin: 0; padding: 0;}
+.card {
+    width: 317px;
+    height: 394px;
+    margin: 100px auto;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+    font-style: Montserrat;
+    box-sizing: border-box;
+    position: relative;
+}
+.card-img {
+    display: block;
+    max-width: 293px;
+    margin: 0 auto;
+    padding: 12px 0 22px 0;
+}
+.card-category, .card-header {
+    margin: 0 24px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.card p {
+    margin: 0 24px 10px 24px;
+}
+.card-category {
+    font-size: 10px;
+}
+.card-header-price {
+    font-size: 15px;
+}
+.card-header-rating {
+    background: url(star-1.png) no-repeat center right 10px #7E72F2;
+    border-radius: 3px;
+    padding: 6px 0 7px 11px;
+    color: #fff;
+    width: 70px;
+    box-sizing: border-box;
+    line-height: 14px;
+    
+}
+.card-buy {
+    position: absolute;
+    bottom: 0;
+    background: #7E72F2;
+    border-radius: 0px 0px 5px 5px;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
