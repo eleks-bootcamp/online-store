@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+div{
+  display: block;
+}
+
+* ::after, ::before{
+  box-sizing: border-box;
+}
+
+
+.product-card{
+  width: 317px;
+  height: 394px;
+  left: 1711px;
+  top: 150px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px
+}
+
+.product-img{
+  background-image: url(https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin: 12px 12px 5px;
+}
+.product-content{
+  padding: 22px 24px;
+}
+
+.product-price-block{
+  margin-bottom: 16px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-rating{
+  background-color: #7e72f2;
+  border-radius: 3px;
+  color: #fff;
+  flex: 1;
+  font-size: .875rem;
+  font-weight: 400;
+  max-width: 70px;
+  padding: 6px 12px;
+  box-sizing: border-box;
+}
+
+.star{
+  font-size: medium;
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform;
+  line-height: 1;
+  vertical-align: -0.125em;
+
+
+}
+
+.product-price{
+  color: #2c2c2c;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+h5{
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 400;
+  font-family: Montserrat,sans-serif;;
+}
+
+.product-title{
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.product-description{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #2C2C2C;
+}
+
+.product-footer{
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #7E72F2;
+  border-radius: 0px 0px 5px 5px;
+  width: 317px;
+  height: 40px;
+  left: 1711px;
+  top: 503px;
+}
+
+.btn-primary{
+  background-color: #7e72f2;
+  color: #fff;
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+  cursor: pointer;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  transition: .3s;
+}
