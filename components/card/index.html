@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
-  </div>
-</main>
+  <main>
+    <div class="wrapper">
+      <!-- Card component -->
+      <div class="card-component">
+        <div class="card-component__conteiner">
+          <div class="card-component__column">
+            <div class="card-component__image">
+              <img src="../card/images/Rectangle.png" alt="">
+            </div>
+            <div class="card-component__block-price block-price">
+              <div class="block-price__star">
+                <button class="button-star">
+                  <span>1.23</span>
+                  <span><img class="img-star" src="../card/images/Star1.png" alt=""></span>
+                </button>
+              </div>
+              <div class="block-price__price">
+                <span>15999</span>
+              </div>
+            </div>
+            <div class="card-component__description description">
+              <div class="description__characteristics">
+                <span>Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</span>
+              </div>
+              <div class="description__type">
+                <span>Laptops</span>
+              </div>
+            </div>
+            <div class="card-component__button-card">
+              <button class="button-card">add to card</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>

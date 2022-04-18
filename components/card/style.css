@@ -1,0 +1,137 @@
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.card-component {}
+
+.card-component__conteiner {
+  max-width: 317px;
+  padding: 12px 12px 0 12px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+}
+
+.card-component__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-component__image {
+  width: 293px;
+  height: 200px;
+  margin-bottom: 22px;
+  box-sizing: border-box;
+
+}
+
+.card-component__block-price {
+  width: 293px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.block-price {}
+
+.block-price__star {
+  padding-left: 12px;
+}
+
+.button-star {
+  background-color: #7E72F2;
+  width: 70px;
+  height: 27px;
+  padding: 6px 11px;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+
+.img-star {
+  width: 14px;
+  height: 13px;
+  margin-left: 6px;
+  margin-bottom: -1px;
+}
+
+.button-star span {}
+
+.block-price__price {
+  padding-right: 12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  padding-top: 3px;
+}
+
+.card-component__description {
+  padding: 0;
+  margin: 0;
+}
+
+.description {}
+
+.description__characteristics {
+  margin-left: 12px;
+  box-sizing: border-box;
+  width: 261px;
+  margin-bottom: 10px;
+}
+
+.description__characteristics span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: #2C2C2C;
+}
+
+.description__type {
+  margin-left: 12px;
+  margin-bottom: 22px;
+}
+
+.description__type span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #2C2C2C;
+}
+
+.card-component__button-card {
+  margin: 0 -12px;
+  box-sizing: border-box;
+}
+
+.button-card {
+  background-color: #7E72F2;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 0 0 8px 8px;
+}
