@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: whitesmoke;
+}
+
+.card-wrapper {
+    width: 317px;
+    height: 100%;
+    min-height: 394px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-img {
+    width: 275px;
+    height: 200px;
+    margin: 12px 12px 0;
+}
+
+.card-img img{
+    width: 100%;
+}
+
+.card-info {
+    padding: 22px 24px;
+}
+
+.card-rate-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.card-rate {
+    width: 70px;
+    height: 27px;
+    background: #7e72f2;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card-rate svg{
+    padding-left: 5px;
+    position: relative;
+    top: 0.7px;
+    left: 3px;
+}
+
+.card-price span{
+    font-size: 15px;
+}
+
+.card-desc {
+    margin-bottom: 8px;
+}
+
+.card-desc p{
+    font-size: 13px;
+}
+
+.card-category {
+    font-size: .8em;
+    opacity: .8;
+}
+
+.card-bottom {
+    width: 100%;
+}
+
+.card-btn {
+    width: 100%;
+    height: 40px;
+    background: #7e72f2;
+    color: white;
+    text-transform: uppercase;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.card-btn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.card-btn:hover {
+    background: #675cc7;
+    transition: .3s;
+}
