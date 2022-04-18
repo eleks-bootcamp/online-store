@@ -1,0 +1,96 @@
+body {
+  background-color: rgb(244,244,244 );
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat,sans-serif;
+
+}
+.os-product-card {
+  height: 24.63rem;
+  width: 19.81rem;
+  max-width: 25rem;
+  /*max-height: 30rem;*/
+  min-height: 20%;
+  min-width: 20rem;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: 1.48fr 1fr 2.5rem;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.os-product-img {
+  background-size: contain;
+  box-sizing: border-box;
+  margin: 0.75rem 0.75rem 0 0.75rem;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.img {
+  width: 100%;
+  /*background-size: contain;*/
+}
+.os-product-discription {
+  color: #2c2c2c;
+  box-sizing: border-box;
+  margin: 0.75rem;
+  padding: 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.os-rating-price-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.os-rating {
+  width: 70px;
+  height: 27px;
+  font-size: 0.813rem;
+  color: white;
+  background-color: #7E72F2;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.os-star-ico {
+font-size: 1.1rem;
+padding-bottom: 3px;
+}
+.os-price {
+  font-size: 0.937rem;
+}
+
+.os-product-name {
+  font-size: 0.813rem;
+}
+
+.os-product-category {
+  font-size: 0.625rem;
+}
+
+.os-add-button {
+  background-color: #7E72F2;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+ /* display: flex;
+  align-items: flex-end;*/
+  box-sizing: border-box;
+}
+.os-add-button:hover{
+  background-color: #5c4eda;
+}
