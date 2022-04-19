@@ -3,20 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
   </style>
 </head>
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
-  </div>
+  <main>
+    <div class="wrapper">
+      <!-- Card component -->
+      <div class="prodact-d-flex-jc-space-b prodact-card font-montserrat-400">
+        <div class="prodact-image">
+          <img src="./image/rectangle.png" alt="Image prodact">
+        </div>
+        <div class="prodact-content">
+          <div class="prodact-price-wrapper prodact-d-flex-jc-space-b">
+            <div class="prodact-rating prodact-button-color prodact-d-flex-jc-space-b font-size-13">
+              <span >1.23</span>
+              <i class="bi bi-star"></i>
+            </div>
+            <div class="prodact-price font-size-15">15999</div>
+          </div>
+            <h5 class="font-size-13">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</h5>
+            <div class="prodact-name font-size-10">laptops</div>
+        </div>
+        <div class="prodact-add-to-card prodact-button-color">
+          <button class="prodact-button-add font-montserrat-400 prodact-button-color font-size-13">ADD TO CARD</button>
+        </div>
+      </div>
+    </div>
 </main>
 </body>
 </html>
