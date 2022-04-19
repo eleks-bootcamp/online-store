@@ -1,0 +1,86 @@
+.main-container {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 539px;
+    height: 532px;
+    margin: 10px auto;
+}
+
+.container {
+    width: 317px;
+    height: 394px;
+    left: 1711px;
+    top: 150px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+    border-radius: 8px;
+    margin: 59px auto;
+}
+
+.image img {
+    width: 293px;
+    height: 200px;
+    border-radius: 0px;
+    object-position: bottom;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-right: 12px;
+}
+.price {
+    width: 43px;
+    height: 18px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #2C2C2C;
+    margin-top: 22px;
+    margin-left: -189px;
+    margin-right: 24px;
+}
+.rating {
+    border: none;
+    background: #7E72F2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 27px;
+    border-radius: 3px;
+    margin-top: 22px;
+    margin-left: 24px;
+    margin-right: 223px;
+}
+.info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: auto;
+    align-items: center;
+}
+.title h3 {
+    width: 261px;
+    height: 32px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #2C2C2C;
+    text-justify: auto;
+    margin-left: 24px;
+}
+.ad-to-card {
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 317px;
+    height: 40px;
+    background: #7E72F2;
+    border-radius: 0px 0px 5px 5px;
+    color: #fff;
+    margin-top: 62px;
+}
