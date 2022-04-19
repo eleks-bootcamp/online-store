@@ -8,14 +8,114 @@
   <style>
     .wrapper {
       width: 400px;
+      height: 500px;
       margin: 100px auto;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: Montserrat;
+      background: whitesmoke;
+      border: 1px grey;
+
     }
+
+    .item-photo {
+      margin: 12px 12px 12px;
+      width: -webkit-fill-available;
+      height: 270px;
+
+    }
+
+    .goryzontalka{
+      display: flex;
+      justify-content: space-between;
+      margin: 24px;
+      height: 5%;
+      min-height: 24px;
+      width: -webkit-fill-available;
+      /*box-sizing: border-box;*/
+
+    }
+
+    .rating{
+      width: 10%;
+
+      min-width: 70px;
+
+      border-radius: 3px;
+      background: #7E72F2;
+      color: white;
+      text-align: center;
+    }
+
+    .price{
+
+      width: 10%;
+      min-width: 70px;
+      font-size: 24px;
+    }
+
+    .description{
+      width: -webkit-fill-available;
+      height: 8%;
+      min-height: 2em;
+
+      margin-left: 24px;
+      margin-right: 32px;
+      overflow-wrap: break-word;
+      overflow: hidden;
+    }
+
+    .category{
+      width: -webkit-fill-available;
+      height: 4%;
+      min-height: 12px;
+      width: -webkit-fill-available;
+      margin-left: 24px;
+      margin-right: 24px;
+      font-size: 0.7em;
+    }
+
+    .button-add{
+      width: -webkit-fill-available;
+      height: 10%;
+      background: #7E72F2;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+    }
+
   </style>
 </head>
 <body>
 <main>
   <div class="wrapper">
     <!-- Card component -->
+    <img class="item-photo" src="1photo.jpg" alt="photo of the good">
+      <div class="goryzontalka">
+        <div class="rating">
+          4.5
+        </div>
+        <div class="price">
+          1111
+        </div>
+      </div>
+
+
+    <div class="description">
+      nvkdvkvvjldrbejvbrbviebvierninbiruenbinreiubirebpuernienpiabrueabnpie iygbuubuyvuyvvvvuuyvuvuvvy
+      nibhybbubyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+    </div>
+    <div class="category">
+      computer
+    </div>
+    <div class="button-add">
+      ADD TO CART
+    </div>
+
   </div>
 </main>
 </body>
