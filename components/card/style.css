@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+ iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ===== */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.wrapper {}
+.container {
+    display:flex;
+    margin: 0 auto;
+}
+.container_shop {
+    margin:0 auto;
+}
+.container_product {
+    Width:317px;
+    padding:12px 0 0 0;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+    border-radius: 8px;
+    overflow:hidden;
+}
+.img {
+    width:293px;
+    height:200px;
+    margin:0 auto;
+}
+.img>a{
+    display:block;
+}
+.info_grade {
+    display: flex;
+    justify-content:space-between;
+    margin:0 0 16px 0;
+}
+.info_grade input[type="submit"]{
+    width:70px;
+    height:27px;
+    background:#7E72F2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    color: #FFFFFF;
+    border:none;
+    text-align:left;
+    padding:0 11px;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+.info_grade form{
+    position:relative;
+}
+.info_grade form>svg{
+    position:absolute;
+    top: 7px;
+    right:11px;
+}
+.info {
+    padding:22px 24px;
+}
+.info_grade>p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+.info_name>a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin:0 0 10px 0;
+    display:block;
+    color:#2C2C2C;
+    text-decoration:none;
+}
+.info_name>p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color:#2C2C2C;
+}
+.buy>button{
+    width:100%;
+    height:40px;
+    background:#7E72F2;
+    border: none;
+    color:white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
