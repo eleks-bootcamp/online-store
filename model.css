@@ -1,0 +1,73 @@
+.wholeplate {
+width: 539px;
+height: 532px;
+background: rgb(255, 255, 255);
+margin: auto;
+display: flex;
+font-family: Montserrat,
+sans-serif;
+font-size: 14px;
+}
+.smallplate {
+  width: 317px;
+  height: 394px;
+  background: rgb(255, 255, 255);
+  margin: auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.image {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin: 12px 12px 0;;
+}
+
+.rateprice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.rate {
+background: #7E72F2;
+display: flex;
+border-radius: 3px;
+width: 70px;
+height: 27px;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+color: white;
+}
+.addbutton {
+align-items: center;
+display: flex;
+justify-content: center;
+background-color: #7e72f2;
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+line-height: 1;
+padding: 8px 12px;
+text-transform: uppercase;
+transition: .3s;
+}
+.summary {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.rateprisesummarycategory {
+padding: 24px 22px;
+}
+.category {
+  font-size: 0.75rem;
+}
