@@ -37,8 +37,8 @@
 }
 
 .card__info {
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 400;
   word-break: break-word;
 }
 
@@ -79,7 +79,7 @@
   padding: 14px;
   width: 100%;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   border: none;
 }
