@@ -15,8 +15,8 @@
       flex-direction: column;
       justify-content: space-between;
       font-family: Montserrat;
-      background: whitesmoke;
-      border: 1px grey;
+      background: white;
+      border: 1px solid lightgrey;
 
     }
 
@@ -28,9 +28,9 @@
     }
 
     /*блок рейтинг-ціна*/
-    .goryzontalka{  /
+    .goryzontalka{
       display: flex;
-     /* flex-direction: row; */
+      flex-direction: row;
       justify-content: space-between;
       margin: 24px;
       height: 5%;
@@ -53,14 +53,14 @@
     }
 
     .rating-star{
-      width: 10px;
-      height: 10px;
-      bacolor: white;
-      box-sizing: border-box;
+      width: 1.2em;
+      height: 1.2em;
+
+
+      /*box-sizing: border-box;*/
     }
 
-    .price{
-
+    .price {
       width: 10%;
       height: 100%;
       min-width: 70px;
@@ -111,16 +111,19 @@
   <div class="wrapper">
     <!-- Card component -->
     <img class="item-photo" src="1photo.jpg" alt="photo of the good">
-      <div class="goryzontalka">
-        <div class="rating">
-          4.5
-          <svg class="rating-star" src="Star1.svg" alt="stars">
-          </svg>
-        </div>
-        <div class="price">
-          1111
-        </div>
+    <div class="goryzontalka">
+      <div class="rating">
+        4.5
+        <svg class="rating-star" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 0.940965L8.8394 3.87345L8.95364 4.05557L9.16441 4.09795L12.6648 4.80181L10.3013 7.25805L10.1392 7.42652L10.1645 7.65893L10.5264 10.9777L7.18936 9.61224L7 9.53476L6.81064 9.61224L3.47361 10.9777L3.83549 7.65893L3.86083 7.42652L3.69872 7.25805L1.3352 4.80181L4.83559 4.09795L5.04636 4.05557L5.1606 3.87345L7 0.940965Z" stroke="white"/>
+        </svg>
       </div>
+
+      <span class="price">
+        11 111
+      </span>
+
+    </div>
 
 
     <div class="description">
@@ -138,3 +141,4 @@
 </main>
 </body>
 </html>
+
