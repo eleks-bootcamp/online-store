@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
   <link rel="stylesheet" href="style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
     .wrapper {
       width: 400px;
@@ -16,6 +16,21 @@
 <main>
   <div class="wrapper">
     <!-- Card component -->
+    <div class="product">
+      <img src="./img/Rectangle.png" class="product__image" alt="Photo">
+      <div class="product__content">
+        <div class="product__block-rating-and-price">
+          <div class="product__rating">
+            <div class="product__rating-count">1.23</div>
+            <img src="./icons/Star 1.png" class="product__star" alt="Star">
+          </div>
+          <div class="product__price">15999</div>
+        </div>
+        <div class="product__about">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</div>
+        <div class="product__category">laptops</div>
+      </div>
+      <button class="button">ADD TO CART</button>
+    </div>
   </div>
 </main>
 </body>
