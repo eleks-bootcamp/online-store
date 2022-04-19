@@ -1,0 +1,67 @@
+.cart {
+  height: 539px;
+  width: 532px;
+  border: 1px solid seagreen;
+}
+
+.block {
+
+  width: 317px;
+  margin-top: 59px;
+  margin-left: 123px;
+  border: 1px solid seagreen;
+}
+
+img {
+
+
+  height: 200px;
+  width: 293px;
+  margin-top: 12px;
+  margin-left: 12px;
+  border: 1px solid seagreen;
+}
+
+.btn1 {
+  display: inline-block;
+  background-color: #7E72F2;
+  color: #FFFFFF;
+
+  margin-left: 35px;
+
+
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  margin-top: 29px;
+}
+
+p {
+  margin-left: 35px;
+}
+
+h5 {
+  font-size: 10px;
+  margin-left: 35px;
+}
+
+.btn {
+  height: 40px;
+  width: 317px;
+  background-color: #7E72F2;
+  color: #FFFFFF;
+
+}
+.star {
+  padding: 1px;
+
+}
+.star::before {
+
+  list-style-image: url("../img/linkedin.svg");
+}
