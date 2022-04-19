@@ -1,0 +1,82 @@
+main {
+  font-family: Montserrat;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-image-container {
+  margin: 12px;
+
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-rating-price {
+  width: 90%;
+  margin: 12px;
+}
+
+
+
+.card-rating-price-container,
+.card-name-product,
+.card-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.price,
+.card-button-buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.rating {
+  background: #7E72F2;
+  color: white;
+  width: 3rem;
+  max-height: 27px;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-category {
+  font-size: 10px;
+}
+
+.card-button-buy {
+  width: 100%;
+  background-color: #7E72F2;
+  border: none;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+
+}
