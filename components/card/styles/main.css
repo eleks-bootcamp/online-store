@@ -4,7 +4,7 @@
 }
 .kart {
 width: 320px;
-height: 400px;
+height: 415px;
 margin: auto;
 background: rgb(239, 239, 240);
 border-radius: 4%;
@@ -25,7 +25,7 @@ font-size: 25px;
   margin-top: 25px;
   color: rgb(208, 204, 232);
 border-radius: 8%;
-
+cursor: default;
  }
 .prise {padding-top: 30px;
   padding-right:  15px;
@@ -36,18 +36,29 @@ border-radius: 8%;
     padding-right: 15px;
   padding-top: 35px;
 font-size: 18px;
-font-family: arial}
+font-family: arial;
+cursor: default;}
 .picture2 {width: 30px; height: 30px;
   position: absolute;
   padding-left: 7px;
 top: 237px;
-
+cursor:default;
 }
 .foo {text-align: center;
   height: 50px;
 color: white;
 padding-bottom: 0px;border-radius: 7%;
-padding-top: 50px;
+padding-top: 35px;
 font-size: 22px;
 font-family: arial;
+cursor: default;
+}
+.type {
+  font-size: 10px;
+  padding-top: 15px;
+  padding-left: 16px;
+  color:rgb(29, 29, 27);
+  font-style: italic;
+  cursor: default;
+  font-family: arial;
 }
