@@ -82,6 +82,11 @@ body {
   border-style: none;
 }
 
+.button:hover {
+  background-color: red;
+  font-size: 110%;
+}
+
 .button-text {
   color: var(--white);
 }
