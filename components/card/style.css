@@ -1,0 +1,111 @@
+.product-card {
+position: absolute;
+width: 539px;
+height: 532px;
+left: 1588px;
+top: 91px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+}
+
+.product-photo {
+  position: absolute;
+  width: 293px;
+  height: 200px;
+  left: 1723px;
+  top: 162px;
+
+  background: url(.jpg);
+  border-radius: 0px;
+}
+
+ .product-rating {
+position: absolute;
+width: 70px;
+height: 27px;
+left: 1735px;
+top: 384px;
+
+background: #7E72F2;
+border-radius: 3px;
+}
+
+ .product-price {
+  position: absolute;
+  width: 43px;
+  height: 18px;
+  left: 1960px;
+  top: 388px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #2C2C2C;
+}
+
+ .product-name {
+  position: absolute;
+width: 261px;
+height: 32px;
+left: 1735px;
+top: 427px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+
+color: #2C2C2C;
+}
+
+ .category {
+  position: absolute;
+width: 39px;
+height: 12px;
+left: 1735px;
+top: 469px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+
+color: #2C2C2C;
+}
+
+ .section-add-to-cart {
+position: absolute;
+width: 86px;
+height: 13px;
+left: 1826px;
+top: 515px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+ .decorative-line {
+position: absolute;
+width: 317px;
+height: 40px;
+left: 1711px;
+top: 503px;
+
+background: #7E72F2;
+border-radius: 0px 0px 5px 5px;
+}
