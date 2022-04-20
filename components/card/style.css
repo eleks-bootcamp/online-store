@@ -1,0 +1,93 @@
+/* Reset */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  all: unset;
+}
+
+
+.card-component {
+  width: 317px;
+  height: 394px;
+  margin-left: 5%;
+  margin-top: 5%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 14px #cccccc;
+  border-radius: 10px;
+}
+
+.card-button-small {
+  width: 70px;
+  height: 27px;
+  background-color: #7E72F2;
+  border-radius: 8px;
+  margin-top: 12px;
+  margin-left: 22px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.card-button-small-text {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-button-small-icon {
+  width: 14px;
+  height: 13px;
+  align-items: baseline;
+  display: flex;
+}
+
+.card-photo {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card-text-price {
+  justify-content: right;
+  float: right;
+  margin-right: 22px;
+  margin-top: 16px;
+  margin-right: 22px;
+  margin-bottom: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-component-text-name-item {
+  margin-left: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-component-text {
+  margin-left: 22px;
+  margin-top: 10px;
+  margin-bottom: 22px;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-component-decorative-button {
+  height: 40px;
+  background-color: #7E72F2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
