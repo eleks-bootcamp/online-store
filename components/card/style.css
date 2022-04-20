@@ -14,8 +14,8 @@ body {
       box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
       border-radius: 8px;
 }
-.product-card {
-      width: 293px;
+.product-card-img {
+      margin: 12px 12px 0 12px;
 }
 .wrapper-content {
       padding: 22px 24px;
