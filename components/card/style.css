@@ -1,0 +1,81 @@
+.card {
+  height: 394px;
+  width: 317px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px #00000022;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2C2C2C;
+}
+
+.goods_photo {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.button_price{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 22px;
+}
+
+.rating_stars {
+  width: 70px;
+  height: 27px;
+  margin-left: 25px;
+  background: #7E72F2;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating {
+  color: #FFFFFF;
+}
+
+.stars {
+  margin-left: 10px;
+}
+
+.price {
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  margin: auto 25px;
+}
+
+.goods_name {
+  margin-left: 25px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.goods_type {
+  margin-left: 25px;
+  font-size: 10px;
+}
+
+.add_to_card {
+  margin-top: 16px;
+  height: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background: #7E72F2;
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+}
+
+
+
+
+
+
