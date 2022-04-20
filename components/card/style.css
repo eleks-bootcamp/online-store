@@ -1,0 +1,77 @@
+* {
+  --main-text-color: #2c2c2c;
+  --main-color: #7e72f2;
+  --main-color-dark: #6e66bf;
+  --white: #ffffff;
+}
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+.card {
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+  width: 317px;
+}
+.card-content {
+  padding: 12px;
+}
+.card-image {
+  display: flex;
+  justify-content: center;
+}
+.card-data {
+  padding: 12px;
+}
+.card-info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-rating {
+  background-color: var(--main-color);
+  display: flex;
+  border-radius: 3px;
+}
+.card-rating-value {
+  padding: 6px 6px 6px 12px;
+  color: var(--white);
+  font-size: 13px;
+  line-height: 18px;
+}
+.card-rating-icon {
+  padding: 6px 12px 6px 6px;
+  cursor: pointer;
+}
+.card-price {
+  font-size: 15px;
+  color: var(--main-text-color);
+}
+.card-title {
+  font-size: 13px;
+  color: var(--main-text-color);
+  line-height: 16px;
+  margin-top: 16px;
+}
+.card-category {
+  font-size: 10px;
+  color: var(--main-text-color);
+  margin-top: 10px;
+}
+.card-button > button {
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  width: 100%;
+  padding: 13px 0px;
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.card-button > button:hover {
+  background-color: var(--main-color-dark);
+}
