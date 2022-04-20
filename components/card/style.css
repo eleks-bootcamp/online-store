@@ -6,7 +6,6 @@ body {
 .wrapper {
   width: 400px;
   margin: 100px auto;
-  border: 1px solid gray;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
   overflow: hidden;
@@ -63,24 +62,21 @@ body {
 .product_footer {
   height: 40px;
   box-sizing: border-box;
+  height: 40px;
+  background-color: #7E72F2;
 }
 
 .product_btn_to_cart {
   padding: 0;
   height: 40px;
-  box-sizing: border-box;
   width: 100%;
   color: white;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
   background-color: #7E72F2;
-  border-radius: 0;
-  border-bottom-width: 0px;
   border-style: none;
-  border-color: #7E72F2;
   cursor: pointer;
-
 }
 
 .product_btn_to_cart:hover {
