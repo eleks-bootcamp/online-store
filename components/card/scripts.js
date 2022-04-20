@@ -36,7 +36,6 @@ function createProductCard(width, productId, starsVal, price, productName, produ
   const cardBaseFontSize = scale*refCardBaseFontSize;
   const starIconWidth = scale*refStarIconWidth;
   const starIconHeight = scale*refStarIconHeight;
-  console.log("sdsdfsdsdfsdfsfsfds test log")
   const card = `
     <div class="card" id="${productId}" style="font-size: ${cardBaseFontSize}px; width: ${width}px; height: ${cardHeight}px;">
       <img src="${productsPhotosBaseLocation}${productId}.png" class="card-product-photo" style="width: ${imgWidth}px; height: ${imgHeight}px; margin: ${imgMargins}px"/>
