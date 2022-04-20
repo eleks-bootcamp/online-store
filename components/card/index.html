@@ -4,18 +4,29 @@
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
   <div class="wrapper">
     <!-- Card component -->
+    <img class="image" src="../assets/Rectangle.svg" alt="PC">
+    <div class="description">
+      <div class="rating-and-price">
+        <button class="button rating">
+          <span>1.23</span>
+          <img src="../assets/Star 1.svg" alt="star">
+        </button>
+        <p class="price">15999</p>
+      </div>
+      <p class="title">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</p>
+      <span class="category">laptops</span>
+    </div>
+    <button class="button add-to-cart">
+      Add to cart
+    </button>
   </div>
 </main>
 </body>
