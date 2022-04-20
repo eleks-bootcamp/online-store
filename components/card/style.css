@@ -29,15 +29,14 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  /* outline: 1px solid red; */
-}
+ }
 .cart-rating {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 70px;
   height: 30px;
-  background: #7e72f2;
+  background-color: #7e72f2;
   border-radius: 3px;
   flex-wrap: wrap;
 }
