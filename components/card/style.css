@@ -3,10 +3,9 @@ body {
 }
 
 .os-product-card {
-    width: 400px;
-    height: 394px;
+    width: 300px;
+    height: 414px;
     margin: 100px auto;
-    padding: 22px 24px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
@@ -75,8 +74,8 @@ body {
 }
 
 .os-product-footer {
-    align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
