@@ -1,0 +1,9 @@
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@import 'blocks/pagination';

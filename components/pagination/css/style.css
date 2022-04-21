@@ -1,0 +1,104 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  width: 590px;
+  height: 40;
+}
+
+.pagination__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #EDEDED;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.pagination__arrow:hover {
+  background: #7E72F2;
+  color: #fff;
+}
+
+.pagination__arrow:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-30%) translateY(-50%) rotate(45deg);
+          transform: translateX(-30%) translateY(-50%) rotate(45deg);
+}
+
+.pagination__arrow:hover:after {
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+.pagination__arrow_right:after {
+  -webkit-transform: translateX(-70%) translateY(-50%) rotate(225deg);
+          transform: translateX(-70%) translateY(-50%) rotate(225deg);
+}
+
+.pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.pagination__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #EDEDED;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.pagination__list-item:hover {
+  background: #7E72F2;
+  color: #fff;
+}
+
+.pagination__list-item:nth-child(1) {
+  background: #7E72F2;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
