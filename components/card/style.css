@@ -1,5 +1,6 @@
 :root {
   --fiolet: #7e72f2;
+  --hover: #6b5dec;
   --dark-text: #2c2c2c;
   --white: #fff;
 }
@@ -83,8 +84,8 @@ body {
 }
 
 .button:hover {
-  background-color: red;
-  font-size: 110%;
+  background-color: var(--hover);
+  /* font-size: 110%; */
 }
 
 .button-text {
