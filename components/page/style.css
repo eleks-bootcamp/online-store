@@ -13,6 +13,7 @@
 body {
   background: #ffffff;
 }
+
 .wrapper {
   width: 400px;
   margin: 100px auto;
@@ -23,6 +24,22 @@ body {
   border-radius: 8px;
   background: #ffffff;
   flex-wrap: wrap;
+}
+
+.box { /*need to check. For goods box scretching <div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+</div>*/
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  align-content: space-between;
 }
 
 .h1 {
