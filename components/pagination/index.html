@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>HTML/CSS Pagination component</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      margin: 100px auto;
-    }
-  </style>
 </head>
+
 <body>
-
-<main>
-  <div class="wrapper">
-    <!-- Pagination component -->
-  </div>
-</main>
-
+  <main>
+    <div class="wrapper">
+      <button class="page-buttons previous-page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+        </svg>
+      </button>
+      <button class="page-buttons"><span class="page-number">1</span></button>
+      <button class="page-buttons"><span class="page-number">2</span></button>
+      <button class="page-buttons"><span class="page-number">3</span></button>
+      <button class="page-buttons"><span class="page-number">4</span></button>
+      <button class="page-buttons"><span class="page-number">5</span></button>
+      <button class="page-buttons"><span class="page-number">6</span></button>
+      <button class="page-buttons"><span class="page-number">7</span></button>
+      <button class="page-buttons"><span class="page-number">8</span></button>
+      <button class="page-buttons"><span class="page-number">9</span></button>
+      <button class="page-buttons"><span class="page-number">10</span></button>
+      <button class="page-buttons"><span class="page-number">11</span></button>
+      <button class="page-buttons"><span class="page-number">12</span></button>
+      <button class="page-buttons next-page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </button>
+    </div>
+  </main>
 </body>
+
 </html>
