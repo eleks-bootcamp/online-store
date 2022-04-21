@@ -28,7 +28,7 @@
 
 .page:hover,
 .active {
-  background: var(--maincolor);
+  background: var(--fiolet);
   color: var(--white);
 }
 
