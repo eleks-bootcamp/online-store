@@ -1,0 +1,39 @@
+.wraper {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #2c2c2c
+}
+
+.pag_page:first-child {
+  margin-right: 15px;
+}
+
+.pag_page:last-child {
+  margin-left: 15px;
+}
+
+.pag_link {
+  align-items: center;
+  background-color: #ededed;
+  border-radius: 20px;
+  color: #2c2c2c;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  transition: .3s;
+  width: 40px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.pag_link:hover {
+  color: white;
+  background-color: #7E72F2;
+}
