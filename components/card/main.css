@@ -20,6 +20,7 @@ body{
     border: 1px solid #000000;
     box-sizing: border-box;   
 }
+
 .product-card{
     width: 317px;
     height: 394px;
@@ -49,9 +50,9 @@ h5{
     align-items: center;
     display: flex;
     justify-content: space-between;
-   }  
+}  
 
-.rating {
+.rating{
     display: flex;
     width: 70px;
     height: 27px;
@@ -85,12 +86,11 @@ span{
     color: #2C2C2C;
 }
 
-.product-footer {
-    
+.product-footer{
     display: flex;
 }
 
-  .button{
+.button{
     color: #fff;
     width: 317px;
     height: 40px;
