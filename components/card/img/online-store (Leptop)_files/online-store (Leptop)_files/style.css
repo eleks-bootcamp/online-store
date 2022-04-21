@@ -5,18 +5,21 @@
 }
 
 .block {
+
   width: 317px;
   margin-top: 59px;
   margin-left: 123px;
-  box-shadow:0px 0px 7px 2px rgba(0,0,0,0.2);
+  border: 1px solid seagreen;
 }
 
 img {
+
+
   height: 200px;
   width: 293px;
   margin-top: 12px;
   margin-left: 12px;
-  box-shadow:0px 0px 7px 1px rgba(0,0,0,0.2);
+  border: 1px solid seagreen;
 }
 
 .btn1-block {
@@ -31,22 +34,14 @@ img {
   align-items: center;
   justify-content: space-between;
   background-color: #7E72F2;
-  font-family: 'Montserrat';
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
   border-radius: 10%;
   color: #FFFFFF;
   height: 27px;
   width: 70px;
 
 }
-.price {
-  font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 15px;
+.btn1:hover {
+  background: greenyellow;
 }
 
 
@@ -84,21 +79,16 @@ h5 {
 .btn {
   height: 40px;
   width: 317px;
-  font-family: 'Montserrat';
-  font-style: normal;
   background-color: #7E72F2;
   color: #FFFFFF;
   text-transform: uppercase;
 }
 .btn:hover  {
-  background: greenyellow;
+  background: red;
 }
 
 .star {
   margin: 0;
   height: 13px;
   width: 14px;
-}
-.star:hover {
-  background: red;
 }
