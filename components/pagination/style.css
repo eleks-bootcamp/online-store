@@ -1,0 +1,59 @@
+:root {
+  --var-bg-wrapper: #FFFFFF;
+  --var-color-bg-body: #E5E5E5;
+  --var-color-hover: #7E72F2;
+  --var-color-circle-bg-defolt: #EDEDED;
+  --var-color-number: #2C2C2C;
+}
+
+body {
+  background: var(--var-color-bg-body);
+}
+
+.size {
+  background: var(--var-color-circle-bg-defolt);
+  width: 2.4rem;
+  height: 2.4rem;
+  font-weight: 800;
+  border-radius: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px gray;
+  margin-right: 0.4rem;
+}
+
+.size:hover {
+  background: var(--var-color-hover);
+  border: 1px solid var(--var-color-circle-bg-defolt);
+  color: var(--var-color-circle-bg-defolt);
+}
+
+img {
+  font-weight: 800;
+  width: 0.7rem;
+}
+
+.wrapper {
+  width: fit-content;
+  height: fit-content;
+  background: var(--var-bg-wrapper);
+  color: var(--var-color-number);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 6rem 4rem 6rem 4rem;
+}
+
+.numbers {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 1.5rem 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
