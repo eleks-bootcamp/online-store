@@ -8,10 +8,10 @@
   color: #FFFFFF;
   border: none;
   border-radius: 0px 0px 5px 5px;
-  background: #7E72F2;
+  background: $main-color;
   cursor: pointer;
   transition: .4s;
   &:hover {
-    background: #7367e6;
+    background: $third-color;
   }
 }
