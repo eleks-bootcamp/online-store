@@ -1,7 +1,6 @@
 body {
-
-
 }
+
 .block {
   display: flex;
   height: 205px;
@@ -10,7 +9,7 @@ body {
 
 }
 .buttons {
- display: flex;
+  display: flex;
   text-align: center;
 
 }
@@ -24,6 +23,7 @@ body {
   width: 40px;
   border-radius: 50%;
   font-size: 1,5 rem;
+  background:  #EDEDED;
 }
 
 
@@ -47,8 +47,12 @@ div {
 .btn:hover {
   border: 2px solid  #7E72F2;
 }
+.btn:active {
+  background: #7E72F2;
+  color:  #F9F9F9;
+}
 ._img {
-
   padding: 0px;
   margin: 0 20px 0 20px;
 }
+
