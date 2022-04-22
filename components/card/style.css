@@ -92,3 +92,7 @@ body {
     text-transform: uppercase;
     transition: .3s;
 }
+
+.os-btn-primary:hover {
+    background-color: #6d5ff0;
+}
