@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 200px;
+}
+
+.container{
+    width: 790px;
+    height: 205px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #EDEDED;
+    font-size: 12px;
+    font-family: 'Montserrat';
+}
+
+.circle:hover {
+    background-color: #7E72F2;
+    color: #eee;
+}
+
+.break{
+     width: 15px;
+}
