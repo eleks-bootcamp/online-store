@@ -1,0 +1,54 @@
+body {
+
+
+}
+.block {
+  display: flex;
+  height: 205px;
+  width: 790px;
+  border: 1px solid #000000;
+
+}
+.buttons {
+ display: flex;
+  text-align: center;
+
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 1,5 rem;
+}
+
+
+.btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  color:  #F9F9F9;
+  border-radius: 50%;
+  background: #7E72F2;
+  font-size: 1,2em;
+}
+
+div {
+  margin: auto;
+}
+
+.btn:hover {
+  border: 2px solid  #7E72F2;
+}
+._img {
+
+  padding: 0px;
+  margin: 0 20px 0 20px;
+}
