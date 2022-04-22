@@ -1,0 +1,36 @@
+body{
+  background: #E5E5E5;
+}
+.wrapper{
+display: flex;
+width: 790px;
+height: 100px;
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+
+.page-back{
+margin-right: 3rem;
+}
+
+.namber-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #EDEDED;
+  border-radius: 50%;
+ }
+
+.next-page{
+ margin-left: 3rem;
+}
+.wrapper .namber-page:hover{
+  background: #7E72F2;
+}
+
