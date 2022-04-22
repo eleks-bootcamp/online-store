@@ -8,9 +8,8 @@ ul {
   justify-content: space-between;
   margin: 0 auto;
   width: 590px;
-  height: 40;
+  height: 40px;
   &__arrow {
-    display: flex;
     position: relative;
     @include circle;
     &:after {
@@ -46,7 +45,7 @@ ul {
     justify-content: center;
     align-items: center;
     @include circle;
-    &:nth-child(1) {
+    &:first-child {
       background: $main-color;
       color: #fff;
     }

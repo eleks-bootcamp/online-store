@@ -18,21 +18,18 @@ ul {
           justify-content: space-between;
   margin: 0 auto;
   width: 590px;
-  height: 40;
+  height: 40px;
 }
 
 .pagination__arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   width: 40px;
   height: 40px;
   border-radius: 100%;
   background: #EDEDED;
   cursor: pointer;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .pagination__arrow:hover {
@@ -88,8 +85,8 @@ ul {
   border-radius: 100%;
   background: #EDEDED;
   cursor: pointer;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .pagination__list-item:hover {
@@ -97,7 +94,7 @@ ul {
   color: #fff;
 }
 
-.pagination__list-item:nth-child(1) {
+.pagination__list-item:first-child {
   background: #7E72F2;
   color: #fff;
 }
