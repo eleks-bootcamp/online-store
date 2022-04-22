@@ -1,0 +1,35 @@
+    body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    height: 100%;
+}
+
+.os-product-footer {
+    .os-product-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .os-pagination {
+        align-items: center;
+        background-color: #ededed;
+        border-radius: 20px;
+        color: #2c2c2c;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        transition: .3s;
+        width: 40px;
+    }
+    .os-pagination {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .page-link-active {
+        background-color: #7e72f2;
+        color: #fff;
+    }
