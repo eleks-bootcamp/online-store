@@ -21,13 +21,12 @@
 }
 
 .pagination-item {
-  display: flex;
+  padding: 0;
+  border: 0;
   height: 40px;
   width: 40px;
   border-radius: 50%;
   background-color: var(--gray-100);
-  justify-content: center;
-  align-items: center;
   transition: background-color .5s;
 }
 
