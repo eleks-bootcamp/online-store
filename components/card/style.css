@@ -1,3 +1,7 @@
+:root {
+  --transparent-100:rgba(0, 0, 0, 0.133);
+  --purpure-100:#7E72F2;
+}
 .wrapper {
   width: 400px;
   margin: 100px auto;
@@ -15,7 +19,7 @@
   width:317px;
   height: 394px;
   border-radius: 8px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  box-shadow: 0px 2px 8px var(--transparent-100);
   flex-direction: column;
 }
 .prodact-d-flex-jc-space-b{
