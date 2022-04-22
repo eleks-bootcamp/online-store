@@ -1,0 +1,44 @@
+body div {
+  box-sizing: border-box;
+}
+
+.pagination-component {
+  display: flex;
+}
+
+.round-btn {
+  width: 40px;
+  height: 40px;
+  background: #EDEDED;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-btn.active {
+  background: #7E72F2;
+  color: #ffffff;
+}
+
+.round-btn:hover {
+  border: 2px solid #7E72F2;
+  cursor: pointer;
+}
+
+.round-btn:first-child {
+  margin-right: 15px;
+}
+
+.round-btn:last-child {
+  margin-left: 15px;
+}
+
+.round-btn img {
+  width: 7px;
+  height: 13px;
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+}
