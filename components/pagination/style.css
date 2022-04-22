@@ -1,0 +1,37 @@
+.wrapper {
+  margin: 100px auto;
+}
+
+.pagination {
+  margin: 0 auto;
+  width: 590px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.pagination-center {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pagination-item {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--gray-100);
+  justify-content: center;
+  align-items: center;
+  transition: background-color .5s;
+}
+
+.pagination-item:hover {
+  background-color: var(--hover-color);
+
+}
