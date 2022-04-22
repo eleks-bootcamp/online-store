@@ -74,3 +74,45 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
    color: #FFFFFF;
    padding: 12px 0px 15px 0px;
 }
+
+
+
+
+.dotted {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.prev__button {
+   margin: 0px 15px 0px 0px;
+}
+.dotted__list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.dotted__list li {
+}
+.dotted__link {
+   color: #2C2C2C;
+   text-align: center;
+   border-radius: 50%;
+}
+.next__button {
+   margin: 0px 0px 0px 15px;
+}
+.btn{
+   background-color: #EDEDED;
+   padding: 16px 16px 16px 16px;
+   border-radius: 50%;
+}
+.btn:hover{
+   background-color: #7E72F2;
+   color: #FFFFFF;
+}
+.dotted__link_click{
+   background-color: #7E72F2;
+   color: #FFFFFF;
+}
