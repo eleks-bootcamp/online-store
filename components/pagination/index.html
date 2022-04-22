@@ -4,18 +4,62 @@
   <meta charset="UTF-8" />
   <title>HTML/CSS Pagination component</title>
   <link rel="stylesheet" href="style.css">
-
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <style>
     .wrapper {
       margin: 100px auto;
+      width: 60%;
+      min-width: 590px;
+      display: flex;
+      justify-content: space-between;
+      font-family: Montserrat;
+      /*border: 1px solid red;*/
     }
+
+    .roundpages {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: lightgrey;
+      margin: 0;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .roundpages:hover {
+      background: #7E72F2;
+    }
+    .pull-of-rounds {
+      /*height: 100%;*/
+      margin: 0 15px;
+      display: flex;
+      flex-direction: row;
+    }
+
   </style>
 </head>
 <body>
 
 <main>
   <div class="wrapper">
-    <!-- Pagination component -->
+    <span class="roundpages page-left">&#x3C</span>
+    <span class="pull-of-rounds">
+      <span class="roundpages">1</span>
+      <span class="roundpages">2</span>
+      <span class="roundpages">3</span>
+      <span class="roundpages">4</span>
+      <span class="roundpages">5</span>
+      <span class="roundpages">6</span>
+      <span class="roundpages">7</span>
+      <span class="roundpages">8</span>
+      <span class="roundpages">9</span>
+      <span class="roundpages">10</span>
+      <span class="roundpages">11</span>
+      <span class="roundpages">12</span>
+    </span>
+    <span class="roundpages page-right">&#x3E</span>
   </div>
 </main>
 
