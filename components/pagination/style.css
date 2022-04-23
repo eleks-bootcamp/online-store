@@ -1,0 +1,43 @@
+:root
+{
+    --blue-100: #7E72F2;
+    --grey: #EDEDED;
+}
+.pagination
+{
+    width: 790px;
+    height: 205px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    margin: 0 auto;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.kolo
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.gray
+{
+    background-color: var(--grey);
+}
+.blue
+{
+    background-color: var(--blue-100);
+}
+.first-end
+{
+    margin: 15px;
+}
+.kolo-center
+{
+    display: flex;
+    height: 100%;
+    justify-content:center;
+    align-items:center;
+}
