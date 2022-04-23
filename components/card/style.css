@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.card {
+  max-width: 317px;
+  max-height: 394px;
+  background: #FFFFFF;
+  border: 1px solid palevioletred;
+  border-radius: 3%;
+}
+
+.img {
+  margin: 12px 12px 22px;
+}
+
+.photo {
+  height: 200px;
+  width: 293px;
+}
+
+.mark-button {
+  width: 70px;
+  height: 27px;
+  background: #7E72F2;
+  margin-left: 24px;
+  border-radius: 3%;
+  padding: 9.53px 34.43px 8.94px 12.22px;
+}
+
+.mark {
+  width: 23.36px;
+  height: 8.53px;
+}
