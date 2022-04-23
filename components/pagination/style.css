@@ -1,0 +1,36 @@
+.flipping {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.page, .page-flip {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #EDEDED;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.page-flip {
+  font-size: 16px;
+}
+
+.page:hover, .page.active, .page-flip:hover {
+  color: #FFFFFF;
+  background: #7E72F2;
+}
+
