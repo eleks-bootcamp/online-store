@@ -7,6 +7,11 @@ a {
   margin: 100px auto;
   border: 1px solid #000000;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
 }
 
 .pagination {
