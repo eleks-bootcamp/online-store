@@ -1,0 +1,115 @@
+/* reset  */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  all: unset;
+}
+
+/* MAIN */
+
+:root {
+  --purple-1: #7E72F2;
+  --grey-1: #EDEDED;
+  --white-1: #ffff;
+  --font-black: #2C2C2C;
+}
+
+/* :root {} */
+
+.wrapper {
+  margin: 100px auto;
+}
+
+.switch-block-main {
+  min-width: 650px;
+  max-width: 750px;
+  height: 140px;
+  margin: 50px 25px 25px;
+  border: 1px solid var(--purple-1);
+  box-sizing: border-box;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 3px 3px 15px var(--purple-1)
+}
+
+.switch-number {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--grey-1);
+  color: var(--font-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .3s;
+
+}
+
+.switch-number:hover {
+  background-color: var(--purple-1);
+  color: var(--white-1);
+}
+
+.switch-botton {
+  margin: 15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--grey-1);
+  color: var(--font-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.switch-botton:hover {
+  background-color: var(--purple-1);
+}
+
+.bi-chevron-left {
+  content: "\f284";
+  font-size: 15px;
+}
+
+.bi-chevron-right {
+  content: "\f285";
+  font-size: 15px;
+}
+
+.bi-chevron-left:hover {
+  color: var(--white-1)
+}
+
+.bi-chevron-right:hover {
+  color: var(--white-1)
+}
+
+/* <a href="#"class="page-link previous"data-element="nav-prev">
+
+  <i class="bi bi-chevron-left"></i></a>
+
+  <i class="bi bi-chevron-left"></i> */
