@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+  background-color: rgb(244,244,244 );
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+:root {
+  --bg-main: #ffffff;
+  --main-color: #7e72f2;
+  --active-color: #5c4eda;
+  --element-bg-color: #ededed;
+  --text-main-color: #2c2c2c;
+  --text-active-color: #ffffff;
+}
+.os-pagination {
+  height: 40px;
+  width: 590px;
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  cursor: pointer;
+  color: var(--text-main-color);
+}
+li {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  background: var(--element-bg-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+li.active {
+  background-color: var(--main-color);
+  color: var(--text-active-color);
+  text-decoration: none;
+}
+li:hover {
+  background-color: var(--active-color);
+  transition: 0.5s ease 0s;
+  color: var(--text-active-color);
+}
+.os-pagination-back {
+  margin-right: 15px;
+}
+.os-pagination-forvard {
+  margin-left: 15px;
+}
