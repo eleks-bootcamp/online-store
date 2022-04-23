@@ -1,0 +1,29 @@
+.pagination-block {
+  width: 790px;
+  height: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+.distance {
+  display: flex;
+  margin: 0 15px;
+}
+
+.page {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #EDEDED;
+}
+
+.page:hover {
+  background-color: #7E72F2;
+  color: white;
+}
