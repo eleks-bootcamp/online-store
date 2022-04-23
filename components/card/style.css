@@ -1,0 +1,61 @@
+
+.wrapper {
+    width: 350px;
+    margin: 100px auto;
+  }
+
+  .laptop_card {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+    border-radius: 2%;
+  }
+
+  img {
+      width: 300px;
+      height: 200px;
+      margin-top: 20px;
+      margin-left: 25px;
+  }
+
+button {
+  height: 40px;
+  width: 350px;
+  background-color: #7E72F2;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3%;
+}
+
+.laptop_description {
+  width: auto;
+  height: 28px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  top: 580px;
+  left: 610px;
+}
+
+.laptop_rating_and_price {
+  margin-left: 25px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.laptop_rating_button {
+  width: 70px;
+  height: 30px;
+  border-radius: 5%;
+}
+
+span {
+  margin-right: 50px;
+  width: 25px;
+}
+
+.goods_category {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
