@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
   <link rel="stylesheet" href="style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b8eeeeb84a.js" crossorigin="anonymous"></script>
   <style>
     .wrapper {
       width: 400px;
@@ -16,6 +17,16 @@
 <main>
   <div class="wrapper">
     <!-- Card component -->
+      <div class="card">
+        <img src="./icon.png" alt="icon-laptop" class="card-icon-img">
+        <div class="card-star-price">
+          <button type="submit" class="card-star-btn"> 1.23 <i class="fa-regular fa-star"></i></button>
+          <p class="card-price">15999</p>
+        </div>
+        <p class="card-item-name">Ноутбук Acer Aspire 3 A315-57G-336G <br> (NX.HZREU.01S) Charcoal Black</p>
+        <p class="card-item-category">laptops</p>
+        <button class="card-add-btn" type="submit">add to cart</button>
+      </div>
   </div>
 </main>
 </body>
