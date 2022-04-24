@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-primary: #7e72f2;
+  --c-basic: #2c2c2c;
+  --c-light-grey: #ededed;
+}
+
+body {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.pagination {
+  display: flex;
+  gap: 15px;
+}
+
+.pagination .pg-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--c-basic);
+  background-color: var(--c-light-grey);
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.pagination .pg-control path {
+  transition: fill 0.25s ease-in-out;
+}
+
+.pagination .pg-control:hover,
+.pagination .pg-control.active{
+  color: white;
+  background-color: var(--c-primary);
+}
+
+.pagination .prev-control:hover path {
+  fill: white;
+}
+
+.pagination .next-control:hover path {
+  fill: white;
+}
+
+.pagination .pages {
+  display: flex;
+}
+
+.pagination .pages__item {
+
+}
