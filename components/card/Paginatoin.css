@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 main {
   position: absolute;
   height: 205px;
@@ -14,16 +13,14 @@ main {
   align-items: center;
 }
 .wrapper {
- display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 }
-
 img {
   position: absolute; 
   height: 16px;
   width: 16px;
 }
-
 .btn-prev, .btn-next, .btn {
   display: flex;
   justify-content: center;
@@ -36,7 +33,6 @@ img {
 .btn-prev, .btn-next {
   margin: 15px;
 }
-
 .btn-prev:hover, .btn-next:hover, .btn:hover {
   background: #7E72F2;
   opacity: 1;
