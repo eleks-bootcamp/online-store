@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <title>HTML/CSS Pagination component</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style>
     .wrapper {
@@ -15,7 +21,33 @@
 
 <main>
   <div class="wrapper">
-    <!-- Pagination component -->
+    <div class="pagination-wrapper">
+      <div class="left-page-wrapper">
+        <button type="button" class="page-button" href="#">
+          <span class="glyphicon glyphicon-menu-left"></span>
+        </button>
+      </div>
+      <div class="page-numbers-wrapper">
+        <button type="button" class="page-button first-button" href="#">1</button>
+        <button type="button" class="page-button" href="#">2</button>
+        <button type="button" class="page-button" href="#">3</button>
+        <button type="button" class="page-button" href="#">4</button>
+        <button type="button" class="page-button" href="#">5</button>
+        <button type="button" class="page-button" href="#">6</button>
+        <button type="button" class="page-button" href="#">7</button>
+        <button type="button" class="page-button" href="#">8</button>
+        <button type="button" class="page-button" href="#">9</button>
+        <button type="button" class="page-button" href="#">10</button>
+        <button type="button" class="page-button" href="#">11</button>
+        <button type="button" class="page-button" href="#">12</button>
+      </div>
+      <div class="right-page-wrapper">
+        <button type="button" class="page-button" href="#">
+          <span class="glyphicon glyphicon-menu-right"></span>
+        </button>
+      </div>
+
+    </div>
   </div>
 </main>
 
