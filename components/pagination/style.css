@@ -12,6 +12,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  list-style: none;
 }
 
 .page {
@@ -24,6 +25,10 @@
   left: 2147px;
   top: 900px;
   background: var(--grey);
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 .page:hover,
