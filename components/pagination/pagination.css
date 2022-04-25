@@ -15,7 +15,7 @@ footer {
   max-width: 790px;
   max-height: 205px;
 }
-.btn-switch {
+.link-switch {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,13 +26,22 @@ footer {
   color: #2c2c2c;
   border: none;
 }
-.left-switch{
+.left-switch {
   margin-right: 15px;
 }
-.right-switch{
-    margin-left: 15px;
-  }
-.btn-switch:active {
-  background-color: #7e72F2;
+.right-switch {
+  margin-left: 15px;
 }
-
+.link-switch:active {
+  background-color: #7e72f2;
+}
+.link-switch:hover {
+  background-color: #7e72f2;
+}
+ul {
+  display: flex;
+}
+a {
+  color: #2c2c2c;
+  text-decoration: none;
+}
