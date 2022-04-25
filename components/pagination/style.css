@@ -1,0 +1,49 @@
+:root {
+  --purple-100: #7E72F2;
+  --grey-100: #EDEDED;
+  --black: #2C2C2C;
+  --wite: #FFFFFF;
+}
+
+.wrapper {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 50%;
+}
+
+.pages-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0 15px;
+}
+
+.pagination {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--grey-100);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages {
+  display: flex;
+  align-content: center;
+}
+
+.bi {
+  font-size: 15px;
+}
+
+.pagination:hover {
+  background-color: var(--purple-100);
+  color: var(--wite);
+}
+
+
+

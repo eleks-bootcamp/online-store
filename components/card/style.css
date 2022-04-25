@@ -17,10 +17,16 @@ a {
   all: unset;
 }
 
+
+:root {
+  --purple-100: #7E72F2;
+  --wite: #FFFFFF;
+}
+
 .card-component-box {
   width: 317px;
   height: 394px;
-  background: #FFFFFF;
+  background: var(--wite);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
   border-radius: 8px;
   font-family: 'Montserrat', sans-serif;
@@ -31,21 +37,35 @@ a {
 
 .card-content {
   padding-top: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-product-image {
  width: 293px;
  height: 200px;
  margin: auto;
- display: block;
+ display: flex;
+ justify-content: center;
+}
+
+.product-image {
+  width: 100%;
 }
 
 .content-details {
   margin: 22px;
 }
 .card-purple-elements {
-  background-color: #7E72F2;
-  color: #FFFFFF;
+  background-color: var(--purple-100);
+  color: var(--wite);
+}
+
+.product-price-reating-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
 }
 
 .card-rating {
@@ -54,28 +74,23 @@ a {
   font-size: 13px;
   border-radius: 3px;
   box-sizing: border-box;
-  padding-left: 11px;
-  float: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.rating, .bi{
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.bi-star {
-  margin: 7px;
+.bi {
+  margin-bottom: 3px;
 }
 
 .card-product-price {
-  float: right;
-  margin-bottom: 22px;
+  font-size: 16px;
 }
 
 .card-product-name {
   font-size: 13px;
   line-height: 16px;
-  display: inline-block;
+  display: block;
 }
 
 .card-product-type {
