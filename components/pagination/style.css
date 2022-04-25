@@ -1,3 +1,7 @@
+a {
+  all: unset;
+}
+
 :root {
   --purple-100: #7E72F2;
   --grey-100: #EDEDED;
@@ -5,11 +9,10 @@
   --wite: #FFFFFF;
 }
 
-.wrapper {
+.pagination {
  display: flex;
  justify-content: center;
  align-items: center;
- width: 50%;
 }
 
 .pages-list {
@@ -19,7 +22,7 @@
   margin: 0 15px;
 }
 
-.pagination {
+.pages {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -31,16 +34,12 @@
   align-items: center;
 }
 
-.pages {
-  display: flex;
-  align-content: center;
-}
-
 .bi {
   font-size: 15px;
 }
 
-.pagination:hover {
+.pages:hover,
+.pages.active {
   background-color: var(--purple-100);
   color: var(--wite);
 }
