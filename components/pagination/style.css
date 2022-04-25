@@ -1,6 +1,8 @@
 .wraper {
   display: flex;
   justify-content: center;
+  --accent-color: #7E72F2;
+  --main-font-color: #2c2c2c;
 }
 
 .pagination_list {
@@ -8,7 +10,7 @@
   justify-content: center;
   margin: 15px auto;
   font-family: 'Montserrat', sans-serif;
-  color: #2c2c2c;
+  color: var(--main-font-color);
   list-style-type: none;
 
 }
@@ -25,7 +27,7 @@
   align-items: center;
   background-color: #ededed;
   border-radius: 20px;
-  color: #2c2c2c;
+  color: var(--main-font-color);
   display: flex;
   height: 40px;
   justify-content: center;
@@ -35,7 +37,12 @@
   font-size: 14px;
 }
 
+.active {
+  pointer-events: none;
+  color: white;
+  background-color: var(--accent-color);
+}
 .pag_link:hover {
   color: white;
-  background-color: #7E72F2;
+  background-color: var(--accent-color);
 }
