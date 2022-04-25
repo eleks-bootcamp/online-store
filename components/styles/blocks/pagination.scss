@@ -1,0 +1,43 @@
+.pagination {
+  height: 40px;
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  &__select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__select {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+    border-radius: 50%;
+    color: $secondary-color;
+
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+
+  &__select-arrow {
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &_left {
+      background-image: url(../img/icons/arrow-left.png);
+    }
+
+    &_right {
+      background-image: url(../img/icons/arrow-right.png);
+    }
+  }
+}

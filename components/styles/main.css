@@ -1,0 +1,202 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px 25px 0;
+  width: 317px;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 5px;
+}
+
+.product-card__image {
+  display: block;
+  width: 293px;
+  height: 200px;
+  margin-bottom: 29px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.product-card__ranking-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 19px;
+}
+
+.product-card__ranking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 7px 12px;
+  width: 70px;
+  height: 27px;
+  background-color: #7e72f2;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.product-card__ranking-marks {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.product-card__star {
+  background-image: url(../img/icons/star.png);
+  width: 14px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-card__price {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2c2c2c;
+}
+
+.product-card__description-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2c2c2c;
+  margin-bottom: 11px;
+}
+
+.product-card__code-container {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  color: #2c2c2c;
+  margin-bottom: 62px;
+}
+
+.product-card__button-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #7e72f2;
+  height: 40px;
+}
+
+.product-card__button-buy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: thin;
+  font-size: 15px;
+  line-height: 18px;
+  height: 40px;
+}
+
+.pagination {
+  height: 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.pagination__select-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination__select {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ededed;
+  border-radius: 50%;
+  color: #2c2c2c;
+}
+
+.pagination__select:hover {
+  background-color: #7e72f2;
+  color: #fff;
+}
+
+.pagination__select-arrow {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagination__select-arrow_left {
+  background-image: url(../img/icons/arrow-left.png);
+}
+
+.pagination__select-arrow_right {
+  background-image: url(../img/icons/arrow-right.png);
+}
+/*# sourceMappingURL=main.css.map */
