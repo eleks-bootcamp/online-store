@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <title>HTML/CSS Pagination component</title>
+
   <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
   <style>
     .wrapper {
@@ -15,7 +18,48 @@
 
 <main>
   <div class="wrapper">
-    <!-- Pagination component -->
+    <nav class="all-components">
+      <a href="#" class="chevron-left link-components" data-element="nav-prev">
+      <i class="bi bi-arrow-left"></i>
+      </a>
+
+      <ul class="list-components" data-element="pagination">
+        <li>
+          <a href="#" class="link-components active" data-element="page-link" data-page-index="1">1</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="2">2</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="3">3</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="4">4</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="5">5</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="6">6</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="7">7</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="8">8</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="9">9</a>
+        </li>
+        <li>
+          <a href="#" class="link-components" data-element="page-link" data-page-index="10">10</a>
+        </li>
+      </ul>
+
+      <a href="#" class="chevron-right link-components" data-element="nav-prev">
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </nav>
   </div>
 </main>
 
