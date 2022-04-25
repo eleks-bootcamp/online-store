@@ -29,13 +29,18 @@ body {
 
 .Pagination__image {}
 
+.all-pages {
+  display: flex;
+}
+
 .item {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: #EDEDED;
-  text-align: center;
-  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   transition: 0.5s;
   border: none;
@@ -48,7 +53,10 @@ body {
   color: #fff;
 }
 
-.pagination-item1 {}
+.pagination-item1 {
+  background-color: #7E72F2;
+  color: #fff;
+}
 
 .pagination-item2 {}
 
@@ -74,4 +82,8 @@ body {
 
 .pagination-vector-next {
   margin-left: 15px;
+}
+
+.shevron {
+  font-size: 16px;
 }
