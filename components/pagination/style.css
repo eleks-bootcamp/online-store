@@ -1,0 +1,44 @@
+:root {
+  --btn-radius: 40px;
+  --btn-normal-color: #EDEDED;
+  --btn-active-color: #7E72F2;
+  --btn-hover-color:  #7E72F2;
+  --btn-active-text-color: #FFFFFF;
+  --nav-btn-margin: 15px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pagination-elem {
+  width: var(--btn-radius);
+  height: var(--btn-radius);
+  background-color: var(--btn-normal-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: var(--btn-radius);
+  justify-content: center;
+}
+
+.pagination-page:hover, .pagination-nav:hover {
+  background-color: var(--btn-hover-color);
+  color: var(--btn-active-text-color)
+}
+
+.pagination-nav.prev {
+  margin-right: var(--nav-btn-margin);
+}
+
+.pagination-nav.next {
+  margin-left: var(--nav-btn-margin);
+}
+
+.pagination-page.active, .pagination-nav:active, .pagination-nav:active {
+  color: var(--btn-active-text-color);
+  background-color: var(--btn-active-color);
+}
+
