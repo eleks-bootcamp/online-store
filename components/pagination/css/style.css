@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 
-.pagination__element {
+.pagination__page-link {
   width: 40px;
   height: 40px;
   display: flex;
@@ -21,6 +21,7 @@
   align-items: center;
   border-radius: 50%;
   background: #EDEDED;
+  cursor: pointer;
   transition: .3s;
 }
 
@@ -32,10 +33,13 @@
   align-items: center;
 }
 
-.pagination__element:hover {
-  cursor: pointer;
+.pagination__page-link:hover {
   background: #7E72F2;
   color: #FFFFFF;
 }
 
+.pagination__page-link.active {
+  background: #7E72F2;
+  color: #FFFFFF;
+}
 
