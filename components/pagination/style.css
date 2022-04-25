@@ -1,0 +1,46 @@
+
+.outside {
+  height: 205px;
+  width: 790px;
+  border: 0.06rem solid rgb(30, 73, 165);
+}
+
+
+.flip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 1;
+}
+
+.page, .page-flip {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #EDEDED;
+  font-family: 'Georgia', sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+
+.page-flip {
+  font-size: 16px;
+}
+
+.page:hover, .page.active, .page-flip:hover {
+  color: #FFFFFF;
+  background: #7E72F2;
+}
