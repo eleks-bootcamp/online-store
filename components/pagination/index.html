@@ -4,18 +4,59 @@
   <meta charset="UTF-8" />
   <title>HTML/CSS Pagination component</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      margin: 100px auto;
-    }
-  </style>
 </head>
 <body>
 
 <main>
   <div class="wrapper">
-    <!-- Pagination component -->
+    <a href="#" class="page-link previous" data-element="link-previous">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+      </svg>
+    </a>
+    <ul class="page-list" data-element="pagination">
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="0">1</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="1">2</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="2">3</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="3">4</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="4">5</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="5">6</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="6">7</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="7">8</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="8">9</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="9">10</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="10">11</a>
+      </li>
+      <li>
+        <a href="#" class="page-link" data-element="page-link active" data-page-index="11">12</a>
+      </li>
+    </ul>
+    <a href="#" class="page-link next" data-element="link-next">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </a>
   </div>
 </main>
 
