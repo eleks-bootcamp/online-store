@@ -1,0 +1,55 @@
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-component {
+  display: block;
+  max-width: 317px;
+  max-height: 394px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+  width: 100%;
+  height: 100%;
+
+}
+.product {
+  padding: 12px;
+  max-width: 293px;
+  max-height: 200px;
+}
+.reiting {
+  padding: 10px 24px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gradation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70px;
+  height: 27px;
+  background-color: #7e72f2;
+  border: none;
+  border-radius: 2px;
+}
+.description {
+  color: #2c2c2c;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 10px 20px 0 20px;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 317px;
+  height: 40px;
+  border: none;
+}
+.os-btn-primary {
+  background-color: #7e72f2;
+  color: #fff;
+}
