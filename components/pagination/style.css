@@ -20,13 +20,14 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 8px gray;
-  margin-right: 0.4rem;
 }
 
 .size:hover {
   background: var(--var-color-hover);
   border: 1px solid var(--var-color-circle-bg-defolt);
   color: var(--var-color-circle-bg-defolt);
+  transition: .3s;
+  box-sizing: border-box;
 }
 
 img {
@@ -35,8 +36,8 @@ img {
 }
 
 .wrapper {
-  width: fit-content;
-  height: fit-content;
+  width: 55rem;
+  height: 15rem;
   background: var(--var-bg-wrapper);
   color: var(--var-color-number);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
@@ -48,11 +49,10 @@ img {
 }
 
 .numbers {
-  width: fit-content;
-  height: fit-content;
-  margin: 0 1.5rem 0 1.5rem;
+  width: 40rem;
+  margin: 0 2rem 0 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
