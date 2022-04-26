@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Pagination component</title>
   <link rel="stylesheet" href="/component-card/pagination/style.css">
-  <style class="wrapper">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <style>
+    .wrapper {
+      margin: 100px auto;
+    }
   </style>
 </head>
+
 <body>
   <main>
-    <div class="center">
-      <div class="pagination">
-      <div class="box">
-      <a href="#">
-        <img src="/component-card/pagination/back.png">
-      </a>
-      <a href="#"class="active">1</a>
-      <a href="#" >2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">5</a>
-      <a href="#">6</a>
-      <a href="#">7</a>
-      <a href="#">8</a>
-      <a href="#">9</a>
-      <a href="#">10</a>
-      <a href="#">11</a>
-      <a href="#">12</a>
-      <a href="#">
-        <img src="/component-card/pagination/forward.png">
-      </a>
-      </div>
+    <div class="wrapper">
+      <nav class="pagination">
+        <a href="#" class="active-list previous" data-element="nav-prev">
+          <i class="bi bi-chevron-left"></i>
+        </a>
+        <ul class="list" data-element="pagination">
+          <li>
+            <a href="#" data-element="active-list" class="active-list active" data-page-index="0">1</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="1">2</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="2">3</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="3">4</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="4">5</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="5">6</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="6">7</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="7">8</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="8">9</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="9">10</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="10">11</a>
+          </li>
+          <li>
+            <a href="#" data-element="active-list" class="active-list" data-page-index="11">12</a>
+          </li>
+        </ul>
+        <a href="#" class="active-list previous" data-element="nav-prev">
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </nav>
     </div>
+  </main>
 </body>
+
 </html>
