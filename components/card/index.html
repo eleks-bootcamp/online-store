@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
-  </div>
-</main>
+  <main>
+    <div class="wrapper">
+      <!-- Card component -->
+      <div class="product_image_container">
+        <img src="https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg" alt="prd_1"
+          class="product_image">
+      </div>
+      <div class="product_info">
+        <div class="product_rate_price">
+          <div class="product_rate">
+            <span>4.5</span>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="product_price">3399</div>
+        </div>
+        <div class="product_title">
+          Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+        </div>
+        <p class="product_category">
+          laptops
+        </p>
+      </div>
+      <footer class="product_footer">
+        <button class="product_btn_to_cart">
+          add to cart
+        </button>
+      </footer>
+    </div>
+  </main>
 </body>
+
 </html>
