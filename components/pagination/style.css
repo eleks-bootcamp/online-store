@@ -1,0 +1,46 @@
+.all-components {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevron-left,
+.chevron-right {
+  color: black;
+}
+
+.chevron-left {
+  margin-right: 15px;
+}
+
+.chevron-right {
+  margin-left: 15px;
+}
+
+.list-components {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link-components {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: rgb(78, 73, 73);
+  text-decoration: none;
+  line-height: 1;
+  transition: .2s;
+  background-color: #ededed;
+}
+
+.link-components:hover,
+.link-components.active {
+  background-color: blueviolet;
+  color: wheat;
+}
+

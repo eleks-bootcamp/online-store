@@ -1,0 +1,86 @@
+.all-card {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, .135216);
+  border-radius: 8px;
+  background-color: #fff;
+
+  overflow: hidden;
+}
+
+.card-img {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin: 12px 12px 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg);
+}
+
+.card-description-product {
+  padding: 22px 24px;
+}
+
+.card-star-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 16px
+}
+
+.card-star:hover {
+  background-color: blueviolet;
+  color: bisque;
+}
+
+.card-star {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 6px 12px;
+  background-color: rgb(175, 129, 219);
+  max-width: 70px;
+  height: 27px;
+  color: black;
+  border-radius: 12%;
+
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.card-price {
+  color: #2c2c2c;
+  font-size: 1.125rem;
+  font-weight: 400
+}
+
+.card-description {
+  font-size: 1rem;
+  margin-bottom: 8px
+}
+
+.card-laptops {
+  font-size: .75rem
+}
+
+.card-battom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 0;
+  color: black;
+  background-color: rgb(175, 129, 219);
+}
+
+.card-battom:hover {
+  background-color: blueviolet;
+  color: bisque;
+}
