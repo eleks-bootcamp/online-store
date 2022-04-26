@@ -1,0 +1,53 @@
+.card{
+  width: 400px;
+  background-color:azure;
+  border-radius: 3%;
+  margin: 100px auto;
+  box-shadow: 0 2px 8px rgba(78, 7, 7, 0.27);
+}
+.image{
+  margin: 10px;
+}
+.laptopicon{
+  width: 100%;
+}
+.price-and-rating{
+  display: flex;
+  height: 30px;
+  justify-content:space-between;
+  margin-bottom: 15px;
+
+}
+.rating{
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 12px;
+  height: 30px;
+  width: 70px;
+  background-color: blueviolet;
+  border-radius: 7%;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+.price{
+  font-size: 22px;
+  margin: 0 12px;
+}
+.product-name{
+margin: 12px;
+}
+.category{
+  font-size: 15px;
+  margin: 0 12px;
+}
+.footer{
+  padding: 15px 0;
+  background-color: blueviolet;
+  color: aliceblue;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+
