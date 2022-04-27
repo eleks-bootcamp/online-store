@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="242c8083-aa48-458a-a8b5-6f4097899d72" name="Changes" comment="Made a card layout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pagination/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/pagination/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pagination/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/pagination/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="242c8083-aa48-458a-a8b5-6f4097899d72" name="Changes" comment="Made a pagination layout" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +58,7 @@
       <updated>1650547012290</updated>
       <workItem from="1650547016039" duration="1885000" />
       <workItem from="1650550570166" duration="13903000" />
-      <workItem from="1650967603092" duration="11212000" />
+      <workItem from="1650967603092" duration="11709000" />
     </task>
     <task id="LOCAL-00001" summary="Made a card layout">
       <created>1650989479983</created>
@@ -71,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650989479983</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Made a pagination layout">
+      <created>1651057386322</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651057386322</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +93,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made a card layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a card layout" />
+    <MESSAGE value="Made a pagination layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a pagination layout" />
   </component>
 </project>
