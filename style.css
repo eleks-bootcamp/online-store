@@ -1,0 +1,36 @@
+.store {
+  background: #E5E5E5;
+}
+
+.wrapper {
+  display: flex;
+  border: 1px solid #000000;
+  justify-content: center;
+  margin: 100px auto;
+  width: 80vw;
+  height: 200px;
+  align-items: center;
+  background: whitesmoke;
+}
+
+.pagination {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pagination:hover {
+  background: #7E72F2;
+}
+
+.page-back {
+  margin-right: 10px;
+}
+
+.page-forvard {
+  margin-left: 10px;
+}
