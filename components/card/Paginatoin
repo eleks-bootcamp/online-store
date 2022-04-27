@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagination</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pagination</title>
   <link rel="stylesheet" href="style/mainPagination.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
 </head>
 <body>
   <main>
     <div class="wrapper">
-      <div class="btn-prev"><img src="img/back_arrow.ico" alt="arrow"></div>
-      <div class="btn active">1</div>
-      <div class="btn">2</div>
-      <div class="btn">3</div>
-      <div class="btn">4</div>
-      <div class="btn">5</div>
-      <div class="btn">6</div>
-      <div class="btn">7</div>
-      <div class="btn">8</div>
-      <div class="btn">9</div>
-      <div class="btn">10</div>
-      <div class="btn">11</div>
-      <div class="btn">12</div>        
-      <div class="btn-next"><img src="img/forwardarrow.ico" alt="arrow"></div>
+      <nav class="btn-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </svg>
+        <a href="#"><i class="bi bi-chevron-left"></i></a>
+      </nav>
+        <div class="btn active">1</div>
+        <div class="btn">2</div>
+        <div class="btn">3</div>
+        <div class="btn">4</div>
+        <div class="btn">5</div>
+        <div class="btn">6</div>
+        <div class="btn">7</div>
+        <div class="btn">8</div>
+        <div class="btn">9</div>
+        <div class="btn">10</div>
+        <div class="btn">11</div>
+        <div class="btn">12</div>        
+      <nav class="btn-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+        <a href="#"><i class="bi bi-chevron-right"></i></a>
+      </nav>
     </div>
   </main>
 </body>
