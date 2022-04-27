@@ -1,59 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body{
-  font-family: 'Montserrat', serif;
+.os-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.os-pagination a {
+  line-height: 1;
+  text-decoration: none
+}
+
+.os-pagination .previous,
+.os-pagination .next {
+  color: #000
+}
+
+.os-pagination .previous {
+  margin-right: 15px
+}
+
+.os-pagination .next {
+  margin-left: 15px
+}
+
+.os-pagination .page-list {
+  display: flex;
   margin: 0;
   padding: 0;
-  background: rgb(244, 244, 244);
-}
-
-
-.os-pagination{
-  height: 40px;
-  width: 590px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
   list-style: none;
-  box-sizing: border-box;
-  font-size: 0.875rem;
-  background-color: white;
-  color: black;
-  cursor: pointer;
+  border-radius: 20px
 }
 
-li{
+.os-pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #ededed;
-  border-radius: 50%;
+  border-radius: 20px;
+  color: #2c2c2c;
+  transition: .3s
 }
 
-li.active{
-  color: white;
+.os-pagination .page-link:hover,
+.os-pagination .page-link.active {
   background-color: #7e72f2;
-  text-decoration: none;
-}
-
-li:hover{
-  background-color: #4639b6;
-  transition: 0.5s ease 0s;
-  color: white;
-}
-
-.os-pagination-prev{
-  margin-right: 15px;
-}
-
-.os-pagination-next{
-  margin-left: 15px;
-}
-
-.bi{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #fff
 }

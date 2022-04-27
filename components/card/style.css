@@ -9,6 +9,7 @@ div{
 }
 
 
+
 .product-card{
   width: 317px;
   height: 394px;
@@ -21,13 +22,13 @@ div{
 
 .product-img{
   background-image: url(https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg);
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
   display: flex;
   height: 200px;
   justify-content: center;
-  margin: 12px 12px 5px;
+  margin: 12px 12px 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center
 }
 .product-content{
   padding: 22px 24px;
@@ -52,8 +53,9 @@ div{
   box-sizing: border-box;
 }
 
-.star{
-  font-size: medium;
+.bi-star{
+  font-size: small;
+  justify-content: center;
   display: inline-block;
   font-family: bootstrap-icons !important;
   font-style: normal;
