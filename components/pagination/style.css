@@ -17,19 +17,32 @@
   height: auto;
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
   justify-content: space-between;
+  list-style: none;
+  border-radius: 20px
 }
 
 .pagination-item {
-  padding: 0;
-  border: 0;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
-  border-radius: 50%;
-  background-color: var(--gray-100);
-  transition: background-color .5s;
+  height: 40px;
+  background-color: #ededed;
+  border-radius: 20px;
+  color: #2c2c2c;
+  transition: .3s
 }
 
+
+.pagination a {
+  line-height: 1;
+  text-decoration: none
+}
+
+.pagination-item.active,
 .pagination-item:hover {
   background-color: var(--hover-color);
 
