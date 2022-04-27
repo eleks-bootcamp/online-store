@@ -13,8 +13,8 @@ main {
   align-items: center;
 }
 .wrapper {
-  display: flex;
-  align-items: center;
+ display: flex;
+ align-items: center;
 }
 img {
   position: absolute; 
@@ -35,7 +35,7 @@ img {
 }
 .btn-prev:hover, .btn-next:hover, .btn:hover {
   background: #7E72F2;
-  opacity: 1;
+  transition: 1s;
   color: white;
 }
 .active {
