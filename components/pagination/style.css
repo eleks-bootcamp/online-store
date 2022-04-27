@@ -1,0 +1,45 @@
+.wrapper {
+  margin: 100px auto;
+  }
+.os-pagenation {
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+}
+.os-pagenation a {
+  line-height: 1;
+  text-decoration: none;
+}
+.os-pagenation .previous,
+.os-pagenation .next {
+  color:#000
+}
+.os-pagenation .previous {
+  margin-right: 15px;
+}
+.os-pagenation .next {
+  margin-left: 15px;
+}
+.os-pagenation .page-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 20px;
+}
+.os-pagenation .page-link {
+  background-color: #ededed;
+  color: #2c2c2c;
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  transition: .3s;
+  width: 40px;
+}
+.os-pagenation .page-link:hover,
+.os-pagenation .page-link.active {
+  background-color: #7e72f2;
+  color: #fff
+}
