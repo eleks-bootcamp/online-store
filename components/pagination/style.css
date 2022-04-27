@@ -1,0 +1,34 @@
+:root {
+  --hover-bakground-color: #7e72f2;
+  --background-button-color: gainsboro;
+  --border-button:  ghostwhite;
+  --hover-text-color: ghostwhite;
+  --link-text-color: rgb(62, 62, 62);
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  }
+
+.pagination button {
+  width: 5px;
+  height: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  border: solid var(--border-button);
+  border-radius: 50%;
+  background-color: var(--background-button-color);
+}
+.pagination button:hover {
+  background-color: var(--hover-bakground-color);
+}
+.pagination-button {
+  color: var(--link-text-color);
+}
+.navi {
+  margin: 1em;
+}
