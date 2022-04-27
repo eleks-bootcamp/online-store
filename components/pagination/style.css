@@ -1,0 +1,59 @@
+:root {
+  --button-background-1: #EDEDED;
+  --button-background-2: #7E72F2;
+  --font-style-1: Montserrat,sans-serif;
+  --size-14: 14px;
+  --link-color-1: #2c2c2c;
+  --link-color-2: #FFFFFF;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--link-color-1);
+}
+
+.button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background: var(--button-background-1);
+  border-radius: 120px;
+  font-family: var(--font-style-1);
+  font-size: var(--size-14);
+}
+
+.row {
+  margin: 0 15px;
+}
+
+.button:active {
+  background: var(--button-background-2);
+}
+
+.link:active {
+  color: var(--link-color-2);
+}
+
+.link:hover {
+  color: var(--link-color-2);
+}
+
+.button:hover {
+  background: var(--button-background-2);
+
+}
+
+.link.visited {
+  color: var(--link-color-2);
+}
+
+.button.visited {
+  background: var(--button-background-2);
+}
