@@ -86,9 +86,10 @@ h5 {
   width: 317px;
   font-family: 'Montserrat';
   font-style: normal;
+  text-transform: uppercase;
   background-color: #7E72F2;
   color: #FFFFFF;
-  text-transform: uppercase;
+
 }
 .btn:hover  {
   background: greenyellow;

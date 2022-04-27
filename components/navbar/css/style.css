@@ -1,0 +1,103 @@
+
+
+
+.slider {
+
+  margin-left: 34px;
+  width: 75%;
+  height: 4px;
+}
+
+
+.block {
+
+  flex: row;
+  position: absolute;
+  width: 280px;
+  height: 904px;
+  left: 285px;
+  top: 236px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  border: 1px solid black;
+}
+h3 {
+  margin-left: 22px;
+}
+.price-block {
+  height: 80px;
+}
+
+
+.price-line {
+  display: flex;
+  flex: row;
+  justify-content: space-between
+
+}
+.zerro {
+  margin-left: 21px;
+}
+.price {
+  margin-right: 22px;
+}
+
+.item {
+  margin: 0px 20px;
+  padding: 0;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 7px;
+
+}
+.btn {
+  height: 17px;
+  width: 20px;
+  border-radius: 2px;
+  border: 1px solid  #979797;
+}
+.btn:hover {
+  border:2px solid #7E72F2;;
+}
+.btn:active {
+  background: #7E72F2;
+}
+p {
+  display: block;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+.line {
+  border-top:1px solid  #D6D6D6; ;
+  width: 240px;
+  margin-left: 20px;
+  margin-top: 24px;
+}
+
+.rating-line {
+  display: flex;
+  flex: row;
+  justify-content: space-between
+}
+.rating {
+  margin-right: 20px;
+}
+.btn-filters {
+
+  height: 48px;
+  width: 280px;
+  background: #7E72F2;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  margin-top: 45px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+

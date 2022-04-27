@@ -1,58 +1,50 @@
-body {
+.wrapper {
+  margin-top: 40px;
 }
-
-.block {
+.nav-pagination {
   display: flex;
-  height: 205px;
-  width: 790px;
-  border: 1px solid #000000;
-
-}
-.buttons {
-  display: flex;
-  text-align: center;
-
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  font-size: 1,5 rem;
-  background:  #EDEDED;
-}
-
-
-.btn1 {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 40px;
+}
+
+.previous,
+.next  {
+  color: #000;
+}
+.previous {
+  margin-right: 15px;
+}
+.next {
+  margin-left: 15px;
+}
+
+.page-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.page-link {
   width: 40px;
-  color:  #F9F9F9;
-  border-radius: 50%;
-  background: #7E72F2;
-  font-size: 1,2em;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background-color: #EDEDED;
+   border-radius: 50%;
+   color: #2c2c2c;
+   transition: .3c;
+   line-height: 1;
+   text-decoration: none;
 }
 
-div {
-  margin: auto;
+.page-link:hover,
+.page-link.active {
+  color: #fff;
+  background-color: #7e72f2;
+}
+.bi {
+  font-size: 18px;
 }
 
-.btn:hover {
-  border: 2px solid  #7E72F2;
-}
-.btn:active {
-  background: #7E72F2;
-  color:  #F9F9F9;
-}
-._img {
-  padding: 0px;
-  margin: 0 20px 0 20px;
-}
 
