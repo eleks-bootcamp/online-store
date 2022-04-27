@@ -51,3 +51,6 @@ cursor: pointer;
 .page1:hover,.page2:hover,.page3:hover,.page4:hover,.page5:hover,.page6:hover,.page7:hover,.page8:hover,.page9:hover,.page10:hover,.page11:hover,.page12:hover{
   background: #7E72F2;color: #EDEDED;
 }
+.page-link.active {
+  background: #7E72F2;
+}
