@@ -1,0 +1,59 @@
+.wrapper {
+  margin: 100px auto;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* position: absolute; */
+  border: 1px solid black;
+  height: 100px;
+}
+
+
+
+.general-pages {
+  width: 40px;
+  height: 40px;
+  background-color: #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.general-pages:hover {
+  background-color: azure;
+}
+
+.back-button {
+  margin-right: 1rem;
+  font-size: larger;
+
+}
+
+.forward-button {
+  margin-left: 1rem;
+  font-size: larger;
+
+}
+
+.page-1 {}
+.page-2 {}
+
+.page-3 {}
+
+.page-4 {}
+
+.page-5 {}
+
+.page-6 {}
+
+.page-7 {}
+
+.page-8 {}
+
+.page-9 {}
+
+.page-10 {}
+
