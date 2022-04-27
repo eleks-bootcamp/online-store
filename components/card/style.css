@@ -35,13 +35,19 @@ padding: 22px 24px;
   background-color: #7E72F2;
   color: white;
   justify-content: space-between;
-
+  max-width: 70px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: .875rem;
+  font-weight: 400
 }
 .rating{
   margin-right: 5px;
 }
 .product-price{
   padding-right: 20px;
+  font-size: 1.125rem;
+  font-weight: 400
 }
 
 
