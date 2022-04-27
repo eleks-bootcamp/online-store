@@ -31,16 +31,14 @@ box-shadow:0 0 10px #555;}
       height: 30px;
       margin-left: 21px;
       color: white;
-      font-size: 17px;
+      font-size: 16px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;}
-      .corect1 {margin-top: -3px;
-      margin-right: 5px;}
-      .corect2{margin-left: 5px;}
-      .blok-zvezda:hover{outline: 2px solid #00BFFF;}
-      .blok-zvezda:hover .corect1{color: #00CED1;}
-      .blok-zvezda:hover .corect2{color: #00CED1;}
+    .corect1{margin: 2px;}
+    .blok-zvezda:hover{outline: 2px solid #00BFFF;}
+    .blok-zvezda:hover .corect1{color: #00CED1;}
+    .blok-zvezda:hover .corect2{color: #00CED1;}
 
     .blok-cena {
       /* outline: 1px solid; */
