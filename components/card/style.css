@@ -1,0 +1,68 @@
+:root {
+  --transparent-100:rgba(0, 0, 0, 0.133);
+  --purpure-100:#7E72F2;
+}
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+.font-size-13{
+  font-size: 0.8125rem;
+}
+.font-size-10{
+  font-size: 0.625rem;
+}
+.font-size-15{
+  font-size: 0.9375rem;
+}
+.prodact-card{
+  width:317px;
+  height: 394px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px var(--transparent-100);
+  flex-direction: column;
+}
+.prodact-d-flex-jc-space-b{
+  display: flex;
+  justify-content: space-between;
+}
+.font-montserrat-400{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.prodact-image{
+  margin:0.75rem;
+}
+.prodact-content{
+  margin:0 1.6rem;
+}
+.prodact-rating{
+  min-width:4.375rem;
+  height: 1.69rem;
+  border-radius: 3px;
+  position: relative;
+  padding:6px 10px 7px 11px;
+  box-sizing: border-box;
+}
+.prodact-button-color{
+  background: #7E72F2;
+  color:white;
+}
+.prodact-price{
+  padding-top:0.375rem;
+}
+.prodact-name{
+  margin-bottom:0.625rem;
+}
+.prodact-add-to-card{
+  border-radius:0 0 8px 8px;
+  min-height: 2.5rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.prodact-button-add{
+  background: transparent;
+  border:none;
+  width:80%;
+}
