@@ -1,7 +1,7 @@
 :root {
-  --gray-100:#EDEDED;
+  --grey-100:#EDEDED;
   --purpure-100:#7E72F2;
-  --gray-500:#2C2C2C;
+  --grey-500:#2C2C2C;
   --wight:#ffffff;
   --black:#000000;
 }
@@ -30,7 +30,6 @@ a {
 }
 .card-pagination {
   justify-content: space-between;
-
 }
 .pagination-block{
   justify-content: center;
@@ -41,9 +40,10 @@ a {
 .pagination-item, .panigation-arrow-left, .panigation-arrow-right  {
   width: 40px;
   height: 40px;
-  background:var(--gray-100);
+  background:var(--grey-100);
   border-radius:50%;
-  color:var(--gray-500);
+  color:var(--grey-500);
+  cursor: pointer;
 }
 .pagination-item a{
   display: block;
@@ -51,7 +51,8 @@ a {
 .pagination-item:hover,
 .panigation-arrow-left:hover,
 .panigation-arrow-right:hover,
-.pagination-item:hover a{
+.pagination-item:hover a,
+.pagination-item.active{
   background:var(--purpure-100);
   color: var(--wight);
 }
