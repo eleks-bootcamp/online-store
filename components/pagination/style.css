@@ -39,7 +39,10 @@
 }
 .Buttons:hover{
   color: #fff;
+  transition: 0.7s;
+  cursor: pointer;
   background-color: #7E72F2;
+
 }
 .Border-off:hover{
   color: #fff;
