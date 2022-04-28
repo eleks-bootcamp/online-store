@@ -1,0 +1,77 @@
+.pagination-component {
+  margin: 100px auto;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previous, .next {
+  color: black;
+}
+
+.previous {
+  margin-right: 15px;
+}
+
+.next {
+  margin-left: 15px;
+}
+
+.page-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-link {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEDED;
+  border-radius: 50%;
+  color: black;
+  text-decoration: none;
+  transition: 2s;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.page-link-previous {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  background-color: #EDEDED;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.page-link-next {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  background-color: #EDEDED;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.page-link-previous:hover,
+.page-link-previous.active,
+.page-link-next:hover,
+.page-link-next.active,
+.page-link:hover,
+.page-link.active
+{
+  background-color: #7E72F2;
+  color: white;
+  transition: 2s;
+}
