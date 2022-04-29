@@ -14,6 +14,11 @@
   background-color: #ededed;
   border-radius: 100%;
   padding: 10px;
+  transition: 0.3s;
+}
+.pagination i:hover{
+  background-color: #7e72f2;
+  color: #fff;
 }
 .pagination .arrow-left,
 .pagination .arrow-right {
@@ -44,7 +49,7 @@
   transition: 0.3s;
 }
 .pagination .page-number:hover,
-.pagination .active{
+.pagination .page-number:active{
   background-color: #7e72f2;
   color: #fff;
 }
