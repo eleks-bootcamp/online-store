@@ -4,18 +4,75 @@
   <meta charset="UTF-8" />
   <title>HTML/CSS Pagination component</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
 
   <style>
     .wrapper {
       margin: 100px auto;
+      width: 590px;
+      min-width: 590px;
+      display: flex;
+      justify-content: space-between;
+      font-family: Montserrat;
+      /*border: 1px solid red;*/
     }
+
+    .roundpages {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: lightgrey;
+      margin: 0;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .roundpages:hover {
+      background: #7E72F2;
+      color: aliceblue;
+      cursor: pointer;
+      transition: .3s;
+    }
+    .pull-of-rounds {
+      /*height: 100%;*/
+      margin: 0 15px;
+      display: flex;
+      flex-direction: row;
+    }
+
   </style>
 </head>
 <body>
 
 <main>
   <div class="wrapper">
-    <!-- Pagination component -->
+    <span class="roundpages page-left">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+      </svg>
+    </span>
+    <span class="pull-of-rounds">
+      <span class="roundpages">1</span>
+      <span class="roundpages">2</span>
+      <span class="roundpages">3</span>
+      <span class="roundpages">4</span>
+      <span class="roundpages">5</span>
+      <span class="roundpages">6</span>
+      <span class="roundpages">7</span>
+      <span class="roundpages">8</span>
+      <span class="roundpages">9</span>
+      <span class="roundpages">10</span>
+      <span class="roundpages">11</span>
+      <span class="roundpages">12</span>
+    </span>
+    <span class="roundpages page-right">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+      </svg>
+    </span>
   </div>
 </main>
 
