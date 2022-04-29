@@ -1,0 +1,31 @@
+@media (min-width: 576px) {
+  @for $i from 1 through 12 {
+    .col-s-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-m-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .col-l-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
