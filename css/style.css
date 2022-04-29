@@ -1,0 +1,109 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+/*constants*/
+:root{
+  --main-color:#7E72F2;
+  --white-color:#fff;
+  --black-color:#000;
+  --text-color:#2C2C2C;
+  --background-grey:#EDEDED;
+}
+/*shop card CSS*/
+a,p{
+  color:var(--text-color);
+}
+.card-shop{
+  position: relative;
+  height: 394px;
+  width: 317px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.card-shop-main{
+  padding: 0.8rem 0.8rem 0 0.8rem ;
+  position: relative;
+
+}
+.card-shop-price-and-mark{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:1.8rem 1rem 0.3rem 1rem;
+  align-items: center;
+
+}
+.card-shop-mark{
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+}
+.card-shop-mark p{
+  font-size: 13px;
+  color:var(--white-color);
+}
+.card-shop-mark img{
+  max-width: 0.85rem;
+  margin: 0.3rem 0 0.3rem 0.8rem;
+  fill:var(--white-color);
+}
+.card-shop-name{
+  margin: 1rem ;
+  display: flex;
+  flex-direction: column;
+}
+.card-shop-name a{
+  font-size: 13px;
+}
+.card-shop-name p{
+  font-size: 10px;
+  padding: 0.8rem 0 0 0;
+}
+.card-shop-button{
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border:0;
+  width: 100%;
+  padding: 0.65rem 0;
+}
+/*pagination styles*/
+.wrapper{
+  margin: 100px auto;
+  width: 790px;
+}
+.pagination{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-element{
+  display: flex;
+  font-size: 10px;
+  border-radius: 50%;
+  background: var(--background-grey);
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+
+}
+.pagination>li:first-child,.pagination>li:last-child{
+  margin:1rem;
+}
+
+.pagination-element:hover, .pagination>.active{
+  background: var(--main-color);
+  color: var(--white-color);
+}
