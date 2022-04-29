@@ -10,13 +10,19 @@
       margin-bottom: 30px;
     }
 
-    .row {
+    .row, .left-side, .right-side {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
     }
 
-    div[class^='col-'] {
+    @media (max-width: 768px) {
+      .left-side{
+        display: none;
+      }
+    }
+
+    div[class^='col-'], .left-side {
       outline: 1px solid red;
       background: lightgray;
       text-align: center;
@@ -115,14 +121,23 @@
   <main>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
+        <div class="left-side col-12 col-xs-0 col-s-3 col-m-5 col-l-4 col-xl-3">
+          Left side
         </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
+        <div class="right-side col-12 col-xs-12 col-s-9 col-m-7 col-l-8 col-xl-9">
+          <div class="col-12">Right side</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 1</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 2</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 3</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 4</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 5</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 6</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 7</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 8</div>
+          <div class="col-xl-4 col-l-4 col-m-6 col-s-12 col-xs-12">card 9</div>
         </div>
       </div>
     </div>
   </main>
-</body>
+  </body>
 </html>
