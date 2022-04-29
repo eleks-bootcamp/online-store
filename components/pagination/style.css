@@ -7,7 +7,6 @@
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .bi-chevron-left,
@@ -23,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .3s;
 }
 
 .number:hover,
