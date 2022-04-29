@@ -1,0 +1,24 @@
+@import 'libs/flex-grid';
+@import 'libs/media-query-grid';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.left-side {
+  min-height: 600px;
+  padding-left: 10px;
+}
+
+div[class^='col-'] {
+  outline: 1px solid red;
+  background: lightgray;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .left-side {
+    display: none;
+  }
+}
