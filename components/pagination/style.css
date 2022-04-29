@@ -12,10 +12,14 @@ button {
   cursor: pointer;
 }
 
+ul > li {
+  list-style: none;
+}
+
 /* Pagination */
 
 .pagination {
-  margin-top: 220px;
+  margin: 100px auto;
   display: flex;
   width: 100%;
   justify-content: center;
