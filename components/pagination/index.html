@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <title>HTML/CSS Pagination component</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      margin: 100px auto;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
 <main>
   <div class="wrapper">
     <!-- Pagination component -->
+    <!--    <footer class="products-footer" data-element="pagination">-->
+    <nav class="pagination">
+      <a class="page-link previous" data-element="nav-prev" href="#">
+        <i class="bi bi-arrow-left-short"></i>
+      </a>
+      <ul class="page-list" data-element="pagination">
+        <li><a class="page-link active" data-element="page-link" data-page-index="0" href="#">1</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="1" href="#">2</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="2" href="#">3</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="3" href="#">4</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="4" href="#">5</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="5" href="#">6</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="6" href="#">7</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="7" href="#">8</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="8" href="#">9</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="9" href="#">10</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="10" href="#">11</a></li>
+        <li><a class="page-link" data-element="page-link" data-page-index="11" href="#">12</a></li>
+      </ul>
+      <a class="page-link next" data-element="nav-next" href="#">
+        <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </nav>
+    <!--    </footer>-->
   </div>
 </main>
 
