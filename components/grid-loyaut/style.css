@@ -1,0 +1,68 @@
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-block {
+  height: 1560px;
+}
+
+
+div[class^='col-'] {
+  outline: 1px solid red;
+}
+
+
+/* s */
+@media (max-width: 576px) {
+  .d-none {
+    display: none;
+  }
+
+  .col-s-12 {
+    width: calc(100% / 12 * 12);
+  }
+}
+
+/* m */
+@media (min-width: 576px) {
+  .col-m-4 {
+    width: calc(100% / 12 * 4);
+  }
+
+  .col-m-6 {
+    width: calc(100% / 12 * 6);
+  }
+
+  .col-m-8 {
+    width: calc(100% / 12 * 8);
+  }
+}
+
+/* l */
+@media (min-width: 992px) {
+  .col-l-3 {
+    width: calc(100% / 12 * 3);
+  }
+
+  .col-l-4 {
+    width: calc(100% / 12 * 4);
+  }
+
+  .col-l-9 {
+    width: calc(100% / 12 * 9);
+  }
+}
