@@ -1,0 +1,36 @@
+.wrapper {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.bi-chevron-left,
+.bi-chevron-right {
+  margin: 0px 12px;
+}
+.number,
+.bi {
+  width: 40px;
+  height: 40px;
+  background-color: #ededed;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+.number:hover,
+.active {
+  background-color: #7e72f2;
+  color: white;
+}
+.bi:hover {
+  background-color: #7e72f2;
+  color: white;
+}
