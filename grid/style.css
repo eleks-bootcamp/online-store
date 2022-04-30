@@ -1,0 +1,23 @@
+body{
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left{
+  height: 720px;
+}
+
+div[class^='col-'] {
+  outline: 1px solid red;
+  text-align: center;
+}
