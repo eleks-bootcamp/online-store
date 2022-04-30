@@ -78,7 +78,7 @@ div[class^='col-'] {
 }
 
 @media (max-width: 576px) {
-    .left-side {
+    .col-left-side {
         display: none;
     }
 
