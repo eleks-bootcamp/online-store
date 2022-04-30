@@ -24,7 +24,7 @@
   line-height: 40px;
 }
 
-.item1 {
+.circle:hover {
   background: #7e72f2;
   color: #fff;
 }
