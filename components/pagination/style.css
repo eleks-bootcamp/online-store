@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  width: 70%;
+  height: 100px;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: #EDEDED;
+  border-radius: 50%;
+  font-size: 17px;
+}
+.prevpage{
+margin-right: 30px;
+}
+.nextpage{
+  margin-left: 30px;
+}
+.box:hover {
+background-color: #7E72F2;
+color: #EDEDED;
+}
+
