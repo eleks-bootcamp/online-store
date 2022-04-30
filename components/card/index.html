@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>HTML/CSS Card component</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
     .wrapper {
@@ -12,11 +17,34 @@
     }
   </style>
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
-  </div>
-</main>
+  <main>
+    <div class="wrapper">
+      <!-- Card component -->
+      <div class="card">
+
+        <img class="card-product-image" src="./images/comp_1.png" alt="image PC">
+
+        <div class="card-star-rating-price-section">
+          <div class="card-star-rating">
+            <div class="card-rating">3.2</div>
+            <div class="card-star">
+              <img src="../../images/star.png" alt="image star">
+            </div>
+          </div>
+          <div class="card-price">22.000</div>
+        </div>
+
+        <div class="card-product-title">Notebook Acer Aspire 7 A7-12-32-423 Charcoal Black</div>
+        <div class="card-product-category">Laptops</div>
+        <div class="card-button">
+          <div class="card-button-title">add to card</div>
+        </div>
+
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>

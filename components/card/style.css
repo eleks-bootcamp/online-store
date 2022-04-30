@@ -1,0 +1,80 @@
+.wrapper {
+  background-color: #E5E5E5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 317px;
+  height: 411px;
+  background-color: white;
+  color: #2C2C2C;
+  margin: 0 auto;
+  font-family: 'Roboto';
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.card-star-rating-price-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 24px;
+  padding-bottom: 0.5rem;
+}
+
+.card-product-image {
+  display: flex;
+  width: 293px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.card-star-rating {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70px;
+  height: 27px;
+  background-color: #7E72F2;
+  border-radius: 3px;
+}
+
+.card-rating {
+  font-size: 14px;
+  color: #fff;
+}
+
+.card-star {
+  display: flex;
+  width: 13.31px;
+  height: 11.76px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 317px;
+  height: 40px;
+  color: #fff;
+  background-color: #7E72F2;
+  text-transform: uppercase;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-sizing: border-box;
+}
+
+.card-product-title {
+  margin: 0 24px;
+}
+
+.card-product-category {
+  font-size: 10px;
+  margin: 0 24px;
+  padding-bottom: 15px;
+}
