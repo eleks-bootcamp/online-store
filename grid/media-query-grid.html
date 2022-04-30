@@ -8,8 +8,14 @@
     .container {
       width: 100%;
       margin-bottom: 30px;
+
     }
 
+    .nowrap {
+      height: 100%;
+      display: flex;
+
+    }
     .row {
       width: 100%;
       display: flex;
@@ -70,6 +76,15 @@
       width: calc(100% / 12 * 12);
     }
 
+
+    @media (max-width: 576px) {
+      .col-hide {
+       display: none;
+      }
+
+    }
+
+
     /* s */
     @media (min-width: 576px) {
       .col-s-2 {
@@ -79,23 +94,52 @@
       .col-s-10 {
         width: calc(100% / 12 * 10);
       }
+      .col-s-12 {
+        width: calc(100% / 12 * 12);
+      }
     }
 
     /* m */
     @media (min-width: 768px) {
+      .col-m-2 {
+        width: calc(100% / 12 * 2);
+      }
+      .col-m-3 {
+        width: calc(100% / 12 * 3);
+      }
+      .col-m-4 {
+        width: calc(100% / 12 * 4);
+      }
       .col-m-6 {
         width: calc(100% / 12 * 6);
+      }
+      .col-m-8 {
+        width: calc(100% / 12 * 8);
+      }
+      .col-m-9 {
+        width: calc(100% / 12 * 9);
+      }
+      .col-m-10 {
+        width: calc(100% / 12 * 10);
       }
     }
 
     /* l */
     @media (min-width: 992px) {
+      .col-l-2 {
+        width: calc(100% / 12 * 2);
+      }
+
+
       .col-l-4 {
         width: calc(100% / 12 * 4);
       }
 
       .col-l-8 {
         width: calc(100% / 12 * 8);
+      }
+      .col-l-10 {
+        width: calc(100% / 12 * 10);
       }
     }
 
@@ -113,6 +157,7 @@
 </head>
 <body>
   <main>
+
     <div class="container">
       <div class="row">
         <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
@@ -122,6 +167,24 @@
           col #2
         </div>
       </div>
+    </div>
+
+    <div class="container nowrap">
+      <div class="col-hide col-4 col-m-3 col-l-2"> left side </div>
+
+      <div class="col-12 col-m-9 col-l-10">right side
+        <div class="right-box row">
+          <div class="col-12 col-m-6 col-l-4"> card 1 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 2 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 3 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 4 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 5 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 6 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 7 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 8 </div>
+          <div class="col-12 col-m-6 col-l-4"> card 9 </div>
+        </div>
+     </div>
     </div>
   </main>
 </body>
