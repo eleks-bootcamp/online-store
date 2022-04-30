@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div[class^="col-"] {
+  outline: 1px solid red;
+  background: lightgray;
+  text-align: center;
+}
