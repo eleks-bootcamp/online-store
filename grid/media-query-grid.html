@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <title>Grid with media queries</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
     .container {
       width: 100%;
       margin-bottom: 30px;
@@ -14,6 +20,7 @@
       width: 100%;
       display: flex;
       flex-wrap: wrap;
+      flex-direction: row;
     }
 
     div[class^='col-'] {
@@ -21,108 +28,104 @@
       background: lightgray;
       text-align: center;
     }
-
     .col-1 {
-      width: calc(100% / 12);
+        width: calc(100% / 12);
     }
-
     .col-2 {
       width: calc(100% / 12 * 2);
     }
-
     .col-3 {
       width: calc(100% / 12 * 3);
     }
-
     .col-4 {
       width: calc(100% / 12 * 4);
     }
-
     .col-5 {
       width: calc(100% / 12 * 5);
     }
-
     .col-6 {
       width: calc(100% / 12 * 6);
     }
-
     .col-7 {
       width: calc(100% / 12 * 7);
     }
-
     .col-8 {
       width: calc(100% / 12 * 8);
     }
-
     .col-9 {
       width: calc(100% / 12 * 9);
     }
-
     .col-10 {
       width: calc(100% / 12 * 10);
     }
-
     .col-11 {
       width: calc(100% / 12 * 11);
     }
-
     .col-12 {
       width: calc(100% / 12 * 12);
     }
 
-    /* s */
+    @media (max-width: 576px) {
+        .col-sm-12 {
+            width: calc(100% / 12 * 12);
+        }
+    }
     @media (min-width: 576px) {
-      .col-s-2 {
-        width: calc(100% / 12 * 2);
-      }
-
-      .col-s-10 {
-        width: calc(100% / 12 * 10);
-      }
+        .col-sm-12 {
+            width: calc(100% / 12 * 12);
+        }
     }
-
-    /* m */
     @media (min-width: 768px) {
-      .col-m-6 {
-        width: calc(100% / 12 * 6);
-      }
+        .col-md-6 {
+            width: calc(100% / 12 * 6);
+        }
     }
-
-    /* l */
     @media (min-width: 992px) {
-      .col-l-4 {
-        width: calc(100% / 12 * 4);
-      }
-
-      .col-l-8 {
-        width: calc(100% / 12 * 8);
-      }
+        .col-lg-4 {
+            width: calc(100% / 12 * 4);
+        }
     }
-
-    /* xl */
     @media (min-width: 1200px) {
-      .col-xl-2 {
-        width: calc(100% / 12 * 2);
-      }
-
-      .col-xl-10 {
-        width: calc(100% / 12 * 10);
-      }
+        .col-xl-4 {
+            width: calc(100% / 12 * 4);
+        }
     }
-  </style>
+
+    .sides {
+        display: flex;
+        height: 100vh;
+    }
+
+    @media (max-width: 576px) {
+        .left-side {
+            display: none;
+        }
+        .col-md-12 {
+            width: calc(100% / 12 * 12);
+        }
+    }
+
+
+    </style>
 </head>
 <body>
-  <main>
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
+        <div class="row sides">
+            <div class="col-3 left-side">left side</div>
+            <div class="col-9 col-md-12 right-side">right side
+                <div class="row">
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-1</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-2</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-3</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-4</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-5</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-6</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-7</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-8</div>
+                    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">card-9</div>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
-        </div>
-      </div>
     </div>
-  </main>
 </body>
 </html>
