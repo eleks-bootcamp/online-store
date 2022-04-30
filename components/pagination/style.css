@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagination {
+  width: 790px;
+  height: 205px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2C2C2C;
+}
+
+.page {
+  width: 40px;
+  height: 40px;
+  border-radius: 150px;
+  background: #EDEDED;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page:hover {
+  background: #7E72F2;
+  color: #FFFFFF;
+}
+
+
