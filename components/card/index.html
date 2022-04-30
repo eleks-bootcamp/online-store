@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>HTML/CSS Card component</title>
-  <link rel="stylesheet" href="style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
+  <div class="product-card">
+    <div class="image">
+      <img src="https://via.placeholder.com/300x200" alt="">
+    </div>
+
+
+    <div class="product-content">
+      <h3>Назва товару</h3>
+      <div class="info">
+        <ul class="rating">
+          <li><span class="iconify" data-icon="ant-design:star-outlined"></span></li>
+          <li><span class="iconify" data-icon="ant-design:star-outlined"></span></li>
+          <li><span class="iconify" data-icon="ant-design:star-outlined"></span></li>
+          <li><span class="iconify" data-icon="ant-design:star-outlined"></span></li>
+          <li><span class="iconify" data-icon="ant-design:star-outlined"></span></li>
+        </ul>
+        <span class="prise">25000 <small>$</small></span>
+
+
+      </div>
+
+      <div class="description">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium qui autem, eligendi laboriosam
+          reprehenderit accusamus, aliquam repellat debitis minima vitae amet commodi nostrum iusto dolores modi facere.
+          Dolores, suscipit. Reiciendis!</p>
+      </div>
+
+      <div class="category">
+        <a href="#">Категорія</a>
+
+      </div>
+
+    </div>
+
+    <!-- <button class="add-to-card">ADD TO CARD</button> -->
+
+    <a href="#" class="add-to-card">ADD TO CARD</a>
   </div>
-</main>
+
+  <div class="pagination-footer">
+    <nav class="pagination">
+
+      <a href="#" class="page-link-previous">
+        ❮ </a>
+
+      <ul class="page-list">
+        <li><a href="#" class="page-link">1</a></li>
+        <li><a href="#" class="page-link">2</a></li>
+        <li><a href="#" class="page-link">3</a></li>
+        <li><a href="#" class="page-link">4</a></li>
+        <li><a href="#" class="page-link">5</a></li>
+        <li><a href="#" class="page-link">6</a></li>
+      </ul>
+
+      <a href="#" class="page-link-next">
+        ❯ </a>
+
+    </nav>
+  </div>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js">
+  </script>
 </body>
+
 </html>
