@@ -1,0 +1,64 @@
+.card {
+  width: 317px;
+  border: 1px solid rgba(0, 0, 0, 0.133);
+  border-radius: 5px;
+}
+
+.photo-laptop {
+  width: 293px;
+  height: 200px;
+  margin: 12px 12px 22px 12px;
+}
+
+.rating-price {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24px;
+  margin-right: 24px;
+  font-family: Montserrat,sans-serif;
+  align-items: center;
+}
+
+.rating {
+  width: 70px;
+  height: 27px;
+  background-color: #7E72F2!important;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 13px;
+  border-radius: 3px;
+}
+.price-laptop {
+  margin-right: 3.45px;
+  color: #2C2C2C;
+}
+.title-laptop {
+  height: 28.6px;
+  margin-top: 18.92px;
+  margin-left: 25.35px;
+  margin-bottom: 13.06px;
+  font-family: Montserrat,sans-serif;
+  font-weight: 400;
+  color: #2C2C2C;
+  }
+
+.category-laptop {
+ margin-left: 24.99px;
+ font-family: Montserrat,sans-serif;
+ font-weight: 400;
+ font-size: .75rem;
+ color: #2C2C2C;
+}
+.add-laptop {
+  width: 317px;
+  height: 40px;
+  background-color: #7E72F2;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-family: Montserrat,sans-serif;
+  font-size: 14px;
+  border: none;
+}
