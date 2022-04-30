@@ -1,0 +1,70 @@
+:root {
+  --main-text-color: #2c2c2c;
+  --main-color: #7e72f2;
+  --bg-gray: #ededed;
+  --white: #ffffff;
+}
+.wrapper {
+  margin: 100px auto;
+  width: 790px;
+  display: flex;
+  justify-content: center;
+}
+.paginator-container {
+  width: 578px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.paginator-item {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-gray);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+.paginator-item > a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+.paginator-pages {
+  display: flex;
+}
+.paginator-item:hover {
+  background-color: var(--main-color);
+}
+
+.bi.bi-chevron-left {
+  transition: all 0.2s;
+}
+.bi.bi-chevron-right {
+  transition: all 0.2s;
+}
+.paginator-item:hover a {
+  color: var(--white);
+}
+.paginator-item:hover .bi.bi-chevron-left {
+  color: var(--white);
+}
+.paginator-item:hover .bi.bi-chevron-right {
+  color: var(--white);
+}
+.paginator-item.active {
+  background-color: var(--main-color);
+}
+.paginator-item.active a {
+  color: var(--white);
+}
+
+.paginator-item:focus-within {
+  background-color: var(--main-color);
+}
+.paginator-item:focus-within a {
+  color: var(--white);
+}
