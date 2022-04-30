@@ -5,9 +5,31 @@
   <meta name="viewport" content="width=, initial-scale=1.0">
   <title>Grid with media queries</title>
   <style>
+    body {
+      height: 900px;
+    }
+    main {
+      height: 100%;
+    }
+
+
     .container {
       width: 100%;
       margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      height: 100%;
+    }
+    .left-side {
+      width: 22%;
+      height: 100%;
+      border-right: 1px solid red;
+    }
+
+    .right-side {
+      width: 78%;
+      height: 100%;
     }
 
     .row {
@@ -70,14 +92,29 @@
       width: calc(100% / 12 * 12);
     }
 
+    @media (max-width: 575px) {
+      .left-side {
+        display: none;
+      }
+      .right-side {
+        width: 100%;
+      }
+    }
+
     /* s */
     @media (min-width: 576px) {
-      .col-s-2 {
-        width: calc(100% / 12 * 2);
+      .col-s-12 {
+        width: calc(100% / 12 * 12);
       }
 
       .col-s-10 {
         width: calc(100% / 12 * 10);
+      }
+      .left-side {
+        width: 15%;
+      }
+      .right-side {
+        width: 85%;
       }
     }
 
@@ -85,6 +122,13 @@
     @media (min-width: 768px) {
       .col-m-6 {
         width: calc(100% / 12 * 6);
+      }
+      .left-side
+      {
+        width: 20%;
+      }
+      .right-side {
+        width: 80%;
       }
     }
 
@@ -97,6 +141,12 @@
       .col-l-8 {
         width: calc(100% / 12 * 8);
       }
+      .left-side {
+        width: 22%;
+      }
+      .right-side {
+        width: 78%;
+      }
     }
 
     /* xl */
@@ -108,20 +158,55 @@
       .col-xl-10 {
         width: calc(100% / 12 * 10);
       }
+      .left-side {
+        width: 22%;
+      }
+      .right-side {
+        width: 78%;
+      }
     }
   </style>
 </head>
 <body>
   <main>
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
-        </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
+      <div class="left-side">
+        <p>LEFT SIDE</p>
+      </div>
+
+      <div class="right-side">
+        <div class="ttt">RIGHT SIDE</div>
+        <div class="row">
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 1
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 2
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 3
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 4
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 5
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 6
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 7
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 8
+          </div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-4">
+          card 9
+          </div>
         </div>
       </div>
+
     </div>
   </main>
 </body>
