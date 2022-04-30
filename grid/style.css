@@ -19,7 +19,7 @@ div[class^='col-'] {
     text-align: center;
 }
 
-.left-side {
+.col-left-side {
     width: 20%;
 }
 
