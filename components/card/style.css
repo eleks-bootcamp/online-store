@@ -310,6 +310,7 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 411px;
 }
 }
 .img {
@@ -319,6 +320,7 @@ h2{
 }
 .img>a{
     display:block;
+    text-align: center;
 }
 .info_grade {
     display: flex;
