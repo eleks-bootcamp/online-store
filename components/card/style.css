@@ -1,120 +1,106 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap');
 
-.wrapper {
-  width: 539px;
-  height: 532px;
-  left: 1588px;
-  top: 91px;
-  margin: 100px auto;
-
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-
-  font-family: Montserrat, sans-serif;
-  color: #2C2C2C;
+html,
+body {
+  height: 100%;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
 }
 
-.card_container {
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #2C2C2C;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.card_container /*os-product-card*/ {
   width: 317px;
   height: 394px;
-  left: 1711px;
-  top: 150px;
-
+  overflow: hidden;
   background: #FFFFFF;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
   border-radius: 8px;
-
   display: flex;
   flex-direction: column;
 }
 
-.card_item-photo img {
-  margin-top: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
-}
-
-.card-item_row {
+.card_item-photo img /*os-product-img*/{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 16px;
+  justify-content: center;
+  height: 200px;
+  margin: 12px 12px 0;
 }
 
-.card_descriptin {
+.card_descriptin /*os-product-content*/ {
   padding: 22px 24px;
 }
 
-.card_rate {
-  width: 70px;
-  height: 27px;
-  left: 1735px;
-  top: 384px;
+.card-item_pr-rt /*os-product-price-wrapper*/ {
+  display: flex;
 
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card_rate /*os-product-rating*/ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70px;
+  padding: 6px 12px;
+  color: #fff;
   background: #7E72F2;
   border-radius: 3px;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex: 0; /*слипается звезда - фикс маржин*/
 }
 
-.rate_number {
-  font-size: 0.875rem;
-  line-height: 14px;
-  color: #FFFFFF;
+.card_rate img /*костыль для звездочки*/{
+  margin-left: 7px;
 }
 
-.card_price {
+.card_price /*os-product-price*/ {
   font-size: 1.125rem;
-  line-height: 18px;
-  color: #2C2C2C;
+  font-weight: 400
 }
 
-.card_title {
+.card_title /*os-product-title*/{
   font-size: 1rem;
-  line-height: 16px;
-  text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  margin-top: 0;
   }
 
-.card_category {
+.card_category /*os-product-description*/{
   font-size: 0.75rem;
-  line-height: 12px;
+  font-weight: normal;
   text-align: left;
+  margin: 0;
 }
 
-.card_add-buttom {
-  background: #7E72F2;
-  border-radius: 0px 0px 5px 5px;
-  width: 317px;
-  height: 40px;
-  left: 712px;
-  top: 500px;
-  cursor: pointer;
-  padding-bottom: 13px;
+.card_footer /*os-product-footer*/{
+  display: grid;
+  grid-template-columns: 1fr
+}
+
+.card_footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 0;
+  background-color: #7e72f2;
+  color: #fff;
+  border: none;
 }
 
-.card_add-buttom:hover {
+.card_footer button:hover {
   background: #6f60f1;
-}
-
-.add-buttom_title {
-  font-size: 12px;
-  line-height: 12px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  text-align: center;
-  text-transform: uppercase;
+  cursor: pointer;
 }
