@@ -7,6 +7,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
+
   }
 
   .row {
@@ -19,6 +20,7 @@
     outline: 1px solid red;
     background: lightgray;
     text-align: center;
+
   }
 
   .col-1 {
@@ -75,17 +77,27 @@
     .col-s-12 {
       width: calc(100% / 12 * 12);
     }
+    .d-none {
+      display: none;
+    }
   }
 
   /* m */
   @media (min-width: 576px) {
+    
+    .col-m-4 {
+      width: calc(100% / 12 * 4);
+    }
 
-    .col-m-6 {
-      width: calc(100% / 12 * 6);
+    .col-m-8 {
+      width: calc(100% / 12 * 8);
     }
     
     .col-m-12 {
         width: calc(100% / 12 * 12);
+    }
+    .d-block {
+      display: block;
     }
   
 
@@ -118,4 +130,4 @@
     .col-xl-9 {
       width: calc(100% / 12 * 9);
     }
-  }
+}
