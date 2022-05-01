@@ -1,0 +1,75 @@
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+
+}
+
+.card-component {
+width: 317px;
+height: 394px;
+background: #FFFFFF;
+border: 0px solid;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding-top: 12px;
+box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+border-radius: 5px 5px 5px 5px;
+}
+
+.card-component-foto {
+  width: 90%;
+  height: 200px;
+margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-component-rating {
+  width: 70px;
+  height: 27px;
+  background: #7E72F2;
+  border-radius: 5%;
+  color: #FFFFFF;
+  padding: 5px;
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+
+  }
+
+.card-component-rating-and-price {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 0 auto;
+width: 80%;
+}
+
+.card-component-about {
+  width: 80%;
+  height: 31px;
+  font-size: 12px;
+  }
+
+  .card-component-type {
+    width: 80%;
+  height: 10px;
+  font-size: 8px;
+  }
+
+  .card-component-add-to-cart {
+    width: 100%;
+    height: 40px;
+    border: 0px;
+    background: #7E72F2;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    }
