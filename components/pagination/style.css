@@ -1,0 +1,42 @@
+.pagination {
+  width: 790px;
+  height: 205px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.button {
+height: 40px;
+width: 40px;
+font-size: 10px;
+border-radius: 50%;
+border: 0px;
+background: #EDEDED;
+text-align: center;
+justify-content: center;
+transition: 0.3s;
+cursor: pointer;
+/* line-height: 40px; */
+}
+
+.button:hover, .button.active {
+  background: #7E72F2;
+  color: #EDEDED;
+}
+
+.button-bi-chevron-left {
+  margin-right: 20px;
+}
+
+.bbutton-bi-chevron-right {
+  margin-left: 20px;
+}
+
+.button-bi-chevron-left, .button-bi-chevron-right {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
