@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-content {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+     grid-template-rows: 100px 1fr;
+        grid-template-areas:
+         "aside content"     
+        ;  
+    }
+    .grid-side {
+        grid-area: aside;
+        margin-left: 10px;
+        border: 1px solid rgb(26, 24, 24);
+      
+    } 
+.content { 
+    grid-area: content;
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;   
+}
+@media (max-width:992px) {
+    .content {
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;   
+    }
+}
+@media (max-width:768px) {
+    .content {
+        grid-template-columns:  1fr;
+        grid-template-rows:  1fr 1fr 1fr 1fr 1fr;   
+    }
+}
+@media (max-width:576px) {
+    .content {
+        grid-template-columns:  1fr;
+        grid-template-rows:  1fr 1fr 1fr 1fr 1fr;   
+    }  
+}
+.col {
+    
+    height: 20px;
+    margin: 0 0 0 10px ;
+    border: 1px solid red;
+    background-color: rgb(211, 192, 192);
+}
+
+@media (max-width:576px) {
+.grid-content {
+       grid-template-areas:
+        "content"
+        "aside"          ;
+    }
+}   
+</style>
+<body>   
+    <main class="grid-content">
+        <aside class="grid-side"> Sidebar </aside>
+        <div class="content">
+            <div class="col 1">card 1</div>
+            <div class="col 2">card 3</div>
+            <div class="col 3">card 3</div>
+            <div class="col 4">card 4</div>
+            <div class="col 5">card 5</div>
+            <div class="col 6">card 6</div>
+            <div class="col 7">card 7</div>
+            <div class="col 8">card 8</div>
+            <div class="col 9">card 9</div>     
+        </div>
+    </main>   
+   
+</body>
+</html>
