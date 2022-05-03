@@ -1,0 +1,83 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 532px;
+  width: 539px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block {
+  height: 394px;
+  width: 317px;
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.image {
+  margin-top: 12px;
+  height: 200px;
+  width: 293px;
+}
+.price {
+  width: 80%;
+  display: flex;
+  margin: 0;
+}
+.raiting {
+  background: #7E72F2;
+  color: white;
+  border-radius: 3px;
+  height: 27px;
+  width: 70px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+.star {
+  position: relative;
+  height: 13px;
+  width: 14px;
+}
+.cost {
+  color: #2C2C2C;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 0;
+}
+.text {
+  height: 32px;
+  margin: 0;
+}
+p {
+  height: 26px;
+  width: 261px;
+  font-size: 13px;
+  margin: 0;
+}
+.buttons {
+  color: white;
+  background: #7E72F2;
+  border-radius: 0 0 5px 5px;
+  height: 40px;
+  width: 317px;
+  font-size: 12px;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
