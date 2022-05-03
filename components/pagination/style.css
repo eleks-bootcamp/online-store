@@ -1,0 +1,35 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: Montserrat;
+}
+
+.pagination-item {
+  width: 40px;
+height: 40px;
+background: #EDEDED;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+}
+
+.pagination-item:hover {
+  background: #ffff;
+  border: 1px solid #7E72F2;
+  color: #7E72F2;
+}
+
+.pagination-item-prev {
+  margin-right: 15px;
+}
+.pagination-item-next {
+  margin-left: 15px;
+}
+
+.pagination-item-active {
+  background: #7E72F2;
+  color: #ffff;
+}
