@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Online Store</title>
+  <link rel="stylesheet" href="style/maincard.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-conteiner">
+  <div class="headers">
+    <h1>Online Store</h1>
+    <button class="cart">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg>
+      <a href="#">CART</a>
+    </button>
+  </div>
+  <div class="wrapper">
+    <div class="container">
+      <aside>
+      
+      </aside>
+      <button class="aside-but">CLEAR ALL FILTERS</button>  
+    </div>
+    <div class="box-blocks">
+        <div class="container-1">
+            <span class="icon"><i class="fa-search"></i></span>
+            <input type="search" placeholder="Search"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+        </div>
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                1.23 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                15999
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>
+          </div> 
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note2.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                1.96 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                21500
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Acer Aspire 7 A715-41G-R9KP (NH.Q8QEU.00L) Charcoal Black
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>      
+          </div>  
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note3.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                2.42 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                22999
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Acer Aspire 7 A715-75G-51ZW (NH.Q88EU.00P) Charcoal Black
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>    
+          </div>
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note4.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                0.53 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                28999
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Acer Nitro 5 AN515-55-56WH (NH.Q7PEU.00L) Obsidian Black Суперцена!!!
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>
+          </div> 
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note5.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                3.2 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                22500
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Acer Aspire 7 A715-75G-57LR (NH.Q87EU.006) Charcoal Black
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>      
+          </div>  
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note6.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                1.57 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                33999
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Apple MacBook Air 13" M1 256GB 2020 (MGND3) Gold
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>    
+          </div>
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note7.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                1.57 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                81000
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Apple MacBook Pro 16" 512GB 2019 (MVVL2) Silver
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>
+          </div> 
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note8.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                1.89 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                70999
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Apple MacBook Pro 13" A2251 Retina 1TB 2020 (MWP82) Silver
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>      
+          </div>  
+          <div class="block">
+            <div>
+              <img class="image" src="img/Note9.png" alt="Note">
+            </div>
+            <div class="price">
+              <p class="raiting">
+                0.92 <img class="star" src="img/Star.png">
+              </p>
+              <p class="cost">
+                51999
+              </p>
+            </div>
+              <p class="text">
+                Ноутбук Apple MacBook Pro 13" M1 512GB 2020 (Z11C000Z3) Custom Space Gray
+              </p>
+              <p>laptops</p>
+            <div>
+              <button class="buttons">
+                <a href="#">ADD TO CART</a>
+              </button>
+            </div>    
+          </div>
+      <main>
+      <nav class="btn-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </svg>
+        <a href="#"><i class="bi bi-chevron-left"></i></a>
+      </nav>
+        <div class="btn pag1 active">1</div>
+        <div class="btn pag2">2</div>
+        <div class="btn pag3">3</div>
+        <div class="btn pag4">4</div>
+        <div class="btn pag5">5</div>
+        <div class="btn pag6">6</div>
+        <div class="btn pag7">7</div>
+        <div class="btn pag8">8</div>
+        <div class="btn pag9">9</div>
+        <div class="btn pag10">10</div>
+        <div class="btn pag11">11</div>
+        <div class="btn pag12">12</div>        
+      <nav class="btn-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+        <a href="#"><i class="bi bi-chevron-right"></i></a>
+      </nav>
+      </main>
+    </div>
+  </div>
+ </div>
+</body>
+</html>
