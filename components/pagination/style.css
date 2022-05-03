@@ -1,0 +1,46 @@
+a{
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+body{
+  font-family: Montserrat,sans-serif;
+}
+
+.page-list{
+  list-style: none;
+  padding-inline-start: 0px;
+  display: flex;
+}
+
+.page-link{
+  background-color: #ededed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.page-link:hover,
+.active{
+  background-color: #7e72f2;
+  color: #fff;
+}
+
+.next{
+  margin-left: 15px;
+}
+
+.previous{
+  margin-right: 15px;
+}
+
+.os-pagination{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
