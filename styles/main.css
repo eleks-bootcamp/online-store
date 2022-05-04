@@ -1,0 +1,76 @@
+.card {
+  width: 539px;
+  height: 532px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-content {
+  width: 317px;
+  height: 394px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+}
+
+.card-image {
+  /*width: 293px;*/
+  height: 200px;
+  background-image: url(/163399632.jpg);
+  background-size: contain; /*розтягує картинку на всю шир і довж*/
+  border-radius: 0px;
+  background-position: 50%; /*centre*/
+  background-repeat: no-repeat; /*не повторювати зображення*/
+  margin: 12px 12px 0; /*відступи*/
+}
+
+.card-info {
+  display: flex;
+  width: 70px;
+  height: 27px;
+  background: #7E72F2;
+  border-radius: 3px;
+  align-items: center;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.card-rating {
+  background-color: #7e72f2;
+  border-radius: 3px;
+  color: #f2ebeb;
+  flex: 1;
+  font-size: .875rem;
+  font-weight: 400;
+  max-width: 70px;
+  padding: 6px 12px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-price {
+  color: #2c2c2c;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.card-about-item {
+width: 261px;
+height: 32px;
+font-size: 1rem;
+margin-bottom: 8px;
+background-position: 50%;
+}
+
+.card-categories {
+width: 39px;
+height: 12px;
+font-size: 1rem;
+margin-bottom: 8px;
+}
