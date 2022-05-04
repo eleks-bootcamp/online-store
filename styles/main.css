@@ -61,16 +61,31 @@
 }
 
 .card-about-item {
-width: 261px;
-height: 32px;
-font-size: 1rem;
-margin-bottom: 8px;
-background-position: 50%;
+  width: 261px;
+  height: 32px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  background-position: 50%;
+  font-size: 1rem;
+  margin: auto;
 }
 
 .card-categories {
-width: 39px;
-height: 12px;
-font-size: 1rem;
-margin-bottom: 8px;
+  width: 39px;
+  height: 12px;
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
+
+.card-add-to-cart {
+  align-items: center;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  background-color: #7e72f2;
+  color: #fff;
+  text-transform: uppercase;
+}
+
