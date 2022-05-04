@@ -64,7 +64,9 @@
 
 .paginator-item:focus-within {
   background-color: var(--main-color);
+  outline: none;
 }
 .paginator-item:focus-within a {
   color: var(--white);
+  outline: none;
 }
