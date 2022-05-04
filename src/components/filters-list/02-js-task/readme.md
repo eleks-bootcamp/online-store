@@ -1,9 +1,9 @@
-# FiltersList component
+# JS | FiltersList component
 
 Необхідно реалізувати FiltersList компонент який буде відповідати за відображення фільтрів
 для списку товарів.
 
-![preview](preview.png)
+![preview](../preview.png)
 
 На вхід компонент має приймати об'єкт аргументів виду:
 
