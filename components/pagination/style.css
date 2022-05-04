@@ -1,0 +1,104 @@
+.wrapper {
+
+  width: 790px;
+  height: 205px;
+  margin: 100px auto;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.open {
+  width: 40px;
+  height: 40px;
+  background: #EDEDED;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.open :hover{
+  background: gold;
+}
+
+.closed {
+  width: 40px;
+  height: 40px;
+  background: #EDEDED;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+
+}
+
+.paginator {
+
+  display: flex;
+  flex-direction: row;
+
+
+}
+.first {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7E72F2;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+
+
+}
+.numbers {
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #EDEDED;
+ justify-content: center;
+ align-items: center;
+ display: flex;
+ box-sizing: border-box;
+
+}
+.numbers:hover{
+  background-color: #7E72F2;
+}
+
+.class{
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 92px;
+  background: #EDEDED;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+
+}
+
+.class2{
+
+  width: 40px;
+  height: 40px;
+  margin-right: 108px;
+  border-radius: 50%;
+  background: #EDEDED;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+
+}
