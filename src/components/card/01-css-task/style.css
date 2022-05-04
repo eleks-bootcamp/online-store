@@ -1,1 +1,106 @@
-/* put your styles in this file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+  background-color: rgb(244,244,244 );
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.wrapper {
+  width: 400px;
+  margin: auto;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+:root {
+  --bg-main: #ffffff;
+  --main-color: #7e72f2;
+  --active-color: #5c4eda;
+  --element-bg-color: #ededed;
+  --text-main-color: #2c2c2c;
+  --text-active-color: #ffffff;
+}
+.os-product-card {
+  /* max-height: 27rem; */
+  max-width: 100%;
+  min-height: 100%;
+  /* min-width: 400px; */
+  box-sizing: border-box;
+  background-color: var(--bg-main);
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: 1.48fr 1fr 2.5rem;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  cursor: default;
+}
+
+.os-product-img {
+  background-size: contain;
+  box-sizing: border-box;
+  margin: 0.75rem 0.75rem 0 0.75rem;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.img {
+  width: 100%;
+}
+.os-product-discription {
+  color: var(--text-main-color);
+  box-sizing: border-box;
+  margin: 0.75rem;
+  padding: 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.os-rating-price-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.os-rating {
+  width: 70px;
+  height: 27px;
+  font-size: 0.813rem;
+  color: var(--text-active-color);
+  background-color: var(--main-color);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.os-price {
+  font-size: 0.937rem;
+}
+
+.os-product-name {
+  font-size: 0.813rem;
+}
+
+.os-product-category {
+  font-size: 0.625rem;
+}
+
+.os-add-button {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 2.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-active-color);
+  box-sizing: border-box;
+  cursor: pointer;
+  margin 0;
+}
+.os-add-button:hover{
+  background-color: var(--active-color);
+  transition: all 0.5s ease 0s;
+}
