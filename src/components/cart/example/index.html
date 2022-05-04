@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart component</title>
+  <link rel="stylesheet" href="../../../styles/style.min.css">
+</head>
+<body>
+<main>
+  <div id="root"></div>
+
+  <script type="module">
+    import Cart from './index.js';
+    import { products } from '../../../fixtures/products.js';
+
+    const cart = new Cart();
+
+    for (const product of products) {
+      cart.add(product);
+    }
+
+    root.append(cart.element);
+
+    addBtn.addEventListener('pointerdown', () => {
+      cart.add(products[0]);
+    });
+  </script>
+</main>
+</body>
+</html>
