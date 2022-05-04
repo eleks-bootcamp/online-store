@@ -1,8 +1,8 @@
-# Card component
+# JS | Card component
 
 Необхідно реалізувати Card компонент, який буде відповідати за відображення карточки товару.
 
-![preview](preview.png)
+![preview](../preview.png)
 
 На вхід компонент має приймати об'єкт виду:
 

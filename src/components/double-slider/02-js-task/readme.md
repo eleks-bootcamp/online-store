@@ -1,9 +1,9 @@
-# DoubleSlider компонент
+# JS | DoubleSlider component
 
 Необхідно реалізувати DoubleSlider компонент,
 який буде відповідати за фільтрацію списку товарів.
 
-![preview](preview.png)
+![preview](../preview.png)
 
 На вхід компонент має приймати об'єкт виду:
 
