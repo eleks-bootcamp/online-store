@@ -1,0 +1,8 @@
+{
+  "files.autoSave": "onWindowChange",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "emmet.excludeLanguages": [],
+  "emmet.triggerExpansionOnTab": true,
+  "editor.tabCompletion": "on"
+}
