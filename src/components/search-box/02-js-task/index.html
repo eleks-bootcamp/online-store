@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SearchBox component</title>
+  <link rel="stylesheet" href="../../../styles/style.min.css">
+
+  <style>
+    .wrapper {
+      width: 400px;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div id="root" class="wrapper"></div>
+
+  <script type="module">
+    import Search from './solution/index.js';
+
+    const search = new Search();
+
+    root.append(search.element);
+
+    const BACKEND_URL = 'http://localhost:3000';
+    const url = new URL('products', BACKEND_URL);
+
+    search.element.addEventListener('search-filter', async event => {
+      url.searchParams.set('q', event.detail);
+
+      const response = await fetch(url);
+      const data = await response.json();
+
+      console.error('data', data);
+    });
+  </script>
+</main>
+</body>
+</html>
