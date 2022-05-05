@@ -1,0 +1,23 @@
+@import 'libs/flex-grid';
+@import 'libs/media-query-grid';
+@import 'libs/fonts';
+
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@import 'blocks/product-card';
+@import 'blocks/buttons';
+@import 'blocks/pagination';
+@import 'blocks/card-list';
+@import 'blocks/media';
