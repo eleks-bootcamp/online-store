@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: none;
+  align-items: center;
+}
+.pagination {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.page-link {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #EDEDED;
+  transition: .3s;
+  text-decoration: none;
+  justify-content: center;
+  color: #2C2C2C;
+}
+.previous {
+  margin-right: 15px;
+}
+.next {
+  margin-left: 15px;
+}
