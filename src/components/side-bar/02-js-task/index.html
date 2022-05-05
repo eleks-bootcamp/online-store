@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SideBar component</title>
+  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <style>
+    .wrapper {
+      width: 400px;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div id="root" class="wrapper"></div>
+
+  <script type="module">
+    import SideBar from './solution/index.js';
+
+    export const categoryFilterConfig = [
+      {
+        value: 'category=cell_phones',
+        title: 'Cell Phones',
+      },
+      {
+        value: 'category=computer_tablets',
+        title: 'Computers & Tablets',
+      },
+      {
+        value: 'category=cell_phones_accessories',
+        title: 'Cell Phone Accessories',
+      },
+      {
+        value: 'category=appliances',
+        title: 'Appliances',
+      },
+      {
+        value: 'category=audio',
+        title: 'Audio',
+      }
+    ];
+
+    export const brandFilterConfig = [
+      {
+        value: 'brand=insigni',
+        title: 'Insigni',
+      },
+      {
+        value: 'brand=samsung',
+        title: 'Samsung',
+      },
+      {
+        value: 'brand=apple',
+        title: 'Apple',
+      }
+    ];
+
+    const sideBar = new SideBar(categoryFilterConfig, brandFilterConfig);
+
+    root.append(sideBar.element);
+
+    sideBar.element.addEventListener('filter-selected', event => {
+      console.error('event', event.detail);
+    });
+  </script>
+</main>
+</body>
+</html>
