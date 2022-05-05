@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../styles/style.min.css">
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="module">
+    import Card from '../../card/example/index.js';
+    import CardsList from './solution/index.js';
+    import { products } from '../../../fixtures/products.js'
+
+    const cardsList = new CardsList({
+      data: products,
+      Component: Card
+    });
+
+    root.append(cardsList.element);
+
+    document.addEventListener('add-to-cart', event => {
+      console.error(event.detail);
+    });
+  </script>
+</body>
+</html>
