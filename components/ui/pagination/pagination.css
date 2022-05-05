@@ -34,9 +34,12 @@ footer {
 }
 .link-switch:active {
   background-color: #7e72f2;
+  color: #ffffff;
 }
 .link-switch:hover {
   background-color: #7e72f2;
+  color: #ffffff;
+  transition: 0.3s;
 }
 ul {
   display: flex;

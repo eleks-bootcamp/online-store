@@ -1,0 +1,13 @@
+.main-content {
+  height: 800px;
+}
+.left-sidebar {
+  height: 800px;
+  border: 1px solid red;
+}
+.col-md-6 {
+  border: 1px solid red;
+}
+.col-lg-4 {
+  border: 1px solid red;
+}
