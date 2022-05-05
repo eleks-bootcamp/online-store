@@ -1,3 +1,9 @@
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .right-margin {
     margin-left: 20px;
 }
