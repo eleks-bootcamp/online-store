@@ -1,1 +1,101 @@
-/* put your styles in this file */
+:root {
+  --var-color-bg-body: #E5E5E5;
+  --var-color-bg-wrapper: #FFFFFF;
+  --var-color-bg-btn-footer: #7E72F2;
+  --var-color-text: #2C2C2C;
+}
+
+.size {
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+}
+
+body {
+  background: var(--var-color-bg-body);
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-component {
+  width: 25%;
+  background: var(--var-color-bg-wrapper);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.os-img {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0.5rem 0 0 0;
+}
+
+.os-img > img {
+  width: 90%;
+}
+
+.os-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.os-price-star {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  background: var(--var-color-bg-btn-footer);
+  color: var(--var-color-bg-wrapper);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.os-price-price {
+  color: var(--var-color-text);
+}
+
+.os-text {
+  width: 85%;
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+}
+
+.os-text > p {
+  margin: 0;
+  color: var(--var-color-text);
+}
+
+.os-text > .os-text-two {
+  margin-top: 0.5rem;
+}
+
+.os-footer {
+  width: 100%;
+  background: var(--var-color-bg-btn-footer);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--var-color-bg-wrapper);
+  border-radius: 0 0 0.4rem 0.4rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
