@@ -1,0 +1,19 @@
+.left-side{
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+    border-radius: 8px;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .left-side {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .left-side {
+        max-width: 250px;
+        width: 100%;
+    }
+}

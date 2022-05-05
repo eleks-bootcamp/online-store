@@ -1,0 +1,76 @@
+.card-wrapper {
+    max-width: 317px;
+    width: 100%;
+    height: 414px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-img {
+    max-width: 293px;
+    padding: 12px 12px 0 12px;
+}
+
+.card-img img {
+    max-width: 293px;
+    width: 100%;
+}   
+
+.card-info {
+    padding: 22px 24px 0 24px;
+}
+
+.info-rate-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-rate {
+    max-width: 70px;
+    width: 100%;
+    height: 27px;
+    background-color: var(--purple-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 16px;
+}
+
+.card-rate span {
+    font-size: 0.9rem;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.card-decs p{
+    margin-bottom: 8px;
+}
+
+.card-category span{
+    font-size: 0.8rem;
+}
+
+.card-btn-add {
+    display: block;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple-color);
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+.card-btn-add:hover {
+    background-color: var(--purple-color-hover);
+    color: #fff;
+}
