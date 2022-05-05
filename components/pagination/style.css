@@ -57,9 +57,10 @@ background: rgba(135, 33, 134, 0.07);
   background: rgb(78, 35, 134);
   transition: 0.7s;
   color: white;
-
-
+  cursor:pointer;
 }
+
+
 .left:hover {
   background: rgb(78, 35, 134);
    transition: 0.7s;
