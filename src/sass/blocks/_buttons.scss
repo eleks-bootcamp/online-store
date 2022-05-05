@@ -14,4 +14,11 @@
   &:hover {
     background: $third-color;
   }
+  &_cart {
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 200px;
+    height: 28px;
+    border-radius: 3px;
+  }
 }

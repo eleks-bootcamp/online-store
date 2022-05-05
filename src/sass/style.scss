@@ -8,6 +8,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 
 ul {
@@ -20,4 +21,5 @@ ul {
 @import 'blocks/buttons';
 @import 'blocks/pagination';
 @import 'blocks/card-list';
+@import 'blocks/cart';
 @import 'blocks/media';
