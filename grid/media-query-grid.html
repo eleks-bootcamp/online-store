@@ -4,179 +4,336 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grid with media queries</title>
+  <link rel="stylesheet" href="med-q-grid.css">
 
-  <style>
-    .container {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-
-    .row {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    div[class^='col-'] {
-      outline: 1px solid red;
-      background: lightgray;
-      text-align: center;
-    }
-
-    .left-side {
-      height: 100vh;
-    }
-
-    .col-1 {
-      width: calc(100% / 12);
-    }
-
-    .col-2 {
-      width: calc(100% / 12 * 2);
-    }
-
-    .col-3 {
-      width: calc(100% / 12 * 3);
-    }
-
-    .col-4 {
-      width: calc(100% / 12 * 4);
-    }
-
-    .col-5 {
-      width: calc(100% / 12 * 5);
-    }
-
-    .col-6 {
-      width: calc(100% / 12 * 6);
-    }
-
-    .col-7 {
-      width: calc(100% / 12 * 7);
-    }
-
-    .col-8 {
-      width: calc(100% / 12 * 8);
-    }
-
-    .col-9 {
-      width: calc(100% / 12 * 9);
-    }
-
-    .col-10 {
-      width: calc(100% / 12 * 10);
-    }
-
-    .col-11 {
-      width: calc(100% / 12 * 11);
-    }
-
-    .col-12 {
-      width: calc(100% / 12 * 12);
-    }
-
-    /* s */
-    @media (min-width: 50px) {
-      .col-s-12 {
-        width: calc(100% / 12 * 12);
-      }
-      .left-side {
-        display: none;
-      }
-    }
-
-    /* m */
-    @media (min-width: 768px) {
-      .col-m-3 {
-        width: calc(100% / 12 * 3);
-      }
-      .col-m-9 {
-        width: calc(100% / 12 * 9);
-      }
-      .col-m-6 {
-        width: calc(100% / 12 * 6);
-      }
-      .left-side {
-        display: inherit;
-      }
-    }
-
-    /* l */
-    @media (min-width: 992px) {
-      .col-l-3 {
-        width: calc(100% / 12 * 3);
-      }
-      .col-l-9 {
-        width: calc(100% / 12 * 9);
-      }
-      .col-l-4 {
-        width: calc(100% / 12 * 4);
-      }
-    }
-
-    /* xl*/
-    @media (min-width: 1200px) {
-      .col-xl-3 {
-        width: calc(100% / 12 * 3);
-      }
-      .col-xl-9 {
-        width: calc(100% / 12 * 9);
-      }
-      .col-xl-3 {
-        width: calc(100% / 12 * 3);
-      }
-    }
-
-
-  </style>
 </head>
 <body>
   <main>
     <div class="container">
 
+      <!-- <div class="  main -->
+
       <div class="row">
 
-        <div class="col-3 col-s-12 col-m-3 col-l-3 col-xl-3 left-side">
-          Left side
+        <div class="col-4 col-s-0 col-m-4 col-l-3 col-xl-3 no-display">
+          Side bar
         </div>
 
-        <div class="col-9 col-s-12 col-m-9 col-l-9 col-xl-9">
-          Right side
+        <div class="col-8 col-s-12 col-m-8 col-l-9 col-xl-9 right-side"> Right side
 
           <div class="row">
 
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 1
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 2
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 3
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 4
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 5
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 6
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 7
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 8
-            </div>
-            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3">
-              Card 9
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 1-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                 <img src="online-store/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                 <!-- <div  style="background-image: url(online-store/components/card/img/A315-57G-336G.png);"></div>-->
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
             </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"><!-- Card 2-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 3-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 4-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 5-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 6-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 7-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 8-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-4 col-s-12 col-m-6 col-l-4 col-xl-3"> <!-- Card 9-->
+
+              <div class="card_container">
+                <div class="card_item-photo">
+                  <img src="/components/card/img/A315-57G-336G.png" alt="Acer Aspire 3 A315-57G-336G">
+                </div>
+                <div class="card_descriptin">
+                    <div class="card-item_pr-rt">
+                        <div class="card_rate">
+                              <span>1.23</span>
+                            <div>
+                              <img src="/components/card/img/Star 1.png" alt="rate-star"> <!-- потом звезду через бутстрап -->
+                            </div>
+                        </div>
+                        <div class="card_price">
+                          15999
+                        </div>
+                    </div>
+                    <h5 class="card_title">
+                      Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </h5>
+                    <p class="card_category">
+                      laptops
+                    </p>
+                </div>
+                <div class="card_footer">
+                    <button class="add-button">
+                      ADD TO CART
+                    </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>  <!--row2-->
+        </div>    <!--Right side-->
+      </div>   <!--row1-->
+    </div>    <!--container-->
   </main>
 </body>
 </html>

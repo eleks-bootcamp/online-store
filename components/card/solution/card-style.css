@@ -43,13 +43,6 @@
   font-weight: 400
 }
 
-.os-product-price-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px
-}
-
 .os-product-price {
   color: #2c2c2c;
   font-size: 1.125rem;
