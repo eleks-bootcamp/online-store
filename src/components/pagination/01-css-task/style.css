@@ -1,3 +1,80 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+.main {
 
-/* put your styles in this file */
+display: flex;
+justify-content:space-around;
+padding-top: 100px;
+height: 50px;
+width: 40%;
+margin: auto;
+
+
+
+
+}
+.left {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+border-radius: 50%;
+cursor: default;
+background: rgba(135, 33, 134, 0.07);
+}
+
+.centr {
+  width: 650px;
+  height: 50px;
+margin-left: -25px;
+margin-right: -25px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+cursor: default;
+}
+.right {
+    font-family: sans-serif;
+  text-align: center;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  cursor: default;
+border-radius: 50%;
+background: rgba(135, 33, 134, 0.07);
+}
+.q {
+  text-align: center;
+  font-size: 15px;
+  font-family:sans-serif;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+   cursor: default;
+   background: rgba(135, 33, 134, 0.07);
+
+}
+.q:hover {
+  background: rgb(78, 35, 134);
+  transition: 0.7s;
+  color: white;
+  cursor:pointer;
+}
+
+
+.left:hover {
+  background: rgb(78, 35, 134);
+   transition: 0.7s;
+   color: white;
+}
+.right:hover {
+  background: rgb(78, 35, 134);
+   transition: 0.7s;
+    color: white;
+}
+.text {margin: auto;
+padding-top: 15px
+}
+.ssylka {
+  text-decoration: none;
+  color: black;
+}
