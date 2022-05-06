@@ -39,10 +39,11 @@
   background-color: rgb(245, 240, 240);
   border-radius: 20px;
   color: black;
+  transition: 0.3s;
 
 }
 .page-link:hover,
 .page-link.active {
   background-color: rgba(126, 57, 255, 0.875);
-  color: #fff
+  color: #fff;
 }
