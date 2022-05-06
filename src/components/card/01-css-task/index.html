@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <title>Card component</title>
   <link rel="stylesheet" href="style.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
   <style>
     .wrapper {
       width: 400px;
@@ -15,7 +20,28 @@
 <body>
 <main>
   <div class="wrapper">
-    <!-- Card component -->
+    <section class="product-item">
+      <img
+        src="./images/Acer-Aspire.svg"
+        alt="Acer-Aspire"
+        class="product-img"
+      />
+      <div class="mark-price">
+        <button class="mark-btn">
+          <p class="mark">1.23</p>
+          <img src="./images/star-logo.svg" alt="star-logo" />
+        </button>
+        <p class="price">15999</p>
+      </div>
+      <div class="product-text">
+        <p class="product-name">
+          Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal
+          Black
+        </p>
+        <p class="product-category">laptops</p>
+      </div>
+      <input type="button" class="add-btn" value="ADD TO CART" />
+    </section>
   </div>
 </main>
 </body>

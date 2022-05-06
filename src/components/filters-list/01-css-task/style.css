@@ -1,1 +1,31 @@
 /* put your styles in this file */
+
+.wrapper{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.filter-list{
+  padding: 0;
+}
+.filter-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+.filter-item {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.checkbox > input {
+  height: 15px;
+  width: 15px;
+}
+.checkbox > input:checked {
+  accent-color: #7e72f2;
+}
+
+.filters-line {
+  width: 100%;
+  border: 1px solid #d6d6d6;
+}
