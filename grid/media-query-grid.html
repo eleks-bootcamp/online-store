@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
@@ -69,6 +70,11 @@
     .col-12 {
       width: calc(100% / 12 * 12);
     }
+    @media (max-width: 575px) {
+      .leftside {
+        display: none;
+      }
+    }
 
     /* s */
     @media (min-width: 576px) {
@@ -110,6 +116,12 @@
 
       .col-s-10 {
         width: calc(100% / 12 * 10);
+      }
+      .col-s-11 {
+        width: calc(100% / 12 * 11);
+      }
+      .col-s-12 {
+        width: calc(100% / 12 * 12);
       }
     }
 
@@ -154,6 +166,12 @@
       .col-m-10 {
         width: calc(100% / 12 * 10);
       }
+      .col-m-11 {
+        width: calc(100% / 12 * 11);
+      }
+      .col-m-12 {
+        width: calc(100% / 12 * 12);
+      }
     }
 
     /* l */
@@ -196,6 +214,12 @@
 
       .col-l-10 {
         width: calc(100% / 12 * 10);
+      }
+      .col-l-11 {
+        width: calc(100% / 12 * 11);
+      }
+      .col-l-12 {
+        width: calc(100% / 12 * 12);
       }
     }
 
@@ -240,18 +264,38 @@
       .col-xl-10 {
         width: calc(100% / 12 * 10);
       }
+      .col-xl-11 {
+        width: calc(100% / 12 * 11);
+      }
+      .col-xl-12 {
+        width: calc(100% / 12 * 12);
+      }
+    }
+    .main-row {
+      height: 1000px;
     }
   </style>
 </head>
+
 <body>
   <main>
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
+      <div class="row main-row">
+        <div class="col-s-4 col-m-4 col-l-4 col-xl-3 leftside">
+          Leftside
         </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
+        <div class="col-12 col-s-8 col-m-8 col-l-8 col-xl-9">
+          Rightside
+          <div class="row">
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_1</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_2</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_3</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_4</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_5</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_6</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_7</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_8</div>
+            <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">Card_9</div>
         </div>
       </div>
     </div>
