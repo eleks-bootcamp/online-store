@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pagination component</title>
+  <link rel="stylesheet" href="../../../styles/style.min.css">
+
+  <style>
+    .wrapper {
+      width: 800px;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div id="root" class="wrapper"></div>
+
+  <script type="module">
+    import Pagination from './index.js';
+
+    const pagination = new Pagination({
+      totalPages: 10,
+      currentPage: 2
+    });
+
+    root.append(pagination.element);
+
+    pagination.element.addEventListener('page-changed', event => {
+      console.error('event', event);
+    });
+
+    window.pagination = pagination;
+  </script>
+</main>
+</body>
+</html>
