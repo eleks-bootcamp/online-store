@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FiltersList component</title>
+  <link rel="stylesheet" href="../../../styles/style.min.css">
+
+  <style>
+    .wrapper {
+      width: 400px;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div id="root" class="wrapper"></div>
+
+  <script type="module">
+    import FiltersList from './solution/index.js';
+
+    const list = [
+      {
+        value: 'cell_phones',
+        title: 'Cell phones',
+      },
+      {
+        value: 'computers',
+        checked: true,
+        title: 'Computers & Tables',
+      }
+    ];
+
+    const filtersList = new FiltersList({
+      title: 'Category',
+      list
+    });
+
+    root.append(filtersList.element);
+
+    reset.addEventListener('pointerdown', () => {
+      filtersList.reset();
+    });
+
+    filtersList.element.addEventListener('change', event => {
+      console.error('event', event.target.value);
+    });
+  </script>
+</main>
+</body>
+</html>
