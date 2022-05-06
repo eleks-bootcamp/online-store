@@ -16,8 +16,8 @@
 }
 
 .pagination ul li a,
-.btn-prev,
-.btn-next {
+.btn-prev a,
+.btn-next a{
   width: 40px;
   height: 40px;
   display: flex;
@@ -30,8 +30,8 @@
 }
 
 .pagination ul li a:hover,
-.btn-prev:hover,
-.btn-next:hover {
+.btn-prev a:hover,
+.btn-next a:hover {
   background-color: #7e72f2;
   color: #fff;
 }

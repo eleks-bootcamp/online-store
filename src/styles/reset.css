@@ -1,3 +1,9 @@
+body, html{
+  font-size: 18px;
+}
+p, h5{
+  margin: 0px;
+}
 ul,
 li {
   margin: 0;
