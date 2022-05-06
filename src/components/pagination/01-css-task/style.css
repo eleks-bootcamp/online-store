@@ -1,3 +1,51 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-/* put your styles in this file */
+a {
+  all: unset;
+}
+
+:root {
+  --purple-100: #7E72F2;
+  --grey-100: #EDEDED;
+  --black: #2C2C2C;
+  --wite: #FFFFFF;
+}
+
+.pagination {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.pages-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0 15px;
+}
+
+.pages {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--grey-100);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bi {
+  font-size: 15px;
+}
+
+.pages:hover,
+.pages.active {
+  background-color: var(--purple-100);
+  color: var(--wite);
+}
+
+
+
+
