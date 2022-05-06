@@ -1,1 +1,47 @@
-/* put your styles in this file */
+.slider {
+    background: #c8c2f3;
+    box-shadow: 0 0 1px #7e72f2;
+    display: inline-block;
+    height: 4px;
+    margin: 10px 14px;
+    position: relative;
+    user-select: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.progress {
+    background: #7e72f2;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.left-slider {
+    background: url(http://online-store.bootcamp.place/range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+    background-size: cover;
+    cursor: grab;
+    height: 18px;
+    margin-top: -9px;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    margin-left: -6px;
+}
+
+.right-slider {
+    background: url(http://online-store.bootcamp.place/range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+    background-size: cover;
+    cursor: grab;
+    height: 18px;
+    margin-top: -9px;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    right: 0%;
+    margin-right: -6px;
+    transform: rotate(180deg);
+}
