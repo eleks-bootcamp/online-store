@@ -1,3 +1,61 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
-
 /* put your styles in this file */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul > li {
+  list-style: none;
+}
+
+/* Pagination */
+
+.pagination {
+  margin: 100px auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.pagination a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ededed;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.pagination a > img {
+  margin-top: 2px;
+}
+
+.pagination a:hover {
+  background-color: #6f64f8;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.pagination a.active {
+  color: #fff;
+  background-color: #6f64f8;
+}
+
+.pagination__options {
+  display: inline-flex;
+  margin: 0 10px;
+  border-radius: 25px;
+}
