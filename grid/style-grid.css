@@ -1,0 +1,110 @@
+/* temp style */
+.card {
+  box-sizing: border-box;
+  background-color: aqua;
+  width: 100%;
+  border: 1px solid rebeccapurple;
+}
+
+footer {
+  background-color: cadetblue;
+  border: 1px solid brown;
+  min-height: 100px;
+}
+
+.right-col,
+.left-col {
+  box-sizing: border-box;
+  border: 1px solid brown;
+}
+
+/* end temp style */
+
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+  margin: 0 auto;
+  min-width: 450px;}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+
+  .col-sm-none {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+  .col-md-none {
+    display: none;
+  }
+
+  .col-md-6 {
+    width: calc(100%/2);
+  }
+
+  .col-md-12 {
+    width: 100%
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+  .col-lg-3 {
+    width: calc(100%/12*3);
+  }
+
+  .col-lg-6 {
+    width: calc(100%/12*6);
+  }
+
+  .col-lg-9 {
+    width: calc(100%/12*9);
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+  .col-xl-3 {
+    width: calc(100%/12*3);
+  }
+
+  .col-xl-4 {
+    width: calc(100%/12*4);
+  }
+
+  .col-xl-9 {
+    width: calc(100%/12*9);
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .col-xl-3 {
+    width: calc(100%/12*3);
+  }
+
+  .col-xl-4 {
+    width: calc(100%/12*4);
+  }
+
+  .col-xl-9 {
+    width: calc(100%/12*9);
+  }
+}
