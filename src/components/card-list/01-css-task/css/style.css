@@ -1,0 +1,24 @@
+@import '../../../../../grid/media-query-grid/css/grid.css';
+@import '../../../../../grid/media-query-grid/css/media-grid.css';
+@import '../../../card/01-css-task/css/style.css';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-list-wrapper {
+  margin: 0 auto;
+}
+
+.product {
+  margin: 20px auto 0 auto;
+}
+
+@media (min-width: 992px) {
+  .card-list-wrapper {
+    width: 990px;
+  }
+}
+
+

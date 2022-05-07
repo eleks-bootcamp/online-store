@@ -1,0 +1,27 @@
+@import 'grid.css';
+@import 'media-grid.css';
+
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+.right-side {
+  padding-bottom: 500px;
+  border-left: 1px solid red;
+}
+
+.card {
+  border: 1px solid red;
+}
+
+@media (max-width: 576px) {
+  .left-side {
+    display: none;
+  }
+}
+
+
+
+
+
