@@ -9,4 +9,4 @@ NOTE: потрібно задіяти усі класи `s, m, l, xl`.
 
 ![](./grid.gif)
 
-test
+test +
