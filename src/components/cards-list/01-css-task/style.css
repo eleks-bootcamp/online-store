@@ -1,1 +1,8 @@
-/* put your styles in this file */
+.wrapper{
+    width:61.875rem;
+    margin: 0 auto;
+}
+.card-list{
+    width:100%;
+    margin-top: 20px;
+}

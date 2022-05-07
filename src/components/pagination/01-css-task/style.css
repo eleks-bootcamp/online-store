@@ -5,16 +5,13 @@
   --purpure-100:#7E72F2;
   --grey-500:#2C2C2C;
   --wight:#ffffff;
-  --black:#000000;
 }
 a {
   all: unset;
 }
 .wrapper {
   margin: 100px auto;
-  padding:82px 0;
   width:790px;
-  border:1px solid var(--black);
 }
 .font-montserrat-400{
   font-family: 'Montserrat', sans-serif;
@@ -31,7 +28,7 @@ a {
   align-items: center;
 }
 .card-pagination {
-  justify-content: space-between;
+  justify-content: center;
 }
 .pagination-block{
   justify-content: center;
@@ -62,4 +59,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.panigation-arrow-right{
+  margin-left: 15px;
+}
+.panigation-arrow-left{
+  margin-right: 15px;
 }

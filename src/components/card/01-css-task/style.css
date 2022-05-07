@@ -16,7 +16,6 @@
   font-size: 0.9375rem;
 }
 .prodact-card{
-  width:317px;
   height: 394px;
   border-radius: 8px;
   box-shadow: 0px 2px 8px var(--transparent-100);
@@ -31,7 +30,15 @@
   font-weight: 400;
 }
 .prodact-image{
-  margin:0.75rem;
+  margin: 12px 12px 0;
+  background-image: url(https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
 }
 .prodact-content{
   margin:0 1.6rem;
