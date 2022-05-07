@@ -1,0 +1,41 @@
+.filter {
+  margin-top: 10px;
+  display: flex;
+  span {
+    margin-left: 12px;
+  }
+}
+
+input[type="checkbox"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 17px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:after {
+  content: '\e902';
+  font-family: 'icomoon';
+  color: #fff;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  border: none;
+  background-color: $main-color;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}

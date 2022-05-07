@@ -49,7 +49,7 @@ input[type="range"]::-ms-track {
       background: url('../icons/thumb.svg') no-repeat;
       cursor: grab;
       pointer-events: auto;
-      margin-top: -8px;
+      margin-top: -9px;
     }
     &::-moz-range-thumb {
       -moz-appearance: none;
@@ -59,7 +59,7 @@ input[type="range"]::-ms-track {
       cursor: grab;
       border: none;
       pointer-events: auto;
-      margin-top: -8px;
+      margin-top: -9px;
     }
     &::-ms-thumb {
       appearance: none;
@@ -69,7 +69,7 @@ input[type="range"]::-ms-track {
       cursor: grab;
       border: none;
       pointer-events: auto;
-      margin-top: -8px;
+      margin-top: -9px;
     }
     &_right {
       &::-webkit-slider-thumb {

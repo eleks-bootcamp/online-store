@@ -573,7 +573,7 @@ input[type="range"]::-ms-track {
   background: url("../icons/thumb.svg") no-repeat;
   cursor: grab;
   pointer-events: auto;
-  margin-top: -8px;
+  margin-top: -9px;
 }
 
 .slider__thumb::-moz-range-thumb {
@@ -584,7 +584,7 @@ input[type="range"]::-ms-track {
   cursor: grab;
   border: none;
   pointer-events: auto;
-  margin-top: -8px;
+  margin-top: -9px;
 }
 
 .slider__thumb::-ms-thumb {
@@ -595,7 +595,7 @@ input[type="range"]::-ms-track {
   cursor: grab;
   border: none;
   pointer-events: auto;
-  margin-top: -8px;
+  margin-top: -9px;
 }
 
 .slider__thumb_right::-webkit-slider-thumb {
@@ -624,6 +624,49 @@ input[type="range"]::-ms-track {
   border-radius: 5px;
   text-align: center;
   font-size: 13px;
+}
+
+.filter {
+  margin-top: 10px;
+  display: flex;
+}
+
+.filter span {
+  margin-left: 12px;
+}
+
+input[type="checkbox"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 17px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:after {
+  content: '\e902';
+  font-family: 'icomoon';
+  color: #fff;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  border: none;
+  background-color: #7E72F2;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
 }
 
 @media (min-width: 576px) {
