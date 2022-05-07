@@ -1,3 +1,16 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+.search_box {
+  margin: 20px auto;
+  /* padding: 10px 15px; */
+  height: 45px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
 
-/* put your styles in this file */
+#search-input {
+  margin: 0 15px;
+  width: 87%;
+  border: none;
+}
