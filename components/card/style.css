@@ -11,9 +11,12 @@ body {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
   border-radius: 8px;
   margin: 0 auto;
+  box-sizing: border-box;
+
 }
 .card__content {
   padding: 12px 22px 0 22px;
+  box-sizing: border-box;
 }
 .item__name {
   display: block;
