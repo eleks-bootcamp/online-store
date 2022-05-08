@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import 'libs/fonts';
+
 @import 'libs/flex-grid';
 @import 'libs/media-query-grid';
-@import 'libs/fonts';
 
 @import 'base/variables';
 @import 'base/mixins';
 
 * {
-  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
   margin: 0;
 }
 
@@ -17,6 +19,10 @@ ul {
   list-style: none;
 }
 
+body {
+  background-color: #f9f9f9;
+}
+
 @import 'blocks/product-card';
 @import 'blocks/buttons';
 @import 'blocks/pagination';
@@ -24,4 +30,5 @@ ul {
 @import 'blocks/cart';
 @import 'blocks/double-slider';
 @import 'blocks/filters-list';
+@import 'blocks/search-box';
 @import 'blocks/media';

@@ -73,15 +73,15 @@ input[type="range"]::-ms-track {
     }
     &_right {
       &::-webkit-slider-thumb {
-        margin-left: 5px;
+        margin-left: 6px;
         transform: rotate(180deg);
       }
       &::-moz-range-thumb {
-        margin-left: 5px; // not work
+        margin-left: 6px; // not work
         transform: rotate(180deg);
       }
       &::-ms-thumb {
-        margin-left: 5px;
+        margin-left: 6px;
         transform: rotate(180deg);
       }
     }
