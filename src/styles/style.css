@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?243j1o");
@@ -24,6 +24,8 @@
 
 .icon-cart:before {
   content: "\e900";
+  font-size: 18px;
+  margin-right: 5px;
   color: #fff;
 }
 
@@ -284,6 +286,19 @@ body {
   background-color: #f9f9f9;
 }
 
+header {
+  padding: 24px 0 23px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+  color: #7E72F2;
+}
+
 .product-card {
   padding-top: 12px;
   width: 317px;
@@ -340,8 +355,8 @@ body {
 
 .button {
   margin-top: 22px;
-  width: 317px;
-  height: 40px;
+  width: 100%;
+  padding: 14px 0 14px 0;
   font-size: 12px;
   text-align: center;
   text-transform: uppercase;
@@ -359,10 +374,22 @@ body {
 
 .button_cart {
   display: block;
+  width: auto;
   margin: 10px auto 0 auto;
-  width: 200px;
-  height: 28px;
+  padding: 7px 77px 8px 77px;
   border-radius: 3px;
+}
+
+.button_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: auto;
+  padding: 10px 34px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .pagination {

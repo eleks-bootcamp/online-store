@@ -1,7 +1,7 @@
 .button {
   margin-top: 22px;
-  width: 317px;
-  height: 40px;
+  width: 100%;
+  padding: 14px 0 14px 0;
   font-size: 12px;
   text-align: center;
   text-transform: uppercase;
@@ -16,9 +16,20 @@
   }
   &_cart {
     display: block;
+    width: auto;
     margin: 10px auto 0 auto;
-    width: 200px;
-    height: 28px;
+    padding: 7px 77px 8px 77px;
     border-radius: 3px;
+  }
+  &_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: auto;
+    padding: 10px 34px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 300;
   }
 }
