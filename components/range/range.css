@@ -1,0 +1,40 @@
+.range-price {
+  width: 212px;
+  height: 4px;
+}
+
+.range {
+  width: 212px;
+  height: 4px;
+  background: #7E72F2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-btn img {
+  width: 6px;
+  height: 18px;
+}
+
+.right-btn img {
+  width: 6px;
+  height: 18px;
+  transform: rotate(180deg);
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.min-price {
+  margin-top: 12px;
+
+}
+
+.max-price {
+  margin-top: 12px;
+
+}
