@@ -1,1 +1,94 @@
 /* put your styles in this file */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 14px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.shadow {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.form-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin-top: 0px;
+}
+
+.range-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list {
+  border-bottom: 1px solid #d6d6d6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.filter-items-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.form-range {
+  padding-top: 18px;
+}
+.range-slider-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.left-range {
+  position: relative;
+  right: 218px;
+  top: 4px;
+}
+.right-range {
+  position: relative;
+  right: 6px;
+  top: 5px;
+}
+.middle-range {
+  width: 100%;
+  position: relative;
+}
+.range-slide > .price-span:first-child {
+  font-size: 0.8rem;
+  position: relative;
+  top: 17px;
+  left: 21px;
+}
+.range-slide > .price-span:last-child {
+  font-size: 0.8rem;
+  position: relative;
+  top: 17px;
+  right: 24px;
+}
+.range-slide > .rating-span:first-child {
+  font-size: 0.8rem;
+
+  position: relative;
+  top: 11px;
+}
+.range-slide > .rating-span:last-child {
+  font-size: 0.8rem;
+  position: relative;
+  top: 11px;
+  right: 13px;
+}

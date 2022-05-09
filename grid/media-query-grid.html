@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <title>Grid with media queries</title>
-  <style>
-    .container {
-      width: 100%;
-      margin-bottom: 30px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Grid with media queries</title>
+    <style>
+      .container {
+        width: 100%;
+        margin-bottom: 30px;
+      }
 
-    .row {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-    }
+      .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 200px;
+      }
 
-    div[class^='col-'] {
-      outline: 1px solid red;
-      background: lightgray;
-      text-align: center;
-    }
+      div[class^="col-"] {
+        outline: 1px solid red;
+        background: lightgray;
+        text-align: center;
+      }
 
-    .col-1 {
-      width: calc(100% / 12);
-    }
+      .col-1 {
+        width: calc(100% / 12);
+      }
 
+<<<<<<< HEAD
+      .col-2 {
+        width: calc(100% / 12 * 2);
+      }
+
+      .col-3 {
+        width: calc(100% / 12 * 3);
+=======
     .col-2 {
       width: calc(100% / 12 * 2);
     }
@@ -110,9 +119,36 @@
 
       .col-s-10 {
         width: calc(100% / 12 * 10);
+>>>>>>> 90570a75df782cf18caad6d0d8db20d594bf615d
       }
-    }
 
+<<<<<<< HEAD
+      .col-4 {
+        width: calc(100% / 12 * 4);
+      }
+
+      .col-5 {
+        width: calc(100% / 12 * 5);
+      }
+
+      .col-6 {
+        width: calc(100% / 12 * 6);
+      }
+
+      .col-7 {
+        width: calc(100% / 12 * 7);
+      }
+
+      .col-8 {
+        width: calc(100% / 12 * 8);
+      }
+
+      .col-9 {
+        width: calc(100% / 12 * 9);
+      }
+
+      .col-10 {
+=======
     /* m */
     @media (min-width: 768px) {
       .col-m-1 {
@@ -238,23 +274,82 @@
       }
 
       .col-xl-10 {
+>>>>>>> 90570a75df782cf18caad6d0d8db20d594bf615d
         width: calc(100% / 12 * 10);
       }
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
-        </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
-        </div>
+
+      .col-11 {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-12 {
+        width: calc(100% / 12 * 12);
+      }
+
+      /* s */
+      @media (min-width: 576px) {
+        .col-s-2 {
+          width: calc(100% / 12 * 2);
+        }
+
+        .col-s-10 {
+          width: calc(100% / 12 * 10);
+        }
+      }
+
+      /* m */
+      @media (min-width: 768px) {
+        .col-m-6 {
+          width: calc(100% / 12 * 6);
+        }
+      }
+
+      /* l */
+      @media (min-width: 992px) {
+        .col-l-4 {
+          width: calc(100% / 12 * 4);
+        }
+
+        .col-l-8 {
+          width: calc(100% / 12 * 8);
+        }
+      }
+
+      /* xl */
+      @media (min-width: 1200px) {
+        .col-xl-2 {
+          width: calc(100% / 12 * 2);
+        }
+
+        .col-xl-10 {
+          width: calc(100% / 12 * 10);
+        }
+      }
+      .left-side {
+        border-right: 1px solid red;
+        display: flex;
+        justify-content: start;
+      }
+      @media (max-width: 992px) {
+        .left-side {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="left-side col-l-4">left side</div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-2">col #1</div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-2">col #1</div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-2">col #1</div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-2">col #1</div>
+          <div class="col-12 col-s-12 col-m-6 col-l-4 col-xl-2">col #1</div>
+          <div class="col-12 col-s-12 col-m-6 col-l-8 col-xl-2">col #2</div>
+
       </div>
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>

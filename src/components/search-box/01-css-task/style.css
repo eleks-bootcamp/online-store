@@ -1,3 +1,29 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 /* put your styles in this file */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  margin: 100px auto;
+}
+.search-box {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  width: 990px;
+  height: 43px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-input {
+  border: none;
+  width: 100%;
+}
