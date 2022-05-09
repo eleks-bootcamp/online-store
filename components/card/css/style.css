@@ -1,105 +1,68 @@
-.cart {
-  height: 539px;
-  width: 532px;
-  border: 1px solid seagreen;
-}
 
-.block {
+
+.wrapper {
+    width: 400px;
+    height: 520px;
+    margin: 100px auto;
+    background-color: aquamarine;
+    display: flex;
+
+}
+.product {
+  height: 394px;
   width: 317px;
-  margin-top: 59px;
-  margin-left: 123px;
-  box-shadow:0px 0px 7px 2px rgba(0,0,0,0.2);
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: auto;
 }
 
-img {
-  height: 200px;
-  width: 293px;
-  margin-top: 12px;
-  margin-left: 12px;
-  box-shadow:0px 0px 7px 1px rgba(0,0,0,0.2);
+.product-image {
+    margin: 20px 10px;
+    height: 200px;
 }
 
-.btn1-block {
-  display: inline-block;
-  justify-content: space-between;
-  align-items: baseline;
+.rating-price {
+    display: flex;
+    justify-content:space-between;
+    margin: 10px 30px  20px 30px;
 }
 
-.btn1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #7E72F2;
-  font-family: 'Montserrat';
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
-  border-radius: 10%;
-  color: #FFFFFF;
-  height: 27px;
-  width: 70px;
+.rating {
 
 }
+
+.btn-f {
+    width: 70px;
+    height: 27px;
+    background-color: #7E72F2;
+    color: #FFFFFF;
+    border-radius: 3px;
+    border: none;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .price {
-  font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 15px;
+    font-weight: 400;
 }
 
-
-.item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 29px;
-  margin-right: 25px;
-  margin-left: 25px;
+.card-list {
+    margin: 0 0px 8px 30px ;
+    font-size: 14px;
 }
 
-p {
-  padding-left: 35px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  color: #2C2C2C;
-
+.card-line {
+    margin-left: 28px;
 }
 
-h5 {
-  margin-left: 35px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 12px;
-  color: #2C2C2C;
-}
-
-.btn {
-  height: 40px;
-  width: 317px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  text-transform: uppercase;
-  background-color: #7E72F2;
-  color: #FFFFFF;
-
-}
-.btn:hover  {
-  background: greenyellow;
-}
-
-.star {
-  margin: 0;
-  height: 13px;
-  width: 14px;
-}
-.star:hover {
-  background: red;
+.btn-cad  {
+    width: 100%;
+    height: 40px;
+    background-color: #7E72F2;
+    color:  #FFFFFF;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
 }
