@@ -11,7 +11,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   --gray: #606060;
 }
 
-.search-component {
+.search-box {
   position: relative;
   width: 990px;
 }
