@@ -299,6 +299,12 @@ header {
   color: #7E72F2;
 }
 
+.title {
+  margin-bottom: 17px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .product-card {
   padding-top: 12px;
   width: 317px;
@@ -390,6 +396,10 @@ header {
   border-radius: 3px;
   font-size: 14px;
   font-weight: 300;
+}
+
+.button_filters {
+  border-radius: 7px;
 }
 
 .pagination {
@@ -583,10 +593,10 @@ input[type="range"]::-ms-track {
 }
 
 .slider {
-  margin: 0 auto;
+  margin: 23px auto 0 auto;
   position: relative;
   width: 237px;
-  height: 100px;
+  height: 18px;
 }
 
 .slider__track {
@@ -649,7 +659,7 @@ input[type="range"]::-ms-track {
 
 .slider__values {
   position: absolute;
-  bottom: 15px;
+  bottom: -23px;
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -728,6 +738,35 @@ input[type="checkbox"]:checked:after {
   right: 35px;
   font-family: 'icomoon';
   font-size: 20px;
+}
+
+.side-bar {
+  margin: 0 auto;
+  width: 280px;
+}
+
+.side-bar__wrapper {
+  min-height: 904px;
+  padding: 24px 20px 10px 20px;
+  border-radius: 7px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  background: #FFFFFF;
+}
+
+.side-bar__category {
+  margin-top: 48px;
+  padding-bottom: 31px;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.side-bar__brand {
+  margin-top: 24px;
+  padding-bottom: 31px;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.side-bar__rating {
+  margin-top: 24px;
 }
 
 @media (min-width: 576px) {

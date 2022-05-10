@@ -27,10 +27,10 @@ input[type="range"]::-ms-track {
 }
 
 .slider {
-  margin: 0 auto;
+  margin: 23px auto 0 auto;
   position: relative;
   width: 237px;
-  height: 100px;
+  height: 18px;
   &__track {
     position: absolute;
     margin: auto;
@@ -88,7 +88,7 @@ input[type="range"]::-ms-track {
   }
   &__values {
     position: absolute;
-    bottom: 15px;
+    bottom: -23px;
     display: flex;
     justify-content: space-between;
     margin: auto;

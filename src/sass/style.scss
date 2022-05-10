@@ -24,6 +24,7 @@ body {
 }
 
 @import 'blocks/header';
+@import 'blocks/title';
 @import 'blocks/product-card';
 @import 'blocks/buttons';
 @import 'blocks/pagination';
@@ -32,4 +33,5 @@ body {
 @import 'blocks/double-slider';
 @import 'blocks/filters-list';
 @import 'blocks/search-box';
+@import 'blocks/side-bar';
 @import 'blocks/media';
