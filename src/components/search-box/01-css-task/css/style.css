@@ -1,0 +1,35 @@
+@import '../../../../fonts.css';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  margin: 100px auto;
+  width: 990px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search {
+  width: 990px;
+  height: 45px;
+  padding: 5px 60px 5px 10px;
+  font-size: 16px;
+  border: none;
+  outline-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-box::after {
+  content: "\e904";
+  font-family: 'icomoon';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+}
