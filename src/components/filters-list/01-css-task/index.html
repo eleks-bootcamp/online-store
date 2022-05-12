@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <title>FiltersList component</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/src/styles/style.min.css">
+  <link rel="stylesheet" href="file:///C:/Users/vasia/OneDrive/%D0%A0%D0%BE%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D1%96%D0%BB/online-store/src/styles/style.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
   <style>
     .wrapper {
@@ -14,8 +17,58 @@
 </head>
 <body>
 <main>
-  <div class="wrapper">
-    <!-- FiltersList component -->
+  <div id="root" class="wrapper">
+    <form class="os-form-group divider">
+      <h3 class="os-form-title">Category</h3>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=monitors" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=monitors">Monitors</label>
+      </div>
+    </div>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=laptops" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=laptops">Laptops</label>
+      </div>
+    </div>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=video cards" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=video cards">Video cards</label>
+      </div>
+    </div>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=gaming keyboards" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=gaming keyboards">Gaming keyboards</label>
+      </div>
+    </div>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=computer mouse" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=computer mouse">Computer mouse</label>
+      </div>
+    </div>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=ssd" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=ssd">SSD</label>
+      </div>
+    </div>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=sound cards" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=sound cards">Sound cards</label>
+      </div>
+    </div>
+    <div class="os-filters-panel-item">
+      <div class="os-form-checkbox">
+        <input id="category=ram" type="checkbox" name="filter" value="category=monitors">
+        <label for="category=ram">Ram</label>
+      </div>
+    </div>
+  </form>
   </div>
 </main>
 </body>

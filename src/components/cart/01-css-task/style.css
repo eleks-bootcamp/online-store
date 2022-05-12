@@ -1,2 +1,60 @@
-/* put your styles in this file */
-/*@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";*/
+
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";*/
+
+.body{
+  display: block;
+  margin: 8px;
+}
+
+.cart-container{
+  padding: 10px;
+}
+
+.cart-list{
+  padding: 0;
+  margin: 0;
+}
+
+ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  background: #fff;
+  border-radius: 3px;
+}
+
+.item-preview{
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.item-counter, .item-name, .item-preview, .item-price {
+  padding: 0 10px;
+}
+
+.item-counter{
+  min-width: 120px;
+}
+
+.count-btn {
+  background: 0 0;
+  border: none;
+  outline: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
