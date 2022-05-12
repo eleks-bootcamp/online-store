@@ -1,0 +1,39 @@
+.filter {
+  width: 400px;
+  margin: 100px auto;
+
+}
+.filter .slider {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #7E72F2;
+}
+
+.filter .block-min {
+  position: absolute;
+  width: 6px;
+  height: 18px;
+  left: 0px;
+  top: -9px;
+  background-color: white;
+  border: 1px solid #C2CFE0;
+}
+.filter .block-max {
+  position: absolute;
+  width: 6px;
+  height: 18px;
+  left: 95%;
+  top: -9px;
+  background-color: white;
+  border: 1px solid #C2CFE0;
+}
+.filter .color-range {
+  position: absolute;
+  background-color: white;
+  height: 4px;
+}
+.price{
+  position: absolute;
+  top: 20px;
+}
