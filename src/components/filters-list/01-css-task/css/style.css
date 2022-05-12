@@ -1,0 +1,64 @@
+@import '../../../../fonts.css';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+span {
+  padding-left: 5px;
+}
+
+.wrapper {
+  width: 280px;
+  height: 150px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.form-title {
+  margin: 15px 0 10px 15px;
+}
+
+.filter {
+  margin: 8px 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.check {
+  width: 20px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.check[type='checkbox']:checked {
+  background: #7E72F2;
+  border: none;
+}
+
+.check[type='checkbox']::after {
+  content: "\e901";
+  font-family: 'icomoon';
+  font-size: 10px;
+  color: #fff;
+  display: none;
+}
+
+.check[type='checkbox']:checked::after {
+  display: block;
+}
