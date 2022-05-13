@@ -6,16 +6,120 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .wrapper {
-      width: 400px;
+    .sideBar {
+      width: 500px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       margin: 100px auto;
+      background-color: rgb(130, 214, 214);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
   </style>
 </head>
 <body>
 <main>
-  <div class="wrapper">
+  <div class="sideBar">
     <!-- SideBar component -->
+    <aside class="filters-panel">
+
+      <form class="filters-panel-inside">
+            <!-- Price -->
+          <div class="between-form">
+            <h3 class="title-filters-panel">Price</h3>
+
+            <div class="range-slider">
+
+              <span class="from-value">0 UAN</span>
+
+              <div class="range-slider_inner">
+                  <span class="range-slider_thumb-left"></span>
+                  <span class="range-slider_progress"></span>
+                  <span class="range-slider_thumb-right"></span>
+              </div>
+
+              <span class="to-value">85000 UAN</span>
+          </div>
+          </div>
+            <!-- Category -->
+          <div class="between-form">
+
+              <h3 class="title-filters-panel">Category</h3>
+
+              <div class="checkbox-boxes">
+                    <input type="checkbox" class="check">
+                    <label for="check">Cell phones</label>
+              </div>
+
+              <div class="checkbox-boxes">
+                <input type="checkbox" class="check">
+                <label>Computers & Tables</label>
+              </div>
+
+              <div class="checkbox-boxes">
+                <input type="checkbox" class="check">
+                <label>Cell Phone Accessories</label>
+              </div>
+
+              <div class="checkbox-boxes">
+                <input type="checkbox" class="check">
+                <label>Appliances</label>
+              </div>
+
+              <div class="checkbox-boxes">
+                <input type="checkbox" class="check">
+                <label>Audio</label>
+              </div>
+          </div>
+            <!-- Brand -->
+          <div class="between-form">
+
+              <h3 class="title-filters-panel">Brand</h3>
+
+              <div class="checkbox-boxes">
+                    <input type="checkbox" class="check">
+                    <label for="check">Insigni</label>
+              </div>
+
+              <div class="checkbox-boxes">
+                <input type="checkbox" class="check">
+                <label>Samsung</label>
+              </div>
+
+              <div class="checkbox-boxes">
+                <input type="checkbox" class="check">
+                <label>Apple</label>
+              </div>
+            </div>
+          <!-- Rating -->
+          <div>
+            <div class="between-form">
+                <h3 class="title-filters-panel">Rating</h3>
+
+                <div class="range-slider">
+
+                    <span class="from-value">0</span>
+
+                    <div class="range-slider_inner">
+                        <span class="range-slider_thumb-left"></span>
+                        <span class="range-slider_progress" ></span>
+                        <span class="range-slider_thumb-right"></span>
+                    </div>
+
+                    <span class="to-value">5</span>
+
+                </div>
+            </div>
+
+          </div>
+
+      </form>
+
+          <!-- button CLEAR -->
+      <button class="btn-clearFilters" type="button">CLEAR ALL FILTERS</button>
+
+    </aside>
   </div>
 </main>
 </body>

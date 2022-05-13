@@ -1,1 +1,172 @@
-/* put your styles in this file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  color: #2C2C2C;
+}
+
+.filters-panel {
+  display: block;
+  width: 280px;
+}
+
+.filters-panel-inside {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.title-filters-panel {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+
+.between-form {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+/*SLIDER================*/
+
+.range-slider {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 15px;
+}
+
+.range-slider_inner {
+  background: #c8c2f3;
+  box-shadow: 0 0 1px #7e72f2;
+  display: inline-block;
+  height: 4px;
+  margin: 10px 14px;
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+.range-slider_progress {
+  background: #7e72f2;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.range-slider_thumb-left {
+  left: 0;
+  margin-left: -6px;
+}
+
+.range-slider_thumb-right {
+  margin-right: -6px;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.range-slider_thumb-left, .range-slider_thumb-right {
+  background: url(range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+  background-size: cover;
+  cursor: grab;
+  height: 18px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  width: 6px;
+}
+
+.from-value, .to-value {
+  position: absolute;
+  top: 100%;
+}
+
+.to-value {
+  right: 0;
+}
+
+.range-slider span {
+  font-size: .8rem;
+}
+
+/*CHECKBOX===================*/
+
+.checkbox-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+input[type="checkbox"] {
+  width: 23px;
+  height: 19px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+input[type="checkbox"]:after {
+  content: "✓";
+  color: rgb(255, 254, 254);
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #7e72f2;
+  border-color: #7e72f2;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+/*BUTTON======================*/
+
+.btn-clearFilters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #7e72f2;
+  color: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  transition: .3s;
+  line-height: 1;
+  width: 100%;
+}
+
+button:hover {
+  background: #6f60f1;
+  cursor: pointer;
+}
