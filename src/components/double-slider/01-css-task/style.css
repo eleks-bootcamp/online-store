@@ -1,1 +1,67 @@
-/* put your styles in this file */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.wrapper {
+    margin: 20px auto;
+    padding: 25px;
+    width: 215px;
+}
+
+.wrapper-range {
+    margin-bottom: 10px;
+    padding: 39px 18px 5px 18px;
+    border-radius: 3px;
+}
+
+.filter-range {
+    position: relative;
+}
+
+.filter-range-scale {
+    height: 7px;
+    background-color: grey;
+}
+
+.filter-range-bar {
+    height: 7px;
+    width: 100%;
+    background-color: #7E72F2;
+}
+
+.filter-range-handle {
+    background-size: cover;
+    cursor: grab;
+    height: 18px;
+    margin-top: -9px;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+}
+
+.min {
+    background: url(../thumbLeft.png) 0 no-repeat;
+    background-color: #fff;
+}
+
+.max {
+    background: url(../thumbRight.png) 0 no-repeat;
+    background-color: #fff;
+}
+
+.filter-interval {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.to {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.from {
+    padding-left: 15px;
+}

@@ -1,3 +1,57 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-/* put your styles in this file */
+.wrapper {
+    margin: 100px auto;
+    position: relative;
+    justify-content: space-around;
+    text-align: center;
+    width: 790px;
+    height: 205px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.pagination {
+    margin-top: 80px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 10px 16px;
+    background-color: #EDEDED;
+    border-radius: 50%;
+
+    width: 12px;
+    height: 20px;
+}
+
+.pagination a.active {
+    background-color: #7E72F2;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.pagination a:hover {
+    background-color: #7E72F2;
+    border: 1px solid #7E72F2;
+    color: #fff;
+}
+
+.pagination a{
+    background-color: #EDEDED;
+    border-radius: 50%;
+}
+
+.left-arrow {
+    margin-right: 15px;
+}
+
+.right-arrow {
+    margin-left: 15px;
+}
