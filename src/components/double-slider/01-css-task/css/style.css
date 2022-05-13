@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  width: 240px;
+  height: 17px;
+  margin: 100px auto 0 auto;
+}
+
+.double-slider {
+  width: 222px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  margin-left: 11px;
+}
+
+.line {
+  width: 212px;
+  height: 4px;
+  background: #7E72F2;
+}
+
+.price-range {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 12px;
+}
