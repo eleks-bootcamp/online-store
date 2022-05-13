@@ -1,1 +1,31 @@
-/* put your styles in this file */
+.wrapper {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  margin-bottom: 20px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.title-categoty, .title-brand {
+  margin-bottom: 18px;
+}
+
+.filter-list-checkbox ul li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.filter-list-checkbox ul li input {
+  margin-right: 10px;
+}
+
+.filter-list-checkbox ul li label {
+  border-radius: 3px;
+}
+.filter-brand, .filter-category
+{
+  border-bottom: 1px solid #D6D6D6;
+  padding-bottom: 20px;
+}
