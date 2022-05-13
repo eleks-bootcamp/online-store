@@ -1,3 +1,29 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-/* put your styles in this file */
+.circle-button{
+  width: 40px;
+  height: 40px;
+  background-color: #ededed;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#2c2c2c;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  transition: 0.5s;
+}
+.circle-button:hover{
+  background-color: #7e72f2;
+  color:#fff;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow{
+  margin: 0 15px;
+}
+
