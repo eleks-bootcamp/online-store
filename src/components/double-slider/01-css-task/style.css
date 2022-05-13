@@ -1,1 +1,66 @@
-/* put your styles in this file */
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body {
+font-size: 16px;
+}
+
+.range-slider {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 15px;
+}
+
+.range-slider_inner {
+  background: #c8c2f3;
+  box-shadow: 0 0 1px #7e72f2;
+  display: inline-block;
+  height: 4px;
+  margin: 10px 14px;
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+.range-slider_progress {
+  background: #7e72f2;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.range-slider_thumb-left {
+  left: 0;
+  margin-left: -6px;
+}
+
+.range-slider_thumb-right {
+  margin-right: -6px;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.range-slider_thumb-left, .range-slider_thumb-right {
+  background: url(range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+  background-size: cover;
+  cursor: grab;
+  height: 18px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  width: 6px;
+}
+
+.from-min, .to-max {
+  position: absolute;
+  top: 100%;
+}
+
+.to-max {
+  right: 0;
+}

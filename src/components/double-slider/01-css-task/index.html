@@ -7,8 +7,11 @@
 
   <style>
     .wrapper {
-      width: 400px;
+      width: 600px;
+      height: 100px;
       margin: 100px auto;
+      background-color: bisque;
+      padding: 20px;
     }
   </style>
 </head>
@@ -16,6 +19,19 @@
 <main>
   <div class="wrapper">
     <!-- DoubleSlider component -->
+    <div class="range-slider">
+
+        <span class="from-min">100</span>
+
+        <div class="range-slider_inner">
+            <span class="range-slider_thumb-left"></span>
+            <span class="range-slider_progress" ></span>
+            <span class="range-slider_thumb-right"></span>
+        </div>
+
+        <span class="to-max">200</span>
+    </div>
+
   </div>
 </main>
 </body>

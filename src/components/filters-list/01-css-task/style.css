@@ -1,1 +1,62 @@
-/* put your styles in this file */
+main {
+  font-size: 14px;
+  background-color: rgb(87, 199, 243);
+  width: 600px;
+  height: 300px;
+  position: absolute;
+}
+
+.side-filter-form {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.side-filter-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.checkbox-form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+input[type="checkbox"] {
+  width: 23px;
+  height: 19px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+input[type="checkbox"]:after {
+  content: "✓";
+  color: rgb(255, 254, 254);
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #7e72f2;
+  border-color: #7e72f2;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
