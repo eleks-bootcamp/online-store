@@ -1,1 +1,105 @@
-/* put your styles in this file */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap');
+
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #2C2C2C;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.card_container {
+  width: 317px;
+  height: 394px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_item-photo {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin: 12px 0 auto;
+}
+
+.card_descriptin {
+  padding: 22px 24px;
+}
+
+.card-item_pr-rt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card_rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70px;
+  padding: 6px 12px;
+  color: #fff;
+  background: #7E72F2;
+  border-radius: 3px;
+  box-sizing: border-box;
+  flex: 1;
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.card_price {
+  font-size: 1.125rem;
+  font-weight: 400
+}
+
+.card_title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-top: 0;
+  }
+
+.card_category {
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.card_footer {
+  display: grid;
+  grid-template-columns: 1fr
+}
+
+.card_footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 0;
+  background-color: #7e72f2;
+  color: #fff;
+  border: none;
+}
+
+.card_footer button:hover {
+  background: #6f60f1;
+  cursor: pointer;
+}
+
