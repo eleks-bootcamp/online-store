@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SideBar component</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+
+
+<body>
+<main>
+  <div class="side-bar-wrapper">
+    <div class="side-bar-box">
+      <div class="side-bar-content">
+
+        <div class="price">
+          <h3 class="side-bar-text-200">Price</h3>
+
+          <div class="side-bar-slider-top">
+            <div class="range-slider">
+              <span data-element="from">0 UAH</span>
+              <div data-element="inner" class="range-slider-inner">
+                <span data-element="progress" class="range-slider-progress"></span>
+                <span data-element="pointerLeft" class="range-slider-pointerLeft"></span>
+                <span data-element="pointerRight" class="range-slider-pointerRight"></span>
+              </div>
+              <span data-element="to">85 000 UAH</span>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="category">
+          <h3 class="side-bar-text-200">Category</h3>
+          <div class="side-bar-category">
+            <!-- <i class="bi bi-check-lg"></i> -->
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Monitors </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Laptops </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Video cards </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Gaming keabords </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Computer mouse </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> SSD </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Sound cards </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> RAM </label><br>
+          </div>
+        </div>
+
+        <div class="brand">
+          <h3 class="side-bar-text-200">Brand</h3>
+          <div class="side-bar-brand">
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Asus </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Acer </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Apple </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Dell </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Dynamode </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Gigabyte </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Kingston </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Lenovo </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> Logitech </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> MSI </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> BenQ </label><br>
+
+            <input type="checkbox" class="checkbox">
+            <label for="category-checkbox"> A4Tech </label><br>
+          </div>
+
+
+        </div>
+
+
+        <h3 class="side-bar-text-200">Rating</h3>
+
+        <div class="side-bar-slider-bottom"></div>
+
+      </div>
+
+
+    </div>
+
+    <div class="side-bar-btn">
+      <h3 class="side-bar-text-200">CLEAR ALL FILTERS</h3>
+    </div>
+  </div>
+
+
+  <div class="min-value numberVal">
+    <input type="number" min="0" max="10000"
+    value="0" disabled>
+  </div>
+
+  &nbsp;
+
+  <div class="range-sliger">
+    <div class="progress"></div>
+    <input type="range" class="range-min" min="0" max="10000" value="7500">
+    <input type="range" class="range-min" min="0" max="10000" value="7500">
+  </div>
+
+  &nbsp;
+
+  <div class="min-value numberVal">
+    <input type="number" min="0" max="10000"
+    value="85000" disabled>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,142 @@
+.side-bar-box {
+  height: 904px;
+  width: 280px;
+  box-shadow: 0px 0px 14px #cccccc;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.side-bar-content {
+  width: 240px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: absolute;
+}
+
+.side-bar-text-200 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.side-bar-slider-top {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+}
+
+.range-slider {
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.range-slider>span {
+  font-size: 14px;
+  position: absolute;
+  top: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.range-slider>span:last-child{
+  right: 0;
+}
+
+.range-slider-pointerLeft .ranger-slider-pointerRight {
+  background: url(http://online-store.bootcamp.place/range-thumb-icon.a4dd7a38.svg);
+  cursor: grab;
+  height: 17px;
+  width: 6px;
+  position: absolute;
+  top: 50%;
+  background-size: cover;
+}
+
+.range-slider-inner {
+  background: #7E72F2;
+  box-shadow: 0 0 1px #7E72F2;
+  display: inline-block;
+  height: 5px;
+  margin: 10px 14px;
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+
+
+.category {
+  border-bottom: 1px solid #979797;
+  margin-top: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+.brand {
+  border-bottom: 1px solid #979797;
+  margin-top: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+.side-bar-category {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.side-bar-brand {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.side-bar-btn {
+  height: 46px;
+  width: 280px;
+  box-shadow: 0px 0px 14px #cccccc;
+  background-color: #7E72F2;
+  border-radius: 10px;
+  margin: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  box-sizing: border-box;
+  height: 17px;
+  width: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: white;
+  outline: 1px solid #979797;
+  margin-right: 13px;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #7E72F2;
+  outline: 1px solid #7E72F2;
+  color: white;
+  text-align: center;
+  content: "✓";
+}
+
+input[type="checkbox"]:after {
+  content: "✓";
+  color: white;
+}
