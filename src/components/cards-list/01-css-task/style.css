@@ -1,1 +1,116 @@
-/* put your styles in this file */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap');
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #2C2C2C;
+}
+
+.row {
+  width: 1020px;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background-color: rgb(127, 251, 255);
+}
+
+.col-4 {
+  width: calc(100% / 12 * 4);
+}
+
+.card_container {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.card_item-photo /*os-product-img*/{
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin: 12px 0 auto;
+}
+
+.card_descriptin /*os-product-content*/ {
+  padding: 22px 24px;
+}
+
+.card-item_pr-rt /*os-product-price-wrapper*/ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card_rate /*os-product-rating*/ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70px;
+  padding: 6px 12px;
+  color: #fff;
+  background: #7E72F2;
+  border-radius: 3px;
+  box-sizing: border-box;
+  flex: 1;
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+
+.card_price /*os-product-price*/ {
+  font-size: 1.125rem;
+  font-weight: 400
+}
+
+.card_title /*os-product-title*/{
+  font-size: 1rem;
+  text-align: left;
+  font-style: normal;
+  margin-bottom: 8px;
+  margin-top: 0;
+  }
+
+.card_category /*os-product-description*/{
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.card_footer /*os-product-footer*/{
+  display: grid;
+  grid-template-columns: 1fr
+}
+
+.card_footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 0;
+  background-color: #7e72f2;
+  color: #fff;
+  border: none;
+}
+
+.card_footer button:hover {
+  background: #6f60f1;
+  cursor: pointer;
+}
