@@ -45,3 +45,17 @@
     margin-right: -6px;
     transform: rotate(180deg);
 }
+
+.from:first-child {
+    left: -15px;
+    position: absolute;
+    top: 15px;
+    font-size: 0.8rem;
+}
+
+.to:last-child {
+    right: -15px;
+    position: absolute;
+    top: 15px;
+    font-size: 0.8rem;
+}
