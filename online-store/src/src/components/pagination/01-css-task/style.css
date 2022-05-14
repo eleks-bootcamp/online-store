@@ -1,0 +1,34 @@
+.wrapper{
+  display: flex;
+  padding: 80px 90px;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #EDEDED;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.item:first-of-type {
+  margin-right: 15px;
+}
+
+.item:last-of-type {
+  margin-left: 15px;
+}
+
+.item:hover {
+  background-color: #7E72F2;
+  color: white;
+}
+
+.selected {
+  background-color: #7E72F2;
+  color: white;
+}
