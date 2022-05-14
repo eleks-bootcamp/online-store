@@ -1,0 +1,90 @@
+.online-store {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper-container {
+  padding-top: 20px;
+  width: 67.7%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+/* Card product */
+.wrapper-cards-product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-cards-product .card-product {
+  width: 24.4%;
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 9px;
+}
+.wrapper-cards-product .card-product .wrapper-main-info {
+  padding: 12px 18px 0 18px;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-image {
+  width: 100%;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-image .img {
+  max-width: 100%;
+  width: 100%;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0 18px 0;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-price .wrapper-button-rating {
+  width: 70px;
+  height: 27px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #7E72F2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-price .wrapper-button-rating p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-info-product {
+  width: 100%;
+  padding-bottom: 10px;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-info-product p {
+  font-size: 16px;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-category {
+  width: 100%;
+  padding-bottom: 22px;
+}
+.wrapper-cards-product .card-product .wrapper-main-info .wrapper-category p {
+  font-size: 12px;
+}
+.wrapper-cards-product .card-product .wrapper-button {
+  width: 100%;
+}
+.wrapper-cards-product .card-product .wrapper-button .add-btn {
+  height: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: white;
+  background: #7E72F2;
+  border: none;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  cursor: pointer;
+}
+
+/* End Card product */
+
+/*# sourceMappingURL=style.css.map */
