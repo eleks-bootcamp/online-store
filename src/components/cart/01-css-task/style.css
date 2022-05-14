@@ -1,2 +1,75 @@
 /* put your styles in this file */
 /*@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";*/
+body {margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 13px;}
+a {text-decoration: none; color: #2C2C2C}
+p {margin: 0; padding: 0;}
+#root {
+    width: 977px;
+    margin: 90px auto 0 auto;
+}
+.cart {
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+}
+.cart--card {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    width: 967px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    box-sizing: border-box;
+}
+.cart--card-image {
+    max-width: 56px;
+    margin: 15px 0 15px 25px;
+    
+}
+.cart--card--description {
+    flex-basis: 50%;
+}
+.cart--card--amount {
+    font-size: 14px;
+    flex-basis: 10%;
+}
+.cart--card--amount::before {
+    content: '-';
+    margin-right: 11px;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 14px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+.cart--card--amount::after {
+    content: '+';
+    margin-left: 11px;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 17px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+.cart--card--cost {
+    margin-right: 63px;
+}
+.cart--total-cost {
+    font-size: 14px;
+}
+.cart--order {
+    text-transform: uppercase;
+    background-color: #7E72F2;
+    display: block;
+    width: 200px;
+    margin: 11px auto 0 auto;
+    border-radius: 3px;
+    color: #fff;
+    padding: 7px 0;
+    line-height: 20px;
+}
