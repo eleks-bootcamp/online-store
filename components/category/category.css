@@ -1,0 +1,49 @@
+.category-title {
+  margin-left: 7px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.category .checkbox-list .checkbox:hover {
+  cursor: pointer;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  height: 17px;
+  width: 20px;
+  border-radius: 0;
+}
+
+.checkbox[type="checkbox"]:checked:after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 17px;
+  background: #7E72F2;
+  background-image: url("../../images/check-mark-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+label {
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+label:hover {
+  cursor: pointer;
+
+}
+
+.line {
+  margin: 31px 0 23px 0;
+  width: 240px;
+  height: 1px;
+  background: #D6D6D6;
+}
