@@ -6,7 +6,7 @@
 .wrapper {
   width: 240px;
   height: 17px;
-  margin: 100px auto 0 auto;
+  margin: 100px auto;
 }
 
 .double-slider {
@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   margin-left: 11px;
+  cursor: pointer;
 }
 
 .double-slider__line {

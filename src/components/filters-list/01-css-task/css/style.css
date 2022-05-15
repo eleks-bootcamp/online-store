@@ -5,17 +5,23 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-span {
-  padding-left: 5px;
+label {
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .wrapper {
   width: 280px;
-  height: 150px;
   margin: 100px auto;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filters-list {
+  width: 280px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .form-title {
@@ -23,14 +29,10 @@ span {
 }
 
 .filter {
-  margin: 8px 0 0 10px;
+  margin: 6px 0 0 10px;
   display: flex;
   align-items: center;
-}
-
-label {
-  cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .check {
@@ -39,6 +41,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 12px;
   appearance: none;
   outline: none;
   border: 1px solid gray;
