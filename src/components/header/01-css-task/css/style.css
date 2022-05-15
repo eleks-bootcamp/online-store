@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  width: 1288px;
+  margin: 100px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 300;
+  color: #7E72F2;
+}
+
+.button-cart {
+  width: 120px;
+  height: 36px;
+  color: #fff;
+  background: #7E72F2;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button-cart:hover {
+  background: #7467eb;
+  transition: .4s;
+}
