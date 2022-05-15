@@ -26,7 +26,7 @@
 }
 
 .search-box::after {
-  content: "\e904";
+  content: "\e905";
   font-family: 'icomoon';
   position: absolute;
   top: 50%;

@@ -52,7 +52,7 @@ label {
 }
 
 .check[type='checkbox']::after {
-  content: "\e901";
+  content: "\e902";
   font-family: 'icomoon';
   font-size: 10px;
   color: #fff;

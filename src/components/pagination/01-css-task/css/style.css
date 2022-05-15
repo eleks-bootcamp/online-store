@@ -33,6 +33,14 @@
   align-items: center;
 }
 
+.pagination__back {
+  padding-right: 4px;
+}
+
+.pagination__forward {
+  padding-left: 3px;
+}
+
 .pagination__page-link:hover {
   background: #7E72F2;
   color: #FFFFFF;

@@ -17,13 +17,13 @@
   margin-left: 11px;
 }
 
-.line {
+.double-slider__line {
   width: 212px;
   height: 4px;
   background: #7E72F2;
 }
 
-.price-range {
+.double-slider__price-range {
   width: 240px;
   display: flex;
   justify-content: space-between;
