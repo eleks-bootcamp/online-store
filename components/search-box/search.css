@@ -1,0 +1,27 @@
+.search-container {
+  display: flex;
+  position: relative;
+}
+
+.search {
+  width: 100%;
+  height: 45px;
+  border: none;
+  font-family: Montserrat, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  padding: 0 20px 0 20px;
+}
+
+.search-container img {
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+
+}
+
+.search:focus-visible {
+  outline: none;
+}
