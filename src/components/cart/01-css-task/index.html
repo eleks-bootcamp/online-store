@@ -3,12 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <title>Cart component</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <main>
   <div id="root">
     <!-- Cart component -->
+    <div class="container">
+      <div class="cart-item__list">
+      <div class="cart-item">
+        <img class="cart-item__img" src="./img/Notebook.png" alt="item img">
+        <h4 class="cart-item__title">Ноутбук Acer Aspire 3 A315-57G-336G <br> (NX.HZREU.01S) Charcoal Black</h4>
+        <div class="cart-item__quantity">
+          <button class="cart-item__btn">
+            <img src="./icons/decrement.svg" alt="decrement icon" class="cart-item__button">
+          </button>
+          <span class="cart-item__total">1</span>
+          <button class="cart-item__btn">
+            <img src="./icons/increment.svg" alt="increment icon" class="cart-item__button">
+          </button>
+        </div>
+        <span class="cart-item__summ">15999</span>
+      </div>
+      <div class="cart-item">
+        <img class="cart-item__img" src="./img/Notebook.png" alt="item img">
+        <h4 class="cart-item__title">Ноутбук Acer Aspire 7 A715-41G-R9KP <br> (NH.Q8QEU.00L) Charcoal Black</h4>
+        <div class="cart-item__quantity">
+          <button class="cart-item__btn">
+            <img src="./icons/decrement.svg" alt="decrement icon" class="cart-item__button">
+          </button>
+          <span class="cart-item__total">1</span>
+          <button class="cart-item__btn">
+            <img src="./icons/increment.svg" alt="increment icon" class="cart-item__button">
+          </button>
+        </div>
+        <span class="cart-item__summ">21500</span>
+      </div>
+      <div class="cart-item">
+        <img class="cart-item__img" src="./img/Notebook.png" alt="item img">
+        <h4 class="cart-item__title">Ноутбук Acer Aspire 7 A715-75G-51ZW <br> (NH.Q7PEU.00L) Charcoal Black</h4>
+        <div class="cart-item__quantity">
+          <button class="cart-item__btn">
+            <img src="./icons/decrement.svg" alt="decrement icon" class="cart-item__button">
+          </button>
+          <span class="cart-item__total">1</span>
+          <button class="cart-item__btn">
+            <img src="./icons/increment.svg" alt="increment icon" class="cart-item__button">
+          </button>
+        </div>
+        <span class="cart-item__summ">22999</span>
+      </div>
+      <div class="cart-item">
+        <img class="cart-item__img" src="./img/Notebook.png" alt="item img">
+        <h4 class="cart-item__title">Ноутбук Acer Nitro 5 AN515-55-56WH <br> (NH.Q7PEU.00L) Obsidian Black SuperPirce!!!</h4>
+        <div class="cart-item__quantity">
+          <button class="cart-item__btn">
+            <img src="./icons/decrement.svg" alt="decrement icon" class="cart-item__button">
+          </button>
+          <span class="cart-item__total">1</span>
+          <button class="cart-item__btn">
+            <img src="./icons/increment.svg" alt="increment icon" class="cart-item__button">
+          </button>
+        </div>
+        <span class="cart-item__summ">28999</span>
+      </div>
+      <div class="cart-item">
+        <img class="cart-item__img" src="./img/Notebook.png" alt="item img">
+        <h4 class="cart-item__title">Ноутбук Acer Aspire 7 A715-75G-57LR <br> (NH.Q87EU.006) Charcoal Black</h4>
+        <div class="cart-item__quantity">
+          <button class="cart-item__btn">
+            <img src="./icons/decrement.svg" alt="decrement icon" class="cart-item__button">
+          </button>
+          <span class="cart-item__total">1</span>
+          <button class="cart-item__btn">
+            <img src="./icons/increment.svg" alt="increment icon" class="cart-item__button">
+          </button>
+        </div>
+        <span class="cart-item__summ">22500</span>
+      </div>
+    </div>
+      <p class="cart-total">Total: 111997</p>
+      <div class="cart-action">
+        <button class="cart-btn">Order</button>
+      </div>
+    </div>
   </div>
 </main>
 </body>
