@@ -1,0 +1,10 @@
+.brands_checkbox label{
+    cursor: pointer;
+    font-weight: 300;
+    color: #2c2c2c;
+    margin-left: 10px;
+}
+
+.brands_checkbox {
+    margin-bottom: 10px;
+}
