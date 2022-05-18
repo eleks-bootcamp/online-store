@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Card component</title>
-  <link rel="stylesheet" href="style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+<head>
+	<meta charset="UTF-8" />
+	<title>Card component</title>
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+		.wrapper {
+			width: 400px;
+			margin: 100px auto;
+		}
+	</style>
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
-  </div>
-</main>
+	<main>
+		<div class="wrapper">
+			<div class="product-wrapper">
+				<div class="product-card">
+					<img class="card-image" src="../01-css-task/images/Rectangle.png" alt="Laptop Image">
+					<div class="card-wrapper">
+						<div class="card-info">
+							<div class="card-rating">
+								<span class="card-rating-value">1.23</span>
+								<div class="rating">
+									<input name="stars" id="e5" type="radio"></a><label for="e5">☆</label>
+									<input name="stars" id="e4" type="radio"></a><label for="e4">☆</label>
+									<input name="stars" id="e3" type="radio"></a><label for="e3">☆</label>
+									<input name="stars" id="e2" type="radio"></a><label for="e2">☆</label>
+									<input name="stars" id="e1" type="radio"></a><label for="e1">☆</label>
+								</div>
+							</div>
+							<div class="card-prise">28999</div>
+						</div>
+						<p class="card-model">Ноутбук Acer Nitro 5 AN515-55-56WH (NH.Q7PEU.00L) Obsidian Black
+							<br>Суперціна!!!
+						</p>
+						<div class="card-category">laptops</div>
+					</div>
+					<button class="card-button">ADD TO CART</button>
+				</div>
+			</div>
+	</main>
 </body>
+
 </html>
