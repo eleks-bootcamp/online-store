@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>SideBar component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -12,11 +16,115 @@
     }
   </style>
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- SideBar component -->
-  </div>
-</main>
+  <main>
+    <div class="wrapper">
+      <!-- SideBar component -->
+      <aside class="filters">
+        <div class="filters__card">
+          <section>
+            <h4 class="filters__title">Price</h4>
+            <div class="range-slider">
+              <span data-element="from">0 UAH</span>
+              <div class="range-slider__inner" data-element="inner">
+                <span class="range-slider__progress" data-element="progress"></span>
+                <span class="range-slider__thumb-left" data-element="thumbLeft"></span>
+                <span class="range-slider__thumb-right" data-element="thumbRight"></span>
+              </div>
+              <span data-element="to">85000 UAH</span>
+            </div>
+          </section>
+          <section>
+            <h4 class="filters__title">Category</h4>
+            <ul class="filters__list">
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="category" id="category-1">
+                <label for="category-1">
+                  <span class="inner-label">
+                    <span>Cell Phones</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="category" id="category-2">
+                <label for="category-2">
+                  <span class="inner-label">
+                    <span>Computers & Tablets</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="category" id="category-3">
+                <label for="category-3">
+                  <span class="inner-label">
+                    <span>Cell Phone Accesories</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="category" id="category-4">
+                <label for="category-4">
+                  <span class="inner-label">
+                    <span>Appliances</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="category" id="category-5">
+                <label for="category-5">
+                  <span class="inner-label">
+                    <span>Audio</span>
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </section>
+          <hr class="filters__divider">
+          <section>
+            <h4 class="filters__title">Brand</h4>
+            <ul class="filters__list">
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="brand" id="brand-1">
+                <label for="brand-1">
+                  <span class="inner-label">
+                    <span>Insigni</span>
+                  </span>
+              </li>
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="brand" id="branb-2">
+                <label for="brand-2">
+                  <span class="inner-label">
+                    <span>Samsung</span>
+                  </span>
+              </li>
+              <li>
+                <input class="custom-checkbox" type="checkbox" name="brand" id="brand-3">
+                <label for="brand-3">
+                  <span class="inner-label">
+                    <span>Apple</span>
+                  </span>
+              </li>
+            </ul>
+          </section>
+          <hr class="filters__divider">
+          <section>
+            <h4 class="filters__title">Rating</h4>
+            <div class="range-slider">
+              <span data-element="from">0</span>
+              <div class="range-slider__inner" data-element="inner">
+                <span class="range-slider__progress" data-element="progress"></span>
+                <span class="range-slider__thumb-left" data-element="thumbLeft"></span>
+                <span class="range-slider__thumb-right" data-element="thumbRight"></span>
+              </div>
+              <span data-element="to">5</span>
+            </div>
+          </section>
+        </div>
+        <button class="filters__clear-all">Clear all filters</button>
+      </aside>
+    </div>
+  </main>
 </body>
+
 </html>
