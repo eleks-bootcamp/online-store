@@ -1,9 +1,9 @@
 .card {
-  width: 539px;
-  height: 532px;
+  width: 317px;
+  height: 394px;
   margin: 0 auto;
   background: #FFFFFF;
-  border: 1px solid #000000;
+  border-radius: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,71 +21,69 @@
 .card-image {
   /*width: 293px;*/
   height: 200px;
+  width: 293px;
   background-image: url(/163399632.jpg);
   background-size: contain; /*розтягує картинку на всю шир і довж*/
   border-radius: 0px;
   background-position: 50%; /*centre*/
   background-repeat: no-repeat; /*не повторювати зображення*/
-  margin: 12px 12px 0; /*відступи*/
+  margin: 12px 12px 22px 12px; /*відступи*/
 }
 
 .card-info {
-  display: flex;
-  width: 70px;
-  height: 27px;
-  background: #7E72F2;
-  border-radius: 3px;
-  align-items: center;
-  margin-bottom: 16px;
   justify-content: space-between;
+  display: flex;
+  margin: 22px 25px 16px 22px;
+}
+
+.card-rating-number {
+  padding: 6px 36px 7px 11px ;
 }
 
 .card-rating {
+  background: url(/Star\ 1.png) right no-repeat;
+  height: 27px;
+  width: 70px;
   background-color: #7e72f2;
   border-radius: 3px;
   color: #f2ebeb;
-  flex: 1;
-  font-size: .875rem;
+  font-size: 13px;
   font-weight: 400;
-  max-width: 70px;
-  padding: 6px 12px;
   align-items: center;
-  display: flex;
-  justify-content: space-between;
+  display: inline-block;
 }
 
 .card-price {
   color: #2c2c2c;
   font-size: 1.125rem;
   font-weight: 400;
+  display: inline-block;
+  margin-left: 20px;
+
 }
 
 .card-about-item {
-  width: 261px;
+  font-family: montserat;
   height: 32px;
-  font-size: 1rem;
+  font-size: 14px;
   margin-bottom: 8px;
-  background-position: 50%;
-  font-size: 1rem;
-  margin: auto;
+  margin: 16px 32px 10px 24px;
+  text-align: left;
 }
 
 .card-categories {
   width: 39px;
   height: 12px;
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 10px;
+  margin: 0px 254px 22px 24px;
 }
 
-.card-add-to-cart {
-  align-items: center;
-  border-radius: 0;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 13px;
-  padding-top: 13px;
-  background-color: #7e72f2;
-  color: #fff;
+.card-add-to-card {
   text-transform: uppercase;
+  background-color: #7E72F2;
+  display: block;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  border-radius: bottom 50% ;
 }
-
