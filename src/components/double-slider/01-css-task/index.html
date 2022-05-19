@@ -8,6 +8,7 @@
   <style>
     .wrapper {
       width: 400px;
+      height: 100px;
       margin: 100px auto;
     }
   </style>
@@ -16,6 +17,15 @@
 <main>
   <div class="wrapper">
     <!-- DoubleSlider component -->
+    <div class="range-slider">
+      <span data-element="from">100</span>
+      <div class="range-slider__inner" data-element="inner">
+        <span class="range-slider__progress" data-element="progress" ></span>
+        <span class="range-slider__thumb-left" data-element="thumbLeft" ></span>
+        <span class="range-slider__thumb-right" data-element="thumbRight" ></span>
+      </div>
+      <span data-element="to">200</span>
+    </div>
   </div>
 </main>
 </body>
