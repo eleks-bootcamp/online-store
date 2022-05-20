@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Card component</title>
+  <title>HTML/CSS Card component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
 <body>
 <main>
-  <div class="wrapper">
+  <div class="product-card">
     <!-- Card component -->
+    <img class="product-card-img" src="./img/computer.jpg" alt="laptop">
+    <div class="wrapper-content">
+      <div class="offer">
+        <div class="product-rating">
+          <p class="product-rating-number">1.23</p>
+          <img class="product-rating-star" src="./img/Star1.svg" alt="star">
+        </div>
+        <p class="product-price">15999</p>
+      </div>
+      <p class="product-description">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</p>
+      <p class="product-categories">laptops</p>
+    </div>
+    <button class="btn" type="button">Add To Cart</button>
   </div>
 </main>
 </body>
