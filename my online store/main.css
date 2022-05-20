@@ -1,0 +1,119 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.product-card {
+    display: flex;
+    height: 394px;
+    width: 317px;
+    margin-top: 59px;
+    flex-direction: column;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+    border-radius: 8px;
+}
+
+.product-photo img {
+    height: 200px;
+    width: 293px;
+    margin: 12px 12px 0 12px;
+}
+
+.product-info {
+    margin: 22px 24px 22px 24px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #2C2C2C;
+}
+
+.product-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-raiting {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #7E72F2;
+    height: 23px;
+    width: 70px;
+    color: white;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.product-name {
+    margin: 16px 0 10px 0;
+}
+
+.product-category {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.product-button {
+    background-color: #7E72F2;
+    height: 43px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 5px 5px;
+}
