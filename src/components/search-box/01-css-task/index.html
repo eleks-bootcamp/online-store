@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>SearchBox component</title>
+	<meta charset="UTF-8" />
+	<title>SearchBox component</title>
+	<link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+		*,
+		*:before,
+		*:after {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		a,
+		a:visited {
+			text-decoration: none;
+			color: #000000;
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: lightskyblue;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		ol {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: inherit;
+			font-size: inherit;
+		}
+
+		html,
+		body {
+
+			height: 100%;
+			line-height: 1;
+			width: 992px;
+			font-size: 1em;
+			background-color: #f7f5f8;
+			margin: 100px auto;
+			font-family: 'Montserrat', sans-serif;
+		}
+	</style>
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- SearchBox component -->
-  </div>
-</main>
+	<main>
+		<div class="wrapper">
+			<div class="searchbox">
+				<input type="text" class="searchbox-field">
+				<button type="submit" class="searchbox-button">
+					<i class="serchbox-icon bi bi-search"></i>
+				</button>
+			</div>
+			</button>
+		</div>
+	</main>
 </body>
+
 </html>
