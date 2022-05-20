@@ -1,3 +1,22 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-/* put your styles in this file */
+.wrapper {
+  background: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem;
+  box-sizing: border-box;
+}
+
+input {
+  width: 90%;
+  min-height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: url(Vector.png) no-repeat white;
+  background-position: 90% 50%;
+  padding: 0 1rem 0 1rem;
+}
+
+
