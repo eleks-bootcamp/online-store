@@ -6,11 +6,11 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 
-const RightSide = () => {
+const RightSide = (props) => {
 
     const [cardData, setCardData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const [itemsPerPage, setItemsPerPage] = useState(9)
+    const [itemsPerPage, setItemsPerPage] = useState(9) 
 
     useEffect(() => {
         axios(`http://online-store.bootcamp.place/api/products`)
@@ -62,7 +62,7 @@ const RightSide = () => {
                             currentIndex.map(item => {
                                 return (
                                     <Col key={item.id} className='col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4'>
-                                        <Card category={item.category} img={item.images [0]} title={item.title} rate={item.rating} price={item.price} />
+                                        <Card item={item} category={item.category} img={item.images [0]} title={item.title} rate={item.rating} price={item.price} choseProducts={props.choseProducts} setChoseProducts={props.setChoseProducts} setProductCount={props.setProductCount} />
                                     </Col>
                                  )})
                         }

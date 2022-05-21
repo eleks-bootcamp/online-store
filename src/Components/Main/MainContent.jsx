@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import LeftSide from './LeftSide';
 import RightSide from './RightSide';
 
-const MainContent = () => {
+const MainContent = (props) => {
     return (
         <main className="main-content">
             <Container className='main-container m-0'>
@@ -13,7 +13,7 @@ const MainContent = () => {
                     </Col>
 
                     <Col className='right-side right-margin p-0'>
-                        <RightSide />
+                        <RightSide choseProducts={props.choseProducts} setChoseProducts={props.setChoseProducts} setProductCount={props.setProductCount} />
                     </Col>
                 </Row>
             </Container>

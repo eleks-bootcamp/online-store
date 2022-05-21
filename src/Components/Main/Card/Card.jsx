@@ -1,6 +1,15 @@
 import './Card.css';
 
 const Card = (props) => {
+    
+    const setChoseProducts = props.setChoseProducts;
+    const choseProducts = props.choseProducts;
+    const setProductCount= props.setProductCount
+
+    const cartCount = () => {
+        setProductCount(prev => prev + 1)
+    }
+
     return (
         <div className="card-wrapper">
             <div className="card-flex">
@@ -27,9 +36,19 @@ const Card = (props) => {
                     </div>
                 </div>
             </div>
-            <a href="#" className='card-btn-add'>
-                <span>add to card</span>
-            </a>
+            <div onClick={() => cartCount()}>
+                <a 
+                    className="card-btn-add" 
+                    onClick={setChoseProducts => {
+                        choseProducts.push(props.item);
+                        console.log(choseProducts);
+                        }
+                    }
+
+                >
+                    <span>add to card</span> {/* ТРЕБА ПОФІКСИТИ */}
+                </a>
+            </div>
         </div>
     )
 }

@@ -24,6 +24,7 @@
     text-transform: uppercase;
     color: #fff;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .header-btn:hover {
@@ -38,4 +39,96 @@
     position: relative;
     top: 2px;
     font-size: .9rem;
+}
+
+/* Modal window */
+.modal-body {
+    background-color: whitesmoke;
+}
+
+.body-wrapper {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+}
+
+.product-img {
+    max-width: 60px;
+    height: 40px;
+}
+
+.product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+}
+
+.product-title {
+    max-width: 500px;
+    max-height: 70px;
+    overflow: hidden;
+    padding-left: 5px;
+}
+
+.dec-inc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.count-of-product {
+    margin: 0 10px;
+}
+
+.dec-inc-border {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-price {
+    margin: 0 10px;
+}
+
+.product-delete {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-delete-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+    margin: 0 10px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-delete-all:hover {
+    color: rgb(70, 70, 70);
+    background-color: rgb(255, 34, 34);
+    transition: .2s ease-in-out;
+}
+
+.total-price {
+    margin-left: 10px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #000;
 }
