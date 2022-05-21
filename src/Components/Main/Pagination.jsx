@@ -9,7 +9,6 @@ const Pagination = ({ itemsPerPage, totalItem, paginate, nextPage, prevPage }) =
   }
 
   let paginationNumbers = document.querySelectorAll('.active-class');
-  console.log(paginationNumbers);
 
   paginationNumbers.forEach(element =>{
     element.addEventListener('click', (e) =>{
