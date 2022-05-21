@@ -3,16 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <title>Cart component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
   <div id="root">
-    <!-- Cart component -->
-    <button class="cart-button">
+        <!-- Cart component -->
+    <div class="modal-cart"  id="cart-modal">
+      <div class="modal-cart-content">
+        <div class="modal-close-header">
+           <i class="bi bi-x"></i>  
+        </div>
+        <div class="modal-cart-section">    
+           <ul class="modal-cart-list">
+              <li class="modal-cart-row-list">
+                  <div class="modal-item-preview">
+                       <img src="https://content2.rozetka.com.ua/goods/images/big_tile/178060660.jpg" alt="">
+                   </div> 
+                    <div class="modal-item-name">
+                        Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                    </div> 
+                    <div class="modal-item-counter">
+                        <button class="counter-btn">
+                           <i class="bi bi-plus-circle"></i>
+                       </button>
+                        <span>1</span>
+                       <button class="counter-btn">
+                           <i class="bi bi-dash-circle"></i>
+                       </button>
+                    </div>
+                        <div class="modal-item-price">
+                            15999
+                   </div>       
+
+              </li>   
+              <li class="modal-cart-row-list">
+                <div class="modal-item-preview">
+                  <img src="https://content2.rozetka.com.ua/goods/images/big_tile/178060660.jpg" alt="">
+                </div> 
+                <div class="modal-item-name">
+                            Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+                </div> 
+                <div class="modal-item-counter">
+                  <button class="counter-btn">
+                    <i class="bi bi-plus-circle"></i>
+                  </button>
+                  <span>1</span>
+                   <button class="counter-btn">
+                     <i class="bi bi-dash-circle"></i>
+                   </button>
+                </div>
+                <div class="modal-item-price">
+                   15999
+                </div>       
+               </li>     
+            </ul> 
+            <div class="cart-footer">
+               <div class="total-cart">
+                 Total:
+                 <span>4555555</span>
+               </div>
+               <button class="cart-button">Order</button>
+            </div>
+        </div>       
+      </div>
+    </div>
+    <div class="cart-button">
+      <a href="modal.html" class="cart-button-link">
+        <i class="bi bi-cart"></i>
+      <span class="cart-button-span">cart</span>
+      </a>
+    </div>       
+    <!-- <button class="cart-button">
       <i class="bi bi-cart"></i>
       <span class="cart-button-span">cart</span>
-    </button>
+    </button> -->
   </div>
 </main>
 </body>
