@@ -1,0 +1,30 @@
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-margin {
+    margin-left: 20px;
+}
+
+.input-search input{
+    width: 100%;
+    border: none;
+    outline:none;
+    padding: 12px 70px 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.input-search {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 12px;
+    right: 30px;
+}
