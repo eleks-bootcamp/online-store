@@ -1,0 +1,14 @@
+.clear {
+  width: 280px;
+  height: 46px;
+  background-color: #7E72F2;
+  color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  border: none;
+  cursor: pointer;
+  transition: 3s;
+  font-family: Montserrat,sans-serif;
+  text-transform: uppercase;
+
+}

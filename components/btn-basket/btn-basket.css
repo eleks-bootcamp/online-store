@@ -1,0 +1,22 @@
+.basket {
+  width: 120px;
+  height: 36px;
+  background: #7E72F2;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 3s;
+  font-style: italic;
+  font-family: Montserrat,sans-serif;
+  text-transform: uppercase;
+
+}
+
+
+.basket img {
+  height: 15px;
+  width: 15px;
+  margin-right: 11px;
+
+}
