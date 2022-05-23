@@ -18,10 +18,17 @@ const Header = (props) => {
     const setChoseProducts= props.setChoseProducts;
     const setProductCount = props.setProductCount;
 
-    const deleteOfProduct = (index) => {
-        setChoseProducts(choseProducts.splice(index, 1))  // ТУТ ЗУПИНИВСЯ 
-        console.log(index)
+    function deleteElement (arr, index) {
+        const elementsBeforeIndex = arr.slice(0, index);
+        const elementsAfterIndex = arr.slice(index + 1, arr.length);
+      
+        return [...elementsBeforeIndex, ...elementsAfterIndex];
     }
+      
+    const deleteOfProduct = (index) => {
+        setChoseProducts(deleteElement(choseProducts, index));
+        setProductCount(prev => prev -= 1)
+    };
 
     const deleteAll = (index) => {
         setChoseProducts(choseProducts.slice(index, 0)) 
