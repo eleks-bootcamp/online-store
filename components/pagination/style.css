@@ -12,200 +12,24 @@
   align-items: center;
 }
 
+.item {
+  height: 40px;
+  width: 40px;
+  background-color: var(--grey-100);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.item:hover {
+  background-color: var(--lil-100);
+}
+
 .item-start {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-right: 15px;
-}
-
-.item-start:hover{
-  background-color: var(--lil-100);
-}
-
-.item-1 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-1:hover{
-  background-color: var(--lil-100);
-}
-
-.item-2 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-2:hover{
-  background-color: var(--lil-100);
-}
-
-.item-3 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-3:hover{
-  background-color: var(--lil-100);
-}
-
-.item-4 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-4:hover{
-  background-color: var(--lil-100);
-}
-
-.item-5 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-5:hover{
-  background-color: var(--lil-100);
-}
-
-.item-6 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-6:hover{
-  background-color: var(--lil-100);
-}
-
-.item-7 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-7:hover{
-  background-color: var(--lil-100);
-}
-
-.item-8 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-8:hover{
-  background-color: var(--lil-100);
-}
-
-.item-9 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-9:hover{
-  background-color: var(--lil-100);
-}
-
-.item-10 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-10:hover{
-  background-color: var(--lil-100);
-}
-
-.item-11 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-11:hover{
-  background-color: var(--lil-100);
-}
-
-.item-12 {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.item-12:hover{
-  background-color: var(--lil-100);
+ margin-right: 15px;
 }
 
 .item-end {
-  height: 40px;
-  width: 40px;
-  background-color: var(--grey-100);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
   margin-left: 15px;
-}
-
-.item-end:hover{
-  background-color: var(--lil-100);
 }
