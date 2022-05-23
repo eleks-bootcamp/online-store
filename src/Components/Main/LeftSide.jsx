@@ -22,7 +22,11 @@ const LeftSide = () => {
 
     return (
         <div className="left-side">
-            
+            <div className="filter-price">
+                <p>Price</p>
+                
+            </div>
+
             <div className="brands_categories">
                 <p>Categories</p>
                 {
