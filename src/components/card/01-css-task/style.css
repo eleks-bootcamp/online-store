@@ -1,11 +1,7 @@
 /* put your styles in this file */
-.container {
-  max-width: 980px;
-}
-
 .card {
   width: 400px;
-  min-height: 486px;
+  min-height: 480px;
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
@@ -83,10 +79,6 @@
   font-weight: 400;
   text-transform: uppercase;
   border: none;
-}
-
-.card__action {
-  display: flex;
 }
 
 .card__icon {
