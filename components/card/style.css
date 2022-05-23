@@ -1,0 +1,92 @@
+.card {
+  width: 317px;
+  height: 394px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-content {
+  width: 317px;
+  height: 394px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+}
+
+.card-image {
+  /*width: 293px;*/
+  height: 200px;
+  width: 293px;
+  background-image: url(/163399632.jpg);
+  background-size: contain; /*розтягує картинку на всю шир і довж*/
+  border-radius: 0px;
+  background-position: 50%; /*centre*/
+  background-repeat: no-repeat; /*не повторювати зображення*/
+  margin: 12px 12px 22px 12px; /*відступи*/
+}
+
+.card-info {
+  justify-content: space-between;
+  display: flex;
+  margin: 16px;
+  align-items: center;
+}
+
+.card-rating {
+  background-color: #7e72f2;
+  border-radius: 3px;
+  color: #f2ebeb;
+  font-size: 13px;
+  padding: 6px 11px ;
+}
+
+.card-rating span {
+  vertical-align: middle;
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.card-rating span img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-price {
+  color: #2c2c2c;
+  font-size: 1.125rem;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.card-about-item {
+  font-family: montserat;
+  height: 32px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  margin: 16px 32px 10px 24px;
+  text-align: left;
+}
+
+.card-categories {
+  width: 39px;
+  height: 12px;
+  font-size: 10px;
+  margin: 0px 254px 22px 24px;
+}
+
+.card-add-to-card {
+  text-transform: uppercase;
+  background-color: #7E72F2;
+  color: #f2ebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 0px 0px 8px 8px;
+}

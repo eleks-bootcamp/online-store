@@ -33,24 +33,27 @@
 .card-info {
   justify-content: space-between;
   display: flex;
-  margin: 22px 25px 16px 22px;
-}
-
-.card-rating-number {
-  padding: 6px 36px 7px 11px ;
+  margin: 16px;
+  align-items: center;
 }
 
 .card-rating {
-  background: url(/Star\ 1.png) right no-repeat;
-  height: 27px;
-  width: 70px;
   background-color: #7e72f2;
   border-radius: 3px;
   color: #f2ebeb;
   font-size: 13px;
-  font-weight: 400;
-  align-items: center;
+  padding: 6px 11px ;
+}
+
+.card-rating span {
+  vertical-align: middle;
   display: inline-block;
+  padding-top: 2px;
+}
+
+.card-rating span img {
+  height: 100%;
+  width: 100%;
 }
 
 .card-price {
@@ -59,7 +62,6 @@
   font-weight: 400;
   display: inline-block;
   margin-left: 20px;
-
 }
 
 .card-about-item {
@@ -81,9 +83,10 @@
 .card-add-to-card {
   text-transform: uppercase;
   background-color: #7E72F2;
-  display: block;
-  text-align: center;
+  color: #f2ebeb;
+  display: flex;
+  justify-content: center;
   align-items: center;
   height: 40px;
-  border-radius: bottom 50% ;
+  border-radius: 0px 0px 8px 8px;
 }
