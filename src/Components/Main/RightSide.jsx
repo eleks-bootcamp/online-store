@@ -20,9 +20,15 @@ const RightSide = (props) => {
         })
     }, [])
 
+    const [valueSeach, setValueSeach] = useState('');
+
+    const filteredProduct = cardData.filter(item => {
+        return item.title.toLowerCase().includes(valueSeach.toLowerCase());
+    })
+
     const lastItemIndex = currentPage * itemsPerPage;
     const firstItemIndex = lastItemIndex - itemsPerPage;
-    const currentIndex = cardData.slice(firstItemIndex, lastItemIndex)
+    const currentIndex = filteredProduct.slice(firstItemIndex, lastItemIndex)
 
     const paginate = (pageNuber) => {
         setCurrentPage(pageNuber)
@@ -41,7 +47,11 @@ const RightSide = (props) => {
             <div className="right-side-top">
                 <form>
                     <div className="input-search">
-                        <input type="text" placeholder='Search' />
+                        <input 
+                            type="text" 
+                            placeholder='Search' 
+                            onChange={(event) => setValueSeach(event.target.value)}
+                        />
                         <label className='search-icon'>
                             <svg width="19.25" height="19.25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_4_402)">
