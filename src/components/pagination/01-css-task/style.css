@@ -1,3 +1,53 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 /* put your styles in this file */
+:root {
+  --grey: #EDEDED;
+  --fiolet: #7E72F2;
+  --black: #000000;
+  --white: #FFFFFF;
+
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.page-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-link {
+width: 40px;
+height: 40px;
+background: #EDEDED;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--black);
+text-decoration: none;
+transition: .3s;
+}
+
+.page-link.active {
+  background: #7E72F2;
+  color: var(--white);
+  }
+.next {
+  color: var(--black);
+  text-decoration: none;
+  transition: .3s;
+  margin-left: 15px;
+
+}
+.back {
+  color: var(--black);
+  text-decoration: none;
+  transition: .3s;
+  margin-right: 15px;
+}
