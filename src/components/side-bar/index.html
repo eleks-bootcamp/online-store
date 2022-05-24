@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SideBar component</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="sidebar-block">
+          <div class="price-block">
+            <h3 class="side-title">Price</h3>
+            <div class="slider-price">
+              <form name="registrationForm">
+                <input
+                  type="range"
+                  name="ageInputName"
+                  id="ageInputId"
+                  value="1"
+                  min="1"
+                  max="85000"
+                  oninput="ageOutputId.value = ageInputId.value"
+                />
+                <output name="ageOutputName" id="ageOutputId">100</output>
+              </form>
+            </div>
+          </div>
+          <h3 class="side-title">Category</h3>
+          <ul class="sidebar-category">
+            <li class="category"><button class="btn-sidebar"></button>Cell phones</li>
+            <li class="category"> <button class="btn-sidebar"></button>Computers & Tablets </li>
+            <li class="category"> <button class="btn-sidebar"></button>Cell Phone Accessories </li>
+            <li class="category"> <button class="btn-sidebar"></button>Apliances </li>
+            <li class="category"><button class="btn-sidebar"></button>Audio</li>
+          </ul>
+          <h3 class="side-title">Brand</h3>
+          <ul class="sidebar-brand">
+            <li class="brand"><button class="btn-sidebar"></button>Insigni</li>
+            <li class="brand"><button class="btn-sidebar"></button>Sumsung</li>
+            <li class="brand"><button class="btn-sidebar"></button>Apple</li>
+            <li class="brand"><button class="btn-sidebar"></button>Asus</li>
+          </ul>
+
+          <div class="rating-block">
+            <h3 class="side-title">Rating</h3>
+            <div class="slider-rating">
+              <div class="range-slider">
+                <span data-element="from">0</span>
+                <div data-element="inner" class="range-slider__inner">
+                  <span data-element="progress" class="range-slider__progress" style="left: 0%; right: 0%;"></span>
+                  <span data-element="thumbLeft" class="range-slider__thumb-left" style="left: 0%;"></span>
+                  <span data-element="thumbRight" class="range-slider__thumb-right" style="right: 0%;"></span>
+                </div>
+                <span data-element="to">5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-filters">clear all filters</button>
+      </div>
+    </main>
+  </body>
+</html>
