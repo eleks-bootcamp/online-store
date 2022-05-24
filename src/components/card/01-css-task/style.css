@@ -68,9 +68,6 @@
 }
 
 .card__btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   background-color: #6f64f8;
   color: #fff;
   padding: 14px;
@@ -79,8 +76,4 @@
   font-weight: 400;
   text-transform: uppercase;
   border: none;
-}
-
-.card__icon {
-  margin-right: 10px;
 }

@@ -23,22 +23,20 @@ export default class Card {
 
   get template() {
     return `
-  <div class="card">
-    <div class="card__inner">
-          <img class="card__img" src="${this.images[0]}" alt="product" />
-          <div class="card__details">
-            <div class="card__rate-and-price">
-              <button class="card__product--rate">${this.rating}&nbsp;
-                <i class="bi bi-star"></i>
-              </button>
-              <span class="card__price">${this.price}</span>
-            </div>
-            <h4 class="card__title">${this.title}</h4>
-            <span class="card__info">${this.category}</span>
+      <div class="card__inner">
+        <img class="card__img" src="${this.images[0]}" alt="product" />
+        <div class="card__details">
+          <div class="card__rate-and-price">
+            <button class="card__product--rate">${this.rating}&nbsp;
+              <i class="bi bi-star"></i>
+            </button>
+            <span class="card__price">${this.price}</span>
           </div>
+          <h4 class="card__title">${this.title}</h4>
+          <span class="card__info">${this.category}</span>
         </div>
-        <button class="card__btn">Add to cart</button>
-    </div>
+      </div>
+      <button class="card__btn">Add to cart</button>
     `;
   }
 
