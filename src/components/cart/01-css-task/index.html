@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Cart component</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<main>
-  <div id="root">
-    <div class="cart-container">
-      <ul class="cart-list">
-        <li class="cart-product">
-          <div class="product-preview"></div>
-          <div class="product-description"></div>
-          <div class="product-counter">
-            <button class="plus-circle"></button>
-            <button class="plus-circle"></button>
+  <main>
+    <div id="root">
+      <div class="cart-container">
+        <button class="close button"><i class="bi bi-x-lg"></i></button>
+        <ul class="cart-list">
+          <li class="cart-product">
+            <div class="product-preview">
+              <img class="image" src="../../../product-images/image_2022-04-18_14-22-40.png" alt="laptop">
+            </div>
+            <div class="product-description">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</div>
+            <div class="product-counter">
+              <button class="minus-circle"><i class="bi bi-dash-circle"></i></button>
+              <span class="count">1</span>
+              <button class="plus-circle"><i class="bi bi-plus-circle"></i></button>
+            </div>
+            <div class="product-price">15999</div>
+          </li>
+          <li class="cart-product">
+            <div class="product-preview">
+              <img class="image" src="../../../product-images/image_2022-04-18_14-22-40.png" alt="laptop">
+            </div>
+            <div class="product-description">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</div>
+            <div class="product-counter">
+              <button class="minus-circle"><i class="bi bi-dash-circle"></i></button>
+              <span class="count">1</span>
+              <button class="plus-circle"><i class="bi bi-plus-circle"></i></button>
+            </div>
+            <div class="product-price">15999</div>
+          </li>
+          <li class="cart-product">
+            <div class="product-preview">
+              <img class="image" src="../../../product-images/image_2022-04-18_14-22-40.png" alt="laptop">
+            </div>
+            <div class="product-description">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</div>
+            <div class="product-counter">
+              <button class="minus-circle"><i class="bi bi-dash-circle"></i></button>
+              <span class="count">1</span>
+              <button class="plus-circle"><i class="bi bi-plus-circle"></i></button>
+            </div>
+            <div class="product-price">15999</div>
+          </li>
+        </ul>
+        <div class="footer">
+          <div class="cart-total">
+            <span>Total: 16789</span>
           </div>
-          <div class="product-price"></div>
-        </li>
-        <li class="cart-product"></li>
-        <li class="cart-product"></li>
-        <li class="cart-product"></li>
-      </ul>
-      <div class="footer">
-        <div class="cart-total">
-          <span>Total: </span>
+          <button class="order button">order</button>
         </div>
-        <button class="order-button">ORDER</button>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 </body>
+
 </html>
