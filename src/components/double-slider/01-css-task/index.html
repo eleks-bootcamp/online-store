@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>DoubleSlider component</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
-</head>
-<body>
-<main>
-  <div class="wrapper">
-    <!-- DoubleSlider component -->
-  </div>
-</main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DoubleSlider component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <!-- DoubleSlider component -->
+        <div class="range-wrapper">
+        <div class="range-slider">
+          <span data-element="from">0 UAH</span>
+          <div data-element="inner" class="range-slider__inner">
+            <span data-element="progress" class="range-slider__progress" style="left:0%;right:0%;"></span>
+            <span data-element="thumbLeft" class="range-slider__thumb-Left" style="left:0%;"></span>
+            <span data-element="thumbRight" class="range-slider__thumb-right" style="right:0%;"></span>
+          </div>
+          <span data-element="to">85000 UAH</span>
+        </div>
+      </div>
+      </div>
+    </main>
+  </body>
 </html>

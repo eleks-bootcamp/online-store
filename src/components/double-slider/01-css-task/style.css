@@ -1,1 +1,64 @@
 /* put your styles in this file */
+.wrapper {
+  width: 400px;
+  height: 90px;
+  padding-top: 50px;
+  margin: 100px auto;
+  background-color: rgb(236, 234, 194);
+}
+.rang-wrapper {
+  display: block;
+  background-color: rgb(236, 234, 194);
+  width: 400px;
+  height: 200px;
+}
+.range-slider {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.range-slider>span {
+  font-size: .8rem;
+  position: absolute;
+  top: 100%;
+}
+
+.range-slider>span:first-child {
+  left: 0;
+}
+.range-slider__inner {
+  background: #c8c2f3;
+  box-shadow: 0 0 1px #7e72f2;
+  display: inline-block;
+  height: 4px;
+  margin: 10px 14px;
+  position: relative;
+  user-select: none;
+  width: 100%;
+
+}
+.range-slider__progress {
+  background: #7e72f2;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.range-slider__thumb-left, .range-slider__thumb-right {
+  background: url(range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+  background-size: cover;
+  cursor: grab;
+  height: 18px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  width: 6px;
+}
+
+
+
+
+
