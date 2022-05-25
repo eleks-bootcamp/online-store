@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+div[class^='col-'] {
+  outline: 1px solid red;
+}
+
+.left-side {
+  width: 280px;
+  height: 992px;
+  border-right: 1px solid red;
+}
+
+.right-side {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
