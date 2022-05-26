@@ -1,11 +1,12 @@
 export default class CardsList {
   constructor(products) {
     this.element = products;
-
+    console.log(products);
     this.render();
   }
 
   getT() {
+
     return `
     <div class="wrapper-component">
       <div class="os-img">
@@ -132,3 +133,6 @@ export default class CardsList {
   }
 
 }
+
+
+
