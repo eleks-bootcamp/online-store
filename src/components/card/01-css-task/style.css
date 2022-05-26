@@ -22,13 +22,11 @@ body {
   min-height: 500px;
   background: var(--var-color-bg-wrapper);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius:0.4rem;
 }
 
 .os-img {
+  width: 100%;
   text-align: center;
   box-sizing: border-box;
   padding: 1rem 0 0 0;
@@ -80,13 +78,20 @@ body {
 .os-footer {
   width: 100%;
   background: var(--var-color-bg-btn-footer);
-  height: 40px;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
   color: var(--var-color-bg-wrapper);
   border-radius: 0 0 0.4rem 0.4rem;
   text-transform: uppercase;
-  margin-top: 1rem;
+  padding: 0;
+  margin-top: 1.7rem;
 }
 
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

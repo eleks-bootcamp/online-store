@@ -27,6 +27,14 @@ body {
   align-items: center;
 }
 
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper-component {
   width: 25%;
   background: var(--var-color-bg-wrapper);
