@@ -20,16 +20,22 @@ a,p{
   justify-content: space-between;
   overflow: hidden;
 }
+
 .card-shop-main{
   padding: 0.8rem 0.8rem 0 0.8rem ;
   position: relative;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-shop-img{
+  margin-top: 1rem;
 }
 .card-shop-price-and-mark{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin:1.5rem 1rem 0.3rem 1rem;
+  margin: 1rem  1rem;
   align-items: center;
 
 }
@@ -45,10 +51,10 @@ a,p{
   font-size: 13px;
   color:var(--white-color);
 }
-.card-shop-mark img{
+.card-shop-mark i{
   max-width: 0.85rem;
   margin: 0.3rem 0 0.3rem 0.8rem;
-  fill:var(--white-color);
+  color:var(--white-color);
 }
 .card-shop-name{
   margin: 0.8rem ;
