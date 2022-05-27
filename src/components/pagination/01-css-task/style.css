@@ -1,3 +1,46 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-/* put your styles in this file */
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.wrapper {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.page-buttons {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #EDEDED;
+  border: none;
+  text-align: center;
+}
+
+.page-buttons:hover {
+  background-color: #7e72f2;
+  color: #fff;
+}
+
+.page-number {
+  width: 7.36px;
+  height: 9.97px;
+  text-align: center;
+}
+
+
+.previous-page {
+  margin-right: 15px;
+}
+
+.next-page {
+  margin-left: 15px;
+}
