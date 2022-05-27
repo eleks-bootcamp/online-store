@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
@@ -17,7 +18,8 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
+    import Card from './index.js';
+    // import Card from '../example/index.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -35,6 +37,11 @@
     const card = new Card(product);
 
     root.append(card.element);
+
+
+
+
   </script>
 </body>
+
 </html>
