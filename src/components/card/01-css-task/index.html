@@ -2,21 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Card component</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+  <title>HTML/CSS Card component</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
+
 <main>
-  <div class="wrapper">
-    <!-- Card component -->
+
+  <div class="os-product-card">
+    <div class="os-product-image"></div>
+
+    <div class="os-product-details">
+      <div class="os-product-price-wrapper">
+        <div class="os-product-rating">
+          <span>1.23</span>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="os-product-price">15999</div>
+      </div>
+
+      <h5 class="os-product-title">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</h5>
+
+      <p class="os-product-description">laptops</p>
+
+    </div>
+
+
+    <div class="os-product-cart">
+      <button class="os-btn">
+        Add to Cart
+      </button>
+    </div>
+
   </div>
+
 </main>
+
 </body>
+
 </html>
