@@ -9,7 +9,7 @@ export default class FiltersList {
   }
 
   renderFilterItem (item) {
-    const name = this.title?.toLocaleLowerCase();
+    const name = this.title.toLocaleLowerCase();
 
     return `
     <li>
@@ -28,10 +28,10 @@ export default class FiltersList {
     return this.list.map(this.renderFilterItem.bind(this)).join("");
   }
 
-  getTemplate() {
+  get template() {
     return `
-    <h4 class="filters__title">${this.title}</h4>
-    <ul class="filters__list">${this.getFilters()}</ul>
+      <h4 class="filters__title">${this.title}</h4>
+      <ul class="filters__list">${this.getFilters()}</ul>
     `;
   }
 
@@ -39,7 +39,7 @@ export default class FiltersList {
     const wrapper = document.createElement("div");
     wrapper.classList.add("filters__section");
 
-    wrapper.innerHTML = this.getTemplate();
+    wrapper.innerHTML = this.template;
 
     this.element = wrapper;
   }

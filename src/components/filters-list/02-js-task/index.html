@@ -38,12 +38,12 @@
 
     root.append(filtersList.element);
 
-    reset.addEventListener('pointerdown', () => {
-      filtersList.reset();
-    });
+    // reset.addEventListener('pointerdown', () => {
+    //   filtersList.reset();
+    // });
 
     filtersList.element.addEventListener('change', event => {
-      console.error('event', event.target.value);
+      console.table('event', event.target.value);
     });
   </script>
 </main>
