@@ -3,20 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <title>Card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
 <body>
 <main>
+
   <div class="wrapper">
-    <!-- Card component -->
+
+    <div class="product-card d-flex">
+
+      <img class="product-card-laptop" src="../images-icons/laptop.svg" alt="laptop">
+
+      <div class="product-card-wrapper d-flex">
+        <div class="product-card-rating d-flex">
+          <div class="product-card-rating-star d-flex">
+            <p>1.96</p>
+            <img src="../images-icons/star-rating.svg" alt="star for rating">
+          </div>
+          <div class="product-card-price">21500</div>
+        </div>
+        <div class="product-card-title">
+          <p>Ноутбук Acer Aspire 7 A715-41G-R9KP <br> (NH.Q8QEU.00L) Charcoal Black</p>
+          <span>laptops</span>
+        </div>
+      </div>
+
+      <div class="product-card-footer d-flex">ADD TO CART</div>
+
+    </div>
+
   </div>
+
 </main>
 </body>
 </html>

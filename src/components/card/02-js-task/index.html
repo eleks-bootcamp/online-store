@@ -4,20 +4,15 @@
   <meta charset="utf-8">
   <title>Card component</title>
   <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="../../card/01-css-task/style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
 
 <body>
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
+    // import Card from './solution/index.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -32,9 +27,56 @@
       "brand": "acer"
     };
 
-    const card = new Card(product);
+    class Component {
+      constructor(someTitle) {
+        this.componentProduct = someTitle;
+        this.myRender();
+      }
 
-    root.append(card.element);
+      getTemplate () {
+        return `
+          <div class="product-card d-flex">
+
+            <img class="product-card-laptop" src="${this.componentProduct.images[0]}" alt="laptop">
+
+            <div class="product-card-wrapper d-flex">
+              <div class="product-card-rating d-flex">
+                <div class="product-card-rating-star d-flex">
+                  <p>${this.componentProduct.rating}</p>
+                  <img src="../images-icons/star-rating.svg" alt="star for rating">
+                </div>
+                <div class="product-card-price">${this.componentProduct.price}</div>
+              </div>
+              <div class="product-card-title">
+                <p>${this.componentProduct.title}</p>
+                <span>${this.componentProduct.category}</span>
+              </div>
+            </div>
+
+            <div class="product-card-footer d-flex">ADD TO CART</div>
+
+          </div>
+        `;
+    }
+      myRender() {
+        const element = document.createElement('div');
+        element.innerHTML = this.getTemplate();
+        this.componentElement = element;
+      }
+    }
+
+    const obj = new Component(product);
+    console.log(obj);
+
+    const myRootElement = document.querySelector('#root');
+    console.log(myRootElement);
+
+    myRootElement.append(obj.componentElement);
+
+
+    // const card = new Card(product);
+    //
+    // root.append(card.element);
   </script>
 </body>
 </html>
