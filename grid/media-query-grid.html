@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Grid with media queries</title>
   <style>
     .container {
@@ -243,18 +245,29 @@
     }
   </style>
 </head>
+
 <body>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
-        </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
+  <main class="container">
+    <div class="row">
+      <div class="col-3 left-side">
+        Left side
+      </div>
+      <div class="col-9 col-s-12 col-m-12">
+        Right side
+        <div class="row">
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 1</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 2</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 3</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 4</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 5</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 6</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 7</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 8</div>
+          <div class="col-s-12 col-m-12 col-l-6 col-xl-4">card 9</div>
         </div>
       </div>
     </div>
   </main>
 </body>
+
 </html>
