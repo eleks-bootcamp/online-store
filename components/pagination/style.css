@@ -3,6 +3,10 @@
   --lil-100: #7E72F2;
 }
 
+body {
+  flex: 1 1 auto;
+}
+
 .wrapper {
   height: 205px;
   width: 790px;
