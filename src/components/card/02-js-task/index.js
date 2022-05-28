@@ -1,27 +1,25 @@
 export default class Card {
 constructor(someProduct) {
-  this.product=someProduct;
-  this.HTMLForm();
+  this.state=someProduct;
+  this.myRender();
 
 }
 HTMLForm(){
-let elements= document.createElement('div');
-  elements.className = "card-shop";
-elements.innerHTML=`
+const result=`
   <div class="card-shop-main">
     <div class="card-shop-img">
-      <img src=${this.product.images[1]} alt="">
+      <img src=${this.state.images[1]} alt="">
     </div>
     <div class="card-shop-price-and-mark">
       <div class="card-shop-mark">
-        <p>${this.product.rating}</p>
+        <p>${this.state.rating}</p>
         <i class="bi bi-star"></i>
       </div>
-      <p class="card-shop-price">${this.product.price}</p>
+      <p class="card-shop-price">${this.state.price}</p>
     </div>
     <div class="card-shop-name">
-      <a href="#">${this.product.title}</a>
-      <p>${this.product.category}</p>
+      <a href="#">${this.state.title}</a>
+      <p>${this.state.category}</p>
     </div>
 
   </div>
@@ -29,6 +27,17 @@ elements.innerHTML=`
     ADD TO CART
   </button>
     `
-  this.componentElement=elements;
+  return result;
+}
+update(data={}){
+  this.state=data;
+  this.componentElement.innerHTML=this.HTMLForm();
+
+}
+myRender() {
+  let elements = document.createElement('div');
+  elements.className = "card-shop";
+  elements.innerHTML=this.HTMLForm();
+  this.componentElement = elements;
 }
 }

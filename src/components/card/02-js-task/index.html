@@ -13,8 +13,9 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './index.js';
 
+    import Card   from "./index.js";
+    import Pagination from "./pagination.js";
     const product = {
       "id": "76w0hz7015kkr9kjkav",
       "images": [
@@ -27,10 +28,24 @@
       "category": "laptops",
       "brand": "acer"
     };
+    const monitor = {
+      id: "w73oaydowenkr9kjkav",
+      images: [
+        "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+      ],
+      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+      rating: 5,
+      price: 3800,
+      category: "monitors",
+      brand: "benq"
+    };
 
     const card = new Card(product);
   const myElement=document.querySelector('.test')
     myElement.append(card.componentElement);
+    const pagination = new Pagination();
+    const newPagination=document.querySelector('.test')
+    newPagination.append(pagination.element);
   </script>
 </body>
 </html>
