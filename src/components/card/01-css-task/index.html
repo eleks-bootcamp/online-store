@@ -2,21 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Card component</title>
+  <title>HTML/CSS Card component</title>
+  <link rel="stylesheet" href="../../../styles/reset.css">
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
 <body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
+<section  class="card-shop">
+  <div class="card-shop-main">
+    <div class="card-shop-img">
+      <img src="http://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg" alt="">
+    </div>
+    <div class="card-shop-price-and-mark">
+      <div class="card-shop-mark">
+        <p>1.23</p>
+        <img src="ico.svg" alt="">
+      </div>
+      <p class="card-shop-price">15 999</p>
+    </div>
+    <div class="card-shop-name">
+      <a href="#">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</a>
+      <p>laptops</p>
+    </div>
+
+
   </div>
-</main>
+  <button class="card-shop-button">
+    ADD TO CART
+  </button>
+</section>
 </body>
 </html>

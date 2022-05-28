@@ -13,10 +13,10 @@
     .row {
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
     }
 
-    div[class^='col-'] {
+    div[class^='col']{
       outline: 1px solid red;
       background: lightgray;
       text-align: center;
@@ -69,192 +69,371 @@
     .col-12 {
       width: calc(100% / 12 * 12);
     }
-
-    /* s */
-    @media (min-width: 576px) {
-      .col-s-1 {
-        width: calc(100% / 12 * 1);
+    @media (min-width:320px ) {
+      .col-1-xs {
+        width: calc(100% / 12);
       }
 
-      .col-s-2 {
+      .col-2-xs {
         width: calc(100% / 12 * 2);
       }
 
-      .col-s-3 {
+      .col-3-xs {
         width: calc(100% / 12 * 3);
       }
 
-      .col-s-4 {
+      .col-4-xs {
         width: calc(100% / 12 * 4);
       }
 
-      .col-s-5 {
+      .col-5-xs {
         width: calc(100% / 12 * 5);
       }
 
-      .col-s-6 {
+      .col-6-xs {
         width: calc(100% / 12 * 6);
       }
 
-      .col-s-7 {
+      .col-7-xs {
         width: calc(100% / 12 * 7);
       }
 
-      .col-s-8 {
+      .col-8-xs {
         width: calc(100% / 12 * 8);
       }
 
-      .col-s-9 {
+      .col-9-xs {
         width: calc(100% / 12 * 9);
       }
 
-      .col-s-10 {
+      .col-10-xs {
         width: calc(100% / 12 * 10);
+      }
+
+      .col-11-xs {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-12-xs {
+        width: calc(100% / 12 * 12);
       }
     }
-
-    /* m */
-    @media (min-width: 768px) {
-      .col-m-1 {
-        width: calc(100% / 12 * 1);
+    @media (min-width:480px ) {
+      .col-1-s {
+        width: calc(100% / 12);
       }
 
-      .col-m-2 {
+      .col-2-s {
         width: calc(100% / 12 * 2);
       }
 
-      .col-m-3 {
+      .col-3-s {
         width: calc(100% / 12 * 3);
       }
 
-      .col-m-4 {
+      .col-4-s {
         width: calc(100% / 12 * 4);
       }
 
-      .col-m-5 {
+      .col-5-s {
         width: calc(100% / 12 * 5);
       }
 
-      .col-m-6 {
+      .col-6-s {
         width: calc(100% / 12 * 6);
       }
 
-      .col-m-7 {
+      .col-7-s {
         width: calc(100% / 12 * 7);
       }
 
-      .col-m-8 {
+      .col-8-s {
         width: calc(100% / 12 * 8);
       }
 
-      .col-m-9 {
+      .col-9-s {
         width: calc(100% / 12 * 9);
       }
 
-      .col-m-10 {
+      .col-10-s {
         width: calc(100% / 12 * 10);
+      }
+
+      .col-11-s {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-12-s {
+        width: calc(100% / 12 * 12);
       }
     }
-
-    /* l */
-    @media (min-width: 992px) {
-      .col-l-1 {
-        width: calc(100% / 12 * 1);
+    @media (min-width:768px ) {
+      .col-1-m {
+        width: calc(100% / 12);
       }
 
-      .col-l-2 {
+      .col-2-m {
         width: calc(100% / 12 * 2);
       }
 
-      .col-l-3 {
+      .col-3-m {
         width: calc(100% / 12 * 3);
       }
 
-      .col-l-4 {
+      .col-4-m {
         width: calc(100% / 12 * 4);
       }
 
-      .col-l-5 {
+      .col-5-m {
         width: calc(100% / 12 * 5);
       }
 
-      .col-l-6 {
+      .col-6-m {
         width: calc(100% / 12 * 6);
       }
 
-      .col-l-7 {
+      .col-7-m {
         width: calc(100% / 12 * 7);
       }
 
-      .col-l-8 {
+      .col-8-m {
         width: calc(100% / 12 * 8);
       }
 
-      .col-l-9 {
+      .col-9-m {
         width: calc(100% / 12 * 9);
       }
 
-      .col-l-10 {
+      .col-10-m {
         width: calc(100% / 12 * 10);
+      }
+
+      .col-11-m {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-12-m {
+        width: calc(100% / 12 * 12);
       }
     }
-
-    /* xl */
-    @media (min-width: 1200px) {
-      .col-xl-1 {
-        width: calc(100% / 12 * 1);
+    @media (min-width:992px) {
+      .col-1-l {
+        width: calc(100% / 12);
       }
 
-      .col-xl-2 {
+      .col-2-l {
         width: calc(100% / 12 * 2);
       }
 
-      .col-xl-3 {
+      .col-3-l {
         width: calc(100% / 12 * 3);
       }
 
-      .col-xl-4 {
+      .col-4-l {
         width: calc(100% / 12 * 4);
       }
 
-      .col-xl-5 {
+      .col-5-l {
         width: calc(100% / 12 * 5);
       }
 
-      .col-xl-6 {
+      .col-6-l {
         width: calc(100% / 12 * 6);
       }
 
-      .col-xl-7 {
+      .col-7-l {
         width: calc(100% / 12 * 7);
       }
 
-      .col-xl-8 {
+      .col-8-l {
         width: calc(100% / 12 * 8);
       }
 
-      .col-xl-9 {
+      .col-9-l {
         width: calc(100% / 12 * 9);
       }
 
-      .col-xl-10 {
+      .col-10-l {
         width: calc(100% / 12 * 10);
+      }
+
+      .col-11-l {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-12-l {
+        width: calc(100% / 12 * 12);
+      }
+    }
+    @media (min-width:1200px) {
+      .col-1-xl {
+        width: calc(100% / 12);
+      }
+
+      .col-2-xl {
+        width: calc(100% / 12 * 2);
+      }
+
+      .col-3-xl {
+        width: calc(100% / 12 * 3);
+      }
+
+      .col-4-xl {
+        width: calc(100% / 12 * 4);
+      }
+
+      .col-5-xl {
+        width: calc(100% / 12 * 5);
+      }
+
+      .col-6-xl {
+        width: calc(100% / 12 * 6);
+      }
+
+      .col-7-xl {
+        width: calc(100% / 12 * 7);
+      }
+
+      .col-8-xl {
+        width: calc(100% / 12 * 8);
+      }
+
+      .col-9-xl {
+        width: calc(100% / 12 * 9);
+      }
+
+      .col-10-xl {
+        width: calc(100% / 12 * 10);
+      }
+
+      .col-11-xl {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-12-xl {
+        width: calc(100% / 12 * 12);
+      }
+    }
+    .left-side{
+      display: none;
+    }
+
+    .right-side-row{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @media (min-width:320px){
+
+    }
+    @media (min-width:480px){
+
+    }
+    @media (min-width:768px){
+      .left-side{
+        display: flex;
+      }
+    }
+    @media (min-width:992px){
+
+    }
+    @media (min-width:1200px){
+
+    }
+
+    /*grid class*/
+    .row-grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: max-content;
+
+    }
+    .left-side-grid{
+      display: none;
+    }
+    .left-side-grid .col{
+
+      height: 100%;
+    }
+    .right-side-row-grid{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width:320px){
+
+    }
+    @media (min-width:480px){
+
+    }
+    @media (min-width:768px){
+      .row-grid{
+        grid-template-columns: 4fr 8fr;
+      }
+      .left-side-grid{
+        display: block;
+      }
+      .right-side-row-grid{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width:992px){
+      .right-side-row-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    @media (min-width:1200px){
+      .right-side-row-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
-        </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="left-side col-4-m">
+        <div class="col-12">left-side</div>
+      </div>
+      <div class="right-side col-8-m  col-12">
+        <div class="col-12">right-side</div>
+        <div class="right-side-row">
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 1</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 2</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 3</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 4</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 5</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 6</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 7</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 8</div>
+          <div class="col-12 col-6-m col-4-l col-3-xl">card 9</div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+  <div class="container">
+    <div class="row-grid">
+      <div class="left-side-grid">
+        <div class="col">left-side</div>
+      </div>
+      <div class="right-side-grid">
+        <div class="col">right-side</div>
+        <div class="right-side-row-grid">
+          <div class="col">card 1</div>
+          <div class="col">card 2</div>
+          <div class="col">card 3</div>
+          <div class="col">card 4</div>
+          <div class="col">card 5</div>
+          <div class="col">card 6</div>
+          <div class="col">card 7</div>
+          <div class="col">card 8</div>
+          <div class="col">card 9</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
 </body>
 </html>
