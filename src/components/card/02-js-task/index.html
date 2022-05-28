@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../01-css-task/style.css">
 
   <style>
     .wrapper {
@@ -17,7 +19,7 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
+    import Card from "./index.js";
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -31,10 +33,11 @@
       "category": "laptops",
       "brand": "acer"
     };
+   
+    const card = new Card (product);
+    const root = document.querySelector('#root');
+    root.append(card.componentElement);
 
-    const card = new Card(product);
-
-    root.append(card.element);
   </script>
 </body>
 </html>
