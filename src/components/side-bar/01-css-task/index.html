@@ -3,19 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <title>SideBar component</title>
+  <link rel="stylesheet" href="../../../styles/reset.css">
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
 <body>
 <main>
   <div class="wrapper">
-    <!-- SideBar component -->
+    <form class="form-filter">
+      <div class="price">
+        <h3>Price</h3>
+        <--------------->
+        <div class="pirce-input">
+          <div class="field">
+            <span>Min</span>
+            <input type="number" class="input-min" value="0">
+          </div>
+<div class="separator">-</div>
+          <div class="field">
+            <span>Max</span>
+            <input type="number" class="input-max" value="9999">
+          </div>
+        </div>
+<div class="slider">
+  <div class="progres">
+    
+  </div>
+</div>
+
+
+
+
+
+        <--------------->
+      </div>
+      <div class="filter-category">
+        <div class="title-categoty">
+          <h3>Category</h3>
+        </div>
+        <div class="filter-list-checkbox">
+          <ul>
+            <li><input id="checkbox-monitors" type="checkbox">
+              <label for="checkbox-monitors">Monitors</label>
+            </li>
+            <li><input id="checkbox-laptops" type="checkbox">
+              <label for="checkbox-laptops">Laptops</label>
+            </li>
+             <li><input id="checkbox-videoCards" type="checkbox">
+              <label for="checkbox-videoCards">Video cards</label>
+            </li>
+            <li><input id="checkbox-gamingKeyboards" type="checkbox">
+              <label for="checkbox-gamingKeyboards">Gaming keyboards</label>
+            </li>
+            <li><input id="checkbox-computerMouse" type="checkbox">
+              <label for="checkbox-computerMouse">Computer mouse</label>
+            </li>
+            <li><input id="checkbox-ssd" type="checkbox">
+              <label for="checkbox-ssd">SSD</label>
+            </li>
+            <li><input id="checkbox-soundCards" type="checkbox">
+              <label for="checkbox-soundCards">Sound cards</label>
+            </li>
+            <li><input id="checkbox-ram" type="checkbox">
+              <label for="checkbox-ram">RAM</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="filter-brand">
+        <div class="title-brand">
+          <h3>Brand</h3>
+        </div>
+        <div class="filter-list-checkbox">
+          <ul>
+            <li><input id="checkbox-monitors" type="checkbox">
+              <label for="checkbox-monitors">Monitors</label>
+            </li>
+            <li><input id="checkbox-laptops" type="checkbox">
+              <label for="checkbox-laptops">Laptops</label>
+            </li>
+            <li><input id="checkbox-videoCards" type="checkbox">
+              <label for="checkbox-videoCards">Video cards</label>
+            </li>
+            <li><input id="checkbox-gamingKeyboards" type="checkbox">
+              <label for="checkbox-gamingKeyboards">Gaming keyboards</label>
+            </li>
+            <li><input id="checkbox-computerMouse" type="checkbox">
+              <label for="checkbox-computerMouse">Computer mouse</label>
+            </li>
+            <li><input id="checkbox-ssd" type="checkbox">
+              <label for="checkbox-ssd">SSD</label>
+            </li>
+            <li><input id="checkbox-soundCards" type="checkbox">
+              <label for="checkbox-soundCards">Sound cards</label>
+            </li>
+            <li><input id="checkbox-ram" type="checkbox">
+              <label for="checkbox-ram">RAM</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rating">
+        <h3>Rating</h3>
+        <--------------->
+      </div>
+    </form>
   </div>
 </main>
 </body>
