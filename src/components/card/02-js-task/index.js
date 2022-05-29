@@ -1,31 +1,31 @@
 export default class Card {
 
   constructor(someCard) {
-    this.element = someCard;
+    this.state = someCard;
     this.myRender();
   }
 
   getTemplate() {
     return `<div class="os-img">
 
-        <img src=${this.element.images[0]} alt="foto">
+        <img src=${this.state.images[0]} alt="foto">
       </div>
 
         <div class="os-price">
       <div class="os-price-star">
-        <p class="size">${this.element.rating}</p>
+        <p class="size">${this.state.rating}</p>
         <img src="../01-css-task/images/Star.png" alt="icon">
 
       </div>
 
       <p class="os-price-price size">
-        ${this.element.price}
+        ${this.state.price}
       </p>
     </div>
 
         <div class="os-text">
-      <p class="size">${this.element.title}</p>
-      <p class="os-text-two size">${this.element.category}</p>
+      <p class="size">${this.state.title}</p>
+      <p class="os-text-two size">${this.state.category}</p>
     </div>
 
         <div><button class="os-footer size">add to cart</button></div>`
@@ -35,7 +35,7 @@ export default class Card {
     const block = document.createElement('div');
     block.classList = "block";
     block.innerHTML = this.getTemplate();
-    this.element = block;
+    this.state = block;
   }
 
 }

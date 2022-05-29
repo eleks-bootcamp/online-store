@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Card component</title>
   <link rel="stylesheet" href="../01-css-task/style.css">
+  <link rel="stylesheet" href="./style.css">
+
 
   <style>
     .wrapper {
@@ -18,6 +20,7 @@
 
   <script type="module">
     import Card from './index.js';
+    import Pagination from './pagination.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -33,8 +36,10 @@
     };
 
     const card = new Card(product);
+    const pagination = new Pagination();
 
-    root.append(card.element);
+    root.append(card.state);
+    root.append(pagination.state);
   </script>
 </body>
 </html>
