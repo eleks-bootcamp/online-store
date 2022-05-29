@@ -8,6 +8,9 @@ export default class Pagination {
   constructor(pagingData, maxVisiblePages = 0) {
     this.pageChangedEvent = new CustomEvent('page-changed');
     this.pagingData = pagingData;
+    if (!maxVisiblePages) {
+      maxVisiblePages = this.pagingData.totalPages;
+    }
     this.maxVisiblePages = maxVisiblePages;
     this.setActivePage(pagingData.currentPage);
   }
@@ -126,10 +129,10 @@ export default class Pagination {
       if (isFirstBreakNeeded.call(this)) {
         addEl(this.createBreak());
         pCount--;
-          }
+      }
       if (isSecondBreakNeeded.call(this)) {
         pCount--;
-        }
+      }
 
       let startLoopInd = Math.round(this.activePage - this.maxVisiblePages/2);
       if (startLoopInd < 0) {
