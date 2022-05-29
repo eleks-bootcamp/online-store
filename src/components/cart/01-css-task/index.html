@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Cart component</title>
+  <link rel="stylesheet" href="../../../styles/reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<main>
-  <div id="root">
-    <!-- Cart component -->
-  </div>
-</main>
+  <main>
+    <div id="root">
+      <div class="modal-window">
+        <header class="modal-header">
+          <div class="btn-close">
+            <i class="bi bi-x-lg"></i>
+          </div>
+
+        </header>
+        <main class="cart-content">
+          <div class="product-list">
+            <ul>
+              <li class="product">
+                <img src="../img/product_photo1.png" alt="">
+                <div class="product-discription">
+                  Ноутбук Apple MacBook Air 13" M1 256GB 2020 (MGND3) Gold
+                </div>
+                <div class="product-counter">
+                  <button class="add-product">
+                    <i class="bi bi-dash-circle"></i>
+                  </button>
+                  <span class="count-namber">1</span>
+                  <button class="delit-product">
+                    <i class="bi bi-plus-circle"></i>
+                  </button>
+                </div>
+                <span class="price"> 11111</span>
+              </li>
+              <li class="product">
+                <img src="../img/product_photo1.png" alt="">
+                <div class="product-discription">
+                  Ноутбук Apple MacBook Air 13" M1 256GB 2020 (MGND3) Gold
+                </div>
+                <div class="product-counter">
+                  <button class="add-product">
+                    <i class="bi bi-dash-circle"></i>
+                  </button>
+                  <span class="count-namber">2</span>
+                  <button class="delit-product">
+                    <i class="bi bi-plus-circle"></i>
+                  </button>
+                </div>
+                <span class="price">2222</span>
+              </li>
+              <li class="product">
+                <img src="../img/product_photo1.png" alt="">
+                <div class="product-discription">
+                  Ноутбук Apple MacBook Air 13" M1 256GB 2020 (MGND3) Gold
+                </div>
+                <div class="product-counter">
+                  <button class="add-product">
+                    <i class="bi bi-dash-circle"></i>
+                  </button>
+                  <span class="count-namber">3</span>
+                  <button class="delit-product">
+                    <i class="bi bi-plus-circle"></i>
+                  </button>
+                </div>
+                <span class="price">33333</span>
+              </li>
+            </ul>
+          </div>
+        </main>
+        <footer>
+          <div class="modal-footer">
+            <h5>Total: </h5>
+            <span class="total">
+              99999
+            </span>
+          </div>
+          <div class="btn-order">
+            Order
+          </div>
+        </footer>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>

@@ -1,1 +1,64 @@
-/* put your styles in this file */
+
+.card {
+  margin: 0 auto;
+  width: 317px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+  border-radius: 8px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+.product_photo {
+  margin: 12px 12px 0;
+  height: 200px;
+}
+
+.product_content {
+  padding: 24px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloc_favorite {
+  width: 70px;
+  height: 27px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #7e72f2;
+  border-radius: 3px;
+  color: #fff;
+  font-size: .875rem;
+  cursor: pointer;
+}
+
+.description h5 {
+  font-size: 1rem;
+  color: #2c2c2c;
+  margin: 16px 0 8px 0;
+  font-weight: 400;
+}
+
+.price {
+  font-size: 1.125rem;
+}
+
+.category {
+  font-size: .75rem;
+}
+
+.btn_addToCart {
+  border: none;
+  width: 100%;
+  height: 40px;
+  background: #7E72F2;
+  border-radius: 0px 0px 5px 5px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+}

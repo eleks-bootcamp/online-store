@@ -1,0 +1,19 @@
+body, html{
+  font-size: 18px;
+}
+p, h5{
+  margin: 0px;
+  font-weight: 100;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
