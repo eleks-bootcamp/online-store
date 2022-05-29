@@ -96,30 +96,63 @@ export default class Pagination {
 
   createElements(pagingData) {
     let res = [];
-    let maxPages = this.maxVisiblePages;
-    if (maxPages < 1) maxPages = pagingData.totalPages;
 
-    const pCount = Math.min(pagingData.totalPages, maxPages+1);
-    let brakePageInd = maxPages;
-    if (brakePageInd == 1) brakePageInd = 2;
+    function isPageActive(pageNum) {
+      return (this.activePage === pageNum);
+    }
+    function isMoreTotalThenVisiblePages() {
+      return pagingData.totalPages > this.maxVisiblePages;
+    }
+    function isFirstBreakNeeded() {
+      return isMoreTotalThenVisiblePages.call(this)&&
+        (this.activePage > this.maxVisiblePages/2);
+    }
+    function isSecondBreakNeeded() {
+      return isMoreTotalThenVisiblePages.call(this)&&
+        ((this.pagingData.totalPages - this.activePage+1) > this.maxVisiblePages/2);
+    }
+    function addEl(el) {
+      if (el)
+        res.push(el);
+    }
+
+    const iLastPage = pagingData.totalPages;
+    let pCount = Math.min(pagingData.totalPages, this.maxVisiblePages);
 
     if (pCount > 1) {
-      res.push(this.createNavBtn(true));
-      for (let i = 1; i <= pCount; i++) {
-        if ((i === brakePageInd)&&(i != pCount)) {
-          res.push(this.createBreak());
-        } else {
-          let pageNum = i;
-          if (i === pCount) {
-            pageNum = pagingData.totalPages;
+      addEl(this.createNavBtn(true));
+      addEl(this.createPage(1, isPageActive.call(this, 1)));
+
+      if (isFirstBreakNeeded.call(this)) {
+        addEl(this.createBreak());
+        pCount--;
           }
-          res.push(this.createPage(pageNum, (this.activePage === i)));
+      if (isSecondBreakNeeded.call(this)) {
+        pCount--;
         }
+
+      let startLoopInd = Math.round(this.activePage - this.maxVisiblePages/2);
+      if (startLoopInd < 0) {
+        startLoopInd = 0;
       }
-      res.push(this.createNavBtn(false));
+      if (startLoopInd > iLastPage - pCount) {
+        startLoopInd = iLastPage - pCount;
+      }
+
+        for (let i = 2 + startLoopInd; i - startLoopInd < pCount; i++) {
+        let pageNum = i;
+        addEl(this.createPage(pageNum, isPageActive.call(this,i)));
+      }
+
+      if (isSecondBreakNeeded.call(this))
+        addEl(this.createBreak());
+
+      addEl(this.createPage(iLastPage, isPageActive.call(this, iLastPage)));
+      addEl(this.createNavBtn(false));
     }
     return res;
   }
+
   createPagination(pagingData) {
     const res = document.createElement('nav');
     res.className = "pagination";
@@ -129,6 +162,7 @@ export default class Pagination {
     }
     return res;
   }
+
   refresh() {
     if (this.element) {
       const elements = this.createElements(this.pagingData);
