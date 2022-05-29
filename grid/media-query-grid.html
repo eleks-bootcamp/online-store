@@ -8,6 +8,8 @@
     .container {
       width: 100%;
       margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
     }
 
     .row {
@@ -20,6 +22,10 @@
       outline: 1px solid red;
       background: lightgray;
       text-align: center;
+    }
+
+    .col-0 {
+      width: 0;
     }
 
     .col-1 {
@@ -73,7 +79,7 @@
     /* s */
     @media (min-width: 576px) {
       .col-s-1 {
-        width: calc(100% / 12 * 1);
+        width: calc(100% / 12);
       }
 
       .col-s-2 {
@@ -111,12 +117,20 @@
       .col-s-10 {
         width: calc(100% / 12 * 10);
       }
+
+      .col-s-11 {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-s-12 {
+        width: calc(100% / 12 * 12);
+      }
     }
 
     /* m */
     @media (min-width: 768px) {
       .col-m-1 {
-        width: calc(100% / 12 * 1);
+        width: calc(100% / 12);
       }
 
       .col-m-2 {
@@ -154,12 +168,20 @@
       .col-m-10 {
         width: calc(100% / 12 * 10);
       }
+
+      .col-m-11 {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-m-12 {
+        width: calc(100% / 12 * 12);
+      }
     }
 
     /* l */
     @media (min-width: 992px) {
       .col-l-1 {
-        width: calc(100% / 12 * 1);
+        width: calc(100% / 12);
       }
 
       .col-l-2 {
@@ -197,12 +219,20 @@
       .col-l-10 {
         width: calc(100% / 12 * 10);
       }
+
+      .col-l-11 {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-l-12 {
+        width: calc(100% / 12 * 12);
+      }
     }
 
     /* xl */
     @media (min-width: 1200px) {
       .col-xl-1 {
-        width: calc(100% / 12 * 1);
+        width: calc(100% / 12);
       }
 
       .col-xl-2 {
@@ -240,18 +270,50 @@
       .col-xl-10 {
         width: calc(100% / 12 * 10);
       }
+
+      .col-xl-11 {
+        width: calc(100% / 12 * 11);
+      }
+
+      .col-xl-12 {
+        width: calc(100% / 12 * 12);
+      }
     }
   </style>
 </head>
 <body>
   <main>
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
-        </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
+      <div class="col-0 col-s-3 left-side">Left side</div>
+      <div class="col-12 col-s-9 right-side">Right Side
+        <div class="row">
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 1
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 2
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 3
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 4
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 5
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 6
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 7
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 8
+          </div>
+          <div class="col-12 col-s-6 col-m-6 col-l-4 col-xl-4">
+            Card 9
+          </div>
         </div>
       </div>
     </div>
