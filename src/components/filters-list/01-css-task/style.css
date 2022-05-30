@@ -1,7 +1,6 @@
 .wrapper {
     width: 400px;
     margin: 100px auto;
-    background-color: aquamarine;
 }
 
 html {
@@ -25,7 +24,7 @@ html {
 
 .filter-checkbox {
     margin-bottom: 5px;
-    padding-left: 18px;
+    padding-left: 0px;
 }
 
 .variant {

@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <title>SideBar component</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../double-slider/01-css-task/style.css">
+  <link rel="stylesheet" href="../../filters-list/01-css-task/style.css">
 
   <style>
     .wrapper {
@@ -15,7 +17,80 @@
 <body>
 <main>
   <div class="wrapper">
-    <!-- SideBar component -->
+    <div class="side-bar">
+
+      <div class="side-component">
+        <div class="side-component-name">Price</div>
+        <div class="slider">
+          <span class="from">0 UAH</span>
+          <span class="progress"></span>
+          <span class="left-slider"></span>
+          <span class="right-slider"></span>
+          <span class="to">100000 UAH</span>
+        </div>
+      </div>
+
+      <div class="side-component">
+        <div class="side-component-name">Category</div>
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Cell-phones">
+          <label for="Cell-phones">Cell phones</label>
+        </div>
+  
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Computer-Tables">
+          <label for="Computer-Tables">Computer & Tables</label>  
+        </div>
+
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Cell-Phone-Accessories">
+          <label for="Cell-Phone-Accessories">Cell Phone Accessories</label>  
+        </div>
+
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Appliances">
+          <label for="Appliances">Appliances</label>  
+        </div>
+
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Audio">
+          <label for="Audio">Audio</label>  
+        </div>
+      </div>
+
+      <div class="side-component">
+        <div class="side-component-name">Brand</div>
+
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Apple">
+          <label for="Apple">Apple</label>  
+        </div>
+
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Google">
+          <label for="Google">Google</label>  
+        </div>
+
+        <div class="filter-checkbox">
+          <input type="checkbox" class="variant" name="Sumsung">
+          <label for="Sumsung">Sumsung</label>  
+        </div>
+      </div>
+
+      <div class="side-component">
+        <div class="side-component-name">Rating</div>
+        <div class="slider">
+          <span class="from">0</span>
+          <span class="progress"></span>
+          <span class="left-slider"></span>
+          <span class="right-slider"></span>
+          <span class="to">5</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="clear-button">clear all filters</button>
   </div>
 </main>
 </body>

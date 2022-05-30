@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="../01-css-task/style.css">
 
   <style>
     .wrapper {
@@ -17,7 +17,6 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -32,7 +31,13 @@
       "brand": "acer"
     };
 
-    const card = new Card(product);
+    const obj = new Card(product);
+
+    const myRootElement = document.querySelector('#root')
+
+    myRootElement.append(obj.componentElement)
+
+    import Card from './index.js';
 
     root.append(card.element);
   </script>

@@ -1,9 +1,13 @@
+html {
+    font-family: Montserrat;
+}
+
 .slider {
     background: #c8c2f3;
     box-shadow: 0 0 1px #7e72f2;
     display: inline-block;
     height: 4px;
-    margin: 10px 14px;
+    margin: 10px 0;
     position: relative;
     user-select: none;
     width: 100%;
