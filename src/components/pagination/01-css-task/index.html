@@ -1,22 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Pagination component</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pagination component</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
 
-  <style>
-    .wrapper {
-      width: 800px;
-      margin: 100px auto;
-    }
-  </style>
-</head>
-<body>
-<main>
-  <div class="wrapper">
-    <!-- Pagination component -->
-  </div>
-</main>
-</body>
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="pagination">
+          <a class="pagination-prev" href="#">
+            <img
+              class="pagination-prev__image"
+              src="image/left-arrow.svg"
+              alt="Стрілка назад"
+              width="16px"
+              height="16px"
+            />
+          </a>
+          <ul class="pagination-list">
+            <li class="pagination-list__item">
+              <a
+                class="pagination-list__number pagination-list__number--active"
+                href="#"
+                >1</a
+              >
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">2</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">3</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">4</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">5</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">6</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">7</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">8</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">9</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">10</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">11</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="pagination-list__number" href="#">12</a>
+            </li>
+          </ul>
+          <a class="pagination-next" href="#">
+            <img
+              class="pagination-next__image"
+              src="image/right-arrow.svg"
+              alt="Стрілка вперед"
+              width="16px"
+              height="16px"
+            />
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
