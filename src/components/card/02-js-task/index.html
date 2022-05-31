@@ -4,19 +4,16 @@
   <meta charset="utf-8">
   <title>Card component</title>
   <link rel="stylesheet" href="../01-css-task/style.css">
-
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+  <link rel="stylesheet" href="../../pagination/01-css-task/style.css">
 </head>
 
-<body>
+<body> 
   <div id="root" class="wrapper"></div>
 
   <script type="module">
+
+    import Card from './index.js';
+    import Pagination from './pagination.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -31,15 +28,26 @@
       "brand": "acer"
     };
 
-    const obj = new Card(product);
+    const monitor = {
+      "id": "w73oaydowenkr9kjkav",
+      "images": [
+      "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+      ],
+      "title": "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+      "rating": 5,
+      "price": 3800,
+      "category": "monitors",
+      "brand": "benq"
+    };
 
-    const myRootElement = document.querySelector('#root')
+    const card = new Card(product);
+    const pagination = new Pagination();
 
-    myRootElement.append(obj.componentElement)
+    const someElement = document.querySelector('#root');
 
-    import Card from './index.js';
+    someElement.append(card.componentElement);
 
-    root.append(card.element);
+    someElement.append(pagination.element);
   </script>
 </body>
 </html>
