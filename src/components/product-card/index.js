@@ -13,30 +13,47 @@ const product = {
   "brand": "acer"
 };
 
+const monitor = {
+  id: "w73oaydowenkr9kjkav",
+  images: [
+  "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+  ],
+  title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+  rating: 5,
+  price: 3800,
+  category: "monitors",
+  brand: "benq"
+};
+
 class Card {
   constructor (product) {
-    this.product = product;
+    this.state = product;
     this.render();
   }
 
   getTemplate () {
     return `
       <div class="product-card">
-        <img src="${this.product.images[0]}" alt="" class="product-card__img">
+        <img src="${this.state.images[0]}" alt="" class="product-card__img">
         <div class="product-card__content">
           <div class="product-card__wrapper">
             <div class="product-card__rating">
-              <div class="product-card__rating-count">${this.product.rating}</div>
+              <div class="product-card__rating-count">${this.state.rating}</div>
               <i class="icon-star"></i>
             </div>
-            <div class="product-card__price">${this.product.price}</div>
+            <div class="product-card__price">${this.state.price}</div>
           </div>
-          <div class="product-card__title">${this.product.title}</div>
-          <div class="product-card__category">${this.product.category}</div>
+          <div class="product-card__title">${this.state.title}</div>
+          <div class="product-card__category">${this.state.category}</div>
         </div>
         <button class="button">Add To Cart</button>
       </div>
     `;
+  }
+
+  update (data = {}) {
+    this.state = data;
+    this.element.innerHTML = this.getTemplate();
   }
 
   render () {
@@ -44,7 +61,7 @@ class Card {
 
     element.innerHTML = this.getTemplate();
 
-    this.cardElement = element;
+    this.element = element;
   }
 }
 
@@ -52,4 +69,6 @@ const card = new Card (product);
 
 const rootElement = document.querySelector('#root');
 
-rootElement.append(card.cardElement);
+rootElement.append(card.element);
+
+card.update(monitor);

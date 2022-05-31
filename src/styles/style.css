@@ -422,6 +422,9 @@ header {
 
 .pagination__arrow:hover {
   background: #7E72F2;
+}
+
+.pagination__arrow:hover a {
   color: #fff;
 }
 
@@ -467,11 +470,22 @@ header {
 
 .pagination__list-item:hover {
   background: #7E72F2;
+}
+
+.pagination__list-item:hover a {
   color: #fff;
 }
 
-.pagination__list-item:first-child {
+.pagination__list-item a {
+  text-decoration: none;
+  color: #2C2C2C;
+}
+
+.active {
   background: #7E72F2;
+}
+
+.active a {
   color: #fff;
 }
 
