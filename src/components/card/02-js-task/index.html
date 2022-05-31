@@ -9,37 +9,38 @@
 
   <style>
     .wrapper {
-      width: 400px;
-      margin: 100px auto;
+      width: 100%;
     }
   </style>
 </head>
 
-<body>
-  <div id="root" class="wrapper"></div>
+<body class="body">
+<div id="root" class="wrapper"></div>
 
-  <script type="module">
-    import Card from './index.js';
-    import Pagination from './pagination.js';
+<script type="module">
+  import Card from './index.js';
+  import Pagination from './pagination.js';
 
-    const product = {
-      "id": "76w0hz7015kkr9kjkav",
-      "images": [
-        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-      ],
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.89,
-      "price": 15999,
-      "category": "laptops",
-      "brand": "acer"
-    };
+  const product = {
+    "id": "76w0hz7015kkr9kjkav",
+    "images": [
+      "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+      "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+    ],
+    "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+    "rating": 2.89,
+    "price": 15999,
+    "category": "laptops",
+    "brand": "acer"
+  };
 
-    const card = new Card(product);
-    const pagination = new Pagination();
+  const card = new Card(product);
+  const pagination = new Pagination();
 
-    root.append(card.state);
-    root.append(pagination.state);
-  </script>
+  const someElement = document.querySelector('#root');
+  someElement.append(card.state);
+  someElement.append(pagination.state);
+
+</script>
 </body>
 </html>

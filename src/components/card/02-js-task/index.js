@@ -6,8 +6,8 @@ export default class Card {
   }
 
   getTemplate() {
-    return `<div class="os-img">
-
+    return `<div class="wrap">
+<div class="os-img">
         <img src=${this.state.images[0]} alt="foto">
       </div>
 
@@ -28,7 +28,8 @@ export default class Card {
       <p class="os-text-two size">${this.state.category}</p>
     </div>
 
-        <div><button class="os-footer size">add to cart</button></div>`
+        <div><button class="os-footer size">add to cart</button></div>
+</div>`
   }
 
   myRender() {
