@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+  <style>
+    ul>div{
+    display:flex;
+    justify-content:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" id="root">
+  </div>
+<script type = "module">
+  import Card from './index.js';
+  import Pagination from './pagination.js'
+  const monitor = {
+      id: "w73oaydowenkr9kjkav",
+      images: [
+      "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+      ],
+      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+      rating: 5,
+      price: 3800,
+      category: "monitors",
+      brand: "benq"
+};
+
+const card = new Card(monitor);
+const pagination = new Pagination()
+const wrapper = document.querySelector('.wrapper')
+wrapper.append(card.group)
+wrapper.append(pagination.container)
+
+
+</script>
+</body>
+</html>
