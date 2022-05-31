@@ -17,6 +17,18 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
+    const user = {
+      firstname: 'Joe',
+      secname: 'Doe',
+      fullname: 'Joe Doe',
+    }
+      function getName() {
+        console.log(this.firstname);
+      }
+
+      getName.call(user);
+      getName.call(user);
+/*
     import Card from './index.js';
 
     const product = {
@@ -34,7 +46,7 @@
 
     const card = new Card(product);
 
-    root.append(card.element);
+    root.append(card.element); */
   </script>
 </body>
 </html>
