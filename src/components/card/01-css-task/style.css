@@ -1,0 +1,55 @@
+/* put your styles in this file */
+.wrapper {
+    max-width: 317px;
+    height: 364px;
+    background-color: aqua;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+  }
+
+  .picture {
+    margin-top: 10px;
+    width: 293px;
+    height: 200px;
+    background-color: brown;
+
+  }
+
+  .raiting-price {
+    width: 293px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+  .raiting {
+  background-color: darkviolet;
+    font-size: 13px;
+  }
+  .item-title {
+    font-size: 14px;
+    background-color:red;
+    width: 293px;
+
+  }
+  .type {
+    width: 293px;
+    text-align: left;
+    background-color: darkorange;
+  }
+
+  .button {
+    bottom: 0px;
+    text-align: center;
+    line-height: 40px;
+    width: 317px;
+    height: 40px;
+    background-color: blueviolet;
+    border-radius: 0px 0px 10px 10px;
+  }
