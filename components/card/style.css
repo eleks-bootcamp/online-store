@@ -51,13 +51,17 @@ button {
   height: 40px;
   font-size: 12px;
   line-height: 12px;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 8px 8px;
+  border: 0px;
 
 }
 
 .card-img {
   text-align: center;
-  margin: 12px;
+  width: 80%;
+  margin: auto;
+  padding-top: 12px;
+
 }
 
 .card-category {
