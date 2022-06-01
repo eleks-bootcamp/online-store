@@ -11,7 +11,120 @@
 
 <body>
 <main>
-  <div class="card-component">
+
+
+  <div id="root" class="wrapper"></div>
+
+  <script type="module">
+    // import Card from './index.js';
+
+    const title = "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black"
+
+    const product = {
+      "id": "76w0hz7015kkr9kjkav",
+      "images": [
+        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+      ],
+      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+      "rating": 2.89,
+      "price": 15999,
+      "category": "laptops",
+      "brand": "acer"
+    };
+
+    const monitor = {
+      "id": "w73oaydowenkr9kjkav",
+      "images": [
+        "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"],
+      "title": "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+      "rating": 5,
+      "price": 3800,
+      "category": "monitors",
+      "brand": "benq"
+    };
+
+
+    class Component {
+      constructor (someProduct) {
+        this.state = someProduct;
+        this.myRender();
+      }
+
+      getTemplate () {
+        return `
+        <div class="card-component">
+          <div class="card-photo">
+            <img class="card-photo" src="${this.state.images[0]}">
+          </div>
+
+          <div class="card-button-small">
+            <div class="card-button-small-text">
+              <span>${this.state.rating}</span>
+              <div class="card-button-small-icon">
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-text-price">
+            <h4>${this.state.price}</h4>
+          </div>
+
+          <div class="card-component-text-name-item">
+            <a>${this.state.title}</a>
+          </div>
+
+          <div class="card-component-text">
+            <a>laptop</a>
+          </div>
+
+          <div class="card-component-decorative-button">
+            <div class="card-component-decorative-button-text">
+              <a>ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        `;
+      }
+
+
+
+      update(data = {}) {
+
+        this.state = data;
+
+
+
+      }
+
+      myRender () {
+        const element = document.createElement('div');
+
+        element.innerHTML = this.getTemplate();
+
+        this.componentElement = element;
+      }
+    }
+
+    const obj = new Component(product);
+
+    const myRootElement = document.querySelector('#root');
+
+    console.log(obj.componentElement);
+
+    myRootElement.append(obj.componentElement);
+
+    obj.update(monitor);
+
+
+  </script>
+
+
+
+
+
+  <!-- <div class="card-component">
     <div class="card-photo">
       <img src="/Laptop.png">
     </div>
@@ -32,6 +145,7 @@
     <div class="card-component-text-name-item">
       <a>Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</a>
     </div>
+
     <div class="card-component-text">
       <a>laptop</a>
     </div>
@@ -41,10 +155,12 @@
         <a>ADD TO CART</a>
       </div>
     </div>
-  </div>
-  </div>
+  </div> -->
+
 
 
 </main>
 </body>
 </html>
+
+

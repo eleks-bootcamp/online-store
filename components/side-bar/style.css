@@ -1,9 +1,10 @@
 .side-bar-box {
-  height: 904px;
+  height: 1020px;
   width: 280px;
   box-shadow: 0px 0px 14px #cccccc;
   border-radius: 10px;
   margin: 30px;
+  margin-bottom: 0px;
 }
 
 .side-bar-content {
@@ -11,6 +12,7 @@
   margin-left: 20px;
   margin-right: 20px;
   position: absolute;
+  box-sizing: border-box;
 }
 
 .side-bar-text-200 {
@@ -36,7 +38,7 @@
 }
 
 .range-slider>span {
-  font-size: 14px;
+  font-size: 13px;
   position: absolute;
   top: 100%;
   display: flex;
@@ -49,14 +51,27 @@
   right: 0;
 }
 
-.range-slider-pointerLeft .ranger-slider-pointerRight {
-  background: url(http://online-store.bootcamp.place/range-thumb-icon.a4dd7a38.svg);
+.range-slider-pointerLeft  {
+  background: url(/components/side-bar/range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
   cursor: grab;
-  height: 17px;
+  background-size: cover;
+  height: 18px;
   width: 6px;
   position: absolute;
-  top: 50%;
+  bottom: 1%;
   background-size: cover;
+}
+
+.ranger-slider-pointerRight {
+  background: url(/components/side-bar/range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+  cursor: grab;
+  background-size: cover;
+  height: 18px;
+  position: absolute;
+  width: 6px;
+  background-size: cover;
+  transform: rotate(180deg);
+  top: 50%;
 }
 
 .range-slider-inner {
@@ -68,22 +83,23 @@
   position: relative;
   user-select: none;
   width: 100%;
+  left: 0%;
+  right: 0%;
 }
-
 
 
 .category {
   border-bottom: 1px solid #979797;
-  margin-top: 23px;
+  margin-top: 34px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: small;
+  font-size: medium;
 }
 
 .brand {
   border-bottom: 1px solid #979797;
   margin-top: 23px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: small;
+  font-size: medium;
 }
 
 .side-bar-category {
@@ -106,13 +122,19 @@
   box-shadow: 0px 0px 14px #cccccc;
   background-color: #7E72F2;
   border-radius: 10px;
-  margin: 30px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: small;
   cursor: pointer;
+  margin-left: 30px;
+  transition-duration: 0.4s;
+  margin-top: 20px;
+}
+
+.side-bar-btn:hover {
+  background-color: #695fc5;
 }
 
 input[type="checkbox"] {
