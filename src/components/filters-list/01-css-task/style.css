@@ -1,1 +1,34 @@
-/* put your styles in this file */
+.wrapper {
+  min-height: 25rem;
+  background: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-serch {
+  width: 80%;
+  min-height: 2rem;
+  background: white;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.wrapper-serch {
+  font-weight: bold;
+  color: black;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+

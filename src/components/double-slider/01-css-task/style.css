@@ -1,1 +1,29 @@
-/* put your styles in this file */
+:root {
+  --var-bg-wrapper:  bisque;
+  --var-color-bg-btn-footer: #7E72F2;
+  --var-color-text: #2C2C2C;
+}
+
+.wrapper {
+  background: var(--var-bg-wrapper);
+  min-height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-slider_block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider{
+  width: 90%;
+}
+
+
+
+
+
