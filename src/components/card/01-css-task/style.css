@@ -16,9 +16,9 @@ body {
   background: var(--var-color-bg-body);
 }
 
-.wrapper {
+.wrap {
   width: 400px;
-  margin: 100px auto;
+  margin: 20px auto;
   min-height: 500px;
   background: var(--var-color-bg-wrapper);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);

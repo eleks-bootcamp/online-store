@@ -1,11 +1,11 @@
 export default class Pagination {
 
   constructor() {
-    this.defaultPagesSize=12;
+    this.defaultPagesSize = 12;
     this.render();
   }
 
-  getPages(){
+  getPages() {
     return new Array(this.defaultPagesSize).fill(1).map((item, index) => {
       return this.getPageTemplate(index);
     }).join('')
@@ -27,10 +27,9 @@ export default class Pagination {
     `
   }
 
-  getPageTemplate(index=0){
-    return `<li class="siz active" data-page-index="${index}">${index+1}</li>`
+  getPageTemplate(index = 0) {
+    return `<li class="siz active" data-page-index="${index}">${index + 1}</li>`
   }
-
 
 
   render() {
