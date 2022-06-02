@@ -72,7 +72,7 @@ const RightSide = (props) => {
                             currentIndex.map(item => {
                                 return (
                                     <Col key={item.id} className='col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4'>
-                                        <Card item={item} category={item.category} img={item.images [0]} title={item.title} rate={item.rating} price={item.price} choseProducts={props.choseProducts} setChoseProducts={props.setChoseProducts} setProductCount={props.setProductCount} />
+                                        <Card item={item} id={item.id} category={item.category} img={item.images [0]} title={item.title} rate={item.rating} price={item.price} choseProducts={props.choseProducts} setChoseProducts={props.setChoseProducts} setProductCount={props.setProductCount} />
                                     </Col>
                                  )})
                         }
@@ -80,7 +80,7 @@ const RightSide = (props) => {
                 </Container>
             </div>
             <div className="right-side-bottom">
-                <Pagination itemsPerPage={itemsPerPage} totalItem={cardData.length} paginate={paginate} nextPage={nextPage} prevPage={prevPage} />
+                <Pagination itemsPerPage={itemsPerPage} totalItem={filteredProduct.length} paginate={paginate} nextPage={nextPage} prevPage={prevPage} />
             </div>
         </div>
     )

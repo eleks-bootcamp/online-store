@@ -11,13 +11,14 @@
 }
 
 .wrapper-pagination {
-    max-width: 590px;
+    max-width: 630px;
     width: 100%;
     min-height: 40px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 5px;
 }
 
 ._round-shape {

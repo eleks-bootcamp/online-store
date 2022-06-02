@@ -1,14 +1,11 @@
 import './Card.css';
+import { useState } from 'react';
 
 const Card = (props) => {
     
     const setChoseProducts = props.setChoseProducts;
     const choseProducts = props.choseProducts;
-    const setProductCount= props.setProductCount
-
-    const cartCount = () => {
-        setProductCount(prev => prev + 1)
-    }
+    const setProductCount = props.setProductCount;
 
     return (
         <div className="card-wrapper">
@@ -36,17 +33,29 @@ const Card = (props) => {
                     </div>
                 </div>
             </div>
-            <div onClick={() => cartCount()}>
+            <div onClick={() => {
+                setProductCount(choseProducts.map(item => item.count).reduce((prev, next) => prev + next, 0))
+            }}>
                 <a 
                     className="card-btn-add" 
                     onClick={setChoseProducts => {
-                        choseProducts.push(props.item);
+
+                        const selectedItem = props.id;
+                        const search = choseProducts.find((item) => item.id === selectedItem)
+                        if(search === undefined) {
+                            choseProducts.push({
+                                id: props.id,
+                                count: 1,
+                                dataCard: props.item
+                            });
+                        }else {
+                            search.count += 1;
+                        }
                         console.log(choseProducts);
                         }
                     }
-
                 >
-                    <span>add to card</span> {/* ТРЕБА ПОФІКСИТИ */}
+                <span>add to card</span> {/* ТРЕБА ПОФІКСИТИ */}
                 </a>
             </div>
         </div>
