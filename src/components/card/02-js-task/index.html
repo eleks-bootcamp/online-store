@@ -7,17 +7,23 @@
 
   <style>
     .wrapper {
-      width: 400px;
+      width: 600px;
       margin: 100px auto;
+    }
+
+    .os-product-card {
+      margin-bottom: 20px;
     }
   </style>
 </head>
 
 <body>
+
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
+    import Card from './index.js';
+    import Pagination from './pagination.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -33,8 +39,14 @@
     };
 
     const card = new Card(product);
+    const pagination = new Pagination({
+      activePageIndex: 3
+    });
 
-    root.append(card.element);
+    const someElement = document.querySelector('#root');
+
+    someElement.append(card.componentElement);
+    someElement.append(pagination.element);
   </script>
 </body>
 </html>
