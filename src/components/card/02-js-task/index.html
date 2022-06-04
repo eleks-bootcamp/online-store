@@ -34,7 +34,7 @@
   };
 
   const card = new Card(product);
-  const pagination = new Pagination();
+  const pagination = new Pagination({activePageIndex: 0});
 
   const someElement = document.querySelector('#root');
   someElement.append(card.state);

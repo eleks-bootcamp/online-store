@@ -1,15 +1,10 @@
 export default class CardsList {
 
   constructor({data = [], Component = {}}) {
-
     this.state = data;
     this.Component = Component;
 
-    console.log('data',data);
-    console.log('component', Component)
-
     this.render();
-
   }
 
   // getT(obj) {
@@ -161,14 +156,17 @@ export default class CardsList {
   // }
 
 
+  update(data) {
+    this.state = data;
+
+  }
+
   render() {
     const block = document.createElement('div');
     block.classList = "block";
 
     this.state.map((item) => new this.Component(item).element)
-      .forEach((elem) => {block.append(elem)});
-
-
+      .forEach((element) => console.log(element));
     this.element = block;
   }
 

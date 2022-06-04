@@ -1,7 +1,9 @@
 export default class Pagination {
 
-  constructor() {
+
+  constructor({activePageIndex}) {
     this.defaultPagesSize = 12;
+    this.activePageIndex = activePageIndex;
     this.render();
   }
 
@@ -27,8 +29,14 @@ export default class Pagination {
     `
   }
 
-  getPageTemplate(index = 0) {
-    return `<li class="siz active" data-page-index="${index}">${index + 1}</li>`
+  getPageTemplate(pageIndex = 0) {
+    const isActive = pageIndex === this.activePageIndex ? 'active' : '';
+
+    return `<li
+                class="siz ${isActive}"
+                data-page-index="${pageIndex}">
+                    ${pageIndex + 1}
+            </li>`
   }
 
 

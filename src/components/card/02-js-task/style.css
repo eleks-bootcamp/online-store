@@ -33,6 +33,15 @@
   cursor: pointer;
 }
 
+.active{
+  background: var(--var-color-hover);
+  border: 1px solid var(--var-color-circle-bg-defolt);
+  color: var(--var-color-circle-bg-defolt);
+  transition: .3s;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 .pagination {
   width: 50%;
   margin: 20px auto;
