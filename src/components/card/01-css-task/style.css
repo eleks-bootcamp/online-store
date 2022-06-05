@@ -18,6 +18,8 @@ div{
 
 
 .product-card{
+  width: 350px;
+  margin: 100px auto;
   min-width: 280px;
   left: 1711px;
   top: 150px;
@@ -57,7 +59,7 @@ div{
   flex: 1;
   max-width: 70px;
   padding: 6px 12px;
-  border-radius: 3x;
+  border-radius: 3px;
   background-color: #7e72f2;
   color: #fff;
   font-size: .875rem;
