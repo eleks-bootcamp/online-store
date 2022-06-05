@@ -18,63 +18,25 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
+    import Card from './index.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
-      "images": "/online-store/src/components/card/01-css-task/img/A315-57G-336G.png",
+      "images": "https://content.rozetka.com.ua/goods/images/big_tile/73891904.jpg",
       "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.89,
-      "price": 15999,
+      "rating": 2.13,
+      "price": 6999,
       "category": "laptops",
       "brand": "acer"
     };
 
-      class Component {
-        constructor (someProduct) {
-          this.componentProduct = someProduct;
-          this.myRender();
-        }
-
-        getTemplate () {
-          return `
-          <div class="card_container">
-        <div class="card_item-photo">
-          <img src="${this.componentProduct.images}">
-        </div>
-        <div class="card_descriptin">
-            <div class="card-item_pr-rt">
-                <div class="card_rate">
-                  <span>${this.componentProduct.rating}</span>
-                  <i class="bi bi-star"></i>
-                </div>
-                <div class="card_price">${this.componentProduct.price}</div>
-            </div>
-            <h5 class="card_title">${this.componentProduct.title}</h5>
-            <p class="card_category">${this.componentProduct.category}</p>
-        </div>
-        <div class="card_footer">
-            <button>
-              ADD TO CART
-            </button>
-      </div>
-    </div>
-          `
-        }
-
-
-        myRender () {
-          const element = document.createElement('div');
-          element.innerHTML = this.getTemplate();
-          this.componentElement = element;
-        }
-
-      }
-
-      const obj = new Component(product);
-      const myRootElement = document.querySelector('#root');
-      myRootElement.append(obj.componentElement);
+    const card = new Card(product);
+    const myRootElement = document.querySelector('#root');
+    myRootElement.append(card.componentElement);
 
 </script>
+
+    
 
 </body>
 </html>

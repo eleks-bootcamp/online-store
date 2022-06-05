@@ -20,21 +20,24 @@ body {
 }
 
 .card_container {
-  width: 317px;
-  height: 394px;
   overflow: hidden;
   background: #FFFFFF;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 
 .card_item-photo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 200px;
-  margin: 12px 0 auto;
+  margin: 12px 12px 0px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .card_descriptin {
