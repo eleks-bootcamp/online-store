@@ -5,28 +5,36 @@
 	<meta charset="UTF-8" />
 	<title>Pagination component</title>
 	<link rel="stylesheet" href="style.css">
+
+	<style>
+		.wrapper {
+		  width: 800px;
+		  margin: 100px auto;
+		}
+	 </style>
+
 </head>
 
 <body>
 	<main>
-		<div class="wrapper">
+		<div id="root" class="wrapper">
 			<div class="pagination">
-				<div class="bi bi-chevron-left pagination-btn"></div>
-				<div class="pagination-nav">
-					<a class="pagination-btn" href="#">1</a>
-					<a class="pagination-btn" href="#">2</a>
-					<a class="pagination-btn" href="#">3</a>
-					<a class="pagination-btn" href="#">4</a>
-					<a class="pagination-btn" href="#">5</a>
-					<a class="pagination-btn" href="#">6</a>
-					<a class="pagination-btn" href="#">7</a>
-					<a class="pagination-btn" href="#">8</a>
-					<a class="pagination-btn" href="#">9</a>
-					<a class="pagination-btn" href="#">10</a>
-					<a class="pagination-btn" href="#">11</a>
-					<a class="pagination-btn" href="#">12</a>
-				</div>
-				<div class="bi bi-chevron-right pagination-btn"></div>
+				<div class="bi bi-chevron-left pagination__btn"></div>
+				<ul class="pagination__nav">
+					<li><a class="pagination__btn" href="#">1</a></li>
+					<li><a class="pagination__btn" href="#">2</a></li>
+					<li><a class="pagination__btn" href="#">3</a></li>
+					<li><a class="pagination__btn" href="#">4</a></li>
+					<li><a class="pagination__btn" href="#">5</a></li>
+					<li><a class="pagination__btn" href="#">6</a></li>
+					<li><a class="pagination__btn" href="#">7</a></li>
+					<li><a class="pagination__btn" href="#">8</a></li>
+					<li><a class="pagination__btn" href="#">9</a></li>
+					<li><a class="pagination__btn" href="#">10</a></li>
+					<li><a class="pagination__btn" href="#">11</a></li>
+					<li><a class="pagination__btn" href="#">12</a></li>
+				</ul>
+				<div class="bi bi-chevron-right pagination__btn"></div>
 			</div>
 		</div>
 	</main>

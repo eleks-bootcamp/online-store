@@ -1,37 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-body {
-	margin:100 auto;
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
-}
+
 
 a {
 	text-decoration: none;
 }
 
-.wrapper {
-	width: 800px;
-}
 
 .pagination {
-	width: 77%;
+	margin: 0 auto;
+	width: 600px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 
-.pagination-nav {
-	width: 80%;
+.pagination__nav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 500px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	list-style: none;
 }
 
-.pagination-btn {
+.pagination__btn {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -44,7 +41,7 @@ a {
 	
 }
 
-.pagination-btn:hover {
+.pagination__btn:hover {
 	transition: 0.5s;
 	background-color: #7E72F2;
 	cursor: pointer;
