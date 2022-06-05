@@ -1,59 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-* {
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-}
-*,
-*:before,
-*:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-a,
-a:visited {
-	text-decoration: none;
-	color: #000000;
-}
-
-a:hover {
-	text-decoration: none;
-	color: lightskyblue;
-}
-
-ul  {
-	list-style: none;
-}
-ol {
-	list-style: none;
-}
-
-img {
-	vertical-align: top;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: inherit;
-	font-size: inherit;
-}
-
-html,
-body {
-	
-	height: 100%;
-	line-height: 1;
-	width: 992px;
-	font-size: 1em;
-	background-color: #f7f5f8;
-	margin: 0px auto;
-}
 
 .product-wrapper {
 	overflow: hidden;
@@ -85,7 +31,6 @@ body {
 .card-wrapper {
 	height: 28%;
 	width: 88%;
-	font-family: 'Montserrat', sans-serif;
 	color: #2C2C2C;
 	display: flex;
 	flex-direction: column;
@@ -120,7 +65,7 @@ body {
 .rating {
 	width: 67%;
 	margin: 0 auto ;
-	font-size: 23px;
+	font-size: 21px;
 	overflow:hidden;
 	align-items: center;
 }
