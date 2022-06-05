@@ -1,34 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>HTML/CSS Card component</title>
-  <link rel="stylesheet" href="style.css">
+export default class Card {
+  constructor () {
+    this.render();
+  }
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-
-    html{
-  font-size: 14px;
-  font-family: Montserrat,sans-serif;
-  margin: 0;
-}
-  </style>
-</head>
-<body>
-<main>
-  <div class="wrapper">
+  getTemplate () {
+    return `
+    <div class="wrapper">
     <div class="product-card">
       <div class="product-img"></div>
       <div class="product-content">
         <div class="product-price-block">
           <div class="product-rating">
             <span>1.23</span>
-            <i class="star">
-              &#9734</i></div>
+            <i class="bi bi-star"></i></div>
         <div class="product-price">15999</div>
           </div>
         <h5 class="product-title">Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black</h5>
@@ -39,6 +23,19 @@
     </footer>
     </div>
   </div>
-</main>
-</body>
-</html>
+    `;
+  }
+
+
+
+
+  render () {
+    const wrapper = document.createElement('div');
+
+    wrapper.innerHTML = this.getTemplate();
+
+    this.componentElement = wrapper;
+  }
+}
+
+

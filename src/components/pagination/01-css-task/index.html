@@ -1,23 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML/CSS Pagination component</title>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="pagination-style.css"/>
+  <meta charset="UTF-8" />
+  <title>Pagination component</title>
+  <link rel="stylesheet" href="style.css">
 
   <style>
     .wrapper {
+      width: 800px;
       margin: 100px auto;
     }
   </style>
 </head>
 <body>
-
 <main>
-  <div class="wrapper">
+  <div id="root" class="wrapper">
     <nav class="os-pagination">
       <a href="#" class="page-link previous" data-element="nav-prev">
         <i class="bi bi-chevron-left"></i>
@@ -52,7 +49,13 @@
           <a href="#" data-element="page-link" class="page-link" data-page-index="8">9</a>
         </li>
         <li>
-          <a href="#" data-element="page-link" class="page-link" data-page-index="9">10</a>
+          <a href="#" data-element="page-link" class="page-link" data-page-index="8">10</a>
+        </li>
+        <li>
+          <a href="#" data-element="page-link" class="page-link" data-page-index="8">11</a>
+        </li>
+        <li>
+          <a href="#" data-element="page-link" class="page-link" data-page-index="9">12</a>
         </li>
       </ul>
 
@@ -63,6 +66,5 @@
     </nav>
   </div>
 </main>
-
 </body>
 </html>
