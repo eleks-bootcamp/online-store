@@ -13,9 +13,19 @@ body {
       margin: 100px auto;
       box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
       border-radius: 8px;
+      padding-top: 0.1px;
 }
-.product-card-img {
-      margin: 12px 12px 0 12px;
+.img-wrapper {
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      height: 200px;
+      justify-content: center;
+      margin: 12px 12px 0;
+}
+.product-card-img { 
+      
 }
 .wrapper-content {
       padding: 22px 24px;
@@ -40,7 +50,9 @@ body {
       width: 14px;
 }
 .product-price {
-      font-size: 15;
+      color: #2c2c2c;
+    font-size: 1.125rem;
+    font-weight: 400;
 }
 .product-description {
       margin-top: 16px;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="../../../../components/card/style.css">
 
   <style>
     .wrapper {
@@ -17,8 +17,7 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
-
+    
     const product = {
       "id": "76w0hz7015kkr9kjkav",
       "images": [
@@ -31,10 +30,74 @@
       "category": "laptops",
       "brand": "acer"
     };
+    
 
-    const card = new Card(product);
+    class Component {
+        constructor (someProduct) {
+          // this -> {}
+            this.componentProduct = someProduct;
+            this.myRender();
 
-    root.append(card.element);
+            console.log('this.componentTitle', this.componentProduct);
+
+        }
+
+        getMyTemplate () {
+          return `
+            </div>
+            <div class="product-card">
+              <div class="img-wrapper" style=" background-image: url(${this.componentProduct.images[0]})";>
+                
+              </div>
+              <div class="wrapper-content">
+                <div class="offer">
+                  <div class="product-rating">
+                    <p class="product-rating-number">${this.componentProduct.rating}</p>
+                    <img class="product-rating-star" src="../../../../components/card/img/Star1.svg" alt="star">
+                  </div>
+                  <p class="product-price">15999</p>
+                </div>
+                <p class="product-description">${this.componentProduct.title}</p>
+                <p class="product-categories">${this.componentProduct.category}</p>
+              </div>
+              <button class="btn" type="button">Add To Cart</button>
+            </div> 
+            `;
+            
+          
+        }
+
+        myRender () {
+            const element = document.createElement('div');
+            element.innerHTML = this.getMyTemplate();
+            
+
+            this.componentElemet = element
+        }
+    }
+
+    const obj = new Component(product);
+
+    const myRootElement = document.querySelector('#root')
+
+    myRootElement.append(obj.componentElemet);
+
+    
+
+
+
+
+
+
+
+
+    // import Card from '.index.js';
+
+   
+
+    // const card = new Card(product);
+
+    // root.append(card.element);
   </script>
 </body>
 </html>
