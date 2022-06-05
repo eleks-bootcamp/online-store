@@ -33,12 +33,28 @@
     "brand": "acer"
   };
 
+  const videoCard = {
+    "id": "kub9vo3i3hckr9kjkav",
+    "images": [
+      "https://content.rozetka.com.ua/goods/images/big_tile/165161262.jpg",
+      "https://content1.rozetka.com.ua/goods/images/big_tile/165161264.jpg"
+    ],
+    "title": "Asus PCI-Ex Radeon RX 6700 XT Dual 12GB GDDR6 (192bit) (HDMI, 3 x DisplayPort) (DUAL-RX6700XT-12G)",
+    "rating": 2.04,
+    "price": 28000,
+    "category": "video_cards",
+    "brand": "asus"
+  };
+
   const card = new Card(product);
-  const pagination = new Pagination({activePageIndex: 0});
+  const pagination = new Pagination({activePageIndex: 2});
 
   const someElement = document.querySelector('#root');
-  someElement.append(card.state);
-  someElement.append(pagination.state);
+  someElement.append(card.componentElement);
+  someElement.append(pagination.element);
+
+  // card.update(videoCard);
+
 
 </script>
 </body>

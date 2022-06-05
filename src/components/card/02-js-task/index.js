@@ -32,12 +32,17 @@ export default class Card {
     </div>`
   }
 
+  update(data = {}) {
+    this.state = data;
+    this.componentElement.innerHTML = this.getTemplate();
+  }
+
   myRender() {
     const block = document.createElement('div');
     block.classList = "block";
     block.innerHTML = this.getTemplate();
 
-    this.state = block;
+    this.componentElement = block.firstElementChild;
   }
 }
 
