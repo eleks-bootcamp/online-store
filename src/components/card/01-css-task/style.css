@@ -1,1 +1,79 @@
-/* put your styles in this file */
+.product {
+  width: 317px;
+  margin: 100px auto;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+}
+.product-image{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 293px;
+  height: 200px;
+  background-image: url(../card/laptop.svg);
+  background: 100%;
+  margin: 12px;
+}
+.rating{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  padding-left: 24px;
+}
+.mark{
+  position: relative;
+  display: inline-block;
+  background: #7E72F2;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  padding: 6px;
+}
+.label{
+  background-image: url(../card/Star.svg);
+  color: #fff;
+}
+.price{
+  padding: 6px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  margin-right: 20px;
+}
+.characteristics{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2C2C2C;
+  width: 240px;
+  padding-left: 24px;
+  padding-top: 16px;
+  text-align: justify;
+}
+.product-category{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #2C2C2C;
+  padding-left: 24px;
+  padding-top: 10px;
+  padding-bottom: 22px;
+}
+.add-product{
+  background: #7E72F2;
+  border-radius: 0px 0px 5px 5px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 15px;
+  transition: 0.3s;
+}
+.add-product:hover{
+  background: #6657ed;
+}
