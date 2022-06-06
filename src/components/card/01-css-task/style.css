@@ -10,8 +10,11 @@
   text-align: center;
   width: 293px;
   height: 200px;
+<<<<<<< HEAD
   background-image: url(../card/laptop.svg);
   background: 100%;
+=======
+>>>>>>> 04452c09fe520a874172b6d315dc547785a723d7
   margin: 12px;
 }
 .rating{
@@ -33,7 +36,11 @@
   padding: 6px;
 }
 .label{
+<<<<<<< HEAD
   background-image: url(../card/Star.svg);
+=======
+  background-image: url(./Star.svg);
+>>>>>>> 04452c09fe520a874172b6d315dc547785a723d7
   color: #fff;
 }
 .price{
@@ -77,3 +84,7 @@
 .add-product:hover{
   background: #6657ed;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 04452c09fe520a874172b6d315dc547785a723d7

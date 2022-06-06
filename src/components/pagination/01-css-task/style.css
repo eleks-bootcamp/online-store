@@ -1,3 +1,58 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+.wrapper {
+  margin: 100px auto;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination a {
+  line-height: 1;
+  text-decoration: none;
+}
+.pagination i{
+  background-color: #ededed;
+  border-radius: 100%;
+  padding: 10px;
+  transition: 0.3s;
+}
+.pagination i:hover{
+  background-color: #7e72f2;
+  color: #fff;
+}
+.pagination .arrow-left,
+.pagination .arrow-right {
+  color: #000;
+}
+.pagination .arrow-left{
+  margin-right: 15px;
+}
+.pagination .arrow-right{
+  margin-left: 15px;
+}
+.pagination .page-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 100%;
+}
+.pagination .page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ededed;
+  border-radius: 20px;
+  color: #2c2c2c;
+  transition: 0.3s;
+}
+.pagination .page-number:hover,
+.pagination .page-number:active{
+  background-color: #7e72f2;
+  color: #fff;
+}
 
-/* put your styles in this file */
+
+
