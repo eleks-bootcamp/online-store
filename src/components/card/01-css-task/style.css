@@ -1,0 +1,120 @@
+@import url("/src/styles/main.css");
+
+
+.card {
+  height: 394px;
+  width: 317px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px #00000022;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods_photo {
+  margin: 12px 12px;
+  height: 200px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.button_price{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.rating_stars {
+  margin-left: 25px;
+  width: 70px;
+  height: 27px;
+  background: #7E72F2;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.rating {
+  color: #FFFFFF;
+}
+
+.stars {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+}
+
+.price {
+  font-size: 15px;
+  line-height: 18px;
+  margin: auto 25px;
+}
+
+.goods_name {
+  margin-left: 25px;
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+
+.goods_type {
+  margin-left: 25px;
+  font-size: 10px;
+}
+
+.add_to_card {
+  margin-top: 13px;
+  height: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background: #7E72F2;
+  border-radius: 0px 0px 8px 8px;
+  border: none;
+}
+
+/* pagination */
+.pagination {
+  width: 790px;
+  height: 205px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page {
+  width: 40px;
+  height: 40px;
+  border-radius: 150px;
+  background: #EDEDED;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page:hover {
+  background: #7E72F2;
+  color: #FFFFFF;
+}
+
+.active {
+  background: #7E72F2;
+  color: #FFFFFF;
+}

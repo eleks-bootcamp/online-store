@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Card component</title>
+  <link rel="stylesheet" href="../01-css-task/style.css">
+
+  <style>
+    .wrapper {
+      width: 400px;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="wrapper"></div>
+
+  <script type="module">
+
+    import Card from './index.js';
+    import Pagination from './pagination.js';
+
+    const product = {
+          "id": "76w0hz7015kkr9kjkav",
+          "images": [
+            "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+            "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+          ],
+          "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+          "rating": 2.89,
+          "price": 15999,
+          "category": "laptops",
+          "brand": "acer"
+        };
+
+    const monitor = {
+          id: "w73oaydowenkr9kjkav",
+          images: [
+          "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+          ],
+          title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+          rating: 5,
+          price: 3800,
+          category: "monitors",
+          brand: "benq"
+        };
+
+    const card = new Card(product);
+    const pagination = new Pagination(product);
+
+    const someElement=document.querySelector('#root');
+
+      //root.append(card.componentElement);
+      //root.append(pagination.element);
+    someElement.append(card.componentElement);
+    someElement.append(pagination.element);
+
+    card.update(monitor);
+
+  </script>
+</body>
+</html>

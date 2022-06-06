@@ -1,0 +1,36 @@
+/* put your styles in this file */
+:root {
+  --main-color: #FFFFFF;
+  --hover-color: #7E72F2;
+  --accent-color-2: #000;
+  --text-color: #2C2C2C;
+ /* --primary-shadow: 5px 7px #d3d3d3;
+  --secondary-shadow: 7px 7px #eee;
+  --primary-font: Georgia;
+  --secondary-font: sans-serif;
+  --card-height: 43%;
+  --card-width: 40%;
+  --min-card-width: 100px;*/
+  --card-padding-top: 24px;
+  --card-padding-left: 20px;
+}
+
+.price {
+  padding-top: var(--card-padding-top);
+  padding-left: var(--card-padding-left);
+
+}
+
+.price_name {
+  color: var(--text-color);
+}
+
+.price_slider {
+  border-bottom: 4px solid var(--hover-color);
+  width: 212px;
+  height: 4px;
+  left: 319px;
+  top: 305px;
+}
+
+
