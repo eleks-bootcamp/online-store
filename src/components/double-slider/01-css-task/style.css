@@ -1,13 +1,12 @@
-/* put your styles in this file */
-
 .wrapper {
     width: 400px;
     margin: 100px auto;
 }
 
-.body {
+body {
     display: block;
     margin: 8px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .range-slider-inner {
