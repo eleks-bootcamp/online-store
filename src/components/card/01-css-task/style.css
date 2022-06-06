@@ -19,15 +19,15 @@ body {
   border-radius: 8px;
 }
 .product-img {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.product-img img {
-  width: 293px;
   height: 200px;
-  margin: 12px 12px 0px;
+  justify-content: center;
+  margin: 12px 12px 12px;
 }
+
 .product-content {
   padding: 22px 24px;
 }
