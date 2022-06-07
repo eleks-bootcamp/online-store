@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <title>DoubleSlider component</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100;300&display=swap">
 
   <style>
     .wrapper {
       width: 400px;
       margin: 100px auto;
       display: flex;
+      justify-content: center;
     }
   </style>
 </head>
@@ -18,14 +20,13 @@
   <div class="wrapper">
     <!-- DoubleSlider component -->
     <div class = 'range-slider'>
-      <span>0 UAH</span>
-      <div>
-        <span class = 'slider-thumb-left'></span>
+      <span class="range range-from">0 UAH</span>
+      <div class="slider-wrapper">
+        <span class = 'slider-thumb'></span>
         <span class = 'slider-line'></span>
-
+        <span class = 'slider-thumb'></span>
       </div>
-      <span>85000 UAH</span>
-
+      <span class="range range-to">85000 UAH</span>
     </div>
 
   </div>

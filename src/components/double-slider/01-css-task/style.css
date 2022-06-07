@@ -1,4 +1,15 @@
 /* put your styles in this file */
+.range-slider {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.slider-wrapper {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .slider-line {
   background-color: #7E72F2;
@@ -7,22 +18,27 @@
   display: block;
 }
 
-
-.slider-thumb-left {
+.slider-thumb {
   display: block;
   width: 6px;
   height: 18px;
-  /* border: 1px solid #C2CFE0; */
-  border-right: 6px solid #C2CFE0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  border: 1px solid #C2CFE0;
+  cursor:grab;
+  border-radius: 50%;
 }
 
+.range {
+  position: absolute;
+  top: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: #2C2C2C;
+}
 
-.trapezoid {
-	border-bottom: 50px solid red;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	height: 0;
-	width: 200px;
+.range-from {
+  left: 0;
+}
+
+.range-to {
+  right: 0;
 }
