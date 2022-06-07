@@ -8,6 +8,305 @@
 
 </head>
 <body>
+
+<div id="root" class="wrapper11"></div>
+
+<script>
+
+//  function revertCase  (first, second) {
+//    console.log(first);
+//   for(second of first) {
+
+
+//      if (second === second.toUpperCase()){
+//        console.log(second.toLowerCase());
+//      }
+//      else{
+//        console.log(second.toUpperCase());
+//      }
+//     }
+//     console.log(first);
+
+// }
+//  revertCase('hEllO woRlD');
+
+
+
+//  function revertCase  (first) {
+//    console.log(first);
+//    let result = '';
+//   for(const char of first) {
+
+
+//      if (char === char.toUpperCase()){
+//        result += char.toLowerCase();
+//      }
+//      else{
+//        result += char.toUpperCase();
+//      }
+//     }
+//     console.log(result);
+
+// }
+//  revertCase('hEllO woRlD');
+// const path =  'foo-bar-baz-bur';
+// const obj = {
+//   foo:  {
+//     bar:  {
+//       baz:  {
+//         bur:123,
+//       }
+//     }
+//   }
+// }
+
+
+
+// function getValue (someObj = {}, somePath = '') {
+//   const arr = somePath.split('-');
+//   let result;
+
+//   for (const item of arr) {
+//       console.log('item', item);
+
+//       if (result === undefined) {
+//         result = someObj[item];
+//       } else {
+//         result = result[item];
+//       }
+//   }
+// console.log(result);
+//   return result;
+// }
+// getValue(obj, path);
+
+// let arr = [33,51,100,32,412,53213,78,241,78787,21];
+// console.log(arr);
+// let MinValue = Math.min(...arr);
+// console.log(MinValue);
+
+
+
+// function MaxValue(arr){
+// let al = arr.length;
+// let myValue = arr[al-1];
+// while (al--){
+//   if(arr[al] > myValue){
+//     myValue = arr[al]
+//   }
+// }
+// return myValue;
+// };
+// let myArr = [1,2,3];
+// let k = MaxValue(myArr);
+// console.log(k)
+
+
+
+// const sumOfArrayElements = (arr = []) => {
+// const sumOfArray = arr.reduce((previousValue, currentValue) =>
+// previousValue + currentValue, 0);
+// return sumOfArray;
+// };
+
+// console.log(sumOfArrayElements([3,7,13,2]));
+
+
+
+
+
+// const highestAndLowest = (numbers) => {
+// const resultMax = Math.max(numbers);
+// const resultMin = Math.min(numbers);
+// const result = resultMax.toString() + ' ' + resultMin.toString();
+// console.log(resultMax);
+// console.log(resultMin);
+// return result;
+// };
+
+// console.log(highestAndLowest('1, 2, 3'));
+
+
+
+
+
+// const product = {
+//       "id": "76w0hz7015kkr9kjkav",
+//       "images": [
+//         "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+//         "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+//       ],
+//       "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+//       "rating": 2.89,
+//       "price": 15999,
+//       "category": "laptops",
+//       "brand": "acer"
+//     };
+
+
+// class Component {
+//   constructor(someProduct){
+//     this.componentProduct = someProduct;
+//     this.myRender();
+//   }
+
+//   myRender(){
+//     const element = document.createElement('div');
+
+//     element.innerHTML = `
+//       <div>
+//       <h1>${this.componentProduct.title}</h1>
+//       <img src=>${this.componentProduct.images[0]}</img>
+//       <div>some desription here....</div>
+//       </div>
+//     `;
+//     this.componentElement = element;
+//   }
+// }
+
+// const obj = new Component(product);
+// const myRootElement = document.querySelector('#root');
+
+// myRootElement.append(obj.componentElement);
+
+// console.log(obj);
+
+
+// console.error(obj);
+
+
+
+
+
+const removeProperties = (obj, keys) => {
+for(let result of keys){
+  if(result){
+    console.log('removingKey:',result);
+    delete obj[result];
+  }
+}
+return obj;
+};
+console.log(removeProperties(human = { id: 1325517334734, age: 22, firstname: 'Hio', lastname: 'Oih'}, ['age', 'firstname']));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  const sentence = 'The quick brown fox jumps over the lazy dog.';
+// console.log(sentence.toUpperCase());
+// console.log(sentence.toLowerCase());
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <main>
     <div class="container">
       <div class="left-side">left-side</div>

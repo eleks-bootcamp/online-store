@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="./style-card.css">
+  <link rel="stylesheet" href="./style-pagination.css">
 
   <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
+
   </style>
 </head>
 
 <body>
-  <div id="root" class="wrapper"></div>
+  <div id="root" class="wrapper1"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
+  import Card from './index-card.js';
+  import Pagination from './index-pagination.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -31,10 +30,34 @@
       "category": "laptops",
       "brand": "acer"
     };
+    const monitor ={
+     id: "w73oaydowenkr9kjkav",
+      images: [
+      "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+      ],
+      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+      rating: 5,
+      price: 3800,
+      category: "monitors",
+      brand: "benq"
+    }
 
-    const card = new Card(product);
 
-    root.append(card.element);
+
+
+     const card = new Card(product);
+     const pagination = new Pagination({
+       activePageIndex : 2,
+     });
+
+     const someElement = document.querySelector('#root');
+
+     someElement.append(card.componentElement);
+    someElement.append(pagination.element);
+
+    pagination.setPage(7);
+
+     // root.append(card.componentElement);
   </script>
 </body>
 </html>

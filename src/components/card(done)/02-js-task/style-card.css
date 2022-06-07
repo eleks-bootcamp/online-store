@@ -1,0 +1,67 @@
+body{
+  background-color:#FFFFFF;
+}
+.Card-wrapper{
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  width: 317px;
+  height: 394px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+.Card-wrapper-img {
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Card-wrapper-rate{
+  font-family: 'Montserrat';
+  color:#FFFFFF;
+  background-color:#7E72F2;
+  border-radius: 8px;
+  margin-left: 24px;
+  width: 70px;
+  height: 27px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Card-wrapper-price{
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  margin-right: 27.45px;
+}
+.Card-wrapper-price-rate{
+  display: flex;
+  justify-content: space-between;
+}
+.Card-wrapper-discription{
+  font-size: 15.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2C2C2C;
+  margin-left: 24px;
+  margin-top: 18.92px;
+}
+.Card-wrapper-laptops{
+  display: flex;
+  margin-left: 24px; ;
+}
+.Card-wrapper-add-to-card{
+display: flex;
+justify-content: center;
+font-family: 'Montserrat';
+color:#FFFFFF;
+background-color:#7E72F2;
+padding: 10px;
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
+}
+
+
