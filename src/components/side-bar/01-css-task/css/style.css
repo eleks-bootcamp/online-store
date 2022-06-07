@@ -10,6 +10,10 @@ hr {
   margin-top: 29px;
 }
 
+label {
+  width: 240px;
+}
+
 .side-bar {
   width: 280px;
   min-height: 980px;
@@ -25,7 +29,7 @@ hr {
 }
 
 .filter {
-  margin-left: -4px;
+  margin-left: -3px;
 }
 
 .double-slider {

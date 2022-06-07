@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
   margin-left: 11px;
-  cursor: pointer;
 }
 
 .double-slider__line {
@@ -24,7 +23,11 @@
   background: #7E72F2;
 }
 
-.double-slider__price-range {
+.double-slider__icon {
+  cursor: grab;
+}
+
+.double-slider__range {
   width: 240px;
   display: flex;
   justify-content: space-between;
