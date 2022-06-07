@@ -1,1 +1,28 @@
 /* put your styles in this file */
+
+.slider-line {
+  background-color: #7E72F2;
+  width: 212px;
+  height: 4px;
+  display: block;
+}
+
+
+.slider-thumb-left {
+  display: block;
+  width: 6px;
+  height: 18px;
+  /* border: 1px solid #C2CFE0; */
+  border-right: 6px solid #C2CFE0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+
+.trapezoid {
+	border-bottom: 50px solid red;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 200px;
+}

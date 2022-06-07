@@ -23,6 +23,10 @@ a {
   --wite: #FFFFFF;
 }
 
+.wrapper {
+  /* margin: 100px auto; */
+}
+
 .card-component-box {
   width: 317px;
   height: 394px;

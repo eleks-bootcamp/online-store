@@ -11,10 +11,16 @@ a {
   --wite: #FFFFFF;
 }
 
+
+.wrapper {
+  margin: 100px auto;
+}
+
 .pagination {
- display: flex;
- justify-content: center;
- align-items: center;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pages-list {

@@ -188,7 +188,7 @@ a {
   width: calc(100% / 12 * 12);
 }
 
-
+/* s */
 @media (max-width: 919px) {
   .wrapper {
     width: 614px;
