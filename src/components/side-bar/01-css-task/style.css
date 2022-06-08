@@ -1,1 +1,96 @@
-/* put your styles in this file */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.filters-list-container {
+  width: 240px;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+}
+
+.slide-container {
+  width: 100%;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #7E72F2;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 6px;
+  height: 16px;
+  border: 1px solid #D6D6D6;
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+.slide-container-price {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-container-price span {
+  font-size: 14px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 17px;
+  accent-color: #7E72F2;
+  cursor: pointer;
+}
+
+label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin: 0 12px 0 0;
+}
+
+.filter-category-bottom-line, .filter-brand-bottom-line {
+  margin: 30px 0 24px;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.clear-all-filters {
+  width: 280px;
+  height: 46px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  background: #7E72F2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+}

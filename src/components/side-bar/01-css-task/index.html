@@ -11,18 +11,156 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
 <body>
 <main>
+
   <div class="wrapper">
-    <!-- SideBar component -->
+
+    <div class="filters-list-container">
+
+      <div class="slide-container">
+        <p>Price</p>
+        <label for="myRange"></label>
+        <input type="range" id="myRange" min="0" max="85000" value="0" class="slider">
+        <div class="slide-container-price">
+          <span>0 UAH</span>
+          <span>85000 UAH</span>
+        </div>
+      </div>
+
+      <div class="filter-category">
+
+        <p>Category</p>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="monitors" class="checkbox">
+          <label for="monitors">Monitors</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="laptops" class="checkbox">
+          <label for="laptops">Laptops</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="video cards" class="checkbox">
+          <label for="video cards">Video cards</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="gaming keyboards" class="checkbox">
+          <label for="gaming keyboards">Gaming keyboards</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="computer mouse" class="checkbox">
+          <label for="computer mouse">Computer mouse</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="ssd" class="checkbox">
+          <label for="ssd">SSD</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="sound cards" class="checkbox">
+          <label for="sound cards">Sound cards</label>
+        </div>
+
+        <div class="d-flex">
+          <input type="checkbox" id="ram" class="checkbox">
+          <label for="ram">RAM</label>
+        </div>
+
+        <div class="filter-category-bottom-line"></div>
+
+      </div>
+
+      <div class="filter-brand">
+
+        <p>Brand</p>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="asus" class="checkbox">
+          <label for="asus">Asus</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="acer" class="checkbox">
+          <label for="acer">Acer</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="apple" class="checkbox">
+          <label for="apple">Apple</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="dell" class="checkbox">
+          <label for="dell">Dell</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="dynamode" class="checkbox">
+          <label for="dynamode">Dynamode</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="gigabyte" class="checkbox">
+          <label for="gigabyte">Gigabyte</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="kingston" class="checkbox">
+          <label for="kingston">Kingston</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="lenovo" class="checkbox">
+          <label for="lenovo">Lenovo</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="logitech" class="checkbox">
+          <label for="logitech">Logitech</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="msi" class="checkbox">
+          <label for="msi">MSI</label>
+        </div>
+
+        <div class="m-b-10 d-flex">
+          <input type="checkbox" id="benq" class="checkbox">
+          <label for="benq">BenQ</label>
+        </div>
+
+        <div class="d-flex">
+          <input type="checkbox" id="a4tech" class="checkbox">
+          <label for="a4tech">A4Tech</label>
+        </div>
+
+        <div class="filter-brand-bottom-line"></div>
+
+      </div>
+
+      <div class="slide-container">
+        <p>Rating</p>
+        <label for="myRange-rating"></label>
+        <input type="range" id="myRange-rating" min="0" max="5" value="0" class="slider">
+        <div class="slide-container-price">
+          <span>0</span>
+          <span>5</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="clear-all-filters d-flex">CLEAR ALL FILTERS</button>
+
   </div>
+
 </main>
 </body>
 </html>
