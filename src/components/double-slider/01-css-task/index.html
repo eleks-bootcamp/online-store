@@ -3,25 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <title>DoubleSlider component</title>
-  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <main>
+
   <div class="wrapper">
-    <!-- DoubleSlider component -->
+
+    <div class="slide-container">
+      <p>Price</p>
+      <label for="myRange"></label>
+      <input type="range" id="myRange" min="0" max="85000" value="0" class="slider">
+      <div class="slide-container-price">
+        <span>0 UAH</span>
+        <span>85000 UAH</span>
+      </div>
+    </div>
+
+    <div class="slide-container">
+      <p>Rating</p>
+      <label for="myRange-rating"></label>
+      <input type="range" id="myRange-rating" min="0" max="5" value="0" class="slider">
+      <div class="slide-container-price">
+        <span>0</span>
+        <span>5</span>
+      </div>
+    </div>
+
   </div>
+
 </main>
 </body>
 </html>

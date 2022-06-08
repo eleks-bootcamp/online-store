@@ -1,1 +1,46 @@
-/* put your styles in this file */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.slide-container {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #7E72F2;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 6px;
+  height: 16px;
+  border: 1px solid #D6D6D6;
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+.slide-container-price {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-container-price span {
+  font-size: 14px;
+}
