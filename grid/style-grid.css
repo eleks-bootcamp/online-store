@@ -85,14 +85,15 @@ main {
   .for-card {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    min-width: none;
+    max-width: none;
+    width: 100%;
+    max-width: fit;
   }
   .sid {
     display: none;
   }
-.card {
-  min-width: none;
-  max-width: none;
-}
+
   .container-fluid {
     grid-template-areas:
       "hed"
