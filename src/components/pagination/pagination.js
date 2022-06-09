@@ -1,6 +1,6 @@
 "use strict";
 
-class Pagination {
+export default class Pagination {
   constructor ({ activePageIndex = 0 } = {}) {
     this.defaultPagesSize = 12;
     this.activePageIndex = activePageIndex;
@@ -91,20 +91,10 @@ class Pagination {
 
     pagesList.addEventListener('click', e => {
       const pageItem = e.target.closest('.pagination__list-item');
-
       if (!pageItem) return;
 
       const { pageIndex } = pageItem.dataset;
-
       this.setPage(parseInt(pageIndex, 10));
     });
   }
 }
-
-const pagination = new Pagination({
-  activePageIndex: 0
-});
-
-const rootElement = document.querySelector('#root');
-
-rootElement.append(pagination.element);
