@@ -1,3 +1,35 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 /* put your styles in this file */
+body {font-family: 'Montserrat', sans-serif;}
+a {text-decoration: none;}
+ul {list-style: none;}
+.pagination {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+.pagination a {
+    display: block;
+    background-color: #EDEDED;
+    border-radius: 50%;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #000
+}
+.pagination li:first-child {
+    margin-right: 15px;
+}
+.pagination li:last-child {
+    margin-left: 15px;
+}
+li.active a {
+    background-color: #7E72F2;
+    color: #fff;
+    pointer-events: none;
+}
+li a:hover {
+    background-color: #7E72F2;
+    color: #fff;
+}
