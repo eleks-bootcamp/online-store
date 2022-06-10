@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module #5</title>
+  <link rel="stylesheet" href="dom.css">
+
+</head>
+<body>
+
+<main>
+  <div></div>
+  <div></div>
+
+  <section class="data-section">
+
+
+    <h2 id="h2" data-id="forms">Forms</h2>
+
+    <form name="form1">
+      <fieldset>
+        <legend>Form #1</legend>
+        <input name="foo" type="text"/>
+        <input type="submit"/>
+      </fieldset>
+    </form>
+
+    <form name="form2">
+      <fieldset>
+        <legend>Form #2</legend>
+        <select name="country">
+          <option value="belgium">Belgium</option>
+          <option value="france">France</option>
+          <option value="jamaica">Jamaica</option>
+          <option value="mexico">Mexico</option>
+        </select>
+        <input type="submit"/>
+      </fieldset>
+    </form>
+
+    <form name="form3">
+      <fieldset>
+        <legend>Form #3</legend>
+        <div>
+          <textarea name="area" cols="30" rows="10"></textarea>
+        </div>
+        <input type="submit"/>
+      </fieldset>
+    </form>
+
+    <form name="form-3"></form>
+    <form name="form-3"></form>
+  </section>
+  <section class="data-section">
+    <h2 data-id="links">Links</h2>
+
+    <div>
+      External link: <a href="https://google.com">Google</a>
+    </div>
+    <div>
+      Internal link: <a href="/foo">foo</a>
+    </div>
+  </section>
+
+  <section class="data-section">
+    <h2 data-id="images">Images</h2>
+    <div class="images">
+      <img src="http://placekitten.com/g/100/200" alt="placekitten">
+      <img src="http://placekitten.com/g/100/200" alt="placekitten">
+      <img src="http://placekitten.com/g/100/200" alt="placekitten">
+    </div>
+  </section>
+
+  <section>
+    <h2>DOM events. Example #1</h2>
+
+    <div id="red">
+      <div id="orange">
+        <div id="blue">&nbsp;</div>
+      </div>
+    </div>
+
+    <script>
+      red.addEventListener('click', (event) => {
+        console.error('red', event);
+        console.error('target', event.target);
+        console.error('currentTarget', event.currentTarget);
+      });
+
+      orange.addEventListener('click', event => {
+        console.error('orange', event)
+      });
+
+      blue.addEventListener('click', event => {
+        console.error('blue', event)
+      });
+    </script>
+
+  </section>
+
+  <section>
+    <h2>DOM events. Example #2</h2>
+
+    <div id="green">
+      <div id="grey"></div>
+      <div id="yellow">&nbsp;</div>
+    </div>
+
+    <script>
+      // mouseover/out, mouseenter/leave
+      green.addEventListener('mousemove', () => {
+        console.error('mousemove');
+      });
+
+      // `mouse/pointerover` и `mouse/pointerout` - всплывают
+      green.addEventListener('mouseover', () => {
+        console.error('mouseover');
+      });
+      green.addEventListener('mouseout', () => {
+        console.error('mouseout');
+      });
+
+      green.addEventListener('mouseenter', () => {
+        console.error('mouseenter');
+      });
+      green.addEventListener('mouseleave', () => {
+        console.error('mouseleave');
+      });
+    </script>
+
+  </section>
+</main>
+</body>
+</html>
