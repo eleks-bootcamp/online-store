@@ -14,11 +14,14 @@ body {
   --text-active-color: #ffffff;
 }
 .os-pagination {
-  height: 40px;
-  width: 590px;
+  /* height: 40px; */
+  width: auto;
+  margin: 0 auto;
   background-color: var(--bg-main);
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
   padding: 0;
   box-sizing: border-box;
@@ -26,28 +29,30 @@ body {
   cursor: pointer;
   color: var(--text-main-color);
 }
-li {
-  display: flex;
+.os-pagination-pages {
   height: 40px;
   width: 40px;
+  display: flex;
+  flex-wrap: wrap;
   background: var(--element-bg-color);
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
-li.active {
+.os-pagination-pages.active {
   background-color: var(--main-color);
   color: var(--text-active-color);
   text-decoration: none;
 }
-li:hover {
+.os-pagination-pages:hover {
   background-color: var(--active-color);
   transition: 0.5s ease 0s;
   color: var(--text-active-color);
 }
-.os-pagination-back {
+.os-pagination-pages.back {
   margin-right: 15px;
 }
-.os-pagination-forvard {
+.os-pagination-pages.forvard {
   margin-left: 15px;
 }
