@@ -46,7 +46,7 @@ export default class Card {
       const element = document.createElement ('div');
       element.innerHTML = this.getTeamplate ();
 
-      this.ComponentElement = element;
+      this.element = element.firstElementChild;
     }
 }
 

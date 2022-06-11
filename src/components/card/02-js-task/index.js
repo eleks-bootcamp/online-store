@@ -1,4 +1,5 @@
-import Card from './card.js';
+// import Card from './card.js';
+import CardsList from './cards-list.js';
 import Pagination from './pagination.js';
 
 const product = {
@@ -13,7 +14,6 @@ const product = {
   category: "laptops",
   brand: "acer"
 };
-
 // const monitor = {
 //   id: "w73oaydowenkr9kjkav",
 //   images: [
@@ -25,20 +25,15 @@ const product = {
 //   category: "monitors",
 //   brand: "benq"
 // };
-
-
-
 // const page = new OnlineStorePage();
-
 // const someElement = document.querySelector('#root');
-
 // someElement.append(card.ComponentElement);
 // someElement.append(pagination.element);
-
 export default class OnlineStorePage {
 
 
   constructor () {
+    this.products=this.products
     this.components = {};
     this.initComponents();
     this.render();
@@ -59,18 +54,18 @@ export default class OnlineStorePage {
   }
 
   initComponents () {
-  const card = new Card(product);
+  const cardList = new CardsList(product);
   const pagination = new Pagination ({
     activePageIndex: 2,
 });
-  this.components.card = card;
+  this.components.cardList = cardList;
   this.components.pagination = pagination;
   }
 
   renderComponents () {
     const cardContainer = this.element.querySelector('[data-element="card"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
-    cardContainer.append(this.components.card.ComponentElement);
+    cardContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
 
   }
