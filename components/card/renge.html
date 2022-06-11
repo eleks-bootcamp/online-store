@@ -5,19 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
-  <style>
-    ul>div{
-    display:flex;
-    justify-content:center;
-    }
-  </style>
 </head>
 <body>
   <div class="wrapper" id="root">
   </div>
-<script type = "module">
+<script type="module">
   import Card from './index.js';
-  import Pagination from './pagination.js'
+  import Pagination from './pagination.js';
   const monitor = {
       id: "w73oaydowenkr9kjkav",
       images: [
@@ -29,14 +23,16 @@
       category: "monitors",
       brand: "benq"
 };
-
 const card = new Card(monitor);
-const pagination = new Pagination()
+const pagination = new Pagination({
+  activePageIndex:0
+})
 const wrapper = document.querySelector('.wrapper')
 wrapper.append(card.group)
 wrapper.append(pagination.container)
-
-
+pagination.setPage()
+pagination.nextPage()
+pagination.prevPage()
 </script>
 </body>
 </html>

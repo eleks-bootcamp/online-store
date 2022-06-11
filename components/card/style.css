@@ -341,7 +341,7 @@ h2{
 }
 .container_filters svg{
     position: absolute;
-    top:5px;
+    top:2px;
     left:5px;
     pointer-events:none;
     display: none;
@@ -384,7 +384,7 @@ h2{
 .container_right{
     display:flex;
     flex-direction: column;
-    align-items:flex-end;
+    align-items:center;
     width: calc(100%/12*9);
 }
 
@@ -419,7 +419,7 @@ h2{
 .container_shop {
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 -10px;
     align-self: self-start;
 }
@@ -527,7 +527,9 @@ h2{
     cursor:pointer;
 }
 nav{
-    width:100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 nav>ul{
     padding:20px;
@@ -535,9 +537,13 @@ nav>ul{
     margin:0 auto;
     justify-content:center;
 }
-.next, .back{
+nav .next, nav .prev{
     margin:0 15px;
     position:relative;
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+
 }
 nav li{
     width: 40px;
@@ -548,7 +554,6 @@ nav li{
 .page_link{
     text-decoration: none;
     color:#2C2C2C;
-    display: block;
     width: 100%;
     height: 100%;
     background:#EDEDED;
@@ -561,12 +566,12 @@ nav li{
     font-size: 14px;
     line-height: 12px;
 }
-.page_link:hover, .page_link.active{
+nav .page_link:hover, .page_link.active{
     background:#7E72F2;
     transition:background 0.2s linear;
     color:#ffffff;
 }
-.back:hover svg, .next:hover svg{
+.prev:hover svg, .next:hover svg{
     stroke:white;
     transition:all 0.2s linear;
 }
@@ -583,7 +588,7 @@ nav li{
 
 @media (max-width:1140px){
 
-    nav li:nth-child(n+5){
+    nav li:nth-child(n+4){
         display:none;
     }
     nav li:last-child{
