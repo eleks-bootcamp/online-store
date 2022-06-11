@@ -46,7 +46,7 @@ export default class Pagination {
   };
   setPage (pageIndex = 0) {
     if (pageIndex === this.activePageIndex) return;
-    if (pageIndex > this.defaultPagesSize - 1 ) return;
+    if (pageIndex > this.defaultPagesSize - 1 || pageIndex <0) return;
     const activePage = this.element.querySelector('.os-pagination-pages.active');
     if (activePage) {
       activePage.classList.remove('active');
