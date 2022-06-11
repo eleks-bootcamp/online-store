@@ -1,54 +1,83 @@
-export default class Card {
-  constructor (someProduct) {
-    this.state = someProduct;
-    this.render();}
+import Card from './card.js';
+import Pagination from './pagination.js';
 
-  getTeamplate () {
-    return   `
-    <div>
-<div class="os-product-card">
-  <div class="os-product-img">
-      <img class="img scale-down" src="${this.state.images[0]}" alt="">
-  </div>
-  <div class="os-product-discription">
-    <div class="os-rating-price-bar">
-      <div class="os-rating">
-        <span>${this.state.rating}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-        </svg>
-      </div>
-      <div class="os-price">${this.state.price}
-      </div>
-    </div>
-      <div class="os-product-name">
-        ${this.state.title}
-      </div>
-      <div class="os-product-category">
-        ${this.state.category}
-      </div>
-  </div>
-  <div class="os-add-button">
-    <p>Add to cart</p>
-  </div>
-</div>
-</div>
-      `;
+const product = {
+  id: "76w0hz7015kkr9kjkav",
+  images: [
+    "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+    "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+  ],
+  title: "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+  rating: 2.89,
+  price: 15999,
+  category: "laptops",
+  brand: "acer"
+};
+
+// const monitor = {
+//   id: "w73oaydowenkr9kjkav",
+//   images: [
+//   "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+//   ],
+//   title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+//   rating: 5,
+//   price: 3800,
+//   category: "monitors",
+//   brand: "benq"
+// };
 
 
+
+// const page = new OnlineStorePage();
+
+// const someElement = document.querySelector('#root');
+
+// someElement.append(card.ComponentElement);
+// someElement.append(pagination.element);
+
+export default class OnlineStorePage {
+
+
+  constructor () {
+    this.components = {};
+    this.initComponents();
+    this.render();
+    this.renderComponents();
   }
 
-  update (data={}) {
-  this.state=data;
-  this.ComponentElement.innerHTML=this.getTeamplate();
-};
+  getTeamplate () {
+    return `
+      <div>
+        <div data-element="card">
+        <!--CardComponent-->
+        </div>
+        <div data-element="pagination">
+        <!-- Pagination Component -->
+        </div>
+      </div>
+    `;
+  }
+
+  initComponents () {
+  const card = new Card(product);
+  const pagination = new Pagination ({
+    activePageIndex: 2,
+});
+  this.components.card = card;
+  this.components.pagination = pagination;
+  }
+
+  renderComponents () {
+    const cardContainer = this.element.querySelector('[data-element="card"]');
+    const paginationContainer = this.element.querySelector('[data-element="pagination"]');
+    cardContainer.append(this.components.card.ComponentElement);
+    paginationContainer.append(this.components.pagination.element);
+
+  }
   render () {
-      const element = document.createElement ('div');
-      element.innerHTML = this.getTeamplate ();
+    const wrapper = document.createElement ('div');
+    wrapper.innerHTML = this.getTeamplate ();
 
-      this.ComponentElement = element;
-    }
+    this.element = wrapper.firstElementChild;
+  }
 }
-
-
-

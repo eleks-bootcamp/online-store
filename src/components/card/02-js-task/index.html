@@ -19,45 +19,16 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './index.js';
-    import Pagination from './pagination.js';
+    import OnlineStorePage from './index.js';
 
-    const product = {
-      "id": "76w0hz7015kkr9kjkav",
-      "images": [
-        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-      ],
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.89,
-      "price": 15999,
-      "category": "laptops",
-      "brand": "acer"
-    };
+    const page = new OnlineStorePage();
+    const someElement = document.querySelector('#root')
 
-    const monitor = {
-      id: "w73oaydowenkr9kjkav",
-      images: [
-      "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
-      ],
-      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
-      rating: 5,
-      price: 3800,
-      category: "monitors",
-      brand: "benq"
-    };
+    someElement.append(page.element);
 
-    const card = new Card(product);
-    const pagination = new Pagination ({
-      activePageIndex: 3
-    });
-    const someElement = document.querySelector('#root');
-
-    someElement.append(card.ComponentElement);
-    someElement.append(pagination.element);
-    pagination.setPage (9);
-    pagination.prevPage ();
-    pagination.nextPage ();
+    // pagination.setPage (9);
+    // pagination.prevPage ();
+    // pagination.nextPage ();
 
 
 ////////////
