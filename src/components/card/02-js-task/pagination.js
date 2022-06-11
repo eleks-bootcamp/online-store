@@ -29,7 +29,7 @@ export default class Pagination {
   getPages () {
 
         return `
-      <ul data-element="pagination">
+      <ul class="os-pagination" data-element="pagination">
       ${new Array(this.defaultPagesSize).fill(1).map((item, index) => {
         return this.getPageTemplate(index);
       }).join('')}
@@ -46,7 +46,7 @@ export default class Pagination {
   };
   setPage (pageIndex = 0) {
     if (pageIndex === this.activePageIndex) return;
-    if (pageIndex > this.defaultPagesSize - 1) return;
+    if (pageIndex > this.defaultPagesSize - 1 || pageIndex) return;
     const activePage = this.element.querySelector('.os-pagination-pages.active');
     if (activePage) {
       activePage.classList.remove('active');
@@ -87,7 +87,7 @@ export default class Pagination {
 
     prevPageBtn.addEventListener('click', () => {
       this.prevPage();
-    })
+    });
 
     nextPageBtn.addEventListener('click', () => {
       this.nextPage();
@@ -98,13 +98,10 @@ export default class Pagination {
     pagesList.addEventListener('click', event => {
       const pageItem = event.target.closest ('.os-pagination-pages');
       if (!pageItem) return;
-      console.log (pageItem);
       const {pageIndex} = pageItem.dataset;
-
-
       this.setPage(parseInt(pageIndex, 10));
 
-    })
+    });
 
   }
 }
