@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="grid.css">
   <title>Grid with media queries</title>
   <style>
     .container {
@@ -246,13 +247,18 @@
 <body>
   <main>
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-s-2 col-m-6 col-l-4 col-xl-10">
-          col #1
-        </div>
-        <div class="col-12 col-s-10 col-m-6 col-l-8 col-xl-2">
-          col #2
-        </div>
+      <div class="col-xs-hidden col-s-3 container-left-column">col left</div>
+      <div class="col-12 col-s-9 container-right-column">
+        <div class="col-12">right side</div>
+        <div class="col-12 col-s-6 col-m-4">card 1</div>
+        <div class="col-12 col-s-6 col-m-4">card 2</div>
+        <div class="col-12 col-s-6 col-m-4">card 3</div>
+        <div class="col-12 col-s-6 col-m-4">card 4</div>
+        <div class="col-12 col-s-6 col-m-4">card 5</div>
+        <div class="col-12 col-s-6 col-m-4">card 6</div>
+        <div class="col-12 col-s-6 col-m-4">card 7</div>
+        <div class="col-12 col-s-6 col-m-4">card 8</div>
+        <div class="col-12 col-s-6 col-m-4">card 9</div>
       </div>
     </div>
   </main>
