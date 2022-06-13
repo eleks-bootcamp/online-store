@@ -1,7 +1,7 @@
 export default class Pagination {
 
   constructor() {
-    this.defaultPagesSize = 7;
+    this.defaultPagesSize = 12;
     this.myRender();
   }
   getTemplate() {
@@ -26,7 +26,7 @@ export default class Pagination {
     let allPages = '';
     let i = 1;
     do {
-      str = `<li><a href="#page${i}">${i}</a></li>`;
+      str = `<li><a href="#page${i}" >${i}</a></li>`;
       allPages += str;
       i++;
     }
