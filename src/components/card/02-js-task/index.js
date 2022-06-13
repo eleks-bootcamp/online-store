@@ -1,40 +1,71 @@
+import CardsList from './cards-list.js';
+import Pagination from './pagination.js';
 
-export default class Card {
-    constructor(someProduct) {
-            this.componentProduct = someProduct;
-            this.render();
-    }           
-    getTemplate() { 
-        const result = `
-            <div>
-                 <div class="prodact-card prodact-d-flex-jc-space-b font-montserrat-400">
-                   <div class="prodact-image" style="background-image: url(${this.componentProduct.images[0]})">
-                </div>
-                <div class="prodact-content">
-                  <div class="prodact-price-wrapper prodact-d-flex-jc-space-b">
-                    <div class="prodact-rating prodact-button-color prodact-d-flex-jc-space-b font-size-13">
-                      <span >${this.componentProduct.rating}</span>
-                      <i class="bi bi-star"></i>
-                       </div>
-                    <div class="prodact-price font-size-15">${this.componentProduct.price}</div>
-                  </div>
-                     <h5 class="font-size-13 font-montserrat-400">${this.componentProduct.title}</h5>
-                  <div class="prodact-name font-size-10">${this.componentProduct.category}</div>
-                </div>
-                <div class="prodact-add-to-card prodact-button-color">
-                  <button class="prodact-button-add font-montserrat-400 prodact-button-color font-size-13">ADD TO CARD</button>
-                </div>
-              </div>
-            </div>
-            `;
-        return result;
-     }
-  
-    render () {
-         const element = document.createElement('div');
-         element.innerHTML = this.getTemplate();
-         this.componentElement = element;
-     }
-          
-    }
+
+export default class OnlineStorePage {
+  constructor (products = []) {
+    this.pageSize = 4;
+    this.products = products;
+    this.components = {};
+
+    this.initComponents();
+    this.render();
+    this.renderComponents();
+    this.initEventListeners();
+  }
+     
+  getTemplate () {
+     return `
+       <div>
+        <div data-element = "cardsList"> </div>
+        <div data-element = "pagination"> </div>
+       </div>
+    `;
+  }
+
+  initComponents () {
+    const totalPages = Math.ceil(this.products.length / this.pageSize);
+
+    const cardList = new CardsList (this.products.slice(0, this.pageSize));
+    const pagination = new Pagination({
+      // activePageIndex: 0, 
+      totalPages: totalPages
+    });
+    this.components.cardList = cardList;
+    this.components.pagination = pagination;
+  };
+  renderComponents () {
+
+    const cardsContainer  = this.element.querySelector('[data-element = "cardsList"]');
+    const paginationContainer  = this.element.querySelector('[data-element = "pagination"]');
+
+    cardsContainer.append(this.components.cardList.element);
+    paginationContainer.append(this.components.pagination.element);
+  };
+    
+  render () {
+
+    const wrapper = document.createElement('div');
+    
+    wrapper.innerHTML = this.getTemplate();
+    
+    this.element = wrapper.firstElementChild;
+  };
+  initEventListeners () {
+    this.components.pagination.element.addEventListener('page-changed', event => {
+      const pageIndex = event.detail;
+
+      const start = pageIndex* this.pageSize;
+      const end = start +  this.pageSize;
+      const data = this.products.slice(start, end);
+
+      this.components.cardList.update(data);
+    });
+  };
+}
+
+
+
+
+
      

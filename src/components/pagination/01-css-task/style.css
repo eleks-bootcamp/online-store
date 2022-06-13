@@ -11,15 +11,15 @@ a {
 }
 .wrapper {
   margin: 100px auto;
-  width:790px;
+  width:100%;
 }
 .font-montserrat-400{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 .card-pagination {
-  width:590px;
-  margin:0 auto;
+  width:100%;
+  margin:20px auto;
   font-size: 0.875rem;
 }
 .card-pagination, .pagination-block{
@@ -33,36 +33,33 @@ a {
 .pagination-block{
   justify-content: center;
   list-style-type: none;
-  width:100%;
   padding: 0;
 }
-.pagination-item, .panigation-arrow-left, .panigation-arrow-right  {
+.pagination-item, .pagination-arrow-left, .pagination-arrow-right  {
   width: 40px;
   height: 40px;
   background:var(--grey-100);
   border-radius:50%;
   color:var(--grey-500);
   cursor: pointer;
-}
-.pagination-item a{
   display: block;
 }
+
 .pagination-item:hover,
-.panigation-arrow-left:hover,
-.panigation-arrow-right:hover,
-.pagination-item:hover a,
-.pagination-item.active{
+.pagination-arrow-left:hover,
+.pagination-arrow-right:hover,
+.pagination-item:hover, .active{
   background:var(--purpure-100);
   color: var(--wight);
 }
-.panigation-arrow-left, .panigation-arrow-right, .pagination-item  {
+.pagination-arrow-left, .pagination-arrow-right, .pagination-item  {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.panigation-arrow-right{
+.pagination-arrow-right{
   margin-left: 15px;
 }
-.panigation-arrow-left{
+.pagination-arrow-left{
   margin-right: 15px;
 }
