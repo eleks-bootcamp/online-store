@@ -1,5 +1,5 @@
 export default class Card {
-  constructor (someProduct) {
+  constructor (someProduct = {}) {
     this.state = someProduct;
     this.myRender();
   }
@@ -44,6 +44,6 @@ export default class Card {
 
     wrapper.innerHTML = this.getTemplate();
 
-    this.componentElement = wrapper.firstElementChild;
+    this.element = wrapper.firstElementChild;
   }
 }

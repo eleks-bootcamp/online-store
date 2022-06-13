@@ -21,12 +21,13 @@
     <div id="root" class="wrapper"></div>
 
     <script type="module">
+      import { products } from './products.js';
       import OnlineStorePage from './index.js';
 
-      const page = new OnlineStorePage();
-      const someElement = document.querySelector('#root');
+      const page = new OnlineStorePage(products);
+      const root = document.querySelector('#root');
 
-      someElement.append(page.element);
+      root.append(page.element);
     </script>
   </body>
 </html>
