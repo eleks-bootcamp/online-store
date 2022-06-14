@@ -1,10 +1,11 @@
 export default class Pagination {
-  defaultPagesSize = 12;
 
   constructor ({
-    activePageIndex = 0
+    activePageIndex = 0,
+    totalPages = 0
   } = {}) {
     this.activePageIndex = activePageIndex;
+    this.totalPages = totalPages;
 
     this.render();
     this.addEventListeners();
@@ -12,22 +13,24 @@ export default class Pagination {
 
   getTemplate () {
     return `
-      <nav class="os-pagination">
-        <a href="#" class="page-link previous" data-element="nav-prev">
+    <div>
+      <nav class="pagination">
+        <a href="#" class="arrow-left" data-element="nav-prev">
           <i class="bi bi-chevron-left"></i>
         </a>
         ${this.getPages()}
-        <a href="#" class="page-link next" data-element="nav-next">
+        <a href="#" class="arrow-right" data-element="nav-next">
           <i class="bi bi-chevron-right"></i>
         </a>
       </nav>
+      </div>
     `;
   }
 
   getPages () {
     return `
       <ul class="page-list" data-element="pagination">
-        ${new Array(this.defaultPagesSize).fill(1).map((item, index) => {
+        ${new Array(this.totalPages).fill(1).map((item, index) => {
           return this.getPageTemplate(index);
         }).join('')}
       </ul>
@@ -49,9 +52,10 @@ export default class Pagination {
 
   setPage (pageIndex = 0) {
     if (pageIndex === this.activePageIndex) return;
-    if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+    if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
 
-    const activePage = this.element.querySelector('.page-link.active');
+    this.dispatchEvent(pageIndex);
+    const activePage = this.element.querySelector('.page-number.active');
 
     if (activePage) {
       activePage.classList.remove('active');
@@ -79,11 +83,11 @@ export default class Pagination {
   }
 
   render () {
-    const wrapper = document.createElement('div');
+    const wrapperList = document.createElement('div');
 
-    wrapper.innerHTML = this.getTemplate();
+    wrapperList.innerHTML = this.getTemplate();
 
-    this.element = wrapper.firstElementChild;
+    this.element = wrapperList.firstElementChild;
   }
 
   addEventListeners () {
@@ -100,7 +104,7 @@ export default class Pagination {
     });
 
     pagesList.addEventListener('click', event => {
-      const pageItem = event.target.closest('.page-link');
+      const pageItem = event.target.closest('.page-number');
 
       if (!pageItem) return;
 
@@ -108,5 +112,12 @@ export default class Pagination {
 
       this.setPage(parseInt(pageIndex, 10));
     });
+  }
+
+    dispatchEvent (pageIndex) {
+      const customEvent = new CustomEvent('page-changed', {
+        detail: pageIndex
+      });
+      this.element.dispatchEvent(customEvent);
   }
 }
