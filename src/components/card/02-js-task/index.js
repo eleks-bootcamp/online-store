@@ -32,8 +32,8 @@ const product = {
 export default class OnlineStorePage {
 
 
-  constructor () {
-    this.products=this.products
+  constructor (products) {
+    this.products = products;
     this.components = {};
     this.initComponents();
     this.render();
@@ -43,7 +43,7 @@ export default class OnlineStorePage {
   getTeamplate () {
     return `
       <div>
-        <div data-element="card">
+        <div class="os-card-grid" data-element="cardsList">
         <!--CardComponent-->
         </div>
         <div data-element="pagination">
@@ -54,7 +54,7 @@ export default class OnlineStorePage {
   }
 
   initComponents () {
-  const cardList = new CardsList(product);
+  const cardList = new CardsList(this.products);
   const pagination = new Pagination ({
     activePageIndex: 2,
 });
@@ -63,9 +63,9 @@ export default class OnlineStorePage {
   }
 
   renderComponents () {
-    const cardContainer = this.element.querySelector('[data-element="card"]');
+    const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
-    cardContainer.append(this.components.cardList.element);
+    cardsContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
 
   }

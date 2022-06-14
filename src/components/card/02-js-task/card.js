@@ -1,5 +1,5 @@
 export default class Card {
-  constructor (someProduct) {
+  constructor (someProduct = {}) {
     this.state = someProduct;
     this.render();}
 
@@ -39,14 +39,14 @@ export default class Card {
   }
 
   update (data={}) {
-  this.state=data;
+  this.state = data;
   this.ComponentElement.innerHTML=this.getTeamplate();
 };
   render () {
-      const element = document.createElement ('div');
-      element.innerHTML = this.getTeamplate ();
+      const wrapper = document.createElement ('div');
+      wrapper.innerHTML = this.getTeamplate ();
 
-      this.element = element.firstElementChild;
+      this.element = wrapper.firstElementChild;
     }
 }
 

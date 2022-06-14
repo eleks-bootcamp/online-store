@@ -1,14 +1,14 @@
 import Card from "./card.js";
 export default class CardsList {
 constructor (data = []) {
-  this.data = data;
+  this.data=data;
   this.render();
   this.renderCards();
 }
 getTeamplate () {
   return `
   <div>
-    <div data-element="body">
+    <div  data-element="body">
     <!-- Card list -->
     </div>
   </div>
@@ -24,8 +24,8 @@ render () {
 }
 
 renderCards () {
-  const cards = this.data.map (item => {
-    console.log(this.data)
+  const cards = this.data.map(item => {
+    // console.log(this.data)
     const card = new Card(item);
 
     return card.element;
@@ -36,6 +36,7 @@ renderCards () {
 
 
   console.log('cards'. cards);
+
 }
 
 }
