@@ -1,22 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Card component</title>
-  <link rel="stylesheet" href="style.css">
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Card component</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
-</head>
-<body>
-<main>
-  <div class="wrapper">
-    <!-- Card component -->
-  </div>
-</main>
-</body>
+  <body>
+    <main>
+      <div class="wrapper">
+        <article class="card">
+          <a class="card-image" href="#">
+            <img
+              class="card-image__img"
+              src="image/card1.png"
+              alt="Картка товару"
+              width="293px"
+              height="200px"
+            />
+          </a>
+          <div class="card-info">
+            <div class="card-info__rating">1.23</div>
+            <div class="card-info__price">15999</div>
+          </div>
+          <a class="card-model" href="#">
+            Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black
+          </a>
+          <div class="card-type">laptops</div>
+          <button class="card-btn" type="submit">Add To Cart</button>
+        </article>
+      </div>
+    </main>
+  </body>
 </html>
