@@ -104,4 +104,12 @@ export default class Pagination {
     });
 
   }
+
+  dispatchEvent (pageIndex) {
+    const customEvent = new CustomEvent('page-changed', {
+      detail: pageIndex
+    });
+
+    this.element.dispatchEvent(customEvent);
+  }
 }

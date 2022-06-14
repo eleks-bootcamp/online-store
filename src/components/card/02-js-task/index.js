@@ -38,6 +38,8 @@ export default class OnlineStorePage {
     this.initComponents();
     this.render();
     this.renderComponents();
+
+    this.initEventListeners();
   }
 
   getTeamplate () {
@@ -74,5 +76,21 @@ export default class OnlineStorePage {
     wrapper.innerHTML = this.getTeamplate ();
 
     this.element = wrapper.firstElementChild;
+  }
+
+  initEventListeners () {
+    this.components.pagination.element.addEventListener('page-changed', event => {
+      const pageIndex = event.detail;
+
+      // [0, 1, 2] | pageIndex = 0 pageSize = 3
+      // [3, 4, 5] | pageIndex = 1 pageSize = 3
+      // [6, 7]    | pageIndex = 2 pageSize = 3
+
+      const start = pageIndex * this.pageSize;
+      const end = start + this.pageSize;
+      const data = this.products.slice(start, end);
+
+      this.components.cardList.update(data);
+    });
   }
 }
