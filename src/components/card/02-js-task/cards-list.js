@@ -8,7 +8,7 @@ constructor (data = []) {
 getTeamplate () {
   return `
   <div>
-    <div  data-element="body">
+    <div class="card-box" data-element="body">
     <!-- Card list -->
     </div>
   </div>

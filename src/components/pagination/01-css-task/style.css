@@ -14,26 +14,27 @@ body {
   --text-active-color: #ffffff;
 }
 .os-pagination {
-  /* height: 40px; */
+  height: auto;
   width: auto;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: var(--bg-main);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
   box-sizing: border-box;
   font-size: 0.875rem;
   cursor: pointer;
   color: var(--text-main-color);
 }
 .os-pagination-pages {
-  height: 40px;
-  width: 40px;
+  max-height: 40px;
+  max-width: 40px;
+ padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   background: var(--element-bg-color);
   border-radius: 50%;
   justify-content: center;
@@ -50,9 +51,9 @@ body {
   transition: 0.5s ease 0s;
   color: var(--text-active-color);
 }
-.os-pagination-pages.back {
+/* .os-pagination-pages.back {
   margin-right: 15px;
 }
 .os-pagination-pages.forvard {
   margin-left: 15px;
-}
+} */

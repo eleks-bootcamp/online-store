@@ -5,7 +5,7 @@ export default class Card {
 
   getTeamplate () {
     return   `
-    <div>
+    <div class="col-12 col-xl-4f12 col-l-4f12 col-m-6f12 col-s-12f12">
 <div class="os-product-card">
   <div class="os-product-img">
       <img class="img scale-down" src="${this.state.images[0]}" alt="">

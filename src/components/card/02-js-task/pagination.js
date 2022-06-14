@@ -1,5 +1,5 @@
 export default class Pagination {
-  defaultPagesSize = 11;
+  defaultPagesSize = 12;
 
   constructor ({activePageIndex = 0}={}) {
     // this.defaultPagesSize = 12;
@@ -14,11 +14,11 @@ export default class Pagination {
 
 
     <ul class="os-pagination">
-      <li class="os-pagination-pages back"
-      data-element="nav-prev"><i class="bi bi-chevron-left"></i></li>
+      <li class="os-pagination  back"
+      data-element="nav-prev"><i class="os-pagination-pages bi bi-chevron-left"></i></li>
     ${this.getPages()}
-      <li class="os-pagination-pages forvard"
-      data-element="nav-next"><i class="bi bi-chevron-right"></i></li>
+      <li class="os-pagination forvard"
+      data-element="nav-next"><i class=" os-pagination-pages bi bi-chevron-right"></i></li>
     </ul>
 
      `;

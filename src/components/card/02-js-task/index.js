@@ -44,13 +44,20 @@ export default class OnlineStorePage {
 
   getTeamplate () {
     return `
-      <div>
-        <div class="os-card-grid" data-element="cardsList">
+    <div class="container">
+    <div class="row">
+    <div class="col-12 col-s-0 col-m-4 col-l-4 col-xl-2">
+          left side
+        </div>
+      <div class="col-12 col-s-12 col-m-8 col-l-8 col-xl-10">
+        <div  data-element="cardsList">
         <!--CardComponent-->
         </div>
         <div data-element="pagination">
         <!-- Pagination Component -->
         </div>
+      </div>
+      </div>
       </div>
     `;
   }
