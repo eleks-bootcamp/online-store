@@ -1,18 +1,24 @@
-.osnova {outline: 1px solid;
-  width: 790px;
-  height: 205px;
+.osnova {
+  outline: 1px solid;
+  width: 650px;
+  height: 60px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;}
 
   .ramka {
-    /* outline: 1px solid; */
-    width: 680px;
-    height: 120px;
+    outline: 1px solid;
+    width: 620px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;}
+
+    .page-list{
+      display: flex;
+      justify-content: center;
+      align-items: center;}
 
     .krug {
       /* border: 1px solid; */
@@ -26,15 +32,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      list-style: none;
-      transition: .5s;
-      cursor: pointer;}
+      transition: .5s;}
     .krug:hover {background: #0000CD;
       color: white;}
     .active {background: #0000CD;
       color: white;}
 
-    .krug-left {margin-left: 17px;}
-    .krug-right {margin-right: 17px;}
+    .krug-left {margin-right: 17px;}
+    .krug-right {margin-left: 17px;}
+
+.non-styles{
+  text-decoration: none;
+  list-style: none;
+  padding: 0px;}
 
 

@@ -3,10 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+
+<!-- файл стилей которые подгружаются -->
+  <!-- <link rel="stylesheet" href="../../../styles/style.min.css"> -->
+   <link rel="stylesheet" href="../01-css-task/styls/styl.css"> <!--путь к моему файлу стилей -->
+
+
+   <!-- добавляем ссылки на необходимые стили и ссылки с компонета pagination -->
+   <link rel="stylesheet" href="../../pagination/01-css-task/pagination_style_v2.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
     .wrapper {
+      /* для отображения карточки по центру */
       width: 400px;
       margin: 100px auto;
     }
@@ -14,27 +23,464 @@
 </head>
 
 <body>
+      <!-- сюда мы вписываем карту -->
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
 
-    const product = {
-      "id": "76w0hz7015kkr9kjkav",
-      "images": [
-        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-      ],
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.89,
-      "price": 15999,
-      "category": "laptops",
-      "brand": "acer"
-    };
 
-    const card = new Card(product);
 
-    root.append(card.element);
+
+
+
+
+
+
+                                  //ОБУЧЕНИЕ С ДОБАВЛЕНИЕ В КАРТУ
+
+//создадим обьект внутри JS
+// const title= "Ноутбук Acer";
+// class Component {
+//     constructor(someTitle){
+//         this.componentTitle=someTitle;
+//         this.myRender();
+//         // console.log(this.componentTitle)
+//     }
+//     myRender (){
+//         const element=document.createElement('div'); //создали элемент div
+
+//         //наполняем элемент div какимито данными
+//         element.innerHTML=`
+//         <p>
+//             <h1>${this.componentTitle}</h1>
+//             <p>some description of product here...</p>
+//         </p>
+//         `;
+//         this.componentElement=element;
+//     }
+// };
+// const obj= new Component(title);
+// console.error(obj);
+
+
+
+
+
+
+
+// добавим этот обьект в серидину браузере, точнее в документ
+// const title= "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black";
+// class Component {
+//     constructor(someTitle){
+//         this.componentTitle=someTitle;
+//         this.myRender();
+//         // console.log(this.componentTitle)
+//     }
+//     myRender (){
+//         const element = document.createElement('div'); //создали элемент div
+
+//         //наполняем элемент div какимито данными
+//         element.innerHTML=`
+//         <p>
+//             <h1>${this.componentTitle}</h1>
+//             <p>some description of product here...</p>
+//         </p>
+//         `;
+//         this.componentElement=element;
+//     }
+// }
+// const obj= new Component(title);
+
+// // найдем нужный root элемент и вставим в него наш компонент
+// const myRootElement= document.querySelector('#root');
+// // console.error("myRootElement=",myRootElement);
+// console.log(obj);
+
+// // нуобходимо добавить в myRootElement тот обьект который создали
+// myRootElement.append(obj.componentElement);
+// console.error(obj);
+
+
+
+
+
+
+
+
+
+// //Создадим карту
+
+// const product = {
+//       "id": "76w0hz7015kkr9kjkav",
+//       "images": [
+//         "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+//         "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+//       ],
+//       "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+//       "rating": 2.89,
+//       "price": 15999,
+//       "category": "laptops",
+//       "brand": "acer"
+//     };
+
+// class Component {
+//     constructor(someProduct){
+//         this.componentProduct=someProduct;
+//         this.myRender();
+//       }
+
+//       //метод getTemplate позволяющий вернуть шаблон т.е. сдесь вписываются элементы. Сюда вставить свою верстку карточки
+//       getTemplate () {
+//         const result= `
+//         <p>
+//             <h1>${this.componentProduct.title}</h1>         // в это место, через точку, вставляем тот элемент которых выводим
+//             <img src="${this.componentProduct.images[0]}"}
+//             <p>some description of product here...</p>
+//         </p>
+//         `;
+//         return result;
+//       }
+
+//       //ниже идет логика конструирования
+//     myRender (){
+//         const element = document.createElement('div'); //создали элемент div
+
+//         //наполняем элемент div какимито данными
+//         element.innerHTML=this.getTemplate();
+//         this.componentElement=element;
+//     }
+// }
+// const obj= new Component(product);
+
+// // найдем нужный root элемент и вставим в него наш компонент
+// const myRootElement= document.querySelector('#root');
+// // console.error("myRootElement=",myRootElement);
+// console.log(obj);
+
+// // нуобходимо добавить в myRootElement тот обьект который создали
+// myRootElement.append(obj.componentElement);
+
+
+
+
+
+
+
+
+
+        //Создадим карту с моими наработками (окончательно)
+
+// const product = {
+//       "id": "76w0hz7015kkr9kjkav",
+//       "images": [
+//         "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+//         "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+//       ],
+//       "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+//       "rating": 2.89,
+//       "price": 15999,
+//       "category": "laptops",
+//       "brand": "acer"
+//     };
+
+// class Component {
+//     constructor(someProduct){
+//         this.componentProduct=someProduct;
+//         //вызов myRender()
+//         this.myRender();
+//       }
+
+//       //метод getTemplate позволяющий вернуть шаблон т.е. сдесь вписываются элементы. Сюда вставить свою верстку карточки
+//       getTemplate () {
+//         const result= `
+//         <div class="blok-rama">
+//   <div class="blok-img"><img class="otstup" src="${this.componentProduct.images[0]}""></div>
+
+//   <div class="blok-zv-cn">
+//     <div class="blok-zvezda">
+//       <div class="corect1">${this.componentProduct.rating}</div>
+//       <div class="corect1"><i class="bi bi-star"></i></div>
+
+//     </div>
+//     <div class="blok-cena">${this.componentProduct.price}</div>
+//   </div>
+
+//   <div class="blok-naz">
+//     <div class="corect3">${this.componentProduct.title}</div>
+//   </div>
+
+//   <div class="typ">
+//     <div class="corect4">${this.componentProduct.category}</div>
+//   </div>
+
+//   <div class="blok-add knop">
+//     <div class="corect5">Add To Cart</div>
+//   </div>
+// </div>
+//         `;
+//         return result;
+//       }
+
+//       //ниже идет логика конструирования
+//     myRender (){
+//         const element = document.createElement('div'); //создали элемент div
+
+//         //наполняем элемент div какимито данными
+//         element.innerHTML=this.getTemplate();
+//         this.componentElement=element;
+//     }
+// }
+// const obj= new Component(product);
+
+// // найдем нужный root элемент и вставим в него наш компонент
+// const myRootElement= document.querySelector('#root');
+// // console.error("myRootElement=",myRootElement);
+
+//     //выдадим в консоль
+// console.log(obj);
+
+// // нуобходимо добавить в myRootElement тот обьект который создали
+// myRootElement.append(obj.componentElement);
+
+
+                                    //ОКОНЧАНИЕ ОБУЧЕНИЯ С ДОБАВЛЕНИЕ В КАРТУ
+
+
+
+
+
+
+                        //ОБУЧЕНИЕ С ОБНОВЛЕНИЕМ ДАННЫХ В СЕРИДИНЕ КОМПОНЕНТОВ
+
+//                         const product = {
+//       "id": "76w0hz7015kkr9kjkav",
+//       "images": [
+//         "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+//         "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+//       ],
+//       "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+//       "rating": 2.89,
+//       "price": 15999,
+//       "category": "laptops",
+//       "brand": "acer"
+//     };
+
+//     const monitor={
+//       "id": "je1r13p0xckr9kjkav",
+//     "images": [
+//       "https://content1.rozetka.com.ua/goods/images/big_tile/57322367.jpg",
+//       "https://i1.rozetka.ua/promotions/constructors/2074/2074368.png"
+//     ],
+//     "title": "Монитор 23\" Asus VC239HE-W (90LM01E2-B03470)",
+//     "rating": 1.14,
+//     "price": 3800,
+//     "category": "laptops",
+//     "brand": "asus"
+//     };
+
+// class Component {
+//     constructor(someProduct){
+//         this.state=someProduct;
+//         //вызов myRender()
+//         this.myRender();
+//       }
+
+//       //метод getTemplate позволяющий вернуть шаблон т.е. сдесь вписываются элементы. Сюда вставить свою верстку карточки
+//       getTemplate () {
+//         const result= `
+//         <div class="blok-rama">
+//   <div class="blok-img"><img class="otstup" src="${this.state.images[0]}""></div>
+
+//   <div class="blok-zv-cn">
+//     <div class="blok-zvezda">
+//       <div class="corect1">${this.state.rating}</div>
+//       <div class="corect1"><i class="bi bi-star"></i></div>
+
+//     </div>
+//     <div class="blok-cena">${this.state.price}</div>
+//   </div>
+
+//   <div class="blok-naz">
+//     <div class="corect3">${this.state.title}</div>
+//   </div>
+
+//   <div class="typ">
+//     <div class="corect4">${this.state.category}</div>
+//   </div>
+
+//   <div class="blok-add knop">
+//     <div class="corect5">Add To Cart</div>
+//   </div>
+// </div>
+//         `;
+//         return result;
+//       }
+
+//       // создадим метод который будет менять состояние
+//       update(data={}){
+//         this.state=data;
+//         //необходимо наполлнить новыми данными то что раньше было в карточке
+//         this.componentElement.innerHTML=this.getTemplate();
+//       }
+
+
+
+//       //ниже идет логика конструирования
+//     myRender (){
+//         const element = document.createElement('div'); //создали элемент div
+
+//         //наполняем элемент div какимито данными
+//         element.innerHTML=this.getTemplate();
+//         this.componentElement=element;
+//     }
+// }
+// const obj= new Component(product);
+
+// // найдем нужный root элемент и вставим в него наш компонент
+// const myRootElement= document.querySelector('#root');
+// // console.error("myRootElement=",myRootElement);
+
+//     //выдадим в консоль
+// console.log(obj);
+
+// // нуобходимо добавить в myRootElement тот обьект который создали
+// myRootElement.append(obj.componentElement);
+
+// //добавляем (изменяем в ранее созданный) новые данные (монитор) в обьект
+// obj.update(monitor);
+
+
+
+
+
+
+      //ОБУЧЕНИЕ С ПЕРЕНОСОМ В ДРУГОЙ ФАЙЛ
+
+  // import Card from './index.js';
+
+  // const product = {
+  //     "id": "76w0hz7015kkr9kjkav",
+  //     "images": [
+  //       "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+  //       "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+  //     ],
+  //     "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+  //     "rating": 2.89,
+  //     "price": 15999,
+  //     "category": "laptops",
+  //     "brand": "acer"
+  //   };
+  //   const monitor={
+  //     "id": "je1r13p0xckr9kjkav",
+  //   "images": [
+  //     "https://content1.rozetka.com.ua/goods/images/big_tile/57322367.jpg",
+  //     "https://i1.rozetka.ua/promotions/constructors/2074/2074368.png"
+  //   ],
+  //   "title": "Монитор 23\" Asus VC239HE-W (90LM01E2-B03470)",
+  //   "rating": 1.14,
+  //   "price": 3800,
+  //   "category": "laptops",
+  //   "brand": "asus"
+  //   };
+  //   const card = new Card(product);
+
+  //     // сдесь указывается куда вставить карту
+  //     const someElement=document.querySelector('#root');
+  //     someElement.append(card.componentElement);
+        // можно сокрашенно добавить если эта строчка в середине скрипта, но необходимо добавлять как выше сделано
+        // root.append(card.componentElement);
+
+
+
+
+        //ОБУЧЕНИЕ С добаление пэджинэйшн
+
+        import Card from './index.js';
+
+        // добавим пэджинэйшн
+        import Pagination from './pagination.js';
+
+  const product = {
+    "id": "76w0hz7015kkr9kjkav",
+    "images": [
+      "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+      "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+    ],
+    "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+    "rating": 2.89,
+    "price": 15999,
+    "category": "laptops",
+    "brand": "acer"
+  };
+  const monitor={
+    "id": "je1r13p0xckr9kjkav",
+  "images": [
+    "https://content1.rozetka.com.ua/goods/images/big_tile/57322367.jpg",
+    "https://i1.rozetka.ua/promotions/constructors/2074/2074368.png"
+  ],
+  "title": "Монитор 23\" Asus VC239HE-W (90LM01E2-B03470)",
+  "rating": 1.14,
+  "price": 3800,
+  "category": "laptops",
+  "brand": "asus"
+  };
+
+  const card = new Card(product);
+  const pagination = new Pagination({
+    activePageIndex: 6
+  });
+
+    // сдесь указывается куда вставить карту
+    const someElement=document.querySelector('#root');
+    someElement.append(card.componentElement);
+      //выдаем pagination
+    someElement.append(pagination.element);
+
+
+
+
+    // pagination.setPage(9);
+
+    // pagination.prevPage();
+    // pagination.prevPage();
+    // pagination.prevPage();
+    // pagination.prevPage();
+
+
+    // pagination.nextPage();
+    // pagination.nextPage();
+
+    // pagination.setPage(1);
+
+
+
+
+
+
+
+
+
+
+
+
+    // import Card from './solution/index.js';
+
+    // const product = {
+    //   "id": "76w0hz7015kkr9kjkav",
+    //   "images": [
+    //     "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+    //     "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+    //   ],
+    //   "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+    //   "rating": 2.89,
+    //   "price": 15999,
+    //   "category": "laptops",
+    //   "brand": "acer"
+    // };
+
+    // const card = new Card(product);
+
+    // root.append(card.element);
   </script>
 </body>
 </html>
