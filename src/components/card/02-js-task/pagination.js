@@ -2,9 +2,10 @@ export default class Pagination {
   defaultPagesSize = 12;
 
   constructor({activePageIndex = 0} = {}) {
-
     this.activePageIndex = activePageIndex;
+
     this.render();
+    this.addEventListeners();
   }
 
   getPages() {
@@ -35,15 +36,15 @@ export default class Pagination {
 
     return `<li
                 data-element="page-link"
-                class="siz ${isActive}"
+                class="siz page-link ${isActive}"
                 data-page-index="${pageIndex}">
                     ${pageIndex + 1}
             </li>`
   }
 
-  setPage(paeIndex = 0) {
-    if (paeIndex === this.activePageIndex) return;
-    if (paeIndex > this.defaultPagesSize - 1 || paeIndex < 0) return;
+  setPage(pageIndex = 0) {
+    if (pageIndex === this.activePageIndex) return;
+    if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
 
     const activePage = this.element.querySelector('.page-link.active');
 
@@ -57,7 +58,7 @@ export default class Pagination {
       nextActivePage.classList.add('active');
     }
 
-    this.activePageIndex = paeIndex;
+    this.activePageIndex = pageIndex;
   }
 
   nextPage() {
@@ -70,11 +71,10 @@ export default class Pagination {
     this.setPage(prevPageIndex);
   }
 
-
   render() {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = this.getTemplate();
-    this.element = wrapper.firstElementChild;
+    this.element = wrapper;
   }
 
   addEventListeners () {

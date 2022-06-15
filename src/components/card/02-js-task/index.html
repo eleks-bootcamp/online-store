@@ -47,11 +47,13 @@
   };
 
   const card = new Card(product);
-  const pagination = new Pagination({activePageIndex: 2});
+  const pagination = new Pagination({activePageIndex: 3});
 
   const someElement = document.querySelector('#root');
   someElement.append(card.componentElement);
   someElement.append(pagination.element);
+
+  pagination.setPage(9);
 
   // card.update(videoCard);
 
