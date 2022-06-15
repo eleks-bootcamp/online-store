@@ -1,43 +1,70 @@
-export default class Card {
-  constructor(someTitle) {
-    this.state = someTitle;
-    this.myRender();
+import CardsList from "./cards-list.js";
+import Pagination from './pagination.js';
+
+export default class OnLineStorePage {
+  constructor(products = []) {
+    this.pageSize = 3;
+    this.products = products;
+    this.components = {};
+
+    this.initComponents();
+    this.render();
+    this.renderComponents();
+
+    this.initEventListeners();
   };
 
   getTemplate () {
     return `
-      <div class="product-card d-flex">
-
-        <img class="product-card-laptop" src="${this.state.images[0]}" alt="laptop">
-
-        <div class="product-card-wrapper d-flex">
-          <div class="product-card-rating d-flex">
-            <div class="product-card-rating-star d-flex">
-              <p>${this.state.rating}</p>
-              <img src="../images-icons/star-rating.svg" alt="star for rating">
-            </div>
-            <div class="product-card-price">${this.state.price}</div>
-          </div>
-          <div class="product-card-title">
-            <p>${this.state.title}</p>
-            <span>${this.state.category}</span>
-          </div>
+      <div>
+        <div data-element="cardsList">
+            <!-- Cards List component -->
         </div>
-
-        <div class="product-card-footer d-flex">ADD TO CART</div>
-
+        <div data-element="pagination">
+            <!-- Pagination component -->
+        </div>
       </div>
     `;
   };
 
-  update(data = {}) {
-    this.state = data;
-    this.componentElement.innerHTML = this.getTemplate();
+  initComponents () {
+    const totalPages = Math.ceil(this.products.length / this.pageSize);
+
+    const cardList = new CardsList(this.products.slice(0, this.pageSize));
+    const pagination = new Pagination({
+      activePageIndex: 0,
+      totalPages
+    });
+
+    this.components.cardList = cardList;
+    this.components.pagination = pagination;
   };
 
-  myRender() {
-    const element = document.createElement('div');
-    element.innerHTML = this.getTemplate();
-    this.componentElement = element;
+  renderComponents () {
+    const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
+    const paginationContainer = this.element.querySelector('[data-element="pagination"]');
+
+    cardsContainer.append(this.components.cardList.element);
+    paginationContainer.append(this.components.pagination.element);
   };
+
+  render () {
+    const wrapper = document.createElement('div');
+
+    wrapper.innerHTML = this.getTemplate();
+
+    this.element = wrapper.firstElementChild;
+  };
+
+  initEventListeners () {
+    this.components.pagination.element.addEventListener('page-changed', event => {
+      const pageIndex = event.detail;
+
+      const start = pageIndex * this.pageSize;
+      const end = start + this.pageSize;
+      const data = this.products.slice(start, end);
+
+      this.components.cardList.update(data);
+    });
+  }
 }
