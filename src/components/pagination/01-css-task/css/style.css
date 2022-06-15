@@ -6,11 +6,12 @@
 }
 
 .pagination {
-  width: 590px;
+  max-width: 590px;
   height: 40px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination__page-link {
@@ -30,10 +31,9 @@
 
 .pagination__page-list {
   list-style: none;
-  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 15px;
+  padding: 0;
 }
 
 .pagination__back {

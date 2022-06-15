@@ -4,6 +4,7 @@
 }
 
 .product {
+  margin: 0 auto;
   max-width: 315px;
   height: 394px;
   position: relative;
@@ -15,8 +16,8 @@
 .product__image {
   display: block;
   margin: 0 auto;
-  width: 280px;
-  height: 200px;
+  max-width: 280px;
+  max-height: 200px;
 }
 
 .product__content {

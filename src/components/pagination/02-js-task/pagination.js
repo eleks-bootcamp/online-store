@@ -1,8 +1,13 @@
-export default class Pagination {
-  defaultPagesSize = 12;
+'use strict';
 
-  constructor ({activePageIndex = 0} = {}) {
+export default class Pagination {
+  constructor ({
+    activePageIndex = 0,
+    totalPages = 0
+  } = {}) {
     this.activePageIndex = activePageIndex;
+    this.totalPages = totalPages;
+
     this.render();
     this.addEventListeners();
   }
@@ -10,13 +15,13 @@ export default class Pagination {
   getTaemplate () {
     return `
       <nav class="pagination">
-        <a href="#" class="pagination__page-link previous" data-element="nav-prev">
+        <div class="pagination__page-link previous" data-element="nav-prev">
             <i class="pagination__back icon-arrow-left"></i>
-        </a>
+        </div>
         ${this.getPages()}
-        <a href="#" class="pagination__page-link next" data-element="nav-next">
+        <div class="pagination__page-link next" data-element="nav-next">
           <i class="pagination__forward icon-arrow-right"></i>
-        </a>
+        </div>
       </nav>
     `;
   }
@@ -24,7 +29,7 @@ export default class Pagination {
   getPages () {
     return `
       <ul class="pagination__page-list" data-element="pagination">
-        ${new Array(this.defaultPagesSize).fill('').map((item, index) => {
+        ${new Array(this.totalPages).fill('').map((item, index) => {
           return this.getPageTeamplate(index);
         }).join('')}
       </ul>
@@ -43,7 +48,9 @@ export default class Pagination {
 
   setPage (pageIndex = 0) {
     if (pageIndex === this.activePageIndex) return;
-    if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+    if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
+
+    this.dispatchEvent(pageIndex);
 
     const activePage = this.element.querySelector('.pagination__page-link.active');
 
@@ -77,7 +84,7 @@ export default class Pagination {
 
     element.innerHTML = this.getTaemplate();
 
-    this.element = element;
+    this.element = element.firstElementChild;
   }
 
   addEventListeners () {
@@ -103,12 +110,13 @@ export default class Pagination {
       this.setPage(parseInt(pageIndex, 10));
     });
   }
+
+  dispatchEvent (pageIndex) {
+    const customEvent = new CustomEvent('page-changed', {
+      detail: pageIndex
+    });
+
+    this.element.dispatchEvent(customEvent);
+  }
 }
-
-const pagination = new Pagination({
-  activePageIndex: 0
-});
-
-const rootElement = document.querySelector('#root');
-rootElement.append(pagination.element);
 
