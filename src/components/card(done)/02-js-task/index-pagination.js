@@ -1,10 +1,16 @@
+
 export default class Pagination {
-  defaultPagesSize = 12;
-  constructor ({activePageIndex = 0} = {}) {
+
+  constructor ({
+    activePageIndex = 0,
+    totalPages = 0
+  } = {}) {
+
     this.activePageIndex = activePageIndex;
+    this.totalPages = totalPages;
+
     this.render();
     this.addEventListeners();
-
   }
 
   getTemplate () {
@@ -24,7 +30,7 @@ export default class Pagination {
   getPages(){
    return `
      <div class="Pagination-Buttons-box" data-element="pagintaion-list">
-      ${new Array(this.defaultPagesSize).fill(1).map((item, index)=>{
+      ${new Array(this.totalPages).fill(1).map((item, index)=>{
         return this.getPageTemplate(index);
       }).join('')}
 
@@ -43,7 +49,9 @@ export default class Pagination {
 
 setPage(pageIndex = 0){
   if (pageIndex === this.activePageIndex) return;
-  if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+  if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
+
+  this.dispatchEvent(pageIndex);
 
 const activePage = this.element.querySelector('.Pagination-Buttons.Pagination-Active');
 
@@ -91,9 +99,23 @@ prevPage(){
     pagesList.addEventListener('click', event => {
       const pageItem = event.target.closest('.Pagination-Buttons');
       if (!pageItem) return;
+
       const {pageIndex} = pageItem.dataset;
+
+
 
       this.setPage(parseInt(pageIndex,10));
        } )
+  }
+
+
+  dispatchEvent(pageIndex){
+    const customEvent = new CustomEvent('page-changed', {
+      detail: pageIndex ,
+    });
+
+
+
+    this.element.dispatchEvent(customEvent);
   }
 }

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>DoubleSlider component</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
 </head>
 <body>
 <main>
-  <div class="wrapper">
-    <!-- DoubleSlider component -->
+  <div class="Double-slider-wrapper">
+    <h3 class="Price-title">Price</h3>
+    <div data-element="priceSlider">
+      <div class="range-slider range-slider-dragging">
+        <span data-element="from">0 UAH</span>
+        <i data-element="thumb-left" class="bi bi-caret-left leftC"></i>
+        <div data-element="inner" class="range-slider_inner">
+          <span data-element="progress" class="range-slider_progress"></span>
+        </div>
+        <i data-element="thumb-right" class="bi bi-caret-right rightC"></i>
+        <span data-element="to">100000 UAH</span>
+
+      </div>
+
+    </div>
   </div>
 </main>
 </body>
