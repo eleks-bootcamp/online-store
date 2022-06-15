@@ -1,50 +1,66 @@
-export default class Card {
-  block;
+import Card from './card.js';
+import Pagination from './pagination.js';
 
-  constructor(someCard) {
-    this.state = someCard;
-    this.myRender();
+const product = {
+  "id": "76w0hz7015kkr9kjkav",
+  "images": [
+    "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+    "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+  ],
+  "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+  "rating": 2.89,
+  "price": 15999,
+  "category": "laptops",
+  "brand": "acer"
+};
+
+
+export default class OnlineStorePage {
+  constructor() {
+    this.components = {};
+
+    this.initComponents();
+    this.render();
+    this.renderComponents();
   }
 
   getTemplate() {
-    return `<div class="wrap">
-        <div class="os-img">
-            <img src=${this.state.images[0]} alt="foto">
+    return `
+    <div>
+        <div data-element="card">
+        <!-- Card component -->
         </div>
 
-        <div class="os-price">
-            <div class="os-price-star">
-                <p class="size">${this.state.rating}</p>
-            <img src="../01-css-task/images/Star.png" alt="icon">
+        <div data-element="pagination">
+        <!-- Pagination component -->
         </div>
-
-        <p class="os-price-price size">
-            ${this.state.price}
-        </p>
     </div>
-
-        <div class="os-text">
-            <p class="size">${this.state.title}</p>
-            <p class="os-text-two size">${this.state.category}</p>
-        </div>
-
-        <div><button class="os-footer size">add to cart</button></div>
-    </div>`
+    `;
   }
 
-  update(data = {}) {
-    this.state = data;
-    this.componentElement.innerHTML = this.getTemplate();
+  initComponents() {
+    const card = new Card(product);
+    const pagination = new Pagination({
+      totalElements: 35,
+      activePageIndex: 3,
+      pageSize: 8,
+    });
+
+    this.components.card = card;
+    this.components.pagination = pagination;
   }
 
-  myRender() {
-    const block = document.createElement('div');
-    block.classList = "block";
-    block.innerHTML = this.getTemplate();
+  renderComponents() {
+    const cardContainer = this.element.querySelector('[data-element="card"]');
+    const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
-    this.componentElement = block.firstElementChild;
+    cardContainer.append(this.components.card.element);
+    paginationContainer.append(this.components.pagination.element);
+  }
+
+  render() {
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = this.getTemplate();
+    this.element = wrapper.firstElementChild;
   }
 }
-
-
-

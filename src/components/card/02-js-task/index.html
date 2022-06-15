@@ -17,47 +17,11 @@
 <div id="root" class="wrapper"></div>
 
 <script type="module">
-  import Card from './index.js';
-  import Pagination from './pagination.js';
-
-  const product = {
-    "id": "76w0hz7015kkr9kjkav",
-    "images": [
-      "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-      "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-    ],
-    "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-    "rating": 2.89,
-    "price": 15999,
-    "category": "laptops",
-    "brand": "acer"
-  };
-
-  const videoCard = {
-    "id": "kub9vo3i3hckr9kjkav",
-    "images": [
-      "https://content.rozetka.com.ua/goods/images/big_tile/165161262.jpg",
-      "https://content1.rozetka.com.ua/goods/images/big_tile/165161264.jpg"
-    ],
-    "title": "Asus PCI-Ex Radeon RX 6700 XT Dual 12GB GDDR6 (192bit) (HDMI, 3 x DisplayPort) (DUAL-RX6700XT-12G)",
-    "rating": 2.04,
-    "price": 28000,
-    "category": "video_cards",
-    "brand": "asus"
-  };
-
-  const card = new Card(product);
-  const pagination = new Pagination({activePageIndex: 3});
+  import OnlineStorePage from './index.js';
 
   const someElement = document.querySelector('#root');
-  someElement.append(card.componentElement);
-  someElement.append(pagination.element);
-
-  pagination.setPage(9);
-
-  // card.update(videoCard);
-
-
+  const page = new OnlineStorePage();
+  someElement.append(page.element);
 </script>
 </body>
 </html>

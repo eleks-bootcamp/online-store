@@ -14,7 +14,6 @@ export default class Pagination {
     }).join('')
   }
 
-
   getTemplate() {
     return `
     <div class="pagination">
@@ -77,7 +76,7 @@ export default class Pagination {
     this.element = wrapper;
   }
 
-  addEventListeners () {
+  addEventListeners() {
     const prevPageBtn = this.element.querySelector('[data-element="nav-prev"]');
     const nextPageBtn = this.element.querySelector('[data-element="nav-next"]');
     const pagesList = this.element.querySelector('[data-element="pagination"]');
@@ -100,5 +99,4 @@ export default class Pagination {
       this.setPage(parseInt(pageIndex, 10));
     });
   }
-
 }
