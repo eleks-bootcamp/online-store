@@ -20,19 +20,28 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import { products } from './products.js';
+    // import { products } from './products.js';
     import OnlineStorePage from './index.js';
 
-
-
-
-
-
+    fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=8')
+  .then(response => response.json())
+  .then(products => {
     const page = new OnlineStorePage(products);
     const someElement = document.querySelector('#root');
-
-
     someElement.append(page.element);
+  });
+
+
+
+
+
+
+
+    // const page = new OnlineStorePage(products);
+    // const someElement = document.querySelector('#root');
+
+
+
 
     // pagination.setPage (9);
     // pagination.prevPage ();

@@ -9,7 +9,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 div[class^='col-'] {

@@ -99,7 +99,7 @@ export default class OnlineStorePage {
       const start = pageIndex * this.pageSize;
       const end = start + this.pageSize;
       const data = this.products.slice(start, end);
-
+// замість попережніх 3х стрічок треба зробити фетч 
       this.components.cardList.update(data);
     });
   }
