@@ -52,6 +52,7 @@ export default class Pagination {
   setPage (pageIndex = 0) {
     if (pageIndex === this.activePageIndex) return;
     if (pageIndex > this.totalPages - 1 || pageIndex <0) return;
+    this.dispatchEvent(pageIndex);
     const activePage = this.element.querySelector('.os-pagination-pages.active');
     if (activePage) {
       activePage.classList.remove('active');
@@ -105,7 +106,7 @@ export default class Pagination {
       if (!pageItem) return;
       const {pageIndex} = pageItem.dataset;
 
-      this.dispatchEvent(pageIndex);
+
       this.setPage(parseInt(pageIndex, 10));
 
     });
