@@ -1,56 +1,42 @@
 "use strict";
 
-import Card from "./components/product-card/card.js";
+// import Card from "./components/product-card/card.js";
+import CardsList from "./components/cards-list/cards-list.js";
 import Pagination from "./components/pagination/pagination.js";
-
-const product = {
-  "id": "76w0hz7015kkr9kjkav",
-  "images": [
-    "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-    "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-  ],
-  "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-  "rating": 2.89,
-  "price": 15999,
-  "category": "laptops",
-  "brand": "acer"
-};
-
-const monitor = {
-  "id": "r5pyc7y91djkr9kjkav",
-  "images": [
-    "https://content.rozetka.com.ua/goods/images/big_tile/73891904.jpg"
-  ],
-  "title": "Монитор 27\" Dell S2721DGFA (210-AXRQ)",
-  "rating": 2.13,
-  "price": 6900,
-  "category": "monitors",
-  "brand": "dell"
-};
+import { products } from "./products.js";
 
 class OnLineStorePage {
-  constructor() {
+  constructor(products) {
+    this.pageSize = 3;
+    this.products = products;
     this.components = {};
 
     this.initComponents();
     this.render();
     this.renderComponents();
+
+    this.initEventListeners();
   }
 
   getTemplate() {
     return `
-      <div data-element="card"></div>
-      <div data-element="pagination"></div>
+      <div>
+        <div class="cards-list" data-element="cardsList"></div>
+        <div data-element="pagination"></div>
+      </div>
     `;
   }
 
   initComponents() {
-    const card = new Card (product);
+    const totalPages = Math.ceil(this.products.length / this.pageSize);
+
+    const cardsList = new CardsList(this.products.slice(0, this.pageSize));
     const pagination = new Pagination({
-      activePageIndex: 0
+      activePageIndex: 0,
+      totalPages
     });
 
-    this.components.card = card;
+    this.components.cardsList = cardsList;
     this.components.pagination = pagination;
   }
 
@@ -59,20 +45,32 @@ class OnLineStorePage {
 
     element.innerHTML = this.getTemplate();
 
-    this.element = element;
+    this.element = element.firstElementChild;
   }
 
   renderComponents() {
-    const cardContainer = this.element.querySelector('[data-element="card"]');
+    const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
-    cardContainer.append(this.components.card.element);
+    cardsContainer.append(this.components.cardsList.element);
     paginationContainer.append(this.components.pagination.element);
+  }
+
+  initEventListeners() {
+    this.components.pagination.element.addEventListener('page-changed', e => {
+      const pageIndex = e.detail;
+
+      const start = pageIndex * this.pageSize;
+      const end = start + this.pageSize;
+
+      this.components.cardsList.update(this.products.slice(start, end));
+    });
   }
 }
 
-const page = new OnLineStorePage();
-const rootElement = document.querySelector('#root');
+const page = new OnLineStorePage(products);
+const root = document.querySelector('#root');
 
-rootElement.append(page.element);
-page.components.card.update(monitor);
+root.append(page.element);
+
+// page.components.card.update(monitor);

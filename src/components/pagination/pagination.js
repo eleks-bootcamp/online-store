@@ -1,46 +1,52 @@
 "use strict";
 
 export default class Pagination {
-  constructor ({ activePageIndex = 0 } = {}) {
-    this.defaultPagesSize = 12;
+  constructor({
+    activePageIndex = 0,
+    totalPages = 0
+  } = {}) {
     this.activePageIndex = activePageIndex;
+    this.totalPages = totalPages;
 
     this.render();
     this.addEventListeners();
   }
 
-  getTemplate () {
+  getTemplate() {
     return `
       <div class="pagination">
-        <a href="#" class="pagination__arrow" data-element="arrow-left"></a>
+        <div class="pagination__arrow" data-element="arrow-left"></div>
         ${this.getPages()}
-        <a href="#" class="pagination__arrow pagination__arrow_right" data-element="arrow-right"></a>
+        <div class="pagination__arrow pagination__arrow_right" data-element="arrow-right"></div>
       </div>
     `;
   }
 
-  getPages () {
+  getPages() {
     return `
       <ul class="pagination__list" data-element="pagination">
-        ${new Array(this.defaultPagesSize).fill('').map((item, index) => {
+        ${new Array(this.totalPages).fill('').map((item, index) => {
           return this.getPageTemplate(index);
         }).join('')}
       </ul>
     `;
   }
 
-  getPageTemplate (pageIndex = 0) {
+  getPageTemplate(pageIndex = 0) {
     const isActive = pageIndex === this.activePageIndex ? 'active' : '';
 
-    return `<li class="pagination__list-item ${isActive}" data-page-index="${pageIndex}">
-        <a href="#">${pageIndex + 1}</a>
-      </li>`;
+    return `
+      <li class="pagination__list-item ${isActive}" data-page-index="${pageIndex}">
+        ${pageIndex + 1}
+      </li>
+      `;
   }
 
-  setPage (pageIndex = 0) {
+  setPage(pageIndex = 0) {
     if (pageIndex === this.activePageIndex) return;
-    if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+    if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
 
+    this.dispatchEvent(pageIndex);
     const activePage = this.element.querySelector('.pagination__list-item.active');
 
     if (activePage) {
@@ -56,27 +62,27 @@ export default class Pagination {
     this.activePageIndex = pageIndex;
   }
 
-  nextPage () {
+  nextPage() {
     const nextPageIndex = this.activePageIndex + 1;
 
     this.setPage(nextPageIndex);
   }
 
-  prevPage () {
+  prevPage() {
     const prevPageIndex = this.activePageIndex - 1;
 
     this.setPage(prevPageIndex);
   }
 
-  render () {
+  render() {
     const element = document.createElement('div');
 
     element.innerHTML = this.getTemplate();
 
-    this.element = element;
+    this.element = element.firstElementChild;
   }
 
-  addEventListeners () {
+  addEventListeners() {
     const prevPageBtn = this.element.querySelector('[data-element="arrow-left"]');
     const nextPageBtn = this.element.querySelector('[data-element="arrow-right"]');
     const pagesList = this.element.querySelector('[data-element="pagination"]');
@@ -91,10 +97,20 @@ export default class Pagination {
 
     pagesList.addEventListener('click', e => {
       const pageItem = e.target.closest('.pagination__list-item');
+
       if (!pageItem) return;
 
       const { pageIndex } = pageItem.dataset;
+
       this.setPage(parseInt(pageIndex, 10));
     });
+  }
+
+  dispatchEvent(pageIndex) {
+    const customEvent = new CustomEvent('page-changed', {
+      detail: pageIndex
+    });
+
+    this.element.dispatchEvent(customEvent);
   }
 }
