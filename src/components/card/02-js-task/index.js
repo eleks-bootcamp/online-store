@@ -2,18 +2,18 @@
 import CardsList from './cards-list.js';
 import Pagination from './pagination.js';
 
-const product = {
-  id: "76w0hz7015kkr9kjkav",
-  images: [
-    "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-    "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-  ],
-  title: "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-  rating: 2.89,
-  price: 15999,
-  category: "laptops",
-  brand: "acer"
-};
+// const product = {
+//   id: "76w0hz7015kkr9kjkav",
+//   images: [
+//     "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+//     "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+//   ],
+//   title: "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+//   rating: 2.89,
+//   price: 15999,
+//   category: "laptops",
+//   brand: "acer"
+// };
 // const monitor = {
 //   id: "w73oaydowenkr9kjkav",
 //   images: [
@@ -33,6 +33,7 @@ export default class OnlineStorePage {
 
 
   constructor (products) {
+    this.pageSize = 3;
     this.products = products;
     this.components = {};
     this.initComponents();
@@ -63,9 +64,11 @@ export default class OnlineStorePage {
   }
 
   initComponents () {
-  const cardList = new CardsList(this.products);
+  const totalPages = Math.ceil(this.products.length / this.pageSize);
+  const cardList = new CardsList(this.products.slice(0, this.pageSize));
   const pagination = new Pagination ({
-    activePageIndex: 2,
+    activePageIndex: 0,
+    totalPages: totalPages
 });
   this.components.cardList = cardList;
   this.components.pagination = pagination;

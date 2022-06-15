@@ -32,11 +32,16 @@ renderCards () {
   });
 
   const body = this.element.querySelector('[data-element="body"]');
+  body.innerHTML = '';
   body.append(...cards);
 
 
-  console.log('cards'. cards);
+  // console.log('cards'. cards);
 
+}
+update (data = []) {
+  this.data = data;
+  this.renderCards();
 }
 
 }
