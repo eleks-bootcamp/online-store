@@ -15,11 +15,11 @@ export default class Pagination {
     return `
     <div>
       <nav class="pagination">
-        <a href="#" class="arrow-left" data-element="nav-prev">
+        <a href="#" class="page-link previous" data-element="nav-prev">
           <i class="bi bi-chevron-left"></i>
         </a>
         ${this.getPages()}
-        <a href="#" class="arrow-right" data-element="nav-next">
+        <a href="#" class="page-link next" data-element="nav-next">
           <i class="bi bi-chevron-right"></i>
         </a>
       </nav>
@@ -55,7 +55,7 @@ export default class Pagination {
     if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
 
     this.dispatchEvent(pageIndex);
-    const activePage = this.element.querySelector('.page-number.active');
+    const activePage = this.element.querySelector('.page-link.active');
 
     if (activePage) {
       activePage.classList.remove('active');
@@ -104,7 +104,7 @@ export default class Pagination {
     });
 
     pagesList.addEventListener('click', event => {
-      const pageItem = event.target.closest('.page-number');
+      const pageItem = event.target.closest('.page-link');
 
       if (!pageItem) return;
 
