@@ -1,4 +1,3 @@
-//import Card from './index-card.js';
 import Pagination from './index-pagination.js';
 import CardsList from './card-list.js';
 
