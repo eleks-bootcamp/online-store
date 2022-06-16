@@ -23,6 +23,9 @@ body {
   background: var(--var-color-bg-wrapper);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
   border-radius:0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .os-img {

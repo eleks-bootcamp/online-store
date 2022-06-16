@@ -17,10 +17,12 @@
 <div id="root" class="wrapper"></div>
 
 <script type="module">
+  import {products} from './products.js'
   import OnlineStorePage from './index.js';
 
   const someElement = document.querySelector('#root');
-  const page = new OnlineStorePage();
+  const page = new OnlineStorePage(products);
+
   someElement.append(page.element);
 </script>
 </body>
