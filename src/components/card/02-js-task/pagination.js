@@ -1,5 +1,5 @@
 export default class Pagination {
-  defoultPagesSize = 20;
+  defoultPagesSize = 5;
   constructor({ activePageIndex = 0 } = {}) {
     this.activePageIndex = activePageIndex;
     this.render();
