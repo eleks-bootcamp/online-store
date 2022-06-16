@@ -25,34 +25,48 @@
   <script type="module">
     import Card from './index.js';
     import Pagination from './pagination.js';
+    //API http://online-store.bootcamp.place/api/products
     const product = {
       "id": "76w0hz7015kkr9kjkav",
       "images": [
         "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
         "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
       ],
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+      "title": "Ноутбук Acer Aspire 33 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
       "rating": 2.89,
       "price": 15999,
       "category": "laptops",
       "brand": "acer"
     };
     const monitor = {
-      id: "w73oaydowenkr9kjkav",
-      images: [
-        "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+      "id": "2fw83q44cx4kr9kjkav",
+      "images": [
+        "https://content1.rozetka.com.ua/goods/images/big_tile/3935304.jpg"
       ],
-      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
-      rating: 5,
-      price: 3800,
-      category: "monitors",
-      brand: "benq"
+      "title": "Клавиатура проводная Logitech G815 Gaming Mechanical GL Tactile RGB USB (920-008991)",
+      "rating": 3.22,
+      "price": 4500,
+      "category": "gaming_keyboards",
+      "brand": "logitech"
+    };
+    const ram = {
+      "id": "vbdh6bsx26rkr9kjkav",
+      "images": [
+        "https://content1.rozetka.com.ua/goods/images/big_tile/36439229.jpg",
+        "https://content1.rozetka.com.ua/goods/images/big_tile/36439238.jpg"
+      ],
+      "title": "RAM Kingston SODIMM DDR4-2666 8192MB PC4-21300 ValueRAM (KVR26S19S6/8)",
+      "rating": 1.81,
+      "price": 2700,
+      "category": "ram",
+      "brand": "kingston"
     };
     const card = new Card(monitor);
-    const pagination = new Pagination();
-    const idRoot = document.querySelector('#root');
-    idRoot.append(card.componentElement);
-    idRoot.append(pagination.element);
+    const pagination = new Pagination({activePageIndex:1});
+    const root = document.querySelector('#root');
+    root.append(card.componentElement);
+    root.append(pagination.element);
+    pagination.setPage(0);
 
   </script>
 </body>

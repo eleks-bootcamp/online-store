@@ -12,9 +12,9 @@
 .product_photo {
   display: flex;
   padding-top: 12px ;
-
+  width: 90%;
   margin: 0px auto;
-  height: 200px;
+ 
 }
 
 .product_content {
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-.description h5 {
+.title h5 {
   font-size: 1rem;
   color: #2c2c2c;
   margin: 16px 0 8px 0;

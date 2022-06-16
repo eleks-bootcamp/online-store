@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -6,7 +7,7 @@
   padding: 0 90px 0 90px;
 }
 
-.pagination ul {
+.pagination-list {
   display: flex;
 }
 
@@ -15,9 +16,9 @@
   margin: 0 10px;
 }
 
-.pagination ul li a,
-.btn-prev a,
-.btn-next a{
+.page-link ,
+.btn-prev ,
+.btn-next{
   width: 40px;
   height: 40px;
   display: flex;
@@ -29,19 +30,20 @@
   ;
 }
 
-.pagination ul li a:hover,
+.page-link:hover ,
+.btn-prev:hover,
+.btn-next:hover {
+  background-color: #7e72f2;
+
+}
+.page-link:hover ,
 .btn-prev a:hover,
 .btn-next a:hover {
-  background-color: #7e72f2;
   color: #fff;
 }
 
-.pagination ul li a:focus {
+.active{
   background-color: #7e72f2;
   color: #fff;
-}
-.btn-prev a:active,
-.btn-next a:active
-{
-  color:#fff;
-}
+ }
+
