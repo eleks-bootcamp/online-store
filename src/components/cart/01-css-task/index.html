@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Cart component</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<title>Cart component</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-  <div id="root">
-    <!-- Cart component -->
-  </div>
+	<div id="root">
+		<div class="cart__wrapper">
+			<ul class="cart__list list">
+				<li><ul class="list__item item">
+					<li>
+						<img class="item__img" src="../../card/01-css-task/images/Rectangle.png" alt="">
+					</li>
+					<li>
+						<p class="item__discription">Ноутбук Acer Nitro 5 AN515-55-56WH (NH.Q7PEU.00L) Obsidian Black Суперціна!!!</p>
+					</li>
+					<li>
+							<ul class="item__count count">
+								<li><button class="count__item bi bi-dash-circle"></button></li>
+								<li><p class="count__value">1</p></li>
+								<li><button class="count__item bi bi-plus-circle"></button></li>
+							</ul>
+					</li>
+					<li>
+						<p class="item__price">29999</p>
+					</li>
+				</ul></li>
+			</ul>
+			<p class="cart__total-price">Total: 29999</p>
+			<button class="cart__order">ORDER</button>
+		</div>
+	</div>
 </main>
 </body>
 </html>
