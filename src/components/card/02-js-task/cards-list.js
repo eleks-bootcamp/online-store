@@ -1,5 +1,7 @@
 import Card from "./card.js";
 
+// трропрмпапвопрвпг
+
 
 export default class CardsList {
 
