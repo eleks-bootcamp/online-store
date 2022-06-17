@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Card component</title>
+    <link rel="stylesheet" href="../../../styles/style.min.css" />
+
+    <style>
+      .wrapper {
+        width: 800px;
+        margin: 100px auto;
+      }
+
+      .os-product-card {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root" class="wrapper"></div>
+
+    <script type="module">
+      import { products } from './products.js';
+      import OnlineStorePage from './index.js';
+
+      const page = new OnlineStorePage(products);
+      const root = document.querySelector('#root');
+
+      root.append(page.element);
+    </script>
+  </body>
+</html>

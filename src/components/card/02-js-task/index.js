@@ -1,35 +1,38 @@
-import Pagination from './index-pagination.js';
-import CardsList from './card-list.js';
-
-
+import CardsList from './cards-list.js';
+import Pagination from './pagination.js';
 export default class OnlineStorePage {
   constructor (products = []) {
-    this.pageSize = 9;//задаємо дефолтну кількість продуктів(карток) на сторінці
+    this.pageSize = 3;
     this.products = products;
     this.components = {};
 
     this.initComponents();
     this.render();
     this.renderComponents();
+
     this.initEventListeners();
   }
 
-  getTemplate () { //метод який створює порожні діви куди ми будемо закидувати наші елементи сторінки
+  getTemplate () {
     return `
       <div>
-        <div data-element="cardsList"></div>
-        <div data-element="pagination"></div>
-       </div>
-  `;
+        <div data-element="cardsList">
+          <!-- Cards List component -->
+        </div>
+        <div data-element="pagination">
+          <!-- Pagination component -->
+        </div>
+      </div>
+    `;
   }
 
-  initComponents(){
-  const totalPages = Math.ceil(this.products.length / this.pageSize);//обрахунок кільскості сторінок
+  initComponents () {
+    const totalPages = Math.ceil(this.products.length / this.pageSize);
 
-  const cardList = new CardsList(this.products.slice(0,this.pageSize));
-  const pagination = new Pagination({
-    activePageIndex : 0,
-    totalPages: totalPages,
+    const cardList = new CardsList(this.products.slice(0, this.pageSize));
+    const pagination = new Pagination({
+      activePageIndex: 0,
+      totalPages
     });
 
     this.components.cardList = cardList;
@@ -37,7 +40,6 @@ export default class OnlineStorePage {
   }
 
   renderComponents () {
-
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
@@ -52,16 +54,20 @@ export default class OnlineStorePage {
 
     this.element = wrapper.firstElementChild;
   }
-  initEventListeners(){
-    this.components.pagination.element.addEventListener('page-changed', event =>{
+
+  initEventListeners () {
+    this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
+
+      // [0, 1, 2] | pageIndex = 0 pageSize = 3
+      // [3, 4, 5] | pageIndex = 1 pageSize = 3
+      // [6, 7]    | pageIndex = 2 pageSize = 3
 
       const start = pageIndex * this.pageSize;
       const end = start + this.pageSize;
+      const data = this.products.slice(start, end);
 
-
-      this.components.cardList.update(this.products.slice(start, end));
+      this.components.cardList.update(data);
     });
   }
 }
-

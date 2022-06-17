@@ -1,4 +1,4 @@
-export  const products = [
+export const products = [
   {
     "id": "76w0hz7015kkr9kjkav",
     "images": [
@@ -96,6 +96,5 @@ export  const products = [
     "price": 70999,
     "category": "laptops",
     "brand": "apple"
-  },
-
+  }
 ]
