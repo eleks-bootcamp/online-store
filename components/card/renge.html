@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="wrapper" id="root">
-  </div>
-<script type="module">
-  import Card from './index.js';
-  import Pagination from './pagination.js';
-  const monitor = {
-      id: "w73oaydowenkr9kjkav",
-      images: [
-      "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
-      ],
-      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
-      rating: 5,
-      price: 3800,
-      category: "monitors",
-      brand: "benq"
-};
-const card = new Card(monitor);
-const pagination = new Pagination({
-  activePageIndex:0
-})
-const wrapper = document.querySelector('.wrapper')
-wrapper.append(card.group)
-wrapper.append(pagination.container)
-pagination.setPage()
-pagination.nextPage()
-pagination.prevPage()
-</script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Card component</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .wrapper {
+        width: 800px;
+        margin: 100px auto;
+      }
+      .os-products-list {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -10px;
+        align-self: self-start;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div id="root" class="wrapper"></div>
+
+    <script type="module">
+      import { products } from './products.js';
+      import OnlineStorePage from './index.js';
+
+      const page = new OnlineStorePage(products);
+      const root = document.querySelector('#root')
+      root.append(page.element);
+
+    </script>
+  </body>
 </html>
