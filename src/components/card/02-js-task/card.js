@@ -6,6 +6,11 @@ export default class Card {
     this.myRender();
   }
 
+  //ghfgh
+  // jbcjsbvh
+
+
+
   getTemplate() {
     return `<div class="wrap">
         <div class="os-img">
