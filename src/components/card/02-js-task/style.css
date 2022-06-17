@@ -79,3 +79,14 @@
 .wrap{
   width: 30%;
 }
+
+.os-products-list{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+
+}
+
+.wrap{
+  width: 30%;
+}

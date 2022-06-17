@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<button id="btn">click me!</button>
+
+<!--//просто приклад-->
+<script>
+  const btnElement = document.querySelector('#btn');
+
+  const myEvent = new CustomEvent('foo-bar-baz', {
+    bubbles: true,
+    detail: {
+      foo: 'bar',
+      baz: [1,2,3,9],
+    }
+
+  });
+
+  btnElement.addEventListener('click', event => {
+    console.log('event', event);
+
+    btnElement.dispatchEvent(myEvent);
+  });
+
+  document.addEventListener('foo-bar-baz', event => {
+    console.log('foo-bar-baz', event);
+  })
+
+
+
+</script>
+</body>
+</html>
