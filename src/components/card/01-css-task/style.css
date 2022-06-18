@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   font-size: 14px;
+  margin: 0;
 }
 
 body {
@@ -143,7 +144,7 @@ p {
   margin-right: 3px;
 }
 
-.os-pagination {
+/*.os-pagination {
   display: flex;
   align-items: center;
 }
@@ -190,8 +191,62 @@ p {
 .os-pagination .page-link.active {
   background-color: #7e72f2;
   color: #fff;
+}*/
+
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
 }
 
+.previous-page {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ededed;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+
+}
+
+.next-page {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ededed;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+
+}
+.pagination-items {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: #ededed;
+justify-content: center;
+align-items: center;
+display: flex;
+transition: 0.3s;
+list-style-type: none;
+text-decoration: none;
+}
+.pagination-items:hover,
+.pagination-items.active {
+  background-color: #7e72f2;
+  color: #fff
+}
+/*li:hover {
+  background-color: #7E72F2;
+}
+*/
+ul {
+  list-style-type: none;
+}
 .os-btn-white,
 .os-btn-default,
 .os-btn-primary {

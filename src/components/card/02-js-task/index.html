@@ -12,6 +12,10 @@
       width: 400px;
       margin: 100px auto;
     }
+    .os-product-card {
+        margin-bottom: 20px;
+      }
+
   </style>
 </head>
 
@@ -19,65 +23,17 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-      const product = {
-      "id": "76w0hz7015kkr9kjkav",
-      "images": [
-        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-      ],
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.89,
-      "price": 15999,
-      "category": "laptops",
-      "brand": "acer"
-    };
+    import { products } from './products.js';
+    import OnlineStorePage from './index.js';
 
-    class Component {
-      constructor (someProduct) {
-      this.componentProduct = someProduct;
-      this.myRender ();
 
-    }
+ const page = new OnlineStorePage(products);
+ const root = document.querySelector('#root');
+ console.log(root);
 
-    getTemplate () {
-      return `
-      <div class="os-product-card">
-          <div class="os-product-img" style="background-image: url(${this.componentProduct.images[0]});"></div>
-          <div class="os-product-content">
-            <div class="os-product-price-wrapper">
-              <div class="os-product-rating">
-                <span>${this.componentProduct.rating}</span>
-                <i class="bi bi-star"></i>
-              </div>
+ root.append(page.element);
 
-              <div class="os-product-price">15999</div>
-            </div>
 
-            <h5 class="os-product-title">${this.componentProduct.title}</h5>
-            <p class="os-product-description">${this.componentProduct.category}</p>
-          </div>
-
-          <footer class="os-product-footer">
-            <button class="os-btn-primary" data-element="addToCartBtn">
-              Add To Cart
-            </button>
-          </footer>
-          </div>
-        `;
-      }
-
-    myRender () {
-      const element = document.createElement ('div');
-      element.innerHTML = this.getTemplate();
-
-      this.componentElement = element;
-    }
-  }
-    const obj = new Component(product);
-
-    const myRootElement = document.querySelector('#root');
-    console.log(obj);
-    myRootElement.append(obj.componentElement);
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
