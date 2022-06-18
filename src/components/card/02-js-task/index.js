@@ -1,4 +1,6 @@
-import Card from "./card.js";
+//import Card from "./card.js";
+
+import CardsList from "./card-list.js";
 import Pagination from "./pagination.js";
 
 const product = {
@@ -16,38 +18,44 @@ const product = {
 };
 
 export default class OnlineStorePage {
-  constructor () {
+  constructor (products) {
+    this.pageSize = 9
+    this.products = products
     this.components = {};
 
     this.initComponents();
     this.render();
     this.renderComponents();
+
+    this.initEventListeners();
   };
 
   getTemplate () {
     return `
       <div>
-        <div data-element="card"></div>
+        <div data-element="cardsList"></div>
         <div data-element="pagination"></div>
       </div>
     `;
   }
 
   initComponents () {
-    const card = new Card(product);
+    const totalPages = Math.ceil(100 / this.pageSize)
+    const cardsList = new CardsList(this.products.slice(0, this.pageSize));
     const pagination = new Pagination({
-      activePageIndex: 2
+      activePageIndex: 0,
+      totalPages
     });
 
-    this.components.card = card;
+    this.components.cardsList = cardsList;
     this.components.pagination = pagination;
   }
 
   renderComponents () {
-    const cardContainer = this.element.querySelector('[data-element="card"]');
+    const cardsListContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
-    cardContainer.append(this.components.card.componentElement);
+    cardsListContainer.append(this.components.cardsList.element);
     paginationContainer.append(this.components.pagination.element);
   }
 
@@ -57,5 +65,17 @@ export default class OnlineStorePage {
     wrapper.innerHTML = this.getTemplate();
 
     this.element = wrapper.firstElementChild;
+  }
+
+  initEventListeners () {
+    this.components.pagination.element.addEventListener('page-changed', event => {
+      const pageIndex = event.detail;
+      const page = pageIndex + 1
+
+      fetch(`https://online-store.bootcamp.place/api/products?_page=${page}&_limit=9`)
+        .then(response => response.json())
+        .then(data => {
+      this.components.cardsList.update(data);
+    })})
   }
 }

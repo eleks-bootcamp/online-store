@@ -6,7 +6,7 @@ export default class Card {
 
   getTemplate () {
   const result = `
-    <div class="card">
+    <div class="card col-m col-s">
       <div class="item", style="background-image: url(${this.state.images[0]})"></div>
 
       <div class="item-content">
@@ -39,7 +39,7 @@ export default class Card {
   update (data = {}) {
     this.state = data;
 
-    this.componentElement.innerHTML = this.getTemplate();
+    this.element.innerHTML = this.getTemplate();
   }
 
   myRender () {
@@ -47,7 +47,7 @@ export default class Card {
 
     element.innerHTML = this.getTemplate();
 
-    this.componentElement = element;
+    this.element = element.firstElementChild;
   }
 
 }

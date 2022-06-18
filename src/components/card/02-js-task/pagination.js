@@ -1,7 +1,7 @@
 export default class Pagination {
-	defaultPagesSize = 12;
-	
-	constructor({ activePageIndex = 0 } = {}) {
+
+	constructor({ activePageIndex = 0, totalPages = 12 } = {}) {
+		this.totalPages = totalPages;
 		this.activePageIndex = activePageIndex;
 		this.render();
 		this.addEventListeners();
@@ -23,7 +23,7 @@ export default class Pagination {
 	getPages () {
 		return `
 			<ul class="pagination-center" data-element="pagination">
-				${new Array(this.defaultPagesSize).fill(1).map((item, index) => {
+				${new Array(this.totalPages).fill(1).map((item, index) => {
 					return this.getPageTemplate(index);
 				}).join('')}
 			</ul>
@@ -42,7 +42,9 @@ export default class Pagination {
 
 	setPage (pageIndex = 0) {
 		if (pageIndex === this.activePageIndex) return;
-		if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+		if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
+
+		this.dispatchedEvent(pageIndex);
 
 		const activePage = this.element.querySelector('.pagination-item.active');
 
@@ -76,7 +78,7 @@ export default class Pagination {
 
 		wrapper.innerHTML = this.getTemplatePage();
 
-		this.element = wrapper;
+		this.element = wrapper.firstElementChild;
 	}
 
 	addEventListeners () {
@@ -101,5 +103,13 @@ export default class Pagination {
 
 			this.setPage(parseInt(pageIndex, 10));
 		});
+	}
+
+	dispatchedEvent (pageIndex) {
+		const customEvent = new CustomEvent('page-changed', {
+			detail: pageIndex
+		})
+
+		this.element.dispatchEvent(customEvent)
 	}
 }

@@ -21,6 +21,7 @@
   max-width: 480px;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 10px;
   align-content: space-between;
   height: 394px;
   background: #FFFFFF;
@@ -41,6 +42,7 @@
 
 .item-content {
   padding: 22px 24px;
+  padding-bottom: 0;
 }
 
 .price {
