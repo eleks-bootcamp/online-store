@@ -1,5 +1,6 @@
 export const products = [
-    {
+
+  {
       "id": "76w0hz7015kkr9kjkav",
       "images": [
         "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",

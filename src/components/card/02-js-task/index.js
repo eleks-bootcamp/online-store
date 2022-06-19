@@ -24,12 +24,12 @@ export default class OnlineStorePage {
   }
 
   initComponents () {
-    const totalPages = 100;
-    // const totalPages = Math.ceil(this.products.length / this.pageSize);
+   
+    const totalPages = Math.ceil(this.products.length / this.pageSize);
 
     const cardList = new CardsList (this.products.slice(0, this.pageSize));
     const pagination = new Pagination({
-      // activePageIndex: 0, 
+      activePageIndex: 0, 
       totalPages: totalPages
     });
     this.components.cardList = cardList;
@@ -52,18 +52,27 @@ export default class OnlineStorePage {
     
     this.element = wrapper.firstElementChild;
   };
+
   initEventListeners () {
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
 
-      const start = pageIndex* this.pageSize;
-      const end = start +  this.pageSize;
+
+      // [0, 1, 2] | pageIndex = 0 pageSize = 3
+      // [3, 4, 5] | pageIndex = 1 pageSize = 3
+      // [6, 7]    | pageIndex = 2 pageSize = 3
+
+      const start = pageIndex * this.pageSize;
+      const end = start + this.pageSize;
+
       const data = this.products.slice(start, end);
 
       this.components.cardList.update(data);
     });
+
   };
-}
+
+  }
 
 
 
