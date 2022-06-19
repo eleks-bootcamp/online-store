@@ -24,7 +24,8 @@ export default class OnlineStorePage {
   }
 
   initComponents () {
-    const totalPages = Math.ceil(this.products.length / this.pageSize);
+    const totalPages = 100;
+    // const totalPages = Math.ceil(this.products.length / this.pageSize);
 
     const cardList = new CardsList (this.products.slice(0, this.pageSize));
     const pagination = new Pagination({

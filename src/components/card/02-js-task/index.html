@@ -17,14 +17,20 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import {products} from './products.js';
+    // import {products} from './products.js';
+    
     import OnlineStorePage from "./index.js";
- 
 
-    const page = new OnlineStorePage(products);
-    const root = document.querySelector('#root');
+    fetch('https://online-store.bootcamp.place/api/products')
+      .then(response => response.json())
+      .then(products =>{
+         const page = new OnlineStorePage(products);
+         const root = document.querySelector('#root');
     
     root.append(page.element);
+      });
+
+   
 
   </script>
 </body>
