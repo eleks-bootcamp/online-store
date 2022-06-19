@@ -17,18 +17,29 @@ const product = {
   brand: "acer",
 };
 
-export default class OnlineStorePage {
-  constructor (products) {
-    this.pageSize = 9
-    this.products = products
-    this.components = {};
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
 
+export default class OnlineStorePage {
+  constructor () {
+    this.pageSize = 9
+    this.url = new URL('products', BACKEND_URL)
+    this.url.searchParams.set('_limit', this.pageSize);
+    this.products = []
+    this.components = {};
     this.initComponents();
     this.render();
     this.renderComponents();
-
     this.initEventListeners();
+    this.update(1);
   };
+
+  async LoadData (pageNumber) {
+    this.url.searchParams.set('_page', pageNumber);
+    const response = await fetch(this.url)
+    const products = await response.json();
+
+    return products
+  }
 
   getTemplate () {
     return `
@@ -40,8 +51,9 @@ export default class OnlineStorePage {
   }
 
   initComponents () {
-    const totalPages = Math.ceil(100 / this.pageSize)
-    const cardsList = new CardsList(this.products.slice(0, this.pageSize));
+    const constTotalElements = 100
+    const totalPages = Math.ceil(constTotalElements / this.pageSize)
+    const cardsList = new CardsList(this.products);
     const pagination = new Pagination({
       activePageIndex: 0,
       totalPages
@@ -70,12 +82,13 @@ export default class OnlineStorePage {
   initEventListeners () {
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
-      const page = pageIndex + 1
+      this.update(pageIndex + 1);
+    })
 
-      fetch(`https://online-store.bootcamp.place/api/products?_page=${page}&_limit=9`)
-        .then(response => response.json())
-        .then(data => {
-      this.components.cardsList.update(data);
-    })})
+  }
+
+  async update (pageNumber) {
+    const data = await this.LoadData(pageNumber)
+    this.components.cardsList.update(data)
   }
 }

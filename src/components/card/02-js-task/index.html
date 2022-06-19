@@ -14,14 +14,14 @@
   <script type="module">
     import OnlineStorePage from './index.js';
 
-    fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=9')
-      .then(response => response.json())
-      .then(products => {
-        const page = new OnlineStorePage(products);
+    //fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=9')
+    //  .then(response => response.json())
+    //  .then(products => {
+        const page = new OnlineStorePage();
         const root = document.querySelector('#root');
 
         root.append(page.element);
-    })
+    //})
 
   </script>
 </body>
