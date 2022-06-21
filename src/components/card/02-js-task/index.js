@@ -1,42 +1,21 @@
 // index.js это вся страница, и в ней необх укозать все компоненты которые на ней должны быть
-import Card from './card.js';
+// import Card from './card.js';
+
+import CardsList from './cards-list.js';
 
     // добавим пэджинэйшн
 import Pagination from './pagination.js';
-
-const product = {
-    "id": "76w0hz7015kkr9kjkav",
-    "images": [
-      "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-      "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-    ],
-    "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-    "rating": 2.89,
-    "price": 15999,
-    "category": "laptops",
-    "brand": "acer"
-};
-
-  // const monitor={
-  //   "id": "je1r13p0xckr9kjkav",
-  // "images": [
-  //   "https://content1.rozetka.com.ua/goods/images/big_tile/57322367.jpg",
-  //   "https://i1.rozetka.ua/promotions/constructors/2074/2074368.png"
-  // ],
-  // "title": "Монитор 23\" Asus VC239HE-W (90LM01E2-B03470)",
-  // "rating": 1.14,
-  // "price": 3800,
-  // "category": "laptops",
-  // "brand": "asus"
-  // };
-
-
 
 
 // сроздадим глобальную страницу OnlineStorePage на котор будут другие компоненты
 // export default означает экспорт по умолчанию
 export default class OnlineStorePage {
-  constructor () {
+  constructor (products = []) {
+
+    // огласим сколько хотим видеть карточек на страничке
+    this.pageSize = 3;
+
+    this.products = products;
 
     // создадим пустой обьект components. Сюда будем скаладывать компоненты
     this.components = {};
@@ -45,14 +24,17 @@ export default class OnlineStorePage {
     this.initComponents();
     this.render();
     this.renderComponents();
+
+      // реализует функцию переключения списка карточек (меняет выводимые карточки на экране)
+    this.initEventListeners();
   }
 
   // getTemplate вставит карточки и Pagination в блоки
   getTemplate () {
     return `
       <div>
-        <div data-element="card">
-        <!-- Card component -->
+        <div data-element="cardsList">
+        <!-- Cards List component -->
         </div>
         <div data-element="pagination">
         <!-- Pagination -->
@@ -63,25 +45,28 @@ export default class OnlineStorePage {
 
   // инициализируем наши компоненты
 initComponents () {
+
+  // Math.ceil округление до большего целого
+  const totalPages = Math.ceil(this.products.length / this.pageSize);
   // добавили сюда создание Card и Pagination
-  const card = new Card(product);
+  const cardList = new CardsList(this.products.slice(0, this.pageSize));
   const pagination = new Pagination({
-    // totalElements: 35,
-    activePageIndex: 2,
-    // pageSize: 8,
+    activePageIndex: 0,
+    totalPages: totalPages
   });
 
-  this.components.card = card;
+     //  добавим в this.components указанные компоненты
+  this.components.cardList = cardList;
   this.components.pagination = pagination;
 }
 
   //  отрэндерим наши компоненты путем их поиска
   renderComponents () {
-    const cardConteiner = this.element.querySelector('[data-element="card"]');
+    const cardsConteiner = this.element.querySelector('[data-element="cardsList"]');
     const paginationConteiner = this.element.querySelector('[data-element="pagination"]');
 
     // componentElement свойство карточки с файла card.js
-    cardConteiner.append(this.components.card.componentElement);
+    cardsConteiner.append(this.components.cardList.element);
     paginationConteiner.append(this.components.pagination.element);
   }
 
@@ -92,8 +77,26 @@ initComponents () {
       //наполняем элемент div какимито данными
     wrapper.innerHTML=this.getTemplate();
       // firstElementChild находит первый элемент в родительском и вставляет в него
-      // без firstElementChild создастся лишний div обертка
+      // без firstElementChild создастся лишний div обертка. Убирает 'div' из строчки выше const wrapper
     this.element = wrapper.firstElementChild;
+  }
+
+  initEventListeners() {
+    // создаем действеи
+    this.components.pagination.element.addEventListener('page-changed', event => {
+      const pageIndex = event.detail;
+
+      // реализем отрезание массива даннных для вывода нужных карточек на экран
+      // console.log('this.products=', this.products.slice());
+      const start = pageIndex * this.pageSize;
+      const end = start + this.pageSize;
+      console.log(start, end);
+
+      const data = this.products.slice(start, end);
+
+      this.components.cardList.update(data);
+
+    });
   }
 }
 

@@ -1,9 +1,10 @@
 export default class Pagination{
-  // указываем колличество страниц, можно изменять их колличество в этом месте
-  defaultPagesSize=12;
+
     // activePageIndex = 0 потому что сдесь речь идет о индексах, начинающихся с нуля
-  constructor({activePageIndex = 0} = {}) {
+  constructor({activePageIndex = 0, totalPages = 0} = {}) {
     this.activePageIndex=activePageIndex;
+    // totalPages указываем колличество страниц (круглишков в pagination)
+    this.totalPages = totalPages;
     this.render();
 
     // реализуем обработку действий для обработки на клики на кнопки pagination
@@ -36,7 +37,7 @@ export default class Pagination{
     // создадим итерацию по массиву и применем join для удаления разделителя запятой из строчки
     return `
       <ul class="page-list non-styles" data-element="pagination">
-        ${new Array(this.defaultPagesSize).fill(1).map((item, index)=>{
+        ${new Array(this.totalPages).fill(1).map((item, index)=>{
           return this.getPageTeamlate(index);
         }).join("")}
       </ul>
@@ -67,7 +68,9 @@ export default class Pagination{
     //если выбранный элемент уже активен то не нужно выполянть
     if(pageIndex ===this.activePageIndex) return;
     //если выбранный элемент выходит за пределы сушествуюшего списка то теже не выполянть
-    if(pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+    if(pageIndex > this.totalPages - 1 || pageIndex < 0) return;
+
+    this.dispatchEvent(pageIndex);
 
       // ишим поточную активную страницу соответствующюю pageIndex, т.е. элемент у которого одновременно есть классы .krug.active
     const activePage=this.element.querySelector(".krug.non-styles.active");
@@ -147,10 +150,22 @@ export default class Pagination{
         // узнаем индекс элемента который мы нашли из data-page-index метода getPageTeamlate
         const pageIndex = pageItem.dataset.pageIndex;
 
+
+
           // parseInt приводит строчку к числу
         this.setPage (parseInt(pageIndex, 10) );
       });
 
     }
 
+
+    // организуем реагирование на клик для проверки действия переключения страничек
+    // создаем кастомный Event
+    dispatchEvent (pageIndex) {
+      const customEvent = new CustomEvent ("page-changed", {
+        detail: pageIndex
+      });
+      // слушаем событие на элементе
+      this.element.dispatchEvent(customEvent);
+    }
 }

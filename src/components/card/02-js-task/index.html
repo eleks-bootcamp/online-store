@@ -28,12 +28,14 @@
 
   <script type="module">
 
+    // здесь задана константа import {products} потому что export const products =, а если было бы export default class Card то без {products}
+    import {products} from './products.js';
+
     import OnlineStorePage from './index.js';
 
-
     //page это компонент, у него есть методы
-    //element это свойство page. Также это ДОМ элемент
-    const page = new OnlineStorePage();
+    //element это свойство компонента page. Также это ДОМ элемент поэтому пишем page.element
+    const page = new OnlineStorePage(products);
 
     const someElement=document.querySelector('#root');
 

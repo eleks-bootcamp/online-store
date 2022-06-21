@@ -50,10 +50,10 @@ export default class Card {
 
       //ниже идет логика конструирования
     myRender (){
-        const element = document.createElement('div'); //создали элемент div
+        const wrapper = document.createElement('div'); //создали элемент div
 
         //наполняем элемент div какимито данными
-        element.innerHTML=this.getTemplate();
-        this.componentElement=element;
+        wrapper.innerHTML=this.getTemplate();
+        this.element=wrapper.firstElementChild;
     }
   }
