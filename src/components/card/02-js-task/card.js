@@ -1,14 +1,11 @@
 export default class Card {
-
-  // сюда скопировали с файла HTML всю нижеследуюшюю часть
-
-      constructor(someProduct){
-        this.state=someProduct;
-        //вызов myRender()
-        this.myRender();
-      }
-
+   constructor(someProduct){
+    this.state=someProduct;
+    //вызов myRender()
+    this.myRender();
+   }
       //метод getTemplate позволяющий вернуть шаблон т.е. сдесь вписываются элементы. Сюда вставить свою верстку карточки
+      // сюда скопировали с файла HTML всю нижеследуюшюю часть
       getTemplate () {
         const result= `
         <div class="blok-rama">
@@ -40,20 +37,18 @@ export default class Card {
     }
 
       // создадим метод который будет менять состояние
-      update(data={}){
-        this.state=data;
+    update(data={}){
+      this.state = data;
         //необходимо наполлнить новыми данными то что раньше было в карточке
-        this.componentElement.innerHTML=this.getTemplate();
-      }
-
-
+      this.componentElement.innerHTML = this.getTemplate();
+    }
 
       //ниже идет логика конструирования
     myRender (){
-        const wrapper = document.createElement('div'); //создали элемент div
+      const wrapper = document.createElement('div'); //создали элемент div
 
-        //наполняем элемент div какимито данными
-        wrapper.innerHTML=this.getTemplate();
-        this.element=wrapper.firstElementChild;
+      //наполняем элемент div какимито данными
+      wrapper.innerHTML = this.getTemplate();
+      this.element = wrapper.firstElementChild;
     }
   }

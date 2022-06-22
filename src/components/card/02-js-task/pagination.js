@@ -100,7 +100,6 @@ export default class Pagination{
     this.setPage(nextPageIndex);
   }
 
-
   // предудушая страница
   prevPage() {
 
@@ -118,7 +117,7 @@ export default class Pagination{
     }
 
     // проработку действий реализуем в этом методе addEventListeners
-    //его вставляем в левую стрелку, правую стрелку и центральные кнопки Pagination
+    // его вставляем в левую стрелку, правую стрелку и центральные кнопки Pagination
     // добавим три действия: prevPage, nextPage, и третье действие на все страницы
     addEventListeners() {
 
@@ -157,7 +156,6 @@ export default class Pagination{
       });
 
     }
-
 
     // организуем реагирование на клик для проверки действия переключения страничек
     // создаем кастомный Event

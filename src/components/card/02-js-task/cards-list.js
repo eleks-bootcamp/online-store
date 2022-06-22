@@ -55,7 +55,5 @@ export default class CardsList {
     this.data = data;
 
     this.renderCards();
-
   }
-
 }

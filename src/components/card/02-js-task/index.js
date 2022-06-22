@@ -1,9 +1,7 @@
 // index.js это вся страница, и в ней необх укозать все компоненты которые на ней должны быть
-// import Card from './card.js';
 
 import CardsList from './cards-list.js';
 
-    // добавим пэджинэйшн
 import Pagination from './pagination.js';
 
 
@@ -87,7 +85,6 @@ initComponents () {
       const pageIndex = event.detail;
 
       // реализем отрезание массива даннных для вывода нужных карточек на экран
-      // console.log('this.products=', this.products.slice());
       const start = pageIndex * this.pageSize;
       const end = start + this.pageSize;
       console.log(start, end);
