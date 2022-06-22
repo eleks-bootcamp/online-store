@@ -10,7 +10,9 @@ export default class Card {
     const result = `
       <div class="col-12 col-m-6 col-l-4">
         <div class="product">
-          <img src="${this.state.images[0]}" class="product__image" alt="Photo">
+          <div class="product__image-wrapper">
+            <img src="${this.state.images[0]}" class="product__image" alt="Photo">
+          </div >
           <div class="product__content">
             <div class="product__block-rating-and-price">
               <div class="product__rating">

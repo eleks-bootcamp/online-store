@@ -40,8 +40,8 @@ export default class Pagination {
     const isActive = pageIndex === this.activePageIndex ? 'active' : '';
 
     return `
-      <li>
-        <a href="#" data-element="page-link" class="pagination__page-link ${isActive}" data-page-index="${pageIndex}">${pageIndex + 1}</a>
+      <li data-element="page-link" class="pagination__page-link ${isActive}" data-page-index="${pageIndex}">
+       ${pageIndex + 1}
       </li>
     `;
   }
