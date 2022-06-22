@@ -2,7 +2,7 @@
 
 /* put your styles in this file */
 .search-box {
-  width: 990px;
+  width: 100px;
   height: 45px;
   display: flex;
   flex-direction: row;
