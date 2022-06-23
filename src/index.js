@@ -1,9 +1,8 @@
 "use strict";
 
-// import Card from "./components/product-card/card.js";
 import CardsList from "./components/cards-list/cards-list.js";
 import Pagination from "./components/pagination/pagination.js";
-// import { products } from "./products.js";
+import { API } from "./components/API/api.js";
 
 const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
 class OnLineStorePage {
@@ -13,7 +12,6 @@ class OnLineStorePage {
 
     this.url = new URL('products', BACKEND_URL);
     this.url.searchParams.set('_limit', this.pageSize);
-
     this.components = {};
 
     this.initComponents();
@@ -74,18 +72,9 @@ class OnLineStorePage {
   }
 
   async update(pageNumber) {
-    const data = await this.loadData(pageNumber);
+    const products = await API.loadProducts(pageNumber, this.url);
 
-    this.components.cardsList.update(data);
-  }
-
-  async loadData(pageNumber) {
-    this.url.searchParams.set('_page', pageNumber);
-
-    const response = await fetch(this.url);
-    const products = await response.json();
-
-    return products;
+    this.components.cardsList.update(products);
   }
 }
 
@@ -93,5 +82,3 @@ const page = new OnLineStorePage();
 const root = document.querySelector('#root');
 
 root.append(page.element);
-
-// page.components.card.update(monitor);
