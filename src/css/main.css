@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './fonts.css';
+
+@import '../../grid/media-query-grid/css/grid.css';
+@import '../../grid/media-query-grid/css/media-grid.css';
+@import '../components/header/01-css-task/css/style.css';
+@import '../components/search-box/01-css-task/css/style.css';
+@import '../components/card/01-css-task/css/style.css';
+@import '../components/card-list/01-css-task/css/style.css';
+@import '../components/pagination/01-css-task/css/style.css';
+@import '../components/double-slider/01-css-task/css/style.css';
+@import '../components/filters-list/01-css-task/css/style.css';
+@import '../components/side-bar/01-css-task/css/style.css';
+@import '../components/cart/01-css-task/css/style.css';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+

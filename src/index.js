@@ -1,31 +1,29 @@
 "use strict";
 
+/* import SearchBox from './components/search-box/02-js-task/search-box.js'; */
 import CardsList from './components/card-list/02-js-task/cards-list.js';
 import Pagination from './components/pagination/02-js-task/pagination.js';
+/* import SideBar from './components/side-bar/02-js-task/side-bar.js'; */
+import { API } from './components/API/api.js';
 
-const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
-
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
 class OnlineStorePage {
-  constructor (products = []) {
+  constructor () {
     this.pageSize = 9;
     this.products = [];
+
     this.url = new URL('products', BACKEND_URL);
     this.url.searchParams.set('_limit', this.pageSize);
+
     this.components = {};
 
     this.initComponents();
     this.render();
     this.renderComponents();
+
     this.initEventListeners();
+
     this.update(1);
-  }
-
-  async loadData (pageNumber) {
-    this.url.searchParams.set('_page', pageNumber);
-    const response = await fetch(this.url);
-    const products = await response.json();
-
-    return products;
   }
 
   getTeamplate () {
@@ -46,9 +44,13 @@ class OnlineStorePage {
       activePageIndex: 0,
       totalPages: totalPages
     });
+   /*  const search = new SearchBox(); */
+   /*  const sideBar = new SideBar(); */
 
+    /* this.components.searchBox = search; */
     this.components.cardList = cardList;
     this.components.pagination = pagination;
+    /* this.components.sideBar = sideBar; */
   }
 
   render () {
@@ -60,10 +62,15 @@ class OnlineStorePage {
   }
 
   renderComponents () {
+    /* const searchBoxContainer = this.element.querySelector('[data-element="searchBox"]'); */
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
+   /*  const sideBarContainer = this.element.querySelector('[data-element="sideBar"]'); */
+
+    /* searchBoxContainer.append(this.components.searchBox.element); */
     cardsContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
+    /* sideBarContainer.append(this.components.sideBar.element); */
   }
 
   initEventListeners () {
@@ -75,9 +82,9 @@ class OnlineStorePage {
   }
 
   async update (pageNumber) {
-    const data = await this.loadData(pageNumber);
+    const products = await API.loadProducts(pageNumber, this.url);
 
-    this.components.cardList.update(data);
+    this.components.cardList.update(products);
   }
 }
 

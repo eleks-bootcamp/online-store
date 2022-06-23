@@ -5,18 +5,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper {
-  margin: 100px auto;
-  width: 990px;
-}
-
 .search-box {
   position: relative;
 }
 
 .search {
-  width: 990px;
   height: 45px;
+  width: 100%;
   padding: 5px 60px 5px 10px;
   font-size: 16px;
   border: none;

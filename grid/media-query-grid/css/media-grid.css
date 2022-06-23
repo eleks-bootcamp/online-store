@@ -202,3 +202,9 @@
     width: calc(100% / 12 * 12);
   }
 }
+
+@media (max-width: 576px) {
+  .left-side {
+    display: none;
+  }
+}
