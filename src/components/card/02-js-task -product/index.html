@@ -31,29 +31,18 @@
   <script type="module">
 
     // здесь задана константа import {products} потому что export const products =, а если было бы export default class Card то без {products}
-    // import {products} from './products.js';
-
+    import {products} from './products.js';
 
     import OnlineStorePage from './index.js';
 
+    //page это компонент, у него есть методы
+    //element это свойство компонента page. Также это ДОМ элемент поэтому пишем page.element
+    const page = new OnlineStorePage(products);
 
-    // реализуем асинхронность. Загружаем данные с удаленного сервера
-    fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=8')
-      .then(response => response.json())
-      .then(products => {
+    const someElement=document.querySelector('#root');
 
-      //page это компонент, у него есть методы
-      //element это свойство компонента page. Также это ДОМ элемент поэтому пишем page.element
-      const page = new OnlineStorePage(products);
-
-      const someElement=document.querySelector('#root');
-
-        // подставим page в someElement
-      someElement.append(page.element);
-      }
-      );
-
-
+    // подставим page в someElement
+    someElement.append(page.element);
 
   </script>
 </body>

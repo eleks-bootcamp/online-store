@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Component tren</title>
+</head>
+<body>
+  <button id="btn">Click me!</button>
+
+  <script>
+    const btnElement = document.querySelector('#btn');
+
+
+    // создадим кастомное действие
+    const myEvent = new CustomEvent('foo-bar-baz', {
+      bubbles: true,
+      detail: [1, 2, 3]
+    });
+
+    // создаем действие клика
+    btnElement.addEventListener ('click', event =>{
+      console.log('event', event);
+
+      // отправим дейтсвие далее
+      btnElement.dispatchEvent(myEvent);
+    });
+
+    // чтобы прочитать отправленное действие dispatchEvent необходимо задать имя 'foo-bar-baz'
+    document.addEventListener('foo-bar-baz', event =>{
+      console.log('foo-bar-baz', event);
+    });
+
+  </script>
+
+</body>
+</html>
