@@ -84,17 +84,29 @@ initComponents () {
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
 
-      // реализем отрезание массива даннных для вывода нужных карточек на экран
-      const start = pageIndex * this.pageSize;
-      const end = start + this.pageSize;
-      console.log(start, end);
 
-      const data = this.products.slice(start, end);
+
+      // реализем отрезание массива даннных для вывода нужных карточек на экран
+      // const start = pageIndex * this.pageSize;
+      // const end = start + this.pageSize;
+      // console.log(start, end);
+      // const data = this.products.slice(start, end);
+
+
+      const urlPagenation = pageIndex => `https://online-store.bootcamp.place/api/products?_page=${pageIndex + 1}&_limit=8`
+      fetch(urlPagenation)
+      .then(response => response.json())
+      .then(products => data: products)
+
+
 
       this.components.cardList.update(data);
+      // this.components.cardList.update(data);
 
     });
   }
+
+
 }
 
 

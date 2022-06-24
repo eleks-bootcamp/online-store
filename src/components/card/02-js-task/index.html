@@ -38,7 +38,8 @@
 
 
     // реализуем асинхронность. Загружаем данные с удаленного сервера
-    fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=8')
+    const getUrl = page => `https://online-store.bootcamp.place/api/products?_page=${page}&_limit=8`
+    fetch(getUrl(1))
       .then(response => response.json())
       .then(products => {
 
