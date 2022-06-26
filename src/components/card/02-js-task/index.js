@@ -4,7 +4,7 @@ export default class Card {
       this.myRender();
     }
 
-    getTemplate (){ 
+    getTemplate (){
       return `
         <div class="card_container">
             <div class="card_item-photo" style="background-image: url(${this.state.images})">

@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="/online-store/src/components/card/01-css-task/style.css">
+  <link rel="stylesheet" href="/src/components/card/01-css-task/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/src/components/pagination/01-css-task/style.css">
+
 
   <style>
     .wrapper {
@@ -19,6 +21,7 @@
 
   <script type="module">
     import Card from './index.js';
+    import Pagination from './pagination.js';
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -30,13 +33,31 @@
       "brand": "acer"
     };
 
-    const card = new Card(product);
+    const laptop = {
+      "id": "cvr29caokhhkr9kjkav",
+      "images": "https://content1.rozetka.com.ua/goods/images/big_tile/25101152.jpg",
+      "title": "Ноутбук Acer Nitro 5 AN515-55-56WH (NH.Q7PEU.00L) Obsidian Black Суперцена!!!",
+      "rating": 0.53,
+      "price": 28999,
+      "category": "laptops",
+      "brand": "acer"
+    };
+
+
+    const card = new Card(laptop);
+    const pagination = new Pagination ({
+      activePageIndex: 10
+    });
+
     const myRootElement = document.querySelector('#root');
+
     myRootElement.append(card.componentElement);
+    myRootElement.append(pagination.element);
+
+    pagination.setPage(2);
+    pagination.prevPage();
+    pagination.nextPage();
 
 </script>
-
-    
-
 </body>
 </html>
