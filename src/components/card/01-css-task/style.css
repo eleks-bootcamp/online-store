@@ -196,10 +196,9 @@ p {
 .page-wrapper {
   display: flex;
   align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
+  justify-content: center;
+  padding: 0;
+
 }
 
 .previous-page {
@@ -210,6 +209,7 @@ p {
   margin-right: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
 }
 
@@ -221,6 +221,7 @@ p {
   margin-left: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
 }
 .pagination-items {

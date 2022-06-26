@@ -2,10 +2,15 @@
 
 import CardsList from './cards-list.js';
 import Pagination from './pagination.js';
+
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
 export default class OnlineStorePage {
-  constructor (products = []) {
-    this.pageSize = 3;
-    this.products = products;
+  constructor () {
+    this.pageSize = 9;
+    this.products = [];
+    this.url = new URL('products', BACKEND_URL);
+    this.url.searchParams.set('_limit', this.pageSize);
+
     this.components = {};
 
     this.initComponents();
@@ -13,7 +18,17 @@ export default class OnlineStorePage {
     this.renderComponents();
 
     this.initEventListeners();
+
+    this.update(1);
   }
+
+async loadData (pageNumber) {
+  this.url.searchParams.set('_page', pageNumber);
+  const response = await fetch(this.url);
+  const products = await response.json();
+  return products;
+}
+
   getTemplate () {
 return `
 <div>
@@ -28,9 +43,11 @@ return `
   }
 
 initComponents () {
-  const totalPages = Math.ceil(this.products.length / this.pageSize);
 
-  const cardList = new CardsList(this.products.slice(0, this.pageSize));
+  const totalElements = 100;
+  const totalPages = Math.ceil(totalElements / this.pageSize);
+
+  const cardList = new CardsList(this.products);
   const pagination = new Pagination({
     activePageIndex: 0,
     totalPages
@@ -60,16 +77,14 @@ paginationContainer.append(this.components.pagination.element);
 
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
-      // [0, 1, 2]  | pageIndex = 0 pageSize = 3
-      // [3, 4, 5]  | pageIndex = 1 pageSize = 3
-      // [6, 7]     | pageIndex = 2 pageSize = 3
 
-      const start = pageIndex * this.pageSize;
-      const end = start + this.pageSize;
-      const data = this.products.slice(start, end);
+    this.update(pageIndex + 1);
+    });
+  }
 
-      this.components.cardList.update(data);
-    })
+ async update (pageNumber) {
+  const data = await this.loadData(pageNumber);
+  this.components.cardList.update(data);
   }
 }
 
