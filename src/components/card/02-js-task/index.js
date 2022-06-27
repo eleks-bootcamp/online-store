@@ -5,15 +5,37 @@ import CardsList from './cards-list.js';
 import Pagination from './pagination.js';
 
 
+
+// products?_page=1&_limit=8
+// задаем путь к BACKEND хранилищю с данными
+// products это api категория, их много
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
+
+
+
+
 // сроздадим глобальную страницу OnlineStorePage на котор будут другие компоненты
 // export default означает экспорт по умолчанию
 export default class OnlineStorePage {
-  constructor (products = []) {
+  constructor () {
 
     // огласим сколько хотим видеть карточек на страничке
-    this.pageSize = 3;
+    this.pageSize = 9;
 
-    this.products = products;
+    // продукты в OnlineStorePage будем подтягивать самостоятельно
+    this.products = [];
+
+
+    // создадим ссылку для подтягивания данных для карточек
+    // Т.Е. добаляем к строчке BACKEND_URL параметр products
+    // при создании проекта заменить this.url на this.productsUrl потому что будут другие категории еще
+    this.url = new URL ('products', BACKEND_URL);
+
+    // зададим неизменную величину колличества элементов на одну страницу pageSize
+    this.url.searchParams.set('_limit', this.pageSize);
+
+
+    console.log("this.products=", this.products);
 
     // создадим пустой обьект components. Сюда будем скаладывать компоненты
     this.components = {};
@@ -25,7 +47,30 @@ export default class OnlineStorePage {
 
       // реализует функцию переключения списка карточек (меняет выводимые карточки на экране)
     this.initEventListeners();
+
+    // подгрузим первую страничку при первой загрузке сайта
+    this.update(1);
   }
+
+
+
+  // создадим метод который будет загружать данные
+  async loadData (pageNumber) {
+
+    // добовляем к url номер страницы которая нас интерисует
+    this.url.searchParams.set('_page', pageNumber);
+
+    const response = await fetch(this.url);
+    const products = await response.json();
+    console.log("products=", products);
+    return products;
+  }
+
+
+
+
+
+
 
   // getTemplate вставит карточки и Pagination в блоки
   getTemplate () {
@@ -44,10 +89,17 @@ export default class OnlineStorePage {
   // инициализируем наши компоненты
 initComponents () {
 
+  // зададим по умолчанию колличество элементов в списке constTotalElements
+  const totalElements = 100;
+
   // Math.ceil округление до большего целого
-  const totalPages = Math.ceil(this.products.length / this.pageSize);
+  // const totalPages = Math.ceil(this.products.length / this.pageSize);
+  const totalPages = Math.ceil(totalElements / this.pageSize);
+
+  console.log("this.products.length=", this.products.length);
+
   // добавили сюда создание Card и Pagination
-  const cardList = new CardsList(this.products.slice(0, this.pageSize));
+  const cardList = new CardsList(this.products);
   const pagination = new Pagination({
     activePageIndex: 0,
     totalPages: totalPages
@@ -79,32 +131,31 @@ initComponents () {
     this.element = wrapper.firstElementChild;
   }
 
+  // initEventListeners вызывает метод update чтобы передать cartList компоненту новый диапазон данных
   initEventListeners() {
     // создаем действеи
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
 
-
-
-      // реализем отрезание массива даннных для вывода нужных карточек на экран
-      // const start = pageIndex * this.pageSize;
-      // const end = start + this.pageSize;
-      // console.log(start, end);
-      // const data = this.products.slice(start, end);
-
-
-      const urlPagenation = pageIndex => `https://online-store.bootcamp.place/api/products?_page=${pageIndex + 1}&_limit=8`
-      fetch(urlPagenation)
-      .then(response => response.json())
-      .then(products => data: products)
-
-
-
-      this.components.cardList.update(data);
-      // this.components.cardList.update(data);
-
+      this.update(pageIndex + 1);
     });
   }
+
+
+  // метод update рисует данные
+  async update (pageNamber) {
+    // реализем отрезание массива даннных для вывода нужных карточек на экран
+    // const start = pageIndex * this.pageSize;
+    // const end = start + this.pageSize;
+    // console.log(start, end);
+    // const data = this.products.slice(start, end);
+
+    const data = await this.loadData(pageNamber);
+
+    // обнавляем cardList новыми данными
+    this.components.cardList.update(data);
+  }
+
 
 
 }

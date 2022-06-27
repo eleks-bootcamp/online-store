@@ -16,8 +16,8 @@
   <style>
     .wrapper {
       /* для отображения карточки по центру */
-      /* margin: верх право низ лево; */
       width: 830px;
+      /* margin: верх право низ лево; */
       margin: 100px auto;
       outline: 1px solid;
     }
@@ -38,21 +38,22 @@
 
 
     // реализуем асинхронность. Загружаем данные с удаленного сервера
-    const getUrl = page => `https://online-store.bootcamp.place/api/products?_page=${page}&_limit=8`
-    fetch(getUrl(1))
-      .then(response => response.json())
-      .then(products => {
+    // const getUrl = page => `https://online-store.bootcamp.place/api/products?_page=${page}&_limit=8`
+
+    // const getUrl = page => `https://online-store.bootcamp.place/api/products?_page=${page}&_limit=8`
+    // fetch(getUrl(1))
+    //   .then(response => response.json())
+    //   .then(products => {
 
       //page это компонент, у него есть методы
       //element это свойство компонента page. Также это ДОМ элемент поэтому пишем page.element
-      const page = new OnlineStorePage(products);
+      const page = new OnlineStorePage();
 
       const someElement=document.querySelector('#root');
 
         // подставим page в someElement
       someElement.append(page.element);
-      }
-      );
+      // });
 
 
 
