@@ -5,19 +5,17 @@
   <title>Card component</title>
 
   <!-- файл стилей которые подгружаются -->
-  <!-- <link rel="stylesheet" href="../../../styles/style.min.css"> -->
-   <link rel="stylesheet" href="../01-css-task/styls/styl.css"> <!--путь к моему файлу стилей -->
+  <link rel="stylesheet" href="../01-css-task/styls/styl.css">
 
-
-   <!-- добавляем ссылки на необходимые стили и ссылки с компонета pagination -->
-   <link rel="stylesheet" href="../../pagination/01-css-task/pagination_style_v2.css">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- добавляем ссылки на стили и ссылки с компонета pagination -->
+  <link rel="stylesheet" href="../../pagination/01-css-task/pagination_style_v2.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
+    /* wrapper для отображения карточки по центру */
     .wrapper {
-      /* для отображения карточки по центру */
       width: 830px;
-      /* margin: верх право низ лево; */
+      /* margin: верх право низ лево; расшифровка значений */
       margin: 100px auto;
       outline: 1px solid;
     }
@@ -25,37 +23,21 @@
 </head>
 
 <body>
-      <!-- сюда мы вписываем карту -->
+  <!-- в этот (<div id="root") мы вписываем карту -->
   <div id="root" class="wrapper"></div>
-
   <script type="module">
 
-    // здесь задана константа import {products} потому что export const products =, а если было бы export default class Card то без {products}
-    // import {products} from './products.js';
+  // здесь задана константа import {products} потому что export const products =, а если было бы export default class Card то без {products}
+  // import {products} from './products.js';
 
+  import OnlineStorePage from './index.js';
 
-    import OnlineStorePage from './index.js';
-
-
-    // реализуем асинхронность. Загружаем данные с удаленного сервера
-    // const getUrl = page => `https://online-store.bootcamp.place/api/products?_page=${page}&_limit=8`
-
-    // const getUrl = page => `https://online-store.bootcamp.place/api/products?_page=${page}&_limit=8`
-    // fetch(getUrl(1))
-    //   .then(response => response.json())
-    //   .then(products => {
-
-      //page это компонент, у него есть методы
-      //element это свойство компонента page. Также это ДОМ элемент поэтому пишем page.element
-      const page = new OnlineStorePage();
-
-      const someElement=document.querySelector('#root');
-
-        // подставим page в someElement
-      someElement.append(page.element);
-      // });
-
-
+  //page это компонент, у него есть методы
+  //element это свойство компонента page. Также это ДОМ элемент поэтому пишем page.element
+  const page = new OnlineStorePage();
+  const someElement=document.querySelector('#root');
+  // подставим page в someElement
+  someElement.append(page.element);
 
   </script>
 </body>
