@@ -8,13 +8,18 @@ box-shadow:0 0 10px #555;}
 
   .blok-img {
   /* outline: 1px solid; */
-  width: 100%;
-  height: 55%;
-  display: flex;
-  justify-content: center;}
-  .otstup {margin-left: 12px;
-  margin-right: 12px;
-  margin-top: 12px;}
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+  .img-dimen {
+    /* object-fit: cover; */
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;}
 
   .blok-zv-cn {
     /* outline: 1px solid; */

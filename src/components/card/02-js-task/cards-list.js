@@ -6,8 +6,8 @@ export default class CardsList {
     // организуем данные data для заполнения карточек. В Data массиве содержатся данные для заполнения карточек
     this.data = data;
 
-    this.render();
-    this.renderCards();
+    this.render ();
+    this.renderCards ();
 
   }
 
@@ -24,36 +24,38 @@ export default class CardsList {
   }
 
   render () {
-    const wrapper= document.createElement('div'); //создали элемент div
-      //наполняем элемент div какимито данными
-    wrapper.innerHTML=this.getTempLate();
-      // firstElementChild находит первый элемент в родительском и вставляет в него
-      // без firstElementChild создастся лишний div обертка
+    //создали элемент div
+    const wrapper= document.createElement ('div');
+    //наполняем элемент div данными
+    wrapper.innerHTML=this.getTempLate ();
+    // firstElementChild находит первый элемент в родительском и вставляет в него
+    // без firstElementChild создастся лишний div обертка
     this.element = wrapper.firstElementChild;
   }
 
   // метод renderCards нарисует карточки
   // проитерирует массив с данными this.data
   renderCards () {
-    // на каждый item создаем карточку DOM єлемент
-    const cards = this.data.map(item => {
-      const card = new Card(item);
+    // на каждый item создаем карточку DOM элемент
+    const cards = this.data.map (item => {
+      const card = new Card (item);
       return card.element;
     });
 
-      // ищем элемент куда будем вставлять карточки
-    const body = this.element.querySelector(`[data-element="body"]`);
+    // ищем элемент куда будем вставлять карточки
+    const body = this.element.querySelector (`[data-element="body"]`);
 
     // удалим содержимое body пустой строчкой
     body.innerHTML = '';
 
-    body.append(...cards);
-    console.log("cards=", cards);
+    body.append (...cards);
   }
+
   update (data = [] ) {
     // обновим data
     this.data = data;
 
-    this.renderCards();
+    this.renderCards ();
   }
+
 }
