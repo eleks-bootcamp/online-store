@@ -10,14 +10,15 @@
 
 .wrapper-pagination {
   display: flex;
+  justify-content: center;
 }
 
 .btn-back {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .btn-forward {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .btn-button-class {

@@ -4,6 +4,9 @@
 
 .wrapper {
   width: 1020px;
+}
+
+.grid {
   flex-flow: row wrap;
 }
 
@@ -34,6 +37,8 @@ p {
 
 .product-card-laptop {
   margin: 12px;
+  max-height: 200px;
+  object-fit: contain;
 }
 
 .product-card-wrapper {

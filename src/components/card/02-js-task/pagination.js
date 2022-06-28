@@ -97,7 +97,6 @@ export default class Pagination {
 
       const {pageIndex} = pageItem.dataset;
 
-
       this.setPage(parseInt(pageIndex, 10));
     });
   };

@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-  width: 100%;
+  max-width: 1040px;
   margin: 100px auto;
 }
 
@@ -24,6 +24,7 @@ p {
 .product-card {
   width: 317px;
   height: 394px;
+  margin: 10px;
   flex-direction: column;
   justify-content: space-between;
   background: #FFFFFF;
@@ -33,10 +34,8 @@ p {
 
 .product-card-laptop {
   margin: 12px;
-  /*max-width: 293px;*/
-  /*max-height: 200px;*/
-  /*display: flex;*/
-  /*justify-content: center;*/
+  max-height: 200px;
+  object-fit: contain;
 }
 
 .product-card-wrapper {

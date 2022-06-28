@@ -10,7 +10,7 @@ export default class CardsList {
   getTemplate () {
     return `
       <div>
-        <div class="wrapper d-flex" data-element="body">
+        <div class="d-flex" style="flex-flow: row wrap;" data-element="body">
           <!-- Cards list -->
         </div>
       </div>
@@ -42,5 +42,5 @@ export default class CardsList {
     this.data = data;
 
     this.renderCards();
-  }
+  };
 }

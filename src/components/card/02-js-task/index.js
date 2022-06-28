@@ -1,10 +1,16 @@
 import CardsList from "./cards-list.js";
 import Pagination from './pagination.js';
 
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
+
 export default class OnLineStorePage {
-  constructor(products = []) {
-    this.pageSize = 3;
-    this.products = products;
+  constructor() {
+    this.pageSize = 9;
+    this.products = [];
+
+    this.productsUrl = new URL('products', BACKEND_URL);
+    this.productsUrl.searchParams.set('_limit', this.pageSize);
+
     this.components = {};
 
     this.initComponents();
@@ -12,6 +18,15 @@ export default class OnLineStorePage {
     this.renderComponents();
 
     this.initEventListeners();
+
+    this.update(1);
+  };
+
+  async loadData (pageNumber) {
+    this.productsUrl.searchParams.set('_page', pageNumber);
+
+    const response = await fetch(`${this.productsUrl}`);
+    return await response.json();
   };
 
   getTemplate () {
@@ -28,9 +43,12 @@ export default class OnLineStorePage {
   };
 
   initComponents () {
-    const totalPages = Math.ceil(this.products.length / this.pageSize);
 
-    const cardList = new CardsList(this.products.slice(0, this.pageSize));
+    const totalElements = 100;
+
+    const totalPages = Math.ceil(totalElements / this.pageSize);
+
+    const cardList = new CardsList(this.products);
     const pagination = new Pagination({
       activePageIndex: 0,
       totalPages
@@ -60,11 +78,14 @@ export default class OnLineStorePage {
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
 
-      const start = pageIndex * this.pageSize;
-      const end = start + this.pageSize;
-      const data = this.products.slice(start, end);
-
-      this.components.cardList.update(data);
+      this.update(pageIndex + 1);
     });
-  }
+  };
+
+  async update (pageNumber) {
+    const data = await this.loadData(pageNumber);
+
+    this.components.cardList.update(data);
+  };
+
 }

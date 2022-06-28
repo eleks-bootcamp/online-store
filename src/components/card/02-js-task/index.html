@@ -13,13 +13,12 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import {products} from "./products.js";
     import OnLineStorePage from "./index.js";
 
-    const page = new OnLineStorePage(products);
-    const root = document.querySelector('#root');
+      const page = new OnLineStorePage();
+      const root = document.querySelector('#root');
 
-    root.append(page.element);
+      root.append(page.element);
 
   </script>
 </body>
