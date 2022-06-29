@@ -8,5 +8,14 @@ export const API = {
     const products = await response.json();
 
     return products;
+  },
+
+  async loadCategory() {
+    const server = ' https://online-store.bootcamp.place/api/categories';
+    const response = await fetch(server);
+    const category = await response.json();
+
+    return category;
   }
+
 };
