@@ -2,12 +2,13 @@
 
 import CardsList from "./components/cards-list/cards-list.js";
 import Pagination from "./components/pagination/pagination.js";
+import SideBar from "./components/side-bar/side-bar.js";
 import { API } from "./components/API/api.js";
 
 const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
 class OnLineStorePage {
   constructor() {
-    this.pageSize = 9;
+    this.pageSize = 25;
     this.products = [];
 
     this.url = new URL('products', BACKEND_URL);
@@ -25,9 +26,18 @@ class OnLineStorePage {
 
   getTemplate() {
     return `
-      <div>
-        <div class="cards-list" data-element="cardsList"></div>
-        <div data-element="pagination"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-s-6 col-l-3">
+            <div class="side-bar" data-element="sideBar">
+              <button class="button button_filters">Clear all filters</button>
+            </div>
+          </div>
+          <div class="col-12 col-s-6 col-l-9">
+            <div class="cards-list" data-element="cardsList"></div>
+            <div data-element="pagination"></div>
+          </div>
+        </div>
       </div>
     `;
   }
@@ -37,12 +47,14 @@ class OnLineStorePage {
     const totalElements = 100;
     const totalPages = Math.ceil(totalElements/ this.pageSize);
 
+    const sideBar = new SideBar();
     const cardsList = new CardsList(this.products);
     const pagination = new Pagination({
       activePageIndex: 0,
       totalPages
     });
 
+    this.components.sideBar = sideBar;
     this.components.cardsList = cardsList;
     this.components.pagination = pagination;
   }
@@ -56,9 +68,11 @@ class OnLineStorePage {
   }
 
   renderComponents() {
+    const sideBarContainer = this.element.querySelector('[data-element="sideBar"]');
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
+    sideBarContainer.prepend(this.components.sideBar.element);
     cardsContainer.append(this.components.cardsList.element);
     paginationContainer.append(this.components.pagination.element);
   }

@@ -57,7 +57,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 1320px;
 }
 
 .row {
@@ -301,7 +301,7 @@ header {
 
 .title {
   margin-bottom: 17px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -309,6 +309,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 20px auto 0 auto;
   padding-top: 12px;
   width: 317px;
   height: 411px;
@@ -406,6 +407,7 @@ header {
 }
 
 .button_filters {
+  margin-top: 20px;
   border-radius: 7px;
 }
 
@@ -496,11 +498,7 @@ header {
 }
 
 .cards-list {
-  margin: 100px auto 0 auto;
-}
-
-.product-card {
-  margin: 20px auto 0 auto;
+  margin: 128px auto 0 auto;
 }
 
 .overlay {
@@ -691,7 +689,7 @@ input[type="range"]::-ms-track {
 }
 
 .filter {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
 }
 
@@ -714,6 +712,7 @@ input[type="checkbox"] {
 
 label {
   font-size: 14px;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -761,7 +760,7 @@ input[type="checkbox"]:checked:after {
 }
 
 .side-bar {
-  margin: 0 auto;
+  margin: 83px auto 0 auto;
   width: 280px;
 }
 
@@ -787,17 +786,5 @@ input[type="checkbox"]:checked:after {
 
 .side-bar__rating {
   margin-top: 24px;
-}
-
-@media (min-width: 576px) {
-  .cards-list {
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .cards-list {
-    width: 990px;
-  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@ export default class Card {
 
   getTemplate() {
     return `
-      <div class="col-12 col-m-6 col-l-4">
+      <div class="col-12 col-l-6 col-xl-4">
         <div class="product-card">
           <div class="product-card__img-wrapper">
             <img src="${this.state.images[0]}" alt="" class="product-card__img">
@@ -29,6 +29,7 @@ export default class Card {
     `;
   }
 
+  // Is it necessary?
   update(data = {}) {
     this.state = data;
     this.element.innerHTML = this.getTemplate();
