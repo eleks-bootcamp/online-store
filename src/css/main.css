@@ -6,7 +6,6 @@
 @import '../components/header/style.css';
 @import '../components/search-box/01-css-task/css/style.css';
 @import '../components/card/style.css';
-@import '../components/card-list/style.css';
 @import '../components/pagination/style.css';
 @import '../components/double-slider/01-css-task/css/style.css';
 @import '../components/filters-list/01-css-task/css/style.css';
@@ -18,4 +17,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-
+.card-list__wrapper .container {
+  margin-top: 45px;
+}

@@ -31,12 +31,13 @@ class OnlineStorePage {
       <div class="container">
         <div class="row">
           <div class="col-12 col-s-6 col-l-3">
-            <div class="side-bar" data-element="sideBar">
+            <div class="side-bar__wrapper">
+              <div class="side-bar" data-element="sideBar"></div>
               <button class="button-clear">CLEAR ALL FILTERS</button>
             </div>
           </div>
           <div class="col-12 col-s-6 col-l-9">
-            <div class="card-list-wrapper" data-element="cardsList"></div>
+            <div class="card-list__wrapper" data-element="cardsList"></div>
             <div data-element="pagination"></div>
           </div>
         </div>

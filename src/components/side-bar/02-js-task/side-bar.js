@@ -10,7 +10,6 @@ export default class SideBar {
 
   getTeamplate () {
     return `
-      <div class="side-bar__wrapper">
         <div class=""side-bar__price>
           <h3 class="side-bar__title">Price</h3>
         </div>
@@ -27,7 +26,6 @@ export default class SideBar {
         <div class=""side-bar__rating>
           <h3 class="side-bar__title">Rating</h3>
         </div>
-      </div>
     `;
   }
 
@@ -36,7 +34,7 @@ export default class SideBar {
 
     element.innerHTML = this.getTeamplate();
 
-    this.element = element.firstElementChild;
+    this.element = element;
   }
 
   renderFilters () {

@@ -1,7 +1,3 @@
-@import '../../../double-slider/01-css-task/css/style.css';
-@import '../../../filters-list/01-css-task/css/style.css';
-
-
 hr {
   margin-top: 29px;
 }
@@ -11,10 +7,15 @@ label {
 }
 
 .side-bar {
-  width: 280px;
+  width: 100%;
   min-height: 980px;
   padding: 1px 19px 21px 21px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.side-bar__wrapper {
+  width: 280px;
+  min-height: 980px;
   margin: 0 auto;
 }
 
@@ -46,7 +47,7 @@ label {
   background: #7E72F2;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
