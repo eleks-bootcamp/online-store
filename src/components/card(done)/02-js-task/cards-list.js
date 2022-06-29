@@ -39,7 +39,7 @@ renderCards () {
   body.append(...cards);
   }
 
-  update (data = []) {
+update (data = []) {
     this.data = data;
     this.renderCards();
   }

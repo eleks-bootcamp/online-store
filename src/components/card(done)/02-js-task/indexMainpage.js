@@ -1,5 +1,6 @@
 import Pagination from './pagination.js';
 import CardsList from './cards-list.js';
+import SearchBox from './search-box.js';
 
 //products?_page=1&_limit=8
 const  BACKEND_URL ='https://online-store.bootcamp.place/api/';
@@ -39,6 +40,7 @@ export default class OnlineStorePage {
   getTemplate () { //метод який створює порожні діви куди ми будемо закидувати наші елементи сторінки
     return `
       <div>
+        <div data-element="searchBox"></div>
         <div data-element="cardsList"></div>
         <div data-element="pagination"></div>
        </div>
@@ -50,21 +52,25 @@ export default class OnlineStorePage {
   const totalElements = 100;
   const totalPages = Math.ceil(totalElements / this.pageSize);//обрахунок кільскості сторінок
 
+  const searchBox = new SearchBox();
   const cardList = new CardsList(this.products);
   const pagination = new Pagination({
     activePageIndex : 0,
     totalPages: totalPages,
     });
 
+    this.components.searchBox = searchBox;
     this.components.cardList = cardList;
     this.components.pagination = pagination;
   }
 
   renderComponents () {
 
+    const SearchBoxContainer = this.element.querySelector('[data-element="searchBox"]');
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
+    SearchBoxContainer.append(this.components.searchBox.element);
     cardsContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
   }
