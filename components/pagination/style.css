@@ -1,3 +1,6 @@
+::before, ::after {
+	box-sizing: border-box;
+} 
 ul{
 	list-style-type: none;
 	box-sizing: border-box;
@@ -7,7 +10,6 @@ ul{
 	display: flex;
 	justify-content: center;
     align-items: center;
-    margin: 200px;
 }
 .list-nav {
 	display: flex;
@@ -33,7 +35,9 @@ ul{
 }
 .prev {
 	margin-right: 15px;
+	padding: 12px;
 }
 .next{
 	margin-left: 15px;
+	padding: 12px;
 }

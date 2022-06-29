@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Card component</title>
   <link rel="stylesheet" href="../../../../components/card/style.css">
+  <link rel="stylesheet" href="../../../../components\pagination\style.css">
 
   <style>
     .wrapper {
@@ -14,74 +15,39 @@
 </head>
 
 <body>
-  <div id="root" class="wrapper"></div>
+
+  <div id="root" class="wrapper">
+
+  </div>
 
   <script type="module">
+    import Card from './index.js';
+    import CardList from './cards-list.js';
+    import Pagination from './pagination.js';
+    import { products } from './products.js'
     
-    const product = {
-      "id": "76w0hz7015kkr9kjkav",
-      "images": [
-        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-      ],
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.89,
-      "price": 15999,
-      "category": "laptops",
-      "brand": "acer"
-    };
     
+    const list = new CardList (products);
+    
+    list.renderCards()
 
-    class Component {
-        constructor (someProduct) {
-          // this -> {}
-            this.componentProduct = someProduct;
-            this.myRender();
+    const pagination = new Pagination({
+      activePageIndex: 0
+    });
 
-            console.log('this.componentTitle', this.componentProduct);
+  const someElement = document.querySelector('#root');
+   
+   
+   someElement.append(pagination.element);
 
-        }
+   pagination.setPage(0); 
+   
+ 
 
-        getMyTemplate () {
-          return `
-            </div>
-            <div class="product-card">
-              <div class="img-wrapper" style=" background-image: url(${this.componentProduct.images[0]})";>
-                
-              </div>
-              <div class="wrapper-content">
-                <div class="offer">
-                  <div class="product-rating">
-                    <p class="product-rating-number">${this.componentProduct.rating}</p>
-                    <img class="product-rating-star" src="../../../../components/card/img/Star1.svg" alt="star">
-                  </div>
-                  <p class="product-price">15999</p>
-                </div>
-                <p class="product-description">${this.componentProduct.title}</p>
-                <p class="product-categories">${this.componentProduct.category}</p>
-              </div>
-              <button class="btn" type="button">Add To Cart</button>
-            </div> 
-            `;
-            
-          
-        }
-
-        myRender () {
-            const element = document.createElement('div');
-            element.innerHTML = this.getMyTemplate();
-            
-
-            this.componentElemet = element
-        }
-    }
-
-    const obj = new Component(product);
-
-    const myRootElement = document.querySelector('#root')
-
-    myRootElement.append(obj.componentElemet);
-
+  
+        
+    
+     
     
 
 
@@ -91,13 +57,13 @@
 
 
 
-    // import Card from '.index.js';
+    
 
    
 
-    // const card = new Card(product);
+    const card = new Card(product);
 
-    // root.append(card.element);
+    root.append(card.element);
   </script>
 </body>
 </html>
