@@ -12,19 +12,10 @@
 
   <script type="module">
   import OnlineStorePage from './indexMainpage.js';
-
-  const url = 'https://online-store.bootcamp.place/api/products';
-
-  fetch(url)
-    .then(response => response.json())
-    .then( products => {
-
-    const page = new OnlineStorePage(products);
+    const page = new OnlineStorePage();
     const root = document.querySelector('#root');
 
     root.append(page.element);
-    });
-
   </script>
 </body>
 </html>

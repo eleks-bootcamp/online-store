@@ -1,18 +1,40 @@
-import Pagination from './index-pagination.js';
-import CardsList from './card-list.js';
+import Pagination from './pagination.js';
+import CardsList from './cards-list.js';
 
-
+//products?_page=1&_limit=8
+const  BACKEND_URL ='https://online-store.bootcamp.place/api/';
 export default class OnlineStorePage {
-  constructor (products = []) {
+  constructor () {
     this.pageSize = 9;//задаємо дефолтну кількість продуктів(карток) на сторінці
-    this.products = products;
+    this.products = [];
+
+    this.url = new URL('products', BACKEND_URL);
+    this.url.searchParams.set('_limit', this.pageSize);
+
     this.components = {};
 
     this.initComponents();
     this.render();
     this.renderComponents();
+
     this.initEventListeners();
+
+    this.update(1);
   }
+
+
+
+
+   async loadData(pageNumber){
+
+    this.url.searchParams.set('_page', pageNumber);
+    const response = await fetch(this.url);
+    const products = await response.json();
+
+
+
+    return products;
+   }
 
   getTemplate () { //метод який створює порожні діви куди ми будемо закидувати наші елементи сторінки
     return `
@@ -24,9 +46,11 @@ export default class OnlineStorePage {
   }
 
   initComponents(){
-  const totalPages = Math.ceil(this.products.length / this.pageSize);//обрахунок кільскості сторінок
 
-  const cardList = new CardsList(this.products.slice(0,this.pageSize));
+  const totalElements = 100;
+  const totalPages = Math.ceil(totalElements / this.pageSize);//обрахунок кільскості сторінок
+
+  const cardList = new CardsList(this.products);
   const pagination = new Pagination({
     activePageIndex : 0,
     totalPages: totalPages,
@@ -46,6 +70,7 @@ export default class OnlineStorePage {
   }
 
   render () {
+
     const wrapper = document.createElement('div');
 
     wrapper.innerHTML = this.getTemplate();
@@ -53,15 +78,18 @@ export default class OnlineStorePage {
     this.element = wrapper.firstElementChild;
   }
   initEventListeners(){
+
     this.components.pagination.element.addEventListener('page-changed', event =>{
       const pageIndex = event.detail;
 
-      const start = pageIndex * this.pageSize;
-      const end = start + this.pageSize;
-
-
-      this.components.cardList.update(this.products.slice(start, end));
+      this.update(pageIndex + 1);
     });
+  }
+
+  async update(pageNumber){
+
+    const data = await this.loadData(pageNumber);
+    this.components.cardList.update(data);
   }
 }
 

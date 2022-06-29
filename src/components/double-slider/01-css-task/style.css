@@ -4,7 +4,12 @@ body{
   font-family: Montserrat,sans-serif;
 }
 .Double-slider-wrapper{
-
+  display: flex;
+  flex-direction: column;
+}
+.Slider-money{
+  display: flex;
+  justify-content: space-between;
 }
 .Price-title{
 font-size: 1.2rem;
@@ -13,17 +18,16 @@ font-size: 1.2rem;
 .range-slider{
   display: flex;
   align-items: center;
-  flex-direction: row;
-  position: relative;
+
 }
 .range-slider_inner{
     background: #c8c2f3;
     box-shadow: 0 0 1px #7e72f2;
     display: inline-block;
     height: 4px;
-
+    margin: 0;
+    padding: 0;
     position: relative;
-    user-select: none;
     width: 100%
 }
 
@@ -40,11 +44,11 @@ font-size: 1.2rem;
 .leftC{
   background-size: cover;
   cursor: grab;
-
-
 }
 .rightC{
   background-size: cover;
   cursor: grab;
 
 }
+
+
