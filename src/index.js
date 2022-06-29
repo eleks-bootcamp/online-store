@@ -1,9 +1,9 @@
 "use strict";
 
 /* import SearchBox from './components/search-box/02-js-task/search-box.js'; */
-import CardsList from './components/card-list/02-js-task/cards-list.js';
-import Pagination from './components/pagination/02-js-task/pagination.js';
-/* import SideBar from './components/side-bar/02-js-task/side-bar.js'; */
+import CardsList from './components/card-list/cards-list.js';
+import Pagination from './components/pagination/pagination.js';
+import SideBar from './components/side-bar/02-js-task/side-bar.js';
 import { API } from './components/API/api.js';
 
 const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
@@ -28,9 +28,18 @@ class OnlineStorePage {
 
   getTeamplate () {
     return  `
-      <div>
-        <div class="card-list-wrapper" data-element="cardsList"></div>
-        <div data-element="pagination"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-s-6 col-l-3">
+            <div class="side-bar" data-element="sideBar">
+              <button class="button-clear">CLEAR ALL FILTERS</button>
+            </div>
+          </div>
+          <div class="col-12 col-s-6 col-l-9">
+            <div class="card-list-wrapper" data-element="cardsList"></div>
+            <div data-element="pagination"></div>
+          </div>
+        </div>
       </div>
     `;
   }
@@ -45,12 +54,12 @@ class OnlineStorePage {
       totalPages: totalPages
     });
    /*  const search = new SearchBox(); */
-   /*  const sideBar = new SideBar(); */
+    const sideBar = new SideBar();
 
     /* this.components.searchBox = search; */
     this.components.cardList = cardList;
     this.components.pagination = pagination;
-    /* this.components.sideBar = sideBar; */
+    this.components.sideBar = sideBar;
   }
 
   render () {
@@ -65,12 +74,12 @@ class OnlineStorePage {
     /* const searchBoxContainer = this.element.querySelector('[data-element="searchBox"]'); */
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
-   /*  const sideBarContainer = this.element.querySelector('[data-element="sideBar"]'); */
+    const sideBarContainer = this.element.querySelector('[data-element="sideBar"]');
 
     /* searchBoxContainer.append(this.components.searchBox.element); */
     cardsContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
-    /* sideBarContainer.append(this.components.sideBar.element); */
+    sideBarContainer.prepend(this.components.sideBar.element);
   }
 
   initEventListeners () {

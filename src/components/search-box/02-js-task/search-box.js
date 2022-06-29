@@ -9,7 +9,7 @@ export default class SearchBox {
 
   getTeamplate () {
     return `
-      <input type="text" placeholder="Search" id="text-search" class="search">
+      <input type="text" placeholder="Search" id="text-search" class="search-box__search">
     `;
   }
 
@@ -21,8 +21,3 @@ export default class SearchBox {
     this.element = element.firstElementChild;
   }
 }
-
-/* const search = new SearchBox();
-
-const rootElement = document.querySelector('#root');
-rootElement.append(search.element); */

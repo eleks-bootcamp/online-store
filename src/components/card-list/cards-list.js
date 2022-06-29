@@ -1,5 +1,5 @@
 /* import { products } from "../../../products.js"; */
-import Card from "../../card/02-js-task/card.js";
+import Card from "../card/card.js";
 
 export default class CardsList {
   constructor (data = []) {
@@ -46,6 +46,3 @@ export default class CardsList {
     this.renderCards();
   }
 }
-
-/* const list = new CardsList(products);
-list.renderCards(); */

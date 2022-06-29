@@ -15,13 +15,14 @@ label {
   min-height: 980px;
   padding: 1px 19px 21px 21px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
 }
 
 .filters-list {
   margin-right: 50px;
 }
 
-.form-title {
+.side-bar__title {
   margin: 20px 0 10px 0 ;
 }
 
@@ -33,12 +34,12 @@ label {
   margin: 22px auto 0 auto;
 }
 
-.form-title.category {
+.side-bar__title.category {
   margin-top: 28px;
 }
 
 .button-clear {
-  width: 280px;
+  width: 100%;
   height: 46px;
   margin-top: 7px;
   color: #fff;

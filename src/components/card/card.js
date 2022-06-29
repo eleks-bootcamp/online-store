@@ -8,7 +8,7 @@ export default class Card {
 
   getTeamplate () {
     const result = `
-      <div class="col-12 col-m-6 col-l-4">
+      <div class="col-12 col-l-6 col-xl-4">
         <div class="product">
           <div class="product__image-wrapper">
             <img src="${this.state.images[0]}" class="product__image" alt="Photo">

@@ -7,18 +7,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.card-list-wrapper {
-  margin:100px auto 0 auto;
+.card-list-wrapper .container {
+    margin-top: 0;
 }
 
 .product {
   margin: 20px auto 0 auto;
 }
 
-@media (min-width: 992px) {
-  .card-list-wrapper {
-    width: 990px;
-  }
-}
 
 

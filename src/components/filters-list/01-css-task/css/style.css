@@ -4,7 +4,7 @@ label {
 }
 
 .filters-list {
-  width: 280px;
+  max-width: 280px;
   min-height: 150px;
   display: flex;
   flex-direction: column;
