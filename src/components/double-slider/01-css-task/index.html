@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <title>DoubleSlider component</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
   <style>
     .wrapper {
@@ -16,6 +18,17 @@
 <main>
   <div class="wrapper">
     <!-- DoubleSlider component -->
+    <div data-element="priseSlider">
+      <div class="range-slider">
+        <span data-element="from">100</span>
+        <div data-element="inner" class="range-slider__inner">
+          <span data-element="progress" class="range-slider__progress" style="left: 0%; right: 0%;"></span>
+          <span data-element="thumbLeft" class="range-slider__thumb-left" style="left: 0%;"><img src="Vector (Stroke).svg"></span>
+          <span data-element="thumbRight" class="range-slider__thumb-right" style="right: 0%;"><img src="Vector (Stroke) (1).svg"></span>
+        </div>
+        <span data-element="to">200</span>
+      </div>
+    </div>
   </div>
 </main>
 </body>

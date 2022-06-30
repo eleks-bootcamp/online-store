@@ -3,12 +3,16 @@
 /* put your styles in this file */
 .wrapper {
   background-color: #FFFFFF;
-  width: 790px;
-  height: 205px;
-  display: flex;
+  /* width: 790px;
+  height: 205px; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  /* flex-wrap: wrap;
+  align-content: center; */
   border: 1px solid #E6E6E6;
+  display: grid;
+  justify-items: stretch;
 }
 .shop-pagination {
   display: flex;

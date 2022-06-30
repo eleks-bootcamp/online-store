@@ -4,18 +4,88 @@
   <meta charset="UTF-8" />
   <title>SideBar component</title>
   <link rel="stylesheet" href="style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
-    .wrapper {
+    /* .wrapper {
       width: 400px;
       margin: 100px auto;
-    }
+    } */
   </style>
 </head>
 <body>
 <main>
   <div class="wrapper">
     <!-- SideBar component -->
+    <!-- Price -->
+    <div class="price-title">Price</div>
+    <div data-element="priseSlider">
+      <div class="range-slider">
+        <span data-element="from">0 UAH</span>
+        <div data-element="inner" class="range-slider__inner">
+          <span data-element="progress" class="range-slider__progress" style="left: 0%; right: 0%;"></span>
+          <span data-element="thumbLeft" class="range-slider__thumb-left" style="left: 0%;"><img src="../../double-slider/01-css-task/Vector (Stroke).svg"></span>
+          <span data-element="thumbRight" class="range-slider__thumb-right" style="right: 0%;"><img src="../../double-slider/01-css-task/Vector (Stroke) (1).svg"></span>
+        </div>
+        <span data-element="to">85000 UAH</span>
+      </div>
+    </div>
+    <!-- Category -->
+    <div class="container-category">
+      <div class="category-title">Category</div>
+      <div class="category-list">
+        <ul class="category-ul">
+          <li class="monitors"><span class="label"></span>Monitors</li>
+          <li class="laptops"><span class="label"></span>Laptops</li>
+          <li class="video-cards"><span class="label"></span>Video cards</li>
+          <li class="gaming-keyboards"><span class="label"></span>Gaming keyboards</li>
+          <li class="computer-mouse"><span class="label"></span>Computer mouse</li>
+          <li class="ssd"><span class="label"></span>SSD</li>
+          <li class="sound-cards"><span class="label"></span>Sound cards</li>
+          <li class="ram"><span class="label"></span>RAM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="line-category"></div>
+    <!-- Brand -->
+    <div class="container-brand">
+      <div class="brand-title">Brand</div>
+      <div class="brand-list">
+        <ul class="brand-ul">
+          <li class="asus"><span class="label"></span>Asus</li>
+          <li class="acer"><span class="label"></span>Acer</li>
+          <li class="apple"><span class="label"></span>Apple</li>
+          <li class="dell"><span class="label"></span>Dell</li>
+          <li class="dynamode"><span class="label"></span>Dynamode</li>
+          <li class="gigabyte"><span class="label"></span>Gigabyte</li>
+          <li class="kingston"><span class="label"></span>Kingston</li>
+          <li class="lenovo"><span class="label"></span>Lenovo</li>
+          <li class="logitech"><span class="label"></span>Logitech</li>
+          <li class="msi"><span class="label"></span>MSI</li>
+          <li class="benQ"><span class="label"></span>BenQ</li>
+          <li class="a4Tech"><span class="label"></span>A4Tech</li>
+        </ul>
+      </div>
+    </div>
+    <div class="line-brand"></div>
+    <!-- Rating -->
+    <div class="rating-title">Rating</div>
+    <div data-element="ratingSlider">
+      <div class="range-slider">
+        <span data-element="from">0</span>
+        <div data-element="inner" class="range-slider__inner">
+          <span data-element="progress" class="range-slider__progress" style="left: 0%; right: 0%;"></span>
+          <span data-element="thumbLeft" class="range-slider__thumb-left" style="left: 0%;"><img src="../../double-slider/01-css-task/Vector (Stroke).svg"></span>
+          <span data-element="thumbRight" class="range-slider__thumb-right" style="right: 0%;"><img src="../../double-slider/01-css-task/Vector (Stroke) (1).svg"></span>
+        </div>
+        <span data-element="to">5</span>
+      </div>
+    </div>
+    <!-- Button -->
+  </div>
+  <div class="container-button">
+    <div class="clear-button">
+      <button>CLEAR ALL FILTERS</button>
+    </div>
   </div>
 </main>
 </body>

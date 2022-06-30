@@ -1,2 +1,93 @@
 /* put your styles in this file */
-/*@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";*/
+/* @import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"; */
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  padding:  10px;
+  width: calc(100% - 80px);
+}
+.product-cart {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-family: Montserrat,sans-serif;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.133);
+  justify-content: space-between;
+}
+
+.cart-img {
+  max-height: 40px;
+  box-sizing: border-box;
+  padding: 0 10px;
+
+}
+.card-category {
+  display: flex;
+}
+.card-text {
+  display: flex;
+  padding: 0 10px;
+
+}
+.count-sum {
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+.minus {
+  background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.value {
+  box-sizing: border-box;
+}
+.plus {
+  background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 30px;
+}
+.product-total {
+  display: flex;
+  min-width: 100px;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer {
+  align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.cart-total {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.order-button {
+  padding: 8px 12px;
+  background-color: #7E72F2;
+  border-radius: 3px;
+
+}
+button {
+  background-color: #7E72F2;
+  color: #FFFFFF;
+  border: 0px;
+  width: 200px;
+}

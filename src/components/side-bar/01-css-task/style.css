@@ -1,1 +1,214 @@
 /* put your styles in this file */
+.wrapper {
+  width: 400px;
+  margin: 100px auto 20px;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-family: Montserrat,sans-serif;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  color:  #2C2C2C;
+
+}
+/* price */
+.price-title {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+.range-slider {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.range-slider__inner {
+  background:  #7e72f2;
+  display: inline-block;
+  height: 4px;
+  margin: 10px 14px;
+  position: relative;
+  width: 100%;
+}
+.range-slider__thumb-left, .range-slider__thumb-right {
+  background-size: cover;
+  cursor: grab;
+  height: 18px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  width: 6px;
+}
+img {
+  background-color: white;
+}
+.range-slider>span:first-child {
+  left: 0;
+  padding-left: 20px;
+}
+.range-slider>span {
+  position: absolute;
+  top: 100%;
+}
+/* category */
+.category-title  {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+.category-list .brand-list{
+  font-size: 14px;
+}
+.category-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 10px 20px;
+}
+.label {
+  border-radius: 3px;
+  height: 17px;
+  width: 20px;
+  border: 1px solid #979797;
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 15px;
+}
+.monitors {
+  display: flex;
+}
+.laptops {
+  display: flex;
+}
+.video-cards {
+  display: flex;
+}
+.gaming-keyboards {
+  display: flex;
+}
+.computer-mouse {
+  display: flex;
+}
+.ssd {
+  display: flex;
+}
+.sound-cards {
+  display: flex;
+}
+.ram {
+  display: flex;
+}
+.line-category {
+  border-bottom: 1px solid #d6d6d6;
+  margin: 0px 20px;
+}
+/* Brand */
+.container-brand .container-category{
+  margin-bottom: 20px;
+}
+.brand-title {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.brand-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 10px 20px;
+}
+.asus {
+  display: flex;
+}
+.acer {
+  display: flex;
+}
+.apple {
+  display: flex;
+}
+.dell {
+  display: flex;
+}
+.dynamode {
+  display: flex;
+}
+.gigabyte {
+  display: flex;
+}
+.kingston {
+  display: flex;
+}
+.lenovo {
+  display: flex;
+}
+.logitech {
+  display: flex;
+}
+.msi {
+  display: flex;
+}
+.benQ {
+  display: flex;
+}
+.a4Tech {
+  display: flex;
+}
+.line-brand {
+  border-bottom: 1px solid #d6d6d6;
+  margin: 0px 20px;
+}
+
+/* Rating  */
+.rating-title {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.ratingSlider {
+  padding-bottom: 40px;
+}
+/* Button */
+.container-button {
+  width: 400px;
+  margin: 100px auto;
+  margin-top: 20px;
+}
+.clear-button {
+  padding: 12px;
+  background-color: #7E72F2;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  background-color: #7E72F2;
+  color: #FFFFFF;
+  border: 0px;
+}
+
+
+

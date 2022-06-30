@@ -1,1 +1,47 @@
 /* put your styles in this file */
+
+.wrapper {
+  font-family: Montserrat,sans-serif;
+  font-size: 12px;
+
+}
+.range-slider {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.range-slider__inner {
+  background:  #7e72f2;
+  display: inline-block;
+  height: 4px;
+  margin: 10px 14px;
+  position: relative;
+  width: 100%;
+}
+.range-slider__thumb-left, .range-slider__thumb-right {
+
+  background-size: cover;
+  cursor: grab;
+  height: 18px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  width: 6px;
+}
+img {
+  background-color: white;
+}
+
+.range-slider>span:first-child {
+  left: 0;
+}
+
+.range-slider>span {
+  position: absolute;
+  top: 100%;
+}
