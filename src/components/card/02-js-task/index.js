@@ -1,53 +1,100 @@
-export default class Card {
-  constructor (someProduct) {
-    this.state = someProduct;
 
+import CardList from './cards-list.js';
+import Pagination from './pagination.js';
+
+
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
+
+export default class OnlineStorePage {
+  constructor () {
+    this.pageSize = 9;
+    this.products = [];
+
+
+    this.url = new URL('products', BACKEND_URL);
+    this.url.searchParams.set('_limit', this.pageSize);
+
+
+    this.components = {};
+
+    this.initComponents();
     this.render();
+    this.renderComponents();
+
+    this.initEventListeners();
+
+    this.update(1);
+
   }
+
+  async loadData (pageNumber) {
+
+    this.url.searchParams.set('_page', pageNumber);
+
+    const response = await fetch(this.url);
+    const products = await response.json();
+
+    return products;
+  }
+
 
   getTemplate () {
-    const result =  `
-      <div class="card-component-box">
-        <div class="card-content">
-          <div class="card-product-image">
-          <img src="${this.state.images[0]}" alt="Product image" class="product-image">
-          </div>
-          <div class="content-details">
-            <div class="product-price-reating-wrapper">
-              <div class="card-rating card-purple-elements">
-                <span>${this.state.rating}</span>
-                <i class="bi bi-star"></i>
-              </div>
-              <div class="card-product-price">${this.state.price}</div>
-            </div>
-            <div class="card-product-name">
-              <p>${this.state.title}</p>
-            </div>
-            <div class="card-product-type">
-              <p>${this.state.category}</p>
-            </div>
-          </div>
-        </div>
+    return `
       <div>
-    <button class="card-add-button card-purple-elements card-cursor-pointer">Add to cart</button>
-    </div>
-  </div>
-        `;
+        <div data-element="card-list">
+          <!-- Crad component -->
+        </div>
+        <div data-element="pagination">
+          <!-- Pagination component -->
+        </div>
+      </div>
+    `;
+  }
 
-  return result;
+  initComponents () {
+    const totalElements = 100; //remove hardcoded value
+    const totalPages = Math.ceil(totalElements / this.pageSize);
+
+    const cardList = new CardList(this.products);
+    const pagination = new Pagination({
+      activePageIndex: 0,
+      totalPages: totalPages
+    });
+
+    this.components.cardList = cardList;
+    this.components.pagination = pagination;
 
   }
 
-  update (data = {}) {
-    this.state = data;
-    this.componentELement.innerHTML = this.getTemplate();
+  renderComponents () {
+    const cardsContainer = this.element.querySelector('[data-element="card-list"]');
+    const paginationContainer = this.element.querySelector('[data-element ="pagination"]');
+
+    cardsContainer.append(this.components.cardList.element);
+    paginationContainer.append(this.components.pagination.element);
   }
 
   render () {
-    const element = document.createElement('div');
-      element.innerHTML = this.getTemplate();
-      this.componentELement = element;
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = this.getTemplate();
+    this.element = wrapper.firstElementChild;
   }
 
+  initEventListeners () {
+    this.components.pagination.element.addEventListener('page-changed', event => {
+      const pageIdex = event.detail;
+
+      this.update(pageIdex + 1);
+
+    });
+
+  }
+
+  async update (pageNumber) {
+    const data = await this.loadData(pageNumber);
+
+    this.components.cardList.update(data);
+
+  }
 
 }
