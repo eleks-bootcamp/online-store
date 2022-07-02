@@ -9,6 +9,7 @@ export default class Pagination {
 
     this.activePageIndex = activePageIndex;
     this.totalPages = totalPages;
+    // this.pageIndex =
     this.render();
     this.addEventListener();
 
@@ -115,9 +116,12 @@ export default class Pagination {
 
   dispatchEvent (pageIndex) {
     const customEvent = new CustomEvent('page-changed', {
-      detail: pageIndex
+      detail: pageIndex,
+      bubbles: true
     });
 
     this.element.dispatchEvent(customEvent);
+
+
   }
 }

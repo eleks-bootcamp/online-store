@@ -22,14 +22,18 @@
   <script type="module">
     // import { products } from './products.js';
     import OnlineStorePage from './index.js';
+    import Pagination from './pagination.js';
+    // const pageIndex = this.pageIndex;
+// pageIndex.addEventListener('type', CustomEvent);
 
-    fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=8')
-  .then(response => response.json())
-  .then(products => {
-    const page = new OnlineStorePage(products);
+  //   const getUrl = page => `https://online-store.bootcamp.place/api/products?_page=${page}&_limit=9`;
+  //   fetch(getUrl(9))
+  // .then(response => response.json())
+  // .then(products => {
+    const page = new OnlineStorePage();
     const someElement = document.querySelector('#root');
     someElement.append(page.element);
-  });
+  // });
 
 
 
