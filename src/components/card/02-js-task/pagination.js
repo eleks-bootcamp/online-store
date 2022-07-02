@@ -48,18 +48,16 @@ export default class Pagination {
     if (pageIndex === this.activePageIndex) return;
     if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
 
-    this.dispatchEvent (pageIndex);
-
     const activePage = this.element.querySelector('.page-box.active');
 
     if (activePage) {
-      activePage.classList.remote('active')
+      activePage.classList.remove('active')
     }
 
     const nextActivePage = this.element.querySelector(`[data-page-index="${pageIndex}"]`);
 
     if (nextActivePage) {
-      page.classList.add('active');
+      nextActivePage.classList.add('active');
     }
 
     this.activePageIndex = pageIndex;
@@ -98,10 +96,13 @@ export default class Pagination {
     pagesList.addEventListener('click', event => {
       const pageItem = event.target.closest('.page-box');
 
-      if (pageItem === null) return;
+      if (!pageItem) return;
+
+
 
       const pageIndex = pageItem.dataset.pageIndex;
       this.setPage(parseInt(pageIndex, 10));
   });
   }
+
 }

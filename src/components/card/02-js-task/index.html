@@ -46,7 +46,7 @@
 
     const card = new Card(laptop);
     const pagination = new Pagination ({
-      activePageIndex: 10
+
     });
 
     const myRootElement = document.querySelector('#root');
@@ -54,7 +54,7 @@
     myRootElement.append(card.componentElement);
     myRootElement.append(pagination.element);
 
-    pagination.setPage(2);
+    pagination.setPage(3);
     pagination.prevPage();
     pagination.nextPage();
 
