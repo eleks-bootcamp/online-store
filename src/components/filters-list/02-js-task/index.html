@@ -10,14 +10,27 @@
       width: 400px;
       margin: 100px auto;
     }
+    .btn {
+      width: 60px;
+      margin-left: 450px;
+      background-color: rgb(203, 222, 135);
+      text-align: center;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: rgb(153, 184, 68);
+    }
+
   </style>
 </head>
 <body>
 <main>
   <div id="root" class="wrapper"></div>
+  <div id="reset" class="btn"> Reset </div>
 
   <script type="module">
-    import FiltersList from './solution/index.js';
+    import FiltersList from './index.js';
 
     const list = [
       {
