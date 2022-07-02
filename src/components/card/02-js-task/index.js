@@ -4,7 +4,7 @@ import Pagination from './pagination.js';
 
 export default class OnlineStorePage {
   constructor(products = []) {
-    this.pageSize = 3;
+    this.pageSize = 9;
     this.products = products;
     this.components = {};
 
@@ -32,6 +32,7 @@ export default class OnlineStorePage {
   initComponents() {
     const totalPages = Math.ceil(this.products.length / this.pageSize);
 
+
     const cardList = new CardsList(this.products.slice(0, this.pageSize));
     const pagination = new Pagination({
       activePageIndex: 0,
@@ -41,6 +42,7 @@ export default class OnlineStorePage {
     this.components.cardList = cardList;
     this.components.pagination = pagination;
   }
+
 
   renderComponents() {
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
