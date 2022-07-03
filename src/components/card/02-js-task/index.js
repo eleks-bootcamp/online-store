@@ -2,6 +2,8 @@
 import CardsList from './cards-list.js';
 import Pagination from './pagination.js';
 
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
+
 // const product = {
 //   id: "76w0hz7015kkr9kjkav",
 //   images: [
@@ -32,15 +34,33 @@ import Pagination from './pagination.js';
 export default class OnlineStorePage {
 
 
-  constructor (products) {
-    this.pageSize = 3;
-    this.products = products;
+  constructor () {
+    this.pageSize = 9;
+    this.products = [];
+
+    this.url = new URL ('products', BACKEND_URL);
+    this.url.searchParams.set('_limit', this.pageSize)
+
+
+    // this.products = products;
     this.components = {};
     this.initComponents();
     this.render();
     this.renderComponents();
 
     this.initEventListeners();
+    this.update (1);
+  }
+
+  async LoadData (pageNumber) {
+    this.url.searchParams.set('_page', pageNumber)
+    const responce = await fetch(this.url)
+    const products = await responce.json ();
+
+    return products;
+  // .then(response => response.json())
+  // .then(products => {
+  // });
   }
 
   getTeamplate () {
@@ -64,8 +84,13 @@ export default class OnlineStorePage {
   }
 
   initComponents () {
-  const totalPages = Math.ceil(this.products.length / this.pageSize);
-  const cardList = new CardsList(this.products.slice(0, this.pageSize));
+    //TODO: remove hardcoded value
+  const totalElements = 100;
+
+  const totalPages = Math.ceil(totalElements / this.pageSize);
+  // const totalPages = 10;
+
+  const cardList = new CardsList(this.products);
   const pagination = new Pagination ({
     activePageIndex: 0,
     totalPages: totalPages
@@ -96,11 +121,16 @@ export default class OnlineStorePage {
       // [3, 4, 5] | pageIndex = 1 pageSize = 3
       // [6, 7]    | pageIndex = 2 pageSize = 3
 
-      const start = pageIndex * this.pageSize;
-      const end = start + this.pageSize;
-      const data = this.products.slice(start, end);
-// замість попережніх 3х стрічок треба зробити фетч 
-      this.components.cardList.update(data);
+      // const start = pageIndex * this.pageSize;
+      // const end = start + this.pageSize;
+      // const data = this.products.slice(start, end);
+      // this.components.cardList.update(data);
+      this.update (pageIndex + 1);
+
     });
+  }
+  async  update (pageNumber) {
+    const data = await this.LoadData(pageNumber);
+    this.components.cardList.update(data);
   }
 }
