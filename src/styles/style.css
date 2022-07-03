@@ -300,7 +300,6 @@ header {
 }
 
 .title {
-  margin-bottom: 17px;
   font-size: 17px;
   font-weight: 600;
 }
@@ -688,8 +687,12 @@ input[type="range"]::-ms-track {
   font-size: 13px;
 }
 
-.filter {
+.filters-list {
   margin-top: 20px;
+}
+
+.filter {
+  margin-top: 10px;
   display: flex;
 }
 

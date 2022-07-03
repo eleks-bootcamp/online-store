@@ -10,12 +10,19 @@ export const API = {
     return products;
   },
 
-  async loadCategory() {
-    const server = ' https://online-store.bootcamp.place/api/categories';
-    const response = await fetch(server);
-    const category = await response.json();
+  async loadProductsCategory(category, url) {
+    url.searchParams.set('category', category);
 
-    return category;
+    const response = await fetch(url);
+    const products = await response.json();
+
+    return products;
+  },
+
+  async loadCategories(url) {
+    const response = await fetch(url);
+    const categories = await response.json();
+
+    return categories;
   }
-
 };

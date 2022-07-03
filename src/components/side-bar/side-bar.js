@@ -1,14 +1,16 @@
 "use strict";
 
 import Filter from "../filters-list/filters-list.js";
+import { BACKEND_URL } from "../../index.js";
 import { API } from "../API/api.js";
 
 export default class SideBar {
   constructor() {
-
+    this.categoriesUrl = new URL('categories', BACKEND_URL);
 
     this.render();
     this.renderFilters();
+    this.addEventListener();
   }
 
   getTemplate() {
@@ -17,8 +19,9 @@ export default class SideBar {
         <div class="side-bar__price">
           <div class="title">Price</div>
         </div>
-        <div class="side-bar__category">
-          <div class="title" data-element="category">Category</div>
+        <div class="side-bar__category" data-element="category">
+          <div class="title">Category</div>
+          <div class="filters-list" data-element="categoryFilters"></div>
         </div>
         <div class="side-bar__brand">
           <div class="title">Brand</div>
@@ -35,15 +38,38 @@ export default class SideBar {
 
     element.innerHTML = this.getTemplate();
 
-    this.element = element.firstElementChild;
+    this.element = element;
   }
 
   async renderFilters() {
-    const categories = await API.loadCategory();
+    const categories = await API.loadCategories(this.categoriesUrl);
+    const filterContainer = this.element.querySelector('[data-element="categoryFilters"]');
+    categories.map(item => {
+      const category = new Filter(item);
 
-    const filter = new Filter(categories);
-    const filterContainer = this.element.querySelector('[data-element="category"]');
+      filterContainer.append(category.element);
+    });
+  }
 
-    filterContainer.append(filter.element);
+  addEventListener() {
+    const category = this.element.querySelector('[data-element="category"]');
+
+    category.addEventListener('click', e => {
+      const categoryFilter = e.target.closest('.filter input');
+
+      if(!categoryFilter) return;
+
+      const categoryID = categoryFilter.id;
+
+      this.dispatchEvent(categoryID);
+    });
+  }
+
+  dispatchEvent(categoryID) {
+    const customEvent = new CustomEvent('checkbox-selection', {
+      detail: categoryID
+    });
+
+    this.element.dispatchEvent(customEvent);
   }
 }

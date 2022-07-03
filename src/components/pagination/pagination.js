@@ -39,7 +39,7 @@ export default class Pagination {
       <li class="pagination__list-item ${isActive}" data-page-index="${pageIndex}">
         ${pageIndex + 1}
       </li>
-      `;
+    `;
   }
 
   setPage(pageIndex = 0) {

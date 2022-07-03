@@ -1,18 +1,18 @@
 "use strict";
 
 export default class Filter {
-  constructor(categories) {
-    this.state = categories;
+  constructor(data) {
+    this.state = data;
 
     this.render();
   }
 
   getTemplate() {
     return `
-      <label for="${this.state[2]}">
+      <label for="${this.state.toLowerCase().split(' ').join('_')}">
         <div class="filter">
-          <input type="checkbox" id="${this.state[2]}">
-          <span>${this.state[2]}</span>
+          <input type="checkbox" id="${this.state.toLowerCase().split(' ').join('_')}">
+          <span>${this.state}</span>
         </div>
       </label>
     `;

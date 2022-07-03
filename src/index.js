@@ -5,14 +5,17 @@ import Pagination from "./components/pagination/pagination.js";
 import SideBar from "./components/side-bar/side-bar.js";
 import { API } from "./components/API/api.js";
 
-const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
+export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
 class OnLineStorePage {
   constructor() {
-    this.pageSize = 25;
+    this.pageSize = 9;
     this.products = [];
 
-    this.url = new URL('products', BACKEND_URL);
-    this.url.searchParams.set('_limit', this.pageSize);
+    this.productsUrl = new URL('products', BACKEND_URL);
+    this.productsUrl.searchParams.set('_limit', this.pageSize);
+    // this.categoryUrl = new URL (this.productsUrl);
+    // this.categoryUrl.searchParams.set('category', this.pageSize);
+
     this.components = {};
 
     this.initComponents();
@@ -21,7 +24,7 @@ class OnLineStorePage {
 
     this.initEventListeners();
 
-    this.update(1);
+    this.updateProducts(1);
   }
 
   getTemplate() {
@@ -81,12 +84,24 @@ class OnLineStorePage {
     this.components.pagination.element.addEventListener('page-changed', e => {
       const pageIndex = e.detail;
 
-      this.update(pageIndex + 1);
+      this.updateProducts(pageIndex + 1);
+    });
+
+    this.components.sideBar.element.addEventListener('checkbox-selection', e => {
+      const categoryID = e.detail;
+
+      this.updateCategories(categoryID);
     });
   }
 
-  async update(pageNumber) {
-    const products = await API.loadProducts(pageNumber, this.url);
+  async updateProducts(pageNumber) {
+    const products = await API.loadProducts(pageNumber, this.productsUrl);
+
+    this.components.cardsList.update(products);
+  }
+
+  async updateCategories(category) {
+    const products = await API.loadProductsCategory(category, this.productsUrl);
 
     this.components.cardsList.update(products);
   }
