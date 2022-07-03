@@ -30,6 +30,7 @@
 
       .blok-kvad{
         outline: 2px solid black;
+        color: white;
         cursor: pointer;
         width: 20px;
         height: 20px;
@@ -37,6 +38,7 @@
         align-items: center;
         justify-content: center;
       }
+      .blok-kvad:hover{background: #7E72F2; }
 
       .blok-text{list-style: none;
         outline: 1px solid black;
