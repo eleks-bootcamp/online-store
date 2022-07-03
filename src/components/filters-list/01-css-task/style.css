@@ -30,8 +30,12 @@
 
       .blok-kvad{
         outline: 2px solid black;
+        cursor: pointer;
         width: 20px;
         height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .blok-text{list-style: none;
@@ -40,4 +44,14 @@
         height: 20px;
         margin-left: 15px;
         font-size: 17px;
+        color: black;
       }
+
+.none-style{
+  text-decoration: none;
+  list-style: none;
+}
+
+.text-color{
+  color: black;
+}
