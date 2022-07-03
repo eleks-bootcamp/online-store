@@ -46,6 +46,8 @@ export default class DoubleSlider {
     }
   };
 
+
+
   onThumbPointerUp = () => {
     this.element.classList.remove('range-slider_dragging');
 
@@ -62,8 +64,10 @@ export default class DoubleSlider {
   };
 
   constructor({
-                min = 100,
-                max = 200,
+
+
+                min = 0,
+                max = 0,
                 formatValue = value => value,
                 selected = {
                   from: min,
@@ -72,15 +76,67 @@ export default class DoubleSlider {
                 precision = 0,
                 filterName = ''
               } = {}) {
+
+
+  //   fetch(getUrl(9))
+  // .then(response => response.json())
+  // .then(products => {
+    // const page = new OnlineStorePage();
+    // const someElement = document.querySelector('#root');
+    // someElement.append(page.element);
+
+    // var array = [{
+    //   id: 3,
+    //   name: 'test',
+    // },
+    // {
+    //   id: 4,
+    //   name:'test2',
+    // }
+    // ]
+    // for(var i = 0; i < base.length;i++){
+    //   console.log(base[i].price + ' ' + [i].name);
+    // }
+    // const obj = {min: priceMin};
+    // console.log(obj);
+
     this.min = min;
     this.max = max;
     this.formatValue = formatValue;
     this.selected = selected;
     this.precision = 10 ** precision;
     this.filterName = filterName;
-
+    this.loadData();
     this.render();
+    console.log('rp', this.loadData);
+    // console.log('p', priceMin);
+    this.update();
+    // console.log (this.loadData);
+
+
   }
+
+  async loadData() {
+    const responce = await fetch('https://online-store.bootcamp.place/api/products?')
+    const base = await responce.json ();
+    const priceMin = await base.reduce((acc, v) => acc.price < v.price ? acc : v)[`price`];
+    console.log('pricemin' ,priceMin);
+    console.log('type', typeof priceMin)
+    const priceMax = await base.reduce((acc, v) => acc.price > v.price ? acc : v)[`price`];
+    console.log('pricemax', priceMax);
+    console.log('masr', base);
+    this.min=priceMin;
+    this.max=priceMax;
+    this.update (this.min, this.max);
+
+  return priceMin;
+  }
+
+
+
+
+
+
 
   get template() {
     const { from, to } = this.selected;
@@ -210,3 +266,5 @@ export default class DoubleSlider {
     this.update();
   }
 }
+
+
