@@ -76,30 +76,6 @@ export default class DoubleSlider {
                 precision = 0,
                 filterName = ''
               } = {}) {
-
-
-  //   fetch(getUrl(9))
-  // .then(response => response.json())
-  // .then(products => {
-    // const page = new OnlineStorePage();
-    // const someElement = document.querySelector('#root');
-    // someElement.append(page.element);
-
-    // var array = [{
-    //   id: 3,
-    //   name: 'test',
-    // },
-    // {
-    //   id: 4,
-    //   name:'test2',
-    // }
-    // ]
-    // for(var i = 0; i < base.length;i++){
-    //   console.log(base[i].price + ' ' + [i].name);
-    // }
-    // const obj = {min: priceMin};
-    // console.log(obj);
-
     this.min = min;
     this.max = max;
     this.formatValue = formatValue;
@@ -109,11 +85,7 @@ export default class DoubleSlider {
     this.loadData();
     this.render();
     console.log('rp', this.loadData);
-    // console.log('p', priceMin);
     this.update();
-    // console.log (this.loadData);
-
-
   }
 
   async loadData() {
@@ -131,9 +103,6 @@ export default class DoubleSlider {
 
   return priceMin;
   }
-
-
-
 
 
 
