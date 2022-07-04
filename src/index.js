@@ -11,7 +11,8 @@ class OnLineStorePage {
   state = {
     pageNumber: 1,
     pageSize: 9,
-    categories: []
+    categories: [],
+    brands: []
   };
 
   constructor() {
@@ -87,10 +88,17 @@ class OnLineStorePage {
       this.updateProducts();
     });
 
-    this.components.sideBar.element.addEventListener('checkbox-selection', e => {
+    this.components.sideBar.element.addEventListener('categories-selection', e => {
       const categories = e.detail;
 
       this.state.categories = categories;
+      this.updateProducts();
+    });
+
+    this.components.sideBar.element.addEventListener('brands-selection', e => {
+      const brands = e.detail;
+
+      this.state.brands = brands;
       this.updateProducts();
     });
 
@@ -116,6 +124,13 @@ class OnLineStorePage {
       });
     }
 
+    const { brands } = this.state;
+    if(brands.length) {
+      brands.forEach (brand => {
+        productsUrl.searchParams.append('brand', brand);
+      });
+    }
+
     return productsUrl;
   }
 
@@ -128,10 +143,19 @@ class OnLineStorePage {
 
   clearFilters() {
     this.state.categories = [];
-    this.components.sideBar.checkedCheckboxes.forEach(item => {
-      item.checked = false;
+    this.state.brands = [];
+
+    const allInputs = this.components.sideBar.element.querySelectorAll('input');
+    allInputs.forEach(input => {
+      input.checked = false;
     });
-    this.components.pagination.clearPagination();
+
+
+    if (this.state.pageNumber === 1) {
+      this.updateProducts();
+    } else {
+      this.components.pagination.clearPagination();
+    }
   }
 }
 
