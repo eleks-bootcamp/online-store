@@ -1,1 +1,107 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 /* put your styles in this file */
+.p {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #FFFFFF;
+  --fiolet: #7E72F2;
+  --black: #2C2C2C;
+
+}
+.card {
+  width: 400px;
+  margin: 100px auto;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+}
+.card-1 {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+margin: 0;
+}
+.card-content-image {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  padding: 0.5rem;
+}
+.card-content-name {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  padding: 0.5rem;
+}
+.card-content-category {
+display: flex;
+justify-content: flex-start;
+width: 90%;
+padding: 0.5rem;
+}
+.card-content-text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--black);
+  margin: 0;
+}
+.card-content-text-button {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--white);
+  margin: 1rem;
+}
+.bi {
+  margin: 0;
+  padding: 0.5rem;
+  color: var(--white);
+}
+.card-content-rating-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 1rem;
+}
+.card-content-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--fiolet);
+  border-radius: 3px;
+  height: 27px;
+}
+.card-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.card-content-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: var(--fiolet);
+  width: 100%;
+  height: 40px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.button {
+
+}
+

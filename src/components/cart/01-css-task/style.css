@@ -1,2 +1,128 @@
 /* put your styles in this file */
-/*@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";*/
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: Montserrat;
+  font-size: 1rem;
+}
+
+a {
+  all: unset;
+}
+
+.root {
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+}
+.cart-content {
+  max-width: calc(100% - 80px);
+  max-height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  background: #FEFEFE;
+  z-index: 200;
+  position: fixed;
+  overflow-y: scroll;
+}
+.cart-container {
+  padding: 10px;
+
+}
+.cart-list {
+  margin: 0;
+  padding: 0;
+}
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  margin-bottom: 15px;
+
+}
+.image-cart {
+  max-height: 40px;
+  padding: 2rem;
+}
+
+.currency-image {
+ max-height: 10px;
+ padding: 0.5rem;
+}
+
+.image {
+  max-height: 40px;
+}
+
+.name-cart {
+  padding: 2rem;
+}
+
+.number-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bi {
+padding: 1rem;
+}
+
+.total-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.total-sum {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.currency-cart {
+padding: 1rem;
+}
+
+.bottom-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom {
+  width: 200px;
+  background: #7E72F2;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  padding: 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  font-family: 'Montserrat';
+  color: white;
+}
