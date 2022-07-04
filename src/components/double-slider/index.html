@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DoubleSlider</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    .wrapper {
+      width: 400px;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="wrapper">
+      <div id="slider-wrapper-1" class="slider">
+        <div class="slider__track"></div>
+        <input type="range" min="0" max="85000" value="0" class="slider__thumb slider-1">
+        <input type="range" min="0" max="85000" value="85000" class="slider__thumb slider__thumb_right slider-2">
+        <div class="slider__values">
+          <div class="slider__price-start">
+            <span class="range-1">
+              0
+            </span>
+            UAH
+          </div>
+          <div class="slider__price-end">
+            <span class="range-2">
+              85000
+            </span>
+            UAH
+          </div>
+        </div>
+      </div>
+
+      <div id="slider-wrapper-2" class="slider">
+        <div class="slider__track"></div>
+        <input type="range" min="0" max="5" value="0" step="0.01" class="slider__thumb slider-1">
+        <input type="range" min="0" max="5" value="5" step="0.01" class="slider__thumb slider__thumb_right slider-2">
+        <div class="slider__values">
+          <div class="slider__price-start">
+            <span class="range-1">
+              0
+            </span>
+          </div>
+          <div class="slider__price-end">
+            <span class="range-2">
+              5
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./double-slider.js"></script>
+</body>
+</html>

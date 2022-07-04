@@ -48,14 +48,6 @@ i {
 .icon-search:before {
   content: "\e905";
 }
-.icon-slider-left:before {
-  content: "\e906";
-  color: #c2cfe0;
-}
-.icon-slider-right:before {
-  content: "\e907";
-  color: #c2cfe0;
-}
 .icon-star:before {
   content: "\e908";
   color: #fff;
