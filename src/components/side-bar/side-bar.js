@@ -1,8 +1,8 @@
 'use strict'
 
-import Filter from "../../filters-list/02-js-task/filters-list.js";
-import { BACKEND_URL } from "../../../index.js";
-import { API } from "../../../API/api.js";
+import Filter from "../filters-list/filters-list.js";
+import { BACKEND_URL } from "../../index.js";
+import { API } from "../../API/api.js";
 
 export default class SideBar {
   constructor () {

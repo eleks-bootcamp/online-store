@@ -3,7 +3,7 @@
 /* import SearchBox from './components/search-box/02-js-task/search-box.js'; */
 import CardsList from './components/card-list/cards-list.js';
 import Pagination from './components/pagination/pagination.js';
-import SideBar from './components/side-bar/02-js-task/side-bar.js';
+import SideBar from './components/side-bar/side-bar.js';
 import { API } from './API/api.js';
 
 export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';

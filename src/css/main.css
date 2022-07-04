@@ -7,9 +7,9 @@
 @import '../components/search-box/01-css-task/css/style.css';
 @import '../components/card/style.css';
 @import '../components/pagination/style.css';
-@import '../components/double-slider/01-css-task/css/style.css';
-@import '../components/filters-list/01-css-task/css/style.css';
-@import '../components/side-bar/01-css-task/css/style.css';
+@import '../components/double-slider/css/style.css';
+@import '../components/filters-list/css/style.css';
+@import '../components/side-bar/css/style.css';
 @import '../components/cart/01-css-task/css/style.css';
 
 * {
