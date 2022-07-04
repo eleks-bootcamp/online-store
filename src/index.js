@@ -3,19 +3,19 @@
 import CardsList from "./components/cards-list/cards-list.js";
 import Pagination from "./components/pagination/pagination.js";
 import SideBar from "./components/side-bar/side-bar.js";
-import { API } from "./components/API/api.js";
+import { API } from "./API/api.js";
 
 export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
 class OnLineStorePage {
+
+  state = {
+    pageNumber: 1,
+    pageSize: 9,
+    categories: []
+  };
+
   constructor() {
-    this.pageSize = 9;
     this.products = [];
-
-    this.productsUrl = new URL('products', BACKEND_URL);
-    this.productsUrl.searchParams.set('_limit', this.pageSize);
-    // this.categoryUrl = new URL (this.productsUrl);
-    // this.categoryUrl.searchParams.set('category', this.pageSize);
-
     this.components = {};
 
     this.initComponents();
@@ -23,8 +23,7 @@ class OnLineStorePage {
     this.renderComponents();
 
     this.initEventListeners();
-
-    this.updateProducts(1);
+    this.updateProducts();
   }
 
   getTemplate() {
@@ -48,7 +47,7 @@ class OnLineStorePage {
   initComponents() {
     // TODO: remove hardcoded value
     const totalElements = 100;
-    const totalPages = Math.ceil(totalElements/ this.pageSize);
+    const totalPages = Math.ceil(totalElements/ this.state.pageSize);
 
     const sideBar = new SideBar();
     const cardsList = new CardsList(this.products);
@@ -83,25 +82,39 @@ class OnLineStorePage {
   initEventListeners() {
     this.components.pagination.element.addEventListener('page-changed', e => {
       const pageIndex = e.detail;
+      this.state.pageNumber = pageIndex + 1;
 
-      this.updateProducts(pageIndex + 1);
+      this.updateProducts();
     });
 
     this.components.sideBar.element.addEventListener('checkbox-selection', e => {
-      const categoryID = e.detail;
-
-      this.updateCategories(categoryID);
+      const categories = e.detail;
+      
+      this.state.categories = categories;
+      this.updateProducts();
     });
   }
 
-  async updateProducts(pageNumber) {
-    const products = await API.loadProducts(pageNumber, this.productsUrl);
+  getUrlWithParams() {
+    const productsUrl = new URL('products', BACKEND_URL);
+    const { pageSize, pageNumber } = this.state;
 
-    this.components.cardsList.update(products);
+    productsUrl.searchParams.set('_page', String(pageNumber));
+    productsUrl.searchParams.set('_limit', String(pageSize));
+
+    const { categories } = this.state;
+    if (categories.length) {
+      categories.forEach (category => {
+        productsUrl.searchParams.append('category', category);
+      });
+    }
+
+    return productsUrl;
   }
 
-  async updateCategories(category) {
-    const products = await API.loadProductsCategory(category, this.productsUrl);
+  async updateProducts() {
+    const url = this.getUrlWithParams();
+    const products = await API.loadProducts(url);
 
     this.components.cardsList.update(products);
   }
