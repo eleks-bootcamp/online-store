@@ -74,6 +74,10 @@ export default class Pagination {
     this.setPage(prevPageIndex);
   }
 
+  clearPagination() {
+    this.setPage();
+  }
+
   render() {
     const element = document.createElement('div');
 

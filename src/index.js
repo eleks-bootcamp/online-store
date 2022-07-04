@@ -32,7 +32,7 @@ class OnLineStorePage {
         <div class="row">
           <div class="col-12 col-s-6 col-l-3">
             <div class="side-bar" data-element="sideBar">
-              <button class="button button_filters">Clear all filters</button>
+              <button class="button button_filters" data-element="clearFilters">Clear all filters</button>
             </div>
           </div>
           <div class="col-12 col-s-6 col-l-9">
@@ -89,9 +89,16 @@ class OnLineStorePage {
 
     this.components.sideBar.element.addEventListener('checkbox-selection', e => {
       const categories = e.detail;
-      
+
       this.state.categories = categories;
       this.updateProducts();
+    });
+
+    const rootElement = document.getElementById('root');
+    rootElement.addEventListener('click', e => {
+      if (e.target.dataset.element === 'clearFilters') {
+        this.clearFilters();
+      }
     });
   }
 
@@ -117,6 +124,14 @@ class OnLineStorePage {
     const products = await API.loadProducts(url);
 
     this.components.cardsList.update(products);
+  }
+
+  clearFilters() {
+    this.state.categories = [];
+    this.components.sideBar.checkedCheckboxes.forEach(item => {
+      item.checked = false;
+    });
+    this.components.pagination.clearPagination();
   }
 }
 
