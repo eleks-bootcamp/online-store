@@ -1,1 +1,12 @@
-/* put your styles in this file */
+.wrapper{
+    width:61.875rem;
+    margin: 0 auto;
+}
+.products-list{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  
+  }
+  

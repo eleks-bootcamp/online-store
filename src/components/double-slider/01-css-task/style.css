@@ -1,1 +1,78 @@
 /* put your styles in this file */
+:root {
+    --purpure-100:#7E72F2;
+    --light-purpure-100:#c8c2f3;
+  }
+.form-group{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.price-slider{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    position: relative;
+    font-size: 0.75rem;
+}
+.slider-tittle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    
+}
+.slider-wrapper{
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.range-slider-inner{
+    position: relative;
+    width:100%;
+    margin:10px 14px;
+    background: var(--light-purpure-100);
+    box-shadow: 0 0 1px var(--purpure-100);
+    height: 4px;
+    display: inline-block;
+
+}
+.range-slider-space {
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    background: var(--purpure-100);
+}
+.min-limit,.max-limit {
+    position: absolute;
+    top: 100%;
+}
+.min-limit{
+    left: 0;
+}
+.max-limit {
+    right: 0;
+}
+.range-slider-left{
+    position: absolute;
+    height: 18px;
+    left: 0;
+    top:0;
+    width: 6px; 
+    background: url(http://online-store.bootcamp.place/range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+    transform: rotate(0deg) translateY(-50%);
+    z-index: 15;
+    margin:2px 0 0 -5px;
+}
+.range-slider-right{
+    position: absolute;
+    height: 18px;
+    right: 0;
+    top:0;
+    width: 6px;
+    background: url(http://online-store.bootcamp.place/range-thumb-icon.a4dd7a38.svg) 0 no-repeat;
+    transform: rotate(180deg) translateY(50%);
+    z-index: 15;
+    margin:2px -5px 0 0;
+}
