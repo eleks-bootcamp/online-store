@@ -8,6 +8,7 @@ label {
   min-height: 150px;
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .filter {

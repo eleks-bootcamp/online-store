@@ -1,16 +1,18 @@
 'use strict';
 
 export default class Filter {
-  constructor () {
+  constructor (data) {
+    this.state = data;
+
     this.render();
   }
 
   getTeamplate () {
     return `
-      <label for="check1">
+      <label>
         <div class="filter">
-          <input type="checkbox" id="check1" class="check">
-          <span>Monitors</span>
+          <input type="checkbox" data-element="${this.state.toLowerCase().split(' ').join('_')}" class="check">
+          <span>${this.state}</span>
         </div>
       </label>
     `;
