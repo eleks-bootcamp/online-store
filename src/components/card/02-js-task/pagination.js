@@ -1,10 +1,13 @@
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
 export default class Pagination {
 
 	constructor({ activePageIndex = 0, totalPages = 12 } = {}) {
 		this.totalPages = totalPages;
 		this.activePageIndex = activePageIndex;
+		this.url = new URL('products', BACKEND_URL)
 		this.render();
 		this.addEventListeners();
+		this.getPages()
 	}
 
 	getTemplatePage () {
@@ -13,21 +16,36 @@ export default class Pagination {
 			<a href="#" class="pagination-item" data-element="nav-prev">
 				<i class="bi bi-chevron-left"></i>
 			</a>
-			${this.getPages()}
+			<div data-element="pagination">
+			</div>
 			<a href="#" class="pagination-item" data-element="nav-next">
 				<i class="bi bi-chevron-right"></i>
 			</a>
 		</div>`;
 	}
 
-	getPages () {
-		return `
-			<ul class="pagination-center" data-element="pagination">
-				${new Array(this.totalPages).fill(1).map((item, index) => {
+	render() {
+		const wrapper = document.createElement('div');
+
+		wrapper.innerHTML = this.getTemplatePage();
+
+		this.element = wrapper.firstElementChild;
+	}
+
+	getPages (totalPages = 12) {
+		let pages =  `
+		    <ul class="pagination-center">
+				${new Array(totalPages).fill(1).map((item, index) => {
 					return this.getPageTemplate(index);
 				}).join('')}
 			</ul>
 		`;
+
+		const body = this.element.querySelector('[data-element="pagination"]')
+		console.log(body)
+
+		body.innerHTML = pages
+//		body.append(pages);
 	}
 
 	getPageTemplate (pageIndex = 0) {
@@ -73,13 +91,7 @@ export default class Pagination {
 		this.setPage(prevPageIndex);
 	}
 
-	render() {
-		const wrapper = document.createElement('div');
 
-		wrapper.innerHTML = this.getTemplatePage();
-
-		this.element = wrapper.firstElementChild;
-	}
 
 	addEventListeners () {
 		const prevPageBtn = this.element.querySelector(`[data-element="nav-prev"]`);
@@ -98,7 +110,6 @@ export default class Pagination {
 			const pageItem = event.target.closest('.pagination-item');
 
 			if(!pageItem) return;
-
 			const pageIndex = pageItem.dataset.pageIndex;
 
 			this.setPage(parseInt(pageIndex, 10));
@@ -112,4 +123,9 @@ export default class Pagination {
 
 		this.element.dispatchEvent(customEvent)
 	}
+
+	update (totalPages) {
+		this.getPages(totalPages)
+	}
+
 }

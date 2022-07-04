@@ -1,6 +1,5 @@
 .wrapper {
-    width: 400px;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
 html {
@@ -8,7 +7,7 @@ html {
 }
 
 .filter-list {
-    width: 280px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -25,6 +24,7 @@ html {
 .filter-checkbox {
     margin-bottom: 5px;
     padding-left: 0px;
+    width: 100%;
 }
 
 .variant {

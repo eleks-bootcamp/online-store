@@ -2,6 +2,8 @@
 
 import CardsList from "./card-list.js";
 import Pagination from "./pagination.js";
+import SearchBox from "./search-box.js";
+import SideBar from "./side-bar.js";
 
 const product = {
   id: "76w0hz7015kkr9kjkav",
@@ -33,20 +35,51 @@ export default class OnlineStorePage {
     this.update(1);
   };
 
-  async LoadData (pageNumber) {
+  async LoadData (pageNumber, enabledCheckbox, enabledBrands) {
+    console.log(pageNumber, enabledCheckbox, enabledBrands)
     this.url.searchParams.set('_page', pageNumber);
+    this.url.searchParams.set('_limit', this.pageSize)
+    if(enabledCheckbox !== undefined) {
+      this.url.searchParams.delete('category', enabledCheckbox);
+      for (let i of enabledCheckbox) {
+        this.url.searchParams.append('category', i)
+      }
+      this.components.pagination.setPage(0)
+    }
+
+    if(enabledBrands !== undefined) {
+      this.url.searchParams.delete('brand', enabledBrands);
+      for (let iterator of enabledBrands) {
+        this.url.searchParams.append('brand', iterator)
+      }
+    }
+
     const response = await fetch(this.url)
     const products = await response.json();
-
+    
     return products
   }
 
   getTemplate () {
     return `
-      <div>
-        <div data-element="cardsList"></div>
-        <div data-element="pagination"></div>
+    <div>
+      <div class="header">
+        <div class="site-name">Online Store</div>
+        <button class="cart">
+        <i class="bi bi-cart"></i>
+        cart</button>
       </div>
+      <div class="container">
+        <div class="col-left-side col-xl-3 col-m-4 col-s-6" data-element="sideBar">
+        </div>
+        <div class="right-side col-xl-9 col-m-8 col-s-6">
+          <div class="col-12 right-head" data-element="saearchBox">
+          </div>
+          <div data-element="cardsList"></div>
+          <div data-element="pagination"></div>
+        </div>
+      </div>
+    </div>
     `;
   }
 
@@ -58,17 +91,25 @@ export default class OnlineStorePage {
       activePageIndex: 0,
       totalPages
     });
+    const saearchBox = new SearchBox("");
+    const sideBar = new SideBar();
 
     this.components.cardsList = cardsList;
     this.components.pagination = pagination;
+    this.components.saearchBox = saearchBox;
+    this.components.sideBar = sideBar;
   }
 
   renderComponents () {
     const cardsListContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
+    const saearchBoxContainer = this.element.querySelector('[data-element="saearchBox"]');
+    const sideBarContainer = this.element.querySelector('[data-element="sideBar"]');
 
     cardsListContainer.append(this.components.cardsList.element);
     paginationContainer.append(this.components.pagination.element);
+    saearchBoxContainer.append(this.components.saearchBox.element);
+    sideBarContainer.append(this.components.sideBar.element);
   }
 
   render () {
@@ -80,15 +121,57 @@ export default class OnlineStorePage {
   }
 
   initEventListeners () {
+    let pageIndex = 0
+    let enabledCheckbox = []
+    let enabledBrands = []
     this.components.pagination.element.addEventListener('page-changed', event => {
-      const pageIndex = event.detail;
-      this.update(pageIndex + 1);
+       pageIndex = event.detail;
+       this.update({pageNumber: pageIndex + 1})
+    })
+ 
+    this.components.sideBar.element.addEventListener('checkbox-change', event => {
+       enabledCheckbox = event.detail;
+       this.update({enabledCheckbox: enabledCheckbox})
     })
 
+    this.components.sideBar.element.addEventListener('checkbox-brand', event => {
+       enabledBrands = event.detail;
+       this.update({enabledBrands: enabledBrands})
+    })
+
+    //this.update(pageIndex, enabledCheckbox, enabledBrands);
   }
 
-  async update (pageNumber) {
-    const data = await this.LoadData(pageNumber)
+
+  async update ({pageNumber = 0, enabledCheckbox, enabledBrands}) {
+    let data = await this.LoadData(pageNumber, enabledCheckbox, enabledBrands)
     this.components.cardsList.update(data)
+    
+    if(enabledCheckbox !== undefined || enabledBrands !== undefined) {
+    const url = new URL('products', BACKEND_URL)
+    if(enabledCheckbox !== undefined) {
+      url.searchParams.delete('category', enabledCheckbox);
+      for (let i of enabledCheckbox) {
+        url.searchParams.append('category', i)
+      }
+      this.components.pagination.setPage(0)
+    }
+
+    if(enabledBrands !== undefined) {
+      url.searchParams.delete('brand', enabledBrands);
+      for (let iterator of enabledBrands) {
+        url.searchParams.append('brand', iterator)
+      }
+      this.components.pagination.setPage(0)
+    }
+
+    const response = await fetch(url)
+    const products = await response.json();
+    console.log (products)
+
+    const length = Math.ceil(Object.keys(products).length / 9)
+    console.log(length)
+    this.components.pagination.update(length)
+   }
   }
 }

@@ -1,8 +1,8 @@
 .side-bar {
     display: flex;
     flex-direction: column;
-    width: 280px;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
     margin-bottom: 20px;
     align-content: space-between;
     height: auto;
@@ -16,16 +16,28 @@
   .side-component {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: rgb(211, 211, 211) solid 1px;
+  }
+
+  .side-component-last {
+    display: flex;
+    flex-direction: column;
     width: 240px;
     margin: 0 auto;
     height: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-top: 20px;
   }
 
   .side-component-name {
     margin-bottom: 20px;
     font-size: 1.25rem;
+    text-align:start;
   }
 
   .clear-button {
@@ -41,4 +53,6 @@
     border-radius: 8px;
     background-color: #7E72F2;
     text-transform: uppercase;
+    box-shadow: 0px 2px 8px rgba(0 0 0 / 14%);
+    cursor: pointer;
   }

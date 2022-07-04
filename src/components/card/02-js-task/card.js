@@ -6,7 +6,7 @@ export default class Card {
 
   getTemplate () {
   const result = `
-    <div class="card col-m col-s">
+    <div class="card col-12 col-xl-4 col-m-6 col-s-12">
       <div class="item", style="background-image: url(${this.state.images[0]})"></div>
 
       <div class="item-content">

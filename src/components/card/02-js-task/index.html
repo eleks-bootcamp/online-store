@@ -3,9 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
+  <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../01-css-task/style.css">
-  <link rel="stylesheet" href="../../pagination/01-css-task/style.css">
   <link rel="stylesheet" href="../../cards-list/01-css-task/style.css">
+  <link rel="stylesheet" href="../../../../grid/style.css">
+  <link rel="stylesheet" href="../../search-box/01-css-task/style.css">
+  <link rel="stylesheet" href="../../side-bar/01-css-task/style.css">
+  <link rel="stylesheet" href="../../double-slider/01-css-task/style.css">
+  <link rel="stylesheet" href="../../filters-list/01-css-task/style.css">
+  <link rel="stylesheet" href="../../pagination/01-css-task/style.css">
 </head>
 
 <body> 
@@ -14,14 +20,10 @@
   <script type="module">
     import OnlineStorePage from './index.js';
 
-    //fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=9')
-    //  .then(response => response.json())
-    //  .then(products => {
         const page = new OnlineStorePage();
         const root = document.querySelector('#root');
 
         root.append(page.element);
-    //})
 
   </script>
 </body>

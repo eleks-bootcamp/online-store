@@ -1,6 +1,6 @@
 .product-list {
     max-width: 990px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,6 +12,11 @@
     height: 400px;
 }
 
+@media (max-width: 576px) {
+    .col-xs {
+        width: calc(100% / 12 * 12);
+    }
+}
 
 @media (min-width: 576px) {
     .col-s {
