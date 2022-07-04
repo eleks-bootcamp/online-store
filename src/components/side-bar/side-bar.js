@@ -2,7 +2,7 @@
 
 import Filter from "../filters-list/filters-list.js";
 import { BACKEND_URL } from "../../index.js";
-import { API } from "../API/api.js";
+import { API } from "../../API/api.js";
 
 export default class SideBar {
   constructor() {
@@ -52,16 +52,26 @@ export default class SideBar {
   }
 
   addEventListener() {
-    const category = this.element.querySelector('[data-element="category"]');
+    const categoriesWrapper = this.element.querySelector('[data-element="category"]');
 
-    category.addEventListener('click', e => {
-      const categoryFilter = e.target.closest('.filter input');
+    categoriesWrapper.addEventListener('click', e => {
+      if (e.target.type === 'checkbox') {
+        const allCheckboxes = categoriesWrapper.querySelectorAll('input');
+        const checkedCheckboxes = [];
+        const checkedCheckboxesDataElement = [];
 
-      if(!categoryFilter) return;
+        allCheckboxes.forEach(oneCheckbox => {
+          if (oneCheckbox.checked) {
+            checkedCheckboxes.push(oneCheckbox);
+          }
+        });
 
-      const categoryID = categoryFilter.id;
+        checkedCheckboxes.forEach(checkedCheckboxElement => {
+          checkedCheckboxesDataElement.push(checkedCheckboxElement.dataset.element);
+        });
 
-      this.dispatchEvent(categoryID);
+        this.dispatchEvent(checkedCheckboxesDataElement);
+      }
     });
   }
 
