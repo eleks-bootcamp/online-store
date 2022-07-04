@@ -4,17 +4,19 @@
 import CardsList from './components/card-list/cards-list.js';
 import Pagination from './components/pagination/pagination.js';
 import SideBar from './components/side-bar/02-js-task/side-bar.js';
-import { API } from './components/API/api.js';
+import { API } from './API/api.js';
 
-const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
+export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
+
 class OnlineStorePage {
+  state = {
+    pageNumber: 1,
+    pageSize: 9,
+    categories: []
+  };
+
   constructor () {
-    this.pageSize = 9;
     this.products = [];
-
-    this.url = new URL('products', BACKEND_URL);
-    this.url.searchParams.set('_limit', this.pageSize);
-
     this.components = {};
 
     this.initComponents();
@@ -23,7 +25,7 @@ class OnlineStorePage {
 
     this.initEventListeners();
 
-    this.update(1);
+    this.updateProducts();
   }
 
   getTeamplate () {
@@ -31,8 +33,7 @@ class OnlineStorePage {
       <div class="container">
         <div class="row">
           <div class="col-12 col-s-6 col-l-3">
-            <div class="side-bar__wrapper">
-              <div class="side-bar" data-element="sideBar"></div>
+            <div class="side-bar" data-element="sideBar">
               <button class="button-clear">CLEAR ALL FILTERS</button>
             </div>
           </div>
@@ -47,17 +48,15 @@ class OnlineStorePage {
 
   initComponents () {
     const totalElements = 100;
-    const totalPages = Math.ceil(totalElements / this.pageSize);
+    const totalPages = Math.ceil(totalElements / this.state.pageSize);
 
     const cardList = new CardsList(this.products);
     const pagination = new Pagination({
       activePageIndex: 0,
       totalPages: totalPages
     });
-   /*  const search = new SearchBox(); */
     const sideBar = new SideBar();
 
-    /* this.components.searchBox = search; */
     this.components.cardList = cardList;
     this.components.pagination = pagination;
     this.components.sideBar = sideBar;
@@ -72,12 +71,10 @@ class OnlineStorePage {
   }
 
   renderComponents () {
-    /* const searchBoxContainer = this.element.querySelector('[data-element="searchBox"]'); */
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
     const sideBarContainer = this.element.querySelector('[data-element="sideBar"]');
 
-    /* searchBoxContainer.append(this.components.searchBox.element); */
     cardsContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
     sideBarContainer.prepend(this.components.sideBar.element);
@@ -86,13 +83,39 @@ class OnlineStorePage {
   initEventListeners () {
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
+      this.state.pageNumber = pageIndex + 1;
 
-      this.update(pageIndex + 1);
+      this.updateProducts();
+    });
+
+    this.components.sideBar.element.addEventListener('checkbox-selection', event => {
+      const categories = event.detail;
+      this.state.categories = categories;
+
+      this.updateProducts();
     });
   }
 
-  async update (pageNumber) {
-    const products = await API.loadProducts(pageNumber, this.url);
+  getUrlWithParams () {
+    const productsUrl = new URL('products', BACKEND_URL);
+    const { pageSize, pageNumber } = this.state;
+
+    productsUrl.searchParams.set('_page', String(pageNumber));
+    productsUrl.searchParams.set('_limit', String(pageSize));
+
+    const { categories } = this.state;
+    if (categories.length) {
+      categories.forEach(category => {
+        productsUrl.searchParams.append('category', category);
+      });
+    }
+
+    return productsUrl;
+  }
+
+  async updateProducts () {
+    const url = this.getUrlWithParams();
+    const products = await API.loadProducts(url);
 
     this.components.cardList.update(products);
   }
