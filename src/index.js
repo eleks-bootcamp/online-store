@@ -12,7 +12,8 @@ class OnlineStorePage {
   state = {
     pageNumber: 1,
     pageSize: 9,
-    categories: []
+    categories: [],
+    brands: []
   };
 
   constructor () {
@@ -83,15 +84,22 @@ class OnlineStorePage {
   initEventListeners () {
     this.components.pagination.element.addEventListener('page-changed', event => {
       const pageIndex = event.detail;
-      this.state.pageNumber = pageIndex + 1;
 
+      this.state.pageNumber = pageIndex + 1;
       this.updateProducts();
     });
 
-    this.components.sideBar.element.addEventListener('checkbox-selection', event => {
+    this.components.sideBar.element.addEventListener('categories-selection', event => {
       const categories = event.detail;
-      this.state.categories = categories;
 
+      this.state.categories = categories;
+      this.updateProducts();
+    });
+
+    this.components.sideBar.element.addEventListener('brands-selection', event => {
+      const brands = event.detail;
+
+      this.state.brands = brands;
       this.updateProducts();
     });
 
@@ -118,6 +126,13 @@ class OnlineStorePage {
       });
     }
 
+    const { brands } = this.state;
+    if (brands.length) {
+      brands.forEach(brand => {
+        productsUrl.searchParams.append('brand', brand);
+      });
+    }
+
     return productsUrl;
   }
 
@@ -130,11 +145,18 @@ class OnlineStorePage {
 
   clearFilters () {
     this.state.categories = [];
-    this.components.sideBar.checkedCheckboxes.forEach(item => {
-      item.checked = false;
+    this.state.brands = [];
+
+    const allInputs = this.components.sideBar.element.querySelectorAll('input');
+    allInputs.forEach(input => {
+      input.checked = false;
     });
 
-    this.components.pagination.clearPagination();
+    if (this.state.pageNumber === 1) {
+      this.updateProducts();
+    } else {
+      this.components.pagination.clearPagination();
+    }
   }
 }
 

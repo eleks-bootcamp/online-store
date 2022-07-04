@@ -7,6 +7,7 @@ import { API } from "../../../API/api.js";
 export default class SideBar {
   constructor () {
     this.categoriesUrl = new URL('categories', BACKEND_URL);
+    this.brandsUrl = new URL ('brands', BACKEND_URL);
 
     this.render();
     this.renderFilters();
@@ -19,14 +20,14 @@ export default class SideBar {
         <div class="side-bar__price">
           <h3 class="side-bar__title">Price</h3>
         </div>
-        <div class="side-bar__category" data-element="category">
+        <div class="side-bar__category" data-element="categories">
           <h3 class="side-bar__title category">Category</h3>
           <div class="filters-list" data-element="categoryFilters"></div>
         </div>
         <hr>
-        <div class="side-bar__brand">
+        <div class="side-bar__brand" data-element="brands">
           <h3 class="side-bar__title">Brand</h3>
-          <div class="filters-list" data-element="brand"></div>
+          <div class="filters-list" data-element="brandFilters"></div>
         </div>
         <hr>
         <div class="side-bar__rating">
@@ -47,40 +48,79 @@ export default class SideBar {
 
   async renderFilters () {
     const categories = await API.loadCategories(this.categoriesUrl);
-    const filterContainer = this.element.querySelector('[data-element="categoryFilters"]');
+    const categoriesContainer = this.element.querySelector('[data-element="categoryFilters"]');
     categories.map(item => {
       const category = new Filter(item);
-      filterContainer.append(category.element);
+      categoriesContainer.append(category.element);
+    });
+
+    const brands = await API.loadBrands(this.brandsUrl);
+    const brandsContainer = this.element.querySelector('[data-element="brandFilters"]');
+    brands.map(item => {
+      const brand = new Filter(item);
+      brandsContainer.append(brand.element);
     });
   }
 
   addEventListener () {
-    const categoriesWrapper = this.element.querySelector('[data-element="category"]');
+    const categoriesWrapper = this.element.querySelector('[data-element="categories"]');
 
     categoriesWrapper.addEventListener('click', event => {
       if (event.target.type === 'checkbox') {
-        const allCheckboxes = categoriesWrapper.querySelectorAll('input');
-        const checkedCheckboxes = [];
-        const checkedCheckboxesDataElement = [];
+        const allCategoryCheckboxes = categoriesWrapper.querySelectorAll('input');
+        const checkedCategoryCheckboxes = [];
+        const checkedCategoryCheckboxesDataElement = [];
 
-        allCheckboxes.forEach(oneCheckbox => {
+        allCategoryCheckboxes.forEach(oneCheckbox => {
           if (oneCheckbox.checked) {
-            checkedCheckboxes.push(oneCheckbox);
+            checkedCategoryCheckboxes.push(oneCheckbox);
           }
         });
 
-        checkedCheckboxes.forEach(checkedCheckboxElement => {
-          checkedCheckboxesDataElement.push(checkedCheckboxElement.dataset.element);
+        checkedCategoryCheckboxes.forEach(checkedCheckboxElement => {
+          checkedCategoryCheckboxesDataElement.push(checkedCheckboxElement.dataset.element);
         });
 
-        this.dispatchEvent(checkedCheckboxesDataElement);
+        this.checkedCategoryCheckboxes = checkedCategoryCheckboxes;
+        this.dispatchCategoriesEvent(checkedCategoryCheckboxesDataElement);
+      }
+    });
+
+    const brandsWrapper = this.element.querySelector('[data-element="brands"]');
+
+    brandsWrapper.addEventListener('click', event => {
+      if (event.target.type === 'checkbox') {
+        const allBrandCheckboxes = brandsWrapper.querySelectorAll('input');
+        const checkedBrandCheckboxes = [];
+        const checkedBrandCheckboxesDataElement = [];
+
+        allBrandCheckboxes.forEach(oneCheckbox => {
+          if (oneCheckbox.checked) {
+            checkedBrandCheckboxes.push(oneCheckbox);
+          }
+        });
+
+        checkedBrandCheckboxes.forEach(checkedCheckboxElement => {
+          checkedBrandCheckboxesDataElement.push(checkedCheckboxElement.dataset.element);
+        });
+
+        this.checkedBrandCheckboxes = checkedBrandCheckboxes;
+        this.dispatchBrandsEvent(checkedBrandCheckboxesDataElement);
       }
     });
   }
 
-  dispatchEvent (categoryId) {
-    const customEvent = new CustomEvent('checkbox-selection', {
-      detail: categoryId
+  dispatchCategoriesEvent(dataElement) {
+    const customEvent = new CustomEvent('categories-selection', {
+      detail: dataElement
+    });
+
+    this.element.dispatchEvent(customEvent);
+  }
+
+  dispatchBrandsEvent(dataElement) {
+    const customEvent = new CustomEvent('brands-selection', {
+      detail: dataElement
     });
 
     this.element.dispatchEvent(customEvent);
