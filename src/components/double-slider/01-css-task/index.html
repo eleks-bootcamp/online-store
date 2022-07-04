@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>DoubleSlider component</title>
-  <link rel="stylesheet" href="style.css">
 
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
+<head>
+    <meta charset="UTF-8" />
+    <title>DoubleSlider component</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap" rel="stylesheet">
+
+
+    <style>
+        .wrapper {
+            width: 400px;
+            margin: 100px auto;
+        }
+    </style>
 </head>
+
 <body>
-<main>
-  <div class="wrapper">
-    <!-- DoubleSlider component -->
-  </div>
-</main>
+    <main>
+        <div id="root" class="wrapper">
+            <div class="range-slider">
+                <span data-element="from">0 UAH</span>
+                <div class="range-slider-inner" data-element="inner">
+                    <span data-element="progress" class="range-slider__progress" style="left: 0%; right: 0%;"></span>
+                    <span data-element="thumbLeft" class="range-slider__thumb-left" style="left: 0%;">
+          <svg width="6" height="18" viewBox="0 0 6 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.959114 4.55246L4.65304 0.992556C4.97059 0.686527 5.5 0.911567 5.5 1.35258V16.9297C5.5 17.3481 5.01686 17.5815 4.68917 17.3214L1.06751 14.4471C0.708988 14.1625 0.5 13.7298 0.5 13.2721V5.63253C0.5 5.2251 0.66574 4.83519 0.959114 4.55246Z" fill="white" stroke="#C2CFE0"></path>
+          </svg>
+        </span>
+                    <span data-element="thumbRight" class="range-slider__thumb-right" style="right: 0%;">
+          <svg width="6" height="18" viewBox="0 0 6 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.959114 4.55246L4.65304 0.992556C4.97059 0.686527 5.5 0.911567 5.5 1.35258V16.9297C5.5 17.3481 5.01686 17.5815 4.68917 17.3214L1.06751 14.4471C0.708988 14.1625 0.5 13.7298 0.5 13.2721V5.63253C0.5 5.2251 0.66574 4.83519 0.959114 4.55246Z" fill="white" stroke="#C2CFE0"></path>
+          </svg>
+        </span>
+                </div>
+                <span data-element="to">85000 UAH</span>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
