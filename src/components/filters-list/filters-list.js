@@ -9,9 +9,9 @@ export default class Filter {
 
   getTemplate() {
     return `
-      <label for="${this.state.toLowerCase().split(' ').join('_')}">
+      <label>
         <div class="filter">
-          <input type="checkbox" id="${this.state.toLowerCase().split(' ').join('_')}">
+          <input type="checkbox" data-element="${this.state.toLowerCase().split(' ').join('_')}">
           <span>${this.state}</span>
         </div>
       </label>
