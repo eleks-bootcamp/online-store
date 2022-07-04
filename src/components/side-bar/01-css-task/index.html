@@ -15,7 +15,92 @@
 <body>
 <main>
   <div class="wrapper">
-    <!-- SideBar component -->
+    <div class="box">
+      <h2>Price</h2>
+
+      <div class="sliders price_slider">
+        <div class="wrapper-range">
+          <div class="filter-range">
+            <div class="filter-range-scale">
+              <div class="filter-range-bar"></div>
+            </div>
+            <span class="filter-range-handle min"></span>
+            <span class="filter-range-handle max" style="left: 99%;"></span>
+          </div>
+        </div>
+        <div class="filter-interval">
+          <span class="from">0 UAH</span>
+          <span class="to">85000 UAH</span>
+        </div>
+      </div>
+
+      <h2>Category</h2>
+
+      <div class="category_checkbox">
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_1">
+          <label class="label" for="checkbox_1">Cell Phones</label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_2">
+          <label class="label" for="checkbox_2">Computers & Tablets</label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_3">
+          <label class="label" for="checkbox_3">Cell Phone Accessories</label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_4">
+          <label class="label" for="checkbox_4">Appliances</label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_5">
+          <label class="label" for="checkbox_5">Audio</label>
+        </div>
+      </div>
+      
+      <hr>
+
+      <h2>Brand</h2>
+
+      <div class="brang_checkbox">
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_6">
+          <label class="label" for="checkbox_6">Insigni</label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_7"> 
+          <label class="label" for="checkbox_7">Sumsung</label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" class="checkbox" id="checkbox_8">
+          <label class="label" for="checkbox_8">Apple</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <h2>Rating</h2>
+
+      <div class="sliders rating_slider">
+        <div class="wrapper-range">
+          <div class="filter-range">
+            <div class="filter-range-scale">
+              <div class="filter-range-bar"></div>
+            </div>
+            <span class="filter-range-handle min"></span>
+            <span class="filter-range-handle max" style="left: 99%;"></span>
+          </div>
+        </div>
+        <div class="filter-interval">
+          <span class="from">0</span>
+          <span class="to">5</span>
+        </div>
+      </div>
+
+    <div class="btn">
+      <button class="btn_clear">CLEAR ALL FILTERS</button>
+    </div>
   </div>
 </main>
 </body>
