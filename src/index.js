@@ -34,7 +34,7 @@ class OnlineStorePage {
         <div class="row">
           <div class="col-12 col-s-6 col-l-3">
             <div class="side-bar" data-element="sideBar">
-              <button class="button-clear">CLEAR ALL FILTERS</button>
+              <button class="button-clear" data-element="clearFilters">CLEAR ALL FILTERS</button>
             </div>
           </div>
           <div class="col-12 col-s-6 col-l-9">
@@ -94,6 +94,14 @@ class OnlineStorePage {
 
       this.updateProducts();
     });
+
+    const rootElement = document.getElementById('root');
+
+    rootElement.addEventListener('click', event => {
+      if (event.target.dataset.element === 'clearFilters') {
+        this.clearFilters();
+      }
+    });
   }
 
   getUrlWithParams () {
@@ -118,6 +126,15 @@ class OnlineStorePage {
     const products = await API.loadProducts(url);
 
     this.components.cardList.update(products);
+  }
+
+  clearFilters () {
+    this.state.categories = [];
+    this.components.sideBar.checkedCheckboxes.forEach(item => {
+      item.checked = false;
+    });
+
+    this.components.pagination.clearPagination();
   }
 }
 
