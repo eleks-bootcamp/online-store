@@ -17,7 +17,7 @@ export default class SearchBox {
     const Search = document.createElement('div');
 
     Search.innerHTML = this.getTemplate();
-    this.Search = Search;
+    this.element = Search;
 
   }
 }

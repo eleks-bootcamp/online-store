@@ -1,0 +1,13 @@
+.Grid-layout {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  }
+
+  .Grid-layout1 { grid-area: 1 / 1 / 2 / 7;  } /*Title*/
+  .Grid-layout2 { grid-area: 2 / 1 / 8 / 2; } /*sidebar*/
+  .Grid-layout3 { grid-area: 2 / 2 / 3 / 7; } /*searchbox*/
+  .Grid-layout4 { grid-area: 3 / 2 / 10 / 7;  } /*card-list*/
+  .Grid-layout5 { grid-area: 10 / 2 / 11 / 7; } /*pagintaio*/
