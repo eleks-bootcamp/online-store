@@ -3,67 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <title>SideBar component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="../01-css-task/style.css">
   <style>
-    .wrapper {
+    /* .wrapper {
       width: 400px;
       margin: 100px auto;
-    }
+    } */
   </style>
 </head>
 <body>
 <main>
-  <div id="root" class="wrapper"></div>
+
 
   <script type="module">
-    import SideBar from './solution/index.js';
 
-    export const categoryFilterConfig = [
-      {
-        value: 'category=cell_phones',
-        title: 'Cell Phones',
-      },
-      {
-        value: 'category=computer_tablets',
-        title: 'Computers & Tablets',
-      },
-      {
-        value: 'category=cell_phones_accessories',
-        title: 'Cell Phone Accessories',
-      },
-      {
-        value: 'category=appliances',
-        title: 'Appliances',
-      },
-      {
-        value: 'category=audio',
-        title: 'Audio',
-      }
-    ];
+const cat = "monitors";
 
-    export const brandFilterConfig = [
-      {
-        value: 'brand=insigni',
-        title: 'Insigni',
-      },
-      {
-        value: 'brand=samsung',
-        title: 'Samsung',
-      },
-      {
-        value: 'brand=apple',
-        title: 'Apple',
-      }
-    ];
+const productCat {
+    "id": "76w0hz7015kkr9kjkav",
+    "images": [
+      "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+      "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+    ],
+    "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+    "rating": 2.89,
+    "price": 15999,
+    "category": "laptops",
+    "brand": "acer"
+  }
 
-    const sideBar = new SideBar(categoryFilterConfig, brandFilterConfig);
 
-    root.append(sideBar.element);
 
-    sideBar.element.addEventListener('filter-selected', event => {
-      console.error('event', event.detail);
-    });
+class Component {
+  constructor (somecat) {  //зловимо змінну cat в середині компонента  new Component (somecat=cat який передав new Component)
+    this.componentCat = somecat;  //this - посилається на порожній обєкт в який ми щось покладемо. типу {}.componentCat=somecat доступний в межах класу
+    console.log ('this.componentCat', this.componentCat)
+    this.render (); // викликаємо рендер шоб промалювало а щоб поставити це в документ треба зробити append
+  }
+
+  render () {  // малює
+    const element = document.createElement('div'); //створює пустий дів в який будем класти створений обєкт
+    element.innerHTML = //наповнюємо той дів вмістом
+    `
+      <div class="os-sidebar-chekbox">
+      <input type="checkbox" class="os-sidebar-custom-chekbox" id="monitors"  onchange="chbmonChange()">
+      <label for="monitors">${this.componentCat}</label>
+      </div>
+    `;
+    this.componentElement = element; //зберігаємо той вміст в середині this
+  }
+
+}
+const obj = new Component (cat); //створюємо новий обєкт(компонент) через клас
+const myRootElement = document.querySelector('#root'); //нзаходить елемент в HTML коді по id
+console.error('myRootElement', myRootElement)
+console.error(obj)
+myRootElement.append(obj.componentElement) // в той елемент на сторінці підставляємо obj якй створився через рендер і конструктор але в obj є всяке різне а нам треба поставити тільки componentElement тому myRootElement.append(obj.componentElement
+
+
+
+
+
+
+
   </script>
+<!-- <script src="./index.js"></script> -->
+
+
+
+
+
+
+
+
+<div id="root" class="wrapper">
+
+  <!-- <div class="os-sidebar-header">Price</div>
+  <div> -->
+    <!-- Double slider here -->SideBar
+  <!-- </div>
+  <div class="os-sidebar-header">Category</div>
+  <div class="os-sidebar-chekbox">
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="monitors"  onchange="chbmonChange()">
+    <label for="monitors">Monitors</label>
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="laptops"  onchange="chblapChange()">
+    <label for="laptops">Laptops</label>
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="videoc"  onchange="chbVcChange()">
+    <label for="videoc">Video cards</label>
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="gk"  onchange="chbGkChange()">
+    <label for="gk">Gaming keyboards</label>
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="cm"  onchange="chbCmChange()">
+    <label for="cm">Computer mouse</label>
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="ssd"  onchange="chbSsdChange()">
+    <label for="ssd">SSD</label>
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="sc"  onchange="chbScChange()">
+    <label for="sc">Sound cards</label>
+
+    <input type="checkbox" class="os-sidebar-custom-chekbox" id="ram"  onchange="chbRamChange()">
+    <label for="ram">RAM</label>
+
+
+  </div> -->
+
+  <!-- SideBar component -->
+
+
+</div>
 </main>
 </body>
 </html>
