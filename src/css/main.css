@@ -4,7 +4,7 @@
 @import '../../media-query-grid/css/grid.css';
 @import '../../media-query-grid/css/media-grid.css';
 @import '../components/header/style.css';
-@import '../components/search-box/01-css-task/css/style.css';
+@import '../components/search-box/css/style.css';
 @import '../components/card/style.css';
 @import '../components/pagination/style.css';
 @import '../components/double-slider/css/style.css';
@@ -13,10 +13,16 @@
 @import '../components/cart/01-css-task/css/style.css';
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 
 .card-list__wrapper .container {
-  margin-top: 39px;
+  margin-top: 2px;
+}
+
+.container {
+  margin-top: 40px;
 }

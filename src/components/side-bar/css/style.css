@@ -1,5 +1,5 @@
 hr {
-  margin-top: 29px;
+  margin-top: 20px;
 }
 
 label {
@@ -7,13 +7,12 @@ label {
 }
 
 .side-bar {
-  width: 280px;
-  margin: 7px auto 0 auto;
+  width: 317px;
 }
 
 .side-bar__wrapper {
-  min-height: 980px;
-  padding: 24px 20px 10px 20px;
+  min-height: 904px;
+  padding: 1px 20px 10px 25px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 7px;
 }
@@ -23,11 +22,15 @@ label {
 }
 
 .side-bar__title {
-  margin: 20px 0 10px 0 ;
+  margin-top: 20px;
+}
+
+.side-bar__category {
+  margin-top: 35px;
 }
 
 .filter {
-  margin-left: -3px;
+  margin: 10px 0 0 0 ;
 }
 
 .double-slider {
