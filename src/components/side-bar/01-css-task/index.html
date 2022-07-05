@@ -6,17 +6,114 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .wrapper {
+    /* .wrapper {
       width: 400px;
       margin: 100px auto;
-    }
+    } */
+    .slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
   </style>
 </head>
 <body>
-<main>
-  <div class="wrapper">
-    <!-- SideBar component -->
+
+
+
+
+
+
+  <!-- <div>
+    <input type="text" placeholder="ФИО" name="username" value="">
+  </div> -->
+
+  <!-- <div>
+    <input type="password" name="userpas" value="">
+  </div> -->
+
+  <!-- radio создает выбор в кругляшке с точкой (обязательно или один или другой) -->
+  <!-- <div>
+    <p><input type="radio" name="мороженое" value="стаканчик">В стаканчике</p>
+    <p><input type="radio" name="мороженое" value="палочка">На палочке</p>
   </div>
-</main>
+
+  <br> -->
+
+  <!-- checkbox создает выбор в прямоугольнике с галочкой (обязательно или один или другой) -->
+  <!-- <div>
+    <p><input type="checkbox" name="мороженое" value="стаканчик">В стаканчике</p>
+    <p><input type="checkbox" name="мороженое" value="палочка">На палочке</p>
+  </div> -->
+
+  <!-- <br> -->
+  <!-- file создает оформленную кнопку для выбора файла-->
+  <!-- <div>
+    <input type="file" name="фото">
+  </div> -->
+
+
+
+
+
+
+
+
+
+<!-- <main> -->
+  <!-- <div class="wrapper"> -->
+    <!-- SideBar component -->
+  <!-- </div> -->
+<!-- </main> -->
+
+
+
+
+<h1>Custom Range Slider</h1>
+
+<div class="slidecontainer">
+
+  <p>Default range slider:</p>
+  <input type="range" min="1" max="100" value="50">
+
+
+
+  <p>Custom range slider:</p>
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+</div>
+
+
+
 </body>
 </html>

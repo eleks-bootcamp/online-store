@@ -1,11 +1,13 @@
 .wrapper {
   outline: 1px solid black;
   width: 280px;
-  height: 700px;
-  margin: 0 auto;}
+  height: 905px;
+  margin: 0 auto;
+  border-radius: 11px;
+  box-shadow:0 0 10px #555;}
 
   .category{
-    /* outline: 1px solid black; */
+    outline: 1px solid black;
     width: 100%;
     height: 290px;}
 
@@ -49,21 +51,22 @@
 
 
 
-
-
-
   .brand{
-    /* outline: 1px solid black; */
+    outline: 1px solid black;
     width: 100%;
-    height: 410px;}
+    height: 419px;}
 
 
 
 
 
-
-
-
+.blok-cat-line{
+      /* outline: 1px solid black; */
+      width: 75%;
+      height: 3px;
+      margin-top: 9px;
+      margin-left: 20px;
+      }
 
 .none-style{
   text-decoration: none;
