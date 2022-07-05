@@ -1,6 +1,7 @@
 "use strict";
 
 import Filter from "../filters-list/filters-list.js";
+import DoubleSlider from "../double-slider/double-slider.js";
 import { BACKEND_URL } from "../../index.js";
 import { API } from "../../API/api.js";
 
@@ -11,6 +12,7 @@ export default class SideBar {
 
     this.render();
     this.renderFilters();
+    this.renderDoubleSliders();
     this.addEventListener();
   }
 
@@ -19,6 +21,7 @@ export default class SideBar {
       <div class="side-bar__wrapper">
         <div class="side-bar__price">
           <div class="title">Price</div>
+          <div id="slider-wrapper-1" class="slider" data-element="slider-1"></div>
         </div>
         <div class="side-bar__category" data-element="categories">
           <div class="title">Category</div>
@@ -30,6 +33,7 @@ export default class SideBar {
         </div>
         <div class="side-bar__rating">
           <div class="title">Rating</div>
+          <div id="slider-wrapper-2" class="slider" data-element="slider-2"></div>
         </div>
       </div>
     `;
@@ -61,9 +65,20 @@ export default class SideBar {
     });
   }
 
-  // filterCheckboxes() {
+  renderDoubleSliders() {
+    const doubleSlider = new DoubleSlider();
 
-  // }
+    const priceSliderContainer = this.element.querySelector('[data-element="slider-1"]');
+    priceSliderContainer.append(doubleSlider.priceElement);
+
+    const ratingSliderContainer = this.element.querySelector('[data-element="slider-2"]');
+    ratingSliderContainer.append(doubleSlider.ratingElement);
+
+    window.onload = function() {
+      doubleSlider.renderSlider('slider-wrapper-1');
+      doubleSlider.renderSlider('slider-wrapper-2');
+    };
+  }
 
   addEventListener() {
     const categoriesWrapper = this.element.querySelector('[data-element="categories"]');
