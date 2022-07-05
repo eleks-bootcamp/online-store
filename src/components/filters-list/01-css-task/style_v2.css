@@ -1,0 +1,79 @@
+.wrapper {
+  outline: 1px solid black;
+  width: 280px;
+  height: 905px;
+  margin: 0 auto;
+  border-radius: 11px;
+  box-shadow:0 0 10px #555;}
+
+  .category{
+    outline: 1px solid black;
+    width: 100%;
+    height: 290px;}
+
+    .blok-category-brand{
+      outline: 1px solid black;
+      width: 75%;
+      height: 34px;
+      padding-top: 7px;
+      margin-left: 20px;
+      font-size: 23px;}
+
+      .bloks-cat-br{
+        outline: 1px solid black;
+        width: 75%;
+        height: 26px;
+        margin-top: 4px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;}
+
+  .brand{
+    outline: 1px solid black;
+    width: 100%;
+    height: 419px;}
+
+  .blok-line{
+    outline: 1px solid black;
+    width: 75%;
+    height: 3px;
+    margin-top: 9px;
+    margin-left: 20px;}
+
+.strip{
+  border-top:2px solid #d6d6d6;}
+
+.none-style{
+  text-decoration: none;
+  list-style: none;}
+
+.text-color{
+  color: #808080;}
+
+.blok-slider{
+  outline: 1px solid black;
+  width: 100%;
+  height: 97px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
