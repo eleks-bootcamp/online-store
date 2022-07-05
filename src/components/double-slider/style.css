@@ -48,7 +48,7 @@ input[type="range"]::-ms-track {
   -webkit-appearance: none;
   height: 18px;
   width: 6px;
-  background: url("../../../icons/thumb.svg") no-repeat;
+  background: url("../../icons/thumb.svg") no-repeat;
   cursor: grab;
   pointer-events: auto;
   margin-top: -7px;
@@ -58,7 +58,7 @@ input[type="range"]::-ms-track {
   -moz-appearance: none;
   height: 18px;
   width: 6px;
-  background: ("../../../icons/thumb.svg") no-repeat;
+  background: ("../../icons/thumb.svg") no-repeat;
   cursor: grab;
   border: none;
   pointer-events: auto;
