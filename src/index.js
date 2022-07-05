@@ -1,8 +1,9 @@
 "use strict";
 
+import SideBar from "./components/side-bar/side-bar.js";
+import SearchBox from "./components/search-box/search-box.js";
 import CardsList from "./components/cards-list/cards-list.js";
 import Pagination from "./components/pagination/pagination.js";
-import SideBar from "./components/side-bar/side-bar.js";
 import { API } from "./API/api.js";
 
 export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
@@ -12,7 +13,10 @@ class OnLineStorePage {
     pageNumber: 1,
     pageSize: 9,
     categories: [],
-    brands: []
+    brands: [],
+    lowerPrice: 0,
+    higherPrice: 85000,
+    search: ''
   };
 
   constructor() {
@@ -37,6 +41,7 @@ class OnLineStorePage {
             </div>
           </div>
           <div class="col-12 col-s-6 col-l-9">
+            <div class="search-box" data-element="searchBox"></div>
             <div class="cards-list" data-element="cardsList"></div>
             <div data-element="pagination"></div>
           </div>
@@ -51,6 +56,7 @@ class OnLineStorePage {
     const totalPages = Math.ceil(totalElements/ this.state.pageSize);
 
     const sideBar = new SideBar();
+    const searchBox = new SearchBox();
     const cardsList = new CardsList(this.products);
     const pagination = new Pagination({
       activePageIndex: 0,
@@ -58,6 +64,7 @@ class OnLineStorePage {
     });
 
     this.components.sideBar = sideBar;
+    this.components.searchBox = searchBox;
     this.components.cardsList = cardsList;
     this.components.pagination = pagination;
   }
@@ -72,10 +79,12 @@ class OnLineStorePage {
 
   renderComponents() {
     const sideBarContainer = this.element.querySelector('[data-element="sideBar"]');
+    const searchBoxContainer = this.element.querySelector('[data-element="searchBox"]');
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
     sideBarContainer.prepend(this.components.sideBar.element);
+    searchBoxContainer.append(this.components.searchBox.element);
     cardsContainer.append(this.components.cardsList.element);
     paginationContainer.append(this.components.pagination.element);
   }
@@ -99,6 +108,13 @@ class OnLineStorePage {
       const brands = e.detail;
 
       this.state.brands = brands;
+      this.updateProducts();
+    });
+
+    this.components.searchBox.element.addEventListener('input-text', e => {
+      const text = e.detail;
+
+      this.state.search = text;
       this.updateProducts();
     });
 
@@ -129,6 +145,17 @@ class OnLineStorePage {
       brands.forEach (brand => {
         productsUrl.searchParams.append('brand', brand);
       });
+    }
+
+    // const { lowerPrice } = this.state;
+    // productsUrl.searchParams.append('price_gte', String(lowerPrice));
+
+    // const { higherPrice } = this.state;
+    // productsUrl.searchParams.append('price_lte', String(higherPrice));
+
+    const { search } = this.state;
+    if(search.length) {
+      productsUrl.searchParams.append('q', search);
     }
 
     return productsUrl;
