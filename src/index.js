@@ -34,6 +34,16 @@ class OnLineStorePage {
   getTemplate() {
     return `
       <div class="container">
+        <header>
+          <div class="header-wrapper">
+            <div class="logo">Online Store</div>
+            <button class="button button_header">
+              <i class="icon-cart"></i>
+              Cart
+              <span data-element="counter">5</span>
+            </button>
+          </div>
+        </header>
         <div class="row">
           <div class="col-12 col-s-6 col-l-3">
             <div class="side-bar" data-element="sideBar">
@@ -154,6 +164,7 @@ class OnLineStorePage {
     // productsUrl.searchParams.append('price_lte', String(higherPrice));
 
     const { search } = this.state;
+
     if(search.length) {
       productsUrl.searchParams.append('q', search);
     }
@@ -171,6 +182,8 @@ class OnLineStorePage {
   clearFilters() {
     this.state.categories = [];
     this.state.brands = [];
+    this.state.search = '';
+    this.components.searchBox.element.querySelector('[data-element="searchBoxWrapper"]').value = '';
 
     const allInputs = this.components.sideBar.element.querySelectorAll('input');
     allInputs.forEach(input => {

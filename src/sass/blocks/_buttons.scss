@@ -26,10 +26,13 @@
     align-items: center;
     margin: 0;
     width: auto;
-    padding: 10px 34px;
+    padding: 10px 28px;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
+    span {
+      margin-left: 3px;
+    }
   }
   &_filters {
     margin-top: 20px;
