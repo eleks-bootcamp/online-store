@@ -1,6 +1,6 @@
 'use strict';
 
-import CartsCard from "../../carts-card/carts-cart.js";
+import CartsCard from "../carts-card/carts-cart.js";
 
 export default class Cart {
   constructor (data = []) {

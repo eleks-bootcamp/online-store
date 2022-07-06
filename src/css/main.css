@@ -10,7 +10,7 @@
 @import '../components/double-slider/style.css';
 @import '../components/filters-list/style.css';
 @import '../components/side-bar/style.css';
-@import '../components/cart/01-css-task/css/style.css';
+@import '../components/cart/style.css';
 
 * {
   margin: 0;

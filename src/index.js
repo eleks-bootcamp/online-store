@@ -5,7 +5,7 @@ import CardsList from './components/card-list/cards-list.js';
 import DoubleSlider from './components/double-slider/double-slider.js';
 import Pagination from './components/pagination/pagination.js';
 import SideBar from './components/side-bar/side-bar.js';
-import Cart from './components/cart/02-js-task/cart.js';
+import Cart from './components/cart/cart.js';
 import { API } from './API/api.js';
 
 export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
