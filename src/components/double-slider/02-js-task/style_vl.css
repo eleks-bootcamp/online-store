@@ -50,3 +50,14 @@
     cursor: grab;
 }
 
+
+.range-slider>span:last-child {
+  right: 0;
+}
+
+.range-slider>span {
+  font-size: .8rem;
+  position: absolute;
+  top: 100%;
+}
+
