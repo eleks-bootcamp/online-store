@@ -508,6 +508,10 @@ body {
   background-color: rgba(0, 0, 0, 0.18);
 }
 
+.hidden {
+  display: none;
+}
+
 .cart {
   position: absolute;
   top: 50%;
@@ -763,7 +767,7 @@ input[type="checkbox"]:checked:after {
 }
 
 .side-bar {
-  width: 317px;
+  width: 280px;
 }
 
 .side-bar__wrapper {

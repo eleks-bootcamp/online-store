@@ -5,6 +5,7 @@ import DoubleSlider from "./components/double-slider/double-slider.js";
 import SearchBox from "./components/search-box/search-box.js";
 import CardsList from "./components/cards-list/cards-list.js";
 import Pagination from "./components/pagination/pagination.js";
+import Cart from "./components/cart/cart.js";
 import { API } from "./API/api.js";
 
 export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
@@ -19,7 +20,8 @@ class OnLineStorePage {
     higherPrice: 85000,
     lowerRating: 0,
     higherRating: 5,
-    search: ''
+    search: '',
+    productsInCart: []
   };
 
   constructor() {
@@ -40,10 +42,10 @@ class OnLineStorePage {
         <header>
           <div class="header-wrapper">
             <div class="logo">Online Store</div>
-            <button class="button button_header">
+            <button class="button button_header" data-element="cartBtn">
               <i class="icon-cart"></i>
               Cart
-              <span data-element="counter">5</span>
+              <span data-element="counter"></span>
             </button>
           </div>
         </header>
@@ -76,12 +78,14 @@ class OnLineStorePage {
       activePageIndex: 0,
       totalPages
     });
-
+    const cart = new Cart(this.state.productsInCart);
+    
     this.components.sideBar = sideBar;
     this.components.doubleSlider = doubleSlider;
     this.components.searchBox = searchBox;
     this.components.cardsList = cardsList;
     this.components.pagination = pagination;
+    this.components.cart = cart;
   }
 
   render() {
@@ -89,7 +93,7 @@ class OnLineStorePage {
 
     element.innerHTML = this.getTemplate();
 
-    this.element = element.firstElementChild;
+    this.element = element;
   }
 
   renderComponents() {
@@ -102,6 +106,7 @@ class OnLineStorePage {
     searchBoxContainer.append(this.components.searchBox.element);
     cardsContainer.append(this.components.cardsList.element);
     paginationContainer.append(this.components.pagination.element);
+    this.element.append(this.components.cart.element);
   }
 
   initEventListeners() {
@@ -161,11 +166,25 @@ class OnLineStorePage {
       this.updateProducts();
     });
 
+    document.addEventListener('add-product', e => {
+      this.state.productsInCart.push(e.detail);
+
+      const counter = this.element.querySelector('[data-element="counter"]');
+      counter.textContent = this.state.productsInCart.length;
+    });
+
     const rootElement = document.getElementById('root');
     rootElement.addEventListener('click', e => {
       if (e.target.dataset.element === 'clearFilters') {
         this.clearFilters();
       }
+    });
+
+    const cart = this.components.cart.element.querySelector('[data-element="cart"]');
+    const cartBnt = this.element.querySelector('[data-element="cartBtn"]');
+    cartBnt.addEventListener('click', () => {
+      cart.classList.remove('hidden');
+
     });
   }
 
@@ -233,7 +252,7 @@ class OnLineStorePage {
       input.checked = false;
     });
 
-    // this.components.sideBar.clearDoubleSliders();
+    // this.components.doubleSlider.clearSlider();
 
     if (this.state.pageNumber === 1 ) {
       this.updateProducts();

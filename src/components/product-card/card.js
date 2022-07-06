@@ -2,7 +2,9 @@
 export default class Card {
   constructor(product) {
     this.state = product;
+
     this.render();
+    this.addEventListener();
   }
 
   getTemplate() {
@@ -23,23 +25,28 @@ export default class Card {
             <div class="product-card__title">${this.state.title}</div>
             <div class="product-card__category">${this.state.category}</div>
           </div>
-          <button class="button">Add To Cart</button>
+          <button class="button" data-element="cardBtn">Add To Cart</button>
         </div>
       </div>
     `;
   }
 
-  // Is it necessary?
-  update(data = {}) {
-    this.state = data;
-    this.element.innerHTML = this.getTemplate();
-  }
-
-  render() {
+ render() {
     const element = document.createElement('div');
 
     element.innerHTML = this.getTemplate();
 
     this.element = element.firstElementChild;
+  }
+
+  addEventListener() {
+    const cardBtn = this.element.querySelector('[data-element="cardBtn"]');
+    const customEvent = new CustomEvent('add-product', {
+      detail: this.state
+    });
+
+    cardBtn.addEventListener('click', () => {
+      document.dispatchEvent(customEvent);
+    });
   }
 }

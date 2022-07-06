@@ -1,6 +1,14 @@
 'use strict';
 
 export default class DoubleSlider {
+
+    state = {
+      lowerPrice: 0,
+      higherPrice: 85000,
+      lowerRating: 0,
+      higherRating: 5,
+    };
+
   constructor() {
 
     this.renderPriceSlider();
@@ -10,8 +18,8 @@ export default class DoubleSlider {
   getTemplatePriceSlider() {
     return `
       <div class="slider__track"></div>
-      <input type="range" min="0" max="85000" value="0" class="slider__thumb slider-1" data-element="priceInput-1">
-      <input type="range" min="0" max="85000" value="85000" class="slider__thumb slider__thumb_right slider-2" data-element="priceInput-2">
+      <input type="range" min="0" max="85000" value="${this.state.lowerPrice}" class="slider__thumb slider-1" data-element="priceInput-1">
+      <input type="range" min="0" max="85000" value="${this.state.higherPrice}" class="slider__thumb slider__thumb_right slider-2" data-element="priceInput-2">
       <div class="slider__values">
         <div class="slider__price-start">
           <span class="range-1"></span>
@@ -28,8 +36,8 @@ export default class DoubleSlider {
   getTemplateRatingSlider() {
     return `
       <div class="slider__track"></div>
-      <input type="range" min="0" max="5" value="0" step="0.01" class="slider__thumb slider-1" data-element="ratingInput-1">
-      <input type="range" min="0" max="5" value="5" step="0.01" class="slider__thumb slider__thumb_right slider-2" data-element="ratingInput-2">
+      <input type="range" min="0" max="5" value="${this.state.lowerRating}" step="0.01" class="slider__thumb slider-1" data-element="ratingInput-1">
+      <input type="range" min="0" max="5" value="${this.state.higherRating}" step="0.01" class="slider__thumb slider__thumb_right slider-2" data-element="ratingInput-2">
       <div class="slider__values">
         <div class="slider__price-start">
           <span class="range-1"></span>
@@ -56,6 +64,10 @@ export default class DoubleSlider {
 
     this.ratingElement = ratingElement;
   }
+
+  // clearSlider() {
+
+  // }
 
   renderSlider(wrapperId) {
     const parentElement = document.getElementById(wrapperId);

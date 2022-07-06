@@ -33,7 +33,7 @@ export default class CardsList {
 
       return card.element;
     });
-    
+
     const body = this.element.querySelector('[data-element="body"]');
 
     body.innerHTML = '';
