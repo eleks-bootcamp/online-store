@@ -9,7 +9,7 @@ export default class SearchBox {
 
   getTemplate() {
     return `
-      <input type="text" id="text-to-search" placeholder="Search" data-element="searchBoxWrapper">
+      <input type="text" id="text-to-search" placeholder="Search" data-element="searchInput">
     `;
   }
 
@@ -22,7 +22,7 @@ export default class SearchBox {
   }
 
   addEventListener() {
-    const searchBoxWrapper = this.element.querySelector('[data-element="searchBoxWrapper"]');
+    const searchBoxWrapper = this.element.querySelector('[data-element="searchInput"]');
 
     searchBoxWrapper.addEventListener('input', e => {
       this.dispatchEvent(e.target.value);
