@@ -17,6 +17,8 @@ class OnlineStorePage {
     brands: [],
     lowerPrice: 0,
     higherPrice: 85000,
+    lowerRating: 0,
+    higherRating: 5,
     search: ''
   };
 
@@ -139,8 +141,32 @@ class OnlineStorePage {
       this.updateProducts();
     });
 
-    this.components.doubleSlider.priceElement.addEventListener('slider-selection', event => {
-      const priceValue = event.detail;
+    document.addEventListener('lowerPrice-selection', event => {
+      const lowerPrice = event.detail;
+
+      this.state.lowerPrice = lowerPrice;
+      this.updateProducts();
+    });
+
+    document.addEventListener('higherPrice-selection', event => {
+      const higherPrice = event.detail;
+
+      this.state.higherPrice = higherPrice;
+      this.updateProducts();
+    });
+
+    document.addEventListener('lowerRating-selection', event => {
+      const lowerRating = event.detail;
+
+      this.state.lowerRating = lowerRating;
+      this.updateProducts();
+    });
+
+    document.addEventListener('higherRating-selection', event => {
+      const higherRating = event.detail;
+
+      this.state.higherRating = higherRating;
+      this.updateProducts();
     });
   }
 
@@ -168,8 +194,14 @@ class OnlineStorePage {
     const { lowerPrice } = this.state;
     productsUrl.searchParams.append('price_gte', String(lowerPrice));
 
-    /* const { higherPrice } = this.state;
-    productsUrl.searchParams.append('price_lte', String(higherPrice)); */
+    const { higherPrice } = this.state;
+    productsUrl.searchParams.append('price_lte', String(higherPrice));
+
+    const { lowerRating } = this.state;
+    productsUrl.searchParams.append('rating_gte', String(lowerRating));
+
+    const { higherRating } = this.state;
+    productsUrl.searchParams.append('rating_lte', String(higherRating));
 
     const { search } = this.state;
     if (search.length) {
@@ -189,6 +221,10 @@ class OnlineStorePage {
   clearFilters () {
     this.state.categories = [];
     this.state.brands = [];
+    this.state.lowerPrice = 0;
+    this.state.higherPrice = 85000;
+    this.state.lowerRating = 0;
+    this.state.higherRating = 5;
     this.state.search = '';
     this.components.searchBox.element.querySelector('.search-box__search').value = '';
 
@@ -202,7 +238,6 @@ class OnlineStorePage {
     } else {
       this.components.pagination.clearPagination();
     }
-
   }
 }
 
