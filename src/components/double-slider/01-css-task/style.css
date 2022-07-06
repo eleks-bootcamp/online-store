@@ -1,1 +1,61 @@
-/* put your styles in this file */
+:root {
+  --bg-main: #ffffff;
+  --main-color: #7e72f2;
+  --active-color: #5c4eda;
+  --element-bg-color: #ededed;
+  --text-main-color: #2c2c2c;
+  --text-active-color: #ffffff;
+}
+.range-slider__inner {
+  position:relative;
+  display:inline-block;
+  width:100%;
+  height:4px;
+  margin:10px 14px;
+  background:var(--bg-main);
+  box-shadow:0 0 1px var(--main-color);
+  user-select:none
+}
+.range-slider__thumb-left,.range-slider__thumb-right {
+  position:absolute;
+  top:50%;
+  margin-top:-9px;
+  height:18px;
+  width:6px;cursor:grab
+}
+.range-slider_dragging,.range-slider_dragging.range-slider__thumb-left,.range-slider_dragging.range-slider__thumb-right {
+  cursor:grabbing
+}
+.range-slider__thumb-left {
+  left:0;margin-left:-6px
+}
+.range-slider__thumb-right {
+  right:0;transform:rotate(180deg);
+  margin-right:-6px
+}
+.range-slider__progress {
+  background:var(--main-color);
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:1
+}
+.range-slider {
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  align-items:center
+}
+.range-slider>span {
+  font-size:.8rem;
+  position:absolute;
+  top:100%
+}
+.range-slider>span:first-child {
+  left:0
+}
+.range-slider>span:last-child {
+  right:0
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>[Component] component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="../01-css-task/style.css">
 
   <style>
     .wrapper {
@@ -13,16 +13,16 @@
   </style>
 </head>
 <body>
-<main>
-  <div id="root" class="wrapper"></div>
+  <main>
+    <div id="root" class="wrapper"></div>
 
-  <script type="module">
-    import DoubleSlider from './solution/index.js';
+    <script type="module">
+      import DoubleSlider from './index.js';
 
-    const slider = new DoubleSlider();
+      const slider = new DoubleSlider();
 
-    root.append(slider.element);
-  </script>
-</main>
+      root.append(slider.element);
+    </script>
+  </main>
 </body>
 </html>

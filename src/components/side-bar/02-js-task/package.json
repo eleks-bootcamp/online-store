@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "02-js-task",
+  "version": "1.0.0",
+  "description": "Необхідно реалізувати SideBar компонент, який буде відповідати за відображення списку фільтрів.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

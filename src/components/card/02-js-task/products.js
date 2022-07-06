@@ -96,5 +96,6 @@ export const products = [
     "price": 70999,
     "category": "laptops",
     "brand": "apple"
-  }
+  },
+
 ]
