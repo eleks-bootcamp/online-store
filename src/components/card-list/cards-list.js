@@ -11,9 +11,7 @@ export default class CardsList {
   getTeamplate () {
     return `
       <div class="container">
-        <div class="row" data-element="body">
-
-        </div>
+        <div class="row" data-element="body"></div>
       </div>
     `;
   }

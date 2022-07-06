@@ -24,3 +24,7 @@
   background: #7467eb;
   transition: .4s;
 }
+
+.counter {
+  margin-left: 5px;
+}
