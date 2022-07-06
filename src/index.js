@@ -1,6 +1,7 @@
 "use strict";
 
 import SideBar from "./components/side-bar/side-bar.js";
+import DoubleSlider from "./components/double-slider/double-slider.js";
 import SearchBox from "./components/search-box/search-box.js";
 import CardsList from "./components/cards-list/cards-list.js";
 import Pagination from "./components/pagination/pagination.js";
@@ -16,6 +17,8 @@ class OnLineStorePage {
     brands: [],
     lowerPrice: 0,
     higherPrice: 85000,
+    lowerRating: 0,
+    higherRating: 5,
     search: ''
   };
 
@@ -66,6 +69,7 @@ class OnLineStorePage {
     const totalPages = Math.ceil(totalElements/ this.state.pageSize);
 
     const sideBar = new SideBar();
+    const doubleSlider = new DoubleSlider();
     const searchBox = new SearchBox();
     const cardsList = new CardsList(this.products);
     const pagination = new Pagination({
@@ -74,6 +78,7 @@ class OnLineStorePage {
     });
 
     this.components.sideBar = sideBar;
+    this.components.doubleSlider = doubleSlider;
     this.components.searchBox = searchBox;
     this.components.cardsList = cardsList;
     this.components.pagination = pagination;
@@ -121,6 +126,34 @@ class OnLineStorePage {
       this.updateProducts();
     });
 
+    document.addEventListener('lowerPrice-selection', e => {
+      const lowerPrice = e.detail;
+
+      this.state.lowerPrice = lowerPrice;
+      this.updateProducts();
+    });
+
+    document.addEventListener('higherPrice-selection', e => {
+      const higherPrice = e.detail;
+
+      this.state.higherPrice = higherPrice;
+      this.updateProducts();
+    });
+
+    document.addEventListener('lowerRating-selection', e => {
+      const lowerRating = e.detail;
+
+      this.state.lowerRating = lowerRating;
+      this.updateProducts();
+    });
+
+    document.addEventListener('higherRating-selection', e => {
+      const higherRating = e.detail;
+
+      this.state.higherRating = higherRating;
+      this.updateProducts();
+    });
+
     this.components.searchBox.element.addEventListener('input-text', e => {
       const text = e.detail;
 
@@ -157,11 +190,17 @@ class OnLineStorePage {
       });
     }
 
-    // const { lowerPrice } = this.state;
-    // productsUrl.searchParams.append('price_gte', String(lowerPrice));
+    const { lowerPrice } = this.state;
+    productsUrl.searchParams.append('price_gte', String(lowerPrice));
 
-    // const { higherPrice } = this.state;
-    // productsUrl.searchParams.append('price_lte', String(higherPrice));
+    const { higherPrice } = this.state;
+    productsUrl.searchParams.append('price_lte', String(higherPrice));
+
+    const { lowerRating } = this.state;
+    productsUrl.searchParams.append('rating_gte', String(lowerRating));
+
+    const { higherRating } = this.state;
+    productsUrl.searchParams.append('rating_lte', String(higherRating));
 
     const { search } = this.state;
 
@@ -182,16 +221,21 @@ class OnLineStorePage {
   clearFilters() {
     this.state.categories = [];
     this.state.brands = [];
+    this.state.lowerPrice = 0;
+    this.state.higherPrice = 85000;
+    this.state.lowerRating = 0;
+    this.state.higherRating = 5;
     this.state.search = '';
-    this.components.searchBox.element.querySelector('[data-element="searchBoxWrapper"]').value = '';
+    this.components.searchBox.element.querySelector('[data-element="searchInput"]').value = '';
 
     const allInputs = this.components.sideBar.element.querySelectorAll('input');
     allInputs.forEach(input => {
       input.checked = false;
     });
 
+    // this.components.sideBar.clearDoubleSliders();
 
-    if (this.state.pageNumber === 1) {
+    if (this.state.pageNumber === 1 ) {
       this.updateProducts();
     } else {
       this.components.pagination.clearPagination();
