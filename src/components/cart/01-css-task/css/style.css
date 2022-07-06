@@ -7,6 +7,11 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
+.hidden {
+  display: none;
+}
+
+
 .cart {
   width: 95%;
   min-height: 90%;
@@ -80,6 +85,7 @@
 
 .cart__total {
   text-align: center;
+  margin-top: 30px;
   font-size: 14px;
   line-height: 17px;
 }

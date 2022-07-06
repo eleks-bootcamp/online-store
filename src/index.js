@@ -5,6 +5,7 @@ import CardsList from './components/card-list/cards-list.js';
 import DoubleSlider from './components/double-slider/double-slider.js';
 import Pagination from './components/pagination/pagination.js';
 import SideBar from './components/side-bar/side-bar.js';
+import Cart from './components/cart/02-js-task/cart.js';
 import { API } from './API/api.js';
 
 export const BACKEND_URL = 'https://online-store.bootcamp.place/api/';
@@ -19,7 +20,8 @@ class OnlineStorePage {
     higherPrice: 85000,
     lowerRating: 0,
     higherRating: 5,
-    search: ''
+    search: '',
+    productsInCart: []
   };
 
   constructor () {
@@ -41,10 +43,10 @@ class OnlineStorePage {
         <header>
           <div class="header-wrapper">
             <div class="logo">Online Store</div>
-            <button class="button-cart">
+            <button class="button-cart" data-element="cartBtn">
               <i class="icon-cart"></i>
               CART
-              <span data-element="counter">5</span>
+              <span class="counter" data-element="counter"></span>
             </button>
           </div>
         </header>
@@ -75,13 +77,15 @@ class OnlineStorePage {
     });
     const sideBar = new SideBar();
     const doubleSlider = new DoubleSlider();
-    const searchBox = new SearchBox()
+    const searchBox = new SearchBox();
+    const cart = new Cart(this.state.productsInCart);
 
     this.components.cardList = cardList;
     this.components.pagination = pagination;
     this.components.sideBar = sideBar;
     this.components.doubleSlider = doubleSlider;
     this.components.searchBox = searchBox;
+    this.components.cart = cart;
   }
 
   render () {
@@ -89,7 +93,7 @@ class OnlineStorePage {
 
     element.innerHTML = this.getTeamplate();
 
-    this.element = element.firstElementChild;
+    this.element = element;
   }
 
   renderComponents () {
@@ -98,10 +102,12 @@ class OnlineStorePage {
     const sideBarContainer = this.element.querySelector('[data-element="sideBar"]');
     const searchBoxContainer = this.element.querySelector('[data-element="searchBox"]');
 
+
     cardsContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
     sideBarContainer.prepend(this.components.sideBar.element);
     searchBoxContainer.append(this.components.searchBox.element);
+    this.element.append(this.components.cart.element);
   }
 
   initEventListeners () {
@@ -124,14 +130,6 @@ class OnlineStorePage {
 
       this.state.brands = brands;
       this.updateProducts();
-    });
-
-    const rootElement = document.getElementById('root');
-
-    rootElement.addEventListener('click', event => {
-      if (event.target.dataset.element === 'clearFilters') {
-        this.clearFilters();
-      }
     });
 
     this.components.searchBox.element.addEventListener('input-text', event => {
@@ -167,6 +165,28 @@ class OnlineStorePage {
 
       this.state.higherRating = higherRating;
       this.updateProducts();
+    });
+
+    document.addEventListener('add-product', event => {
+      this.state.productsInCart.push(event.detail);
+
+      const counter = this.element.querySelector('[data-element="counter"]');
+      counter.textContent = this.state.productsInCart.length;
+    });
+
+    const rootElement = document.getElementById('root');
+
+    rootElement.addEventListener('click', event => {
+      if (event.target.dataset.element === 'clearFilters') {
+        this.clearFilters();
+      }
+    });
+
+    const cartBtn = this.element.querySelector('[data-element="cartBtn"]');
+    const cart = this.components.cart.element.querySelector('[data-element="cart"]');
+
+    cartBtn.addEventListener('click', () => {
+      cart.classList.remove('hidden');
     });
   }
 
@@ -232,6 +252,8 @@ class OnlineStorePage {
     allInputs.forEach(input => {
       input.checked = false;
     });
+
+    /* this.components.doubleSlider.clearSlider(); */
 
     if (this.state.pageNumber === 1) {
       this.updateProducts();

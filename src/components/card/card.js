@@ -4,6 +4,7 @@ export default class Card {
   constructor (product) {
     this.state = product;
     this.render();
+    this.addEventListener();
   }
 
   getTeamplate () {
@@ -24,17 +25,12 @@ export default class Card {
             <div class="product__about">${this.state.title}</div>
             <div class="product__category">${this.state.category}</div>
           </div>
-          <button class="product__button">ADD TO CART</button>
+          <button class="product__button" data-element="cardBtn">ADD TO CART</button>
         </div>
       </div>
     `;
 
     return result;
-  }
-
-  update (data = {}) {
-    this.state = data;
-    this.element.innerHTML = this.getTeamplate();
   }
 
   render () {
@@ -43,5 +39,16 @@ export default class Card {
     element.innerHTML = this.getTeamplate();
 
     this.element = element.firstElementChild;
+  }
+
+  addEventListener () {
+    const cardBtn = this.element.querySelector('[data-element="cardBtn"]');
+    const customEvent = new CustomEvent('add-product', {
+      detail: this.state
+    });
+
+    cardBtn.addEventListener('click', () => {
+      document.dispatchEvent(customEvent);
+    });
   }
 }
