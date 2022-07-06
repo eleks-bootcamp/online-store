@@ -9,8 +9,8 @@ export default class DoubleSlider {
   getTeamplatePriceSlider () {
     return `
       <div class="slider__track"></div>
-      <input type="range" min="0" max="85000" value="0" class="slider__thumb slider-1">
-      <input type="range" min="0" max="85000" value="85000" class="slider__thumb slider__thumb_right slider-2">
+      <input type="range" min="0" max="85000" value="0" class="slider__thumb slider-1" data-element="priceInput-1">
+      <input type="range" min="0" max="85000" value="85000" class="slider__thumb slider__thumb_right slider-2" data-element="priceInput-2">
       <div class="slider__values">
         <div class="slider__price-start">
           <span class="range-1"></span>
@@ -27,8 +27,8 @@ export default class DoubleSlider {
   getTeamplateRatingSlider () {
     return `
       <div class="slider__track"></div>
-      <input type="range" min="0" max="5" value="0" step="0.01" class="slider__thumb slider-1">
-      <input type="range" min="0" max="5" value="5" step="0.01" class="slider__thumb slider__thumb_right slider-2">
+      <input type="range" min="0" max="5" value="0" step="0.01" class="slider__thumb slider-1" data-element="ratingInput-1">
+      <input type="range" min="0" max="5" value="5" step="0.01" class="slider__thumb slider__thumb_right slider-2" data-element="ratingInput-2">
       <div class="slider__values">
         <div class="slider__price-start">
           <span class="range-1"></span>
@@ -69,7 +69,13 @@ export default class DoubleSlider {
       displayValOne.textContent = sliderOne.value;
       fillColor();
 
-      this.dispatchPriceEvent(sliderOne.value);
+      if (sliderOne.dataset.element === 'priceInput-1') {
+        this.dispatchLowerPriceEvent(sliderOne.value);
+      }
+
+      if (sliderOne.dataset.element === 'ratingInput-1') {
+        this.dispatchLowerRatingEvent(sliderOne.value);
+      }
     }
 
     const slideTwo = () => {
@@ -78,6 +84,14 @@ export default class DoubleSlider {
       }
       displayValTwo.textContent = sliderTwo.value;
       fillColor();
+
+      if (sliderTwo.dataset.element === 'priceInput-2') {
+        this.dispatchHigherPriceEvent(sliderTwo.value);
+      }
+
+      if (sliderTwo.dataset.element === 'ratingInput-2') {
+        this.dispatchHigherRatingEvent(sliderTwo.value);
+      }
     }
 
     sliderOne.addEventListener('input', slideOne);
@@ -99,11 +113,35 @@ export default class DoubleSlider {
     slideTwo();
   }
 
-  dispatchPriceEvent (value) {
-    const customEvent = new CustomEvent('slider-selection', {
+  dispatchLowerPriceEvent (value) {
+    const customEvent = new CustomEvent('lowerPrice-selection', {
       detail: value
     });
 
-    this.priceElement.dispatchEvent(customEvent);
+    document.dispatchEvent(customEvent);
+  }
+
+  dispatchHigherPriceEvent (value) {
+    const customEvent = new CustomEvent('higherPrice-selection', {
+      detail: value
+    });
+
+    document.dispatchEvent(customEvent);
+  }
+
+  dispatchLowerRatingEvent (value) {
+    const customEvent = new CustomEvent('lowerRating-selection', {
+      detail: value
+    });
+
+    document.dispatchEvent(customEvent);
+  }
+
+  dispatchHigherRatingEvent (value) {
+    const customEvent = new CustomEvent('higherRating-selection', {
+      detail: value
+    });
+
+    document.dispatchEvent(customEvent);
   }
 }
