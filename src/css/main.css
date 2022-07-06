@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import './fonts.css';
 
-@import '../../media-query-grid/css/grid.css';
-@import '../../media-query-grid/css/media-grid.css';
+@import '../../media-query-grid/grid.css';
+@import '../../media-query-grid/media-grid.css';
 @import '../components/header/style.css';
 @import '../components/search-box/style.css';
 @import '../components/card/style.css';
