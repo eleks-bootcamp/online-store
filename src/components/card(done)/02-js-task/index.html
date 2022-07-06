@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Card component</title>
+  <link rel="stylesheet" href="./style-pagination.css">
+  <link rel="stylesheet" href="./style-CardList.css">
+  <link rel="stylesheet" href="./style-SearchBox.css">
+  <link rel="stylesheet" href="./style-SideBar.css">
+  <link rel="stylesheet" href="./Grid-style.css">
+  <link rel="stylesheet" href="./style-title.css">
+</head>
+
+<body>
+  <div id="root" class="wrapper1"></div>
+
+  <script type="module">
+  import OnlineStorePage from './indexMainpage.js';
+    const page = new OnlineStorePage();
+    const root = document.querySelector('#root');
+
+    root.append(page.element);
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+body{
+  font-family: Montserrat,sans-serif;
+
+
+}
+.Side-bar{
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  width: 280px;
+}
+.Underline-box{
+  margin-bottom: 20px;
+}
+.Categories-filter{
+  margin-left: 32px;
+  padding: 0;
+  width: 210px;
+  border-bottom: 1px solid #D6D6D6;
+
+}
+
+.Brand-filter{
+  margin-left: 32px;
+  width: 210px;
+  border-bottom: 1px solid #D6D6D6;
+}
+.Double-slider-wrapper{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+}
+.Slider-money{
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.Price-title, .Category-title{
+font-size: 1.2rem;
+}
+
+.range-slider{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+}
+.range-slider_inner{
+    background: #7e72f2;
+    box-shadow: 0 0 1px #7e72f2;
+    display: inline-block;
+    height: 4px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.range-slider_progress{
+    background: #c8c2f3;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.LeftThumb {
+  color: #C2CFE0;
+  background-size: cover;
+  margin-top: -7.5px;
+  cursor: grab;
+  opacity: 1;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+.RightThumb {
+  color: #C2CFE0;
+  background-size: cover;
+  margin-top: -7px;
+  opacity: 1;
+  cursor: grab;
+  bottom: 0;
+  left: 98,5%;
+  position:absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.Category-device-checkbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.Filter-panel-checkbox{
+  display: flex;
+  margin-top: 10px;
+}
+.Clear-button{
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  color:#FFFFFF;
+  background-color:#7E72F2;
+  border-radius: 8px;
+  border: none;
+  margin-top: 25px;
+  width: 280px;
+  height: 46px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+

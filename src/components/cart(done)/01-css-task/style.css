@@ -1,0 +1,87 @@
+/* put your styles in this file */
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";
+
+
+.Cart-wrapper{
+  background-color:#fff;
+  margin: 20px 20px 20px 20px;
+  border: 1px solid #fff ;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  width: 100%;
+
+}
+.Cart-component{
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-around;
+  align-items:center;
+
+}
+
+.Cart-img {
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 12px 12px 12px;
+}
+.Cart-product-name{
+  display: flex;
+  margin-left: 40%;
+  font-size: 15px;
+  font-family: Montserrat,sans-serif;
+  white-space: nowrap;
+
+}
+.Cart-count{
+  display: flex;
+  margin-left: 150px;
+  font-family: Montserrat,sans-serif;
+}
+
+.Cart-price{
+  display: flex;
+  margin-left: 100px;
+  font-family: Montserrat,sans-serif;
+}
+.Cart-minus{
+  margin-right: 5px;
+}
+
+a{
+  all: unset;
+}
+
+.Cart-plus{
+  margin-left: 2px;
+
+}
+
+
+.Cart-total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px ;
+}
+
+.Cart-order-button {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  background-color:#7E72F2;
+  color: #fff;
+  font-family: Montserrat,sans-serif;
+  font-size: 12px;
+}
+
+
+
