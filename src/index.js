@@ -1,7 +1,8 @@
 "use strict";
 
-/* import SearchBox from './components/search-box/02-js-task/search-box.js'; */
+import SearchBox from './components/search-box/search-box.js';
 import CardsList from './components/card-list/cards-list.js';
+import DoubleSlider from './components/double-slider/double-slider.js';
 import Pagination from './components/pagination/pagination.js';
 import SideBar from './components/side-bar/side-bar.js';
 import { API } from './API/api.js';
@@ -13,7 +14,10 @@ class OnlineStorePage {
     pageNumber: 1,
     pageSize: 9,
     categories: [],
-    brands: []
+    brands: [],
+    lowerPrice: 0,
+    higherPrice: 85000,
+    search: ''
   };
 
   constructor () {
@@ -32,6 +36,16 @@ class OnlineStorePage {
   getTeamplate () {
     return  `
       <div class="container">
+        <header>
+          <div class="header-wrapper">
+            <div class="logo">Online Store</div>
+            <button class="button-cart">
+              <i class="icon-cart"></i>
+              CART
+              <span data-element="counter">5</span>
+            </button>
+          </div>
+        </header>
         <div class="row">
           <div class="col-12 col-s-6 col-l-3">
             <div class="side-bar" data-element="sideBar">
@@ -39,6 +53,7 @@ class OnlineStorePage {
             </div>
           </div>
           <div class="col-12 col-s-6 col-l-9">
+            <div class="search-box" data-element="searchBox"></div>
             <div class="card-list__wrapper" data-element="cardsList"></div>
             <div data-element="pagination"></div>
           </div>
@@ -57,10 +72,14 @@ class OnlineStorePage {
       totalPages: totalPages
     });
     const sideBar = new SideBar();
+    const doubleSlider = new DoubleSlider();
+    const searchBox = new SearchBox()
 
     this.components.cardList = cardList;
     this.components.pagination = pagination;
     this.components.sideBar = sideBar;
+    this.components.doubleSlider = doubleSlider;
+    this.components.searchBox = searchBox;
   }
 
   render () {
@@ -75,10 +94,12 @@ class OnlineStorePage {
     const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
     const paginationContainer = this.element.querySelector('[data-element="pagination"]');
     const sideBarContainer = this.element.querySelector('[data-element="sideBar"]');
+    const searchBoxContainer = this.element.querySelector('[data-element="searchBox"]');
 
     cardsContainer.append(this.components.cardList.element);
     paginationContainer.append(this.components.pagination.element);
     sideBarContainer.prepend(this.components.sideBar.element);
+    searchBoxContainer.append(this.components.searchBox.element);
   }
 
   initEventListeners () {
@@ -110,6 +131,17 @@ class OnlineStorePage {
         this.clearFilters();
       }
     });
+
+    this.components.searchBox.element.addEventListener('input-text', event => {
+      const text = event.detail;
+
+      this.state.search = text;
+      this.updateProducts();
+    });
+
+    this.components.doubleSlider.priceElement.addEventListener('slider-selection', event => {
+      const priceValue = event.detail;
+    });
   }
 
   getUrlWithParams () {
@@ -133,6 +165,17 @@ class OnlineStorePage {
       });
     }
 
+    const { lowerPrice } = this.state;
+    productsUrl.searchParams.append('price_gte', String(lowerPrice));
+
+    /* const { higherPrice } = this.state;
+    productsUrl.searchParams.append('price_lte', String(higherPrice)); */
+
+    const { search } = this.state;
+    if (search.length) {
+      productsUrl.searchParams.append('q', search);
+    }
+
     return productsUrl;
   }
 
@@ -146,6 +189,8 @@ class OnlineStorePage {
   clearFilters () {
     this.state.categories = [];
     this.state.brands = [];
+    this.state.search = '';
+    this.components.searchBox.element.querySelector('.search-box__search').value = '';
 
     const allInputs = this.components.sideBar.element.querySelectorAll('input');
     allInputs.forEach(input => {
@@ -157,6 +202,7 @@ class OnlineStorePage {
     } else {
       this.components.pagination.clearPagination();
     }
+
   }
 }
 

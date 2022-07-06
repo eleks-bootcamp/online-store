@@ -62,6 +62,24 @@ export default class DoubleSlider {
     let sliderOne = parentElement.getElementsByClassName('slider-1')[0];
     let sliderTwo = parentElement.getElementsByClassName('slider-2')[0];
 
+    const slideOne = () => {
+      if(parseFloat(sliderTwo.value) - parseFloat(sliderOne.value) <= minGap) {
+        sliderOne.value = parseFloat(sliderTwo.value) - minGap;
+      }
+      displayValOne.textContent = sliderOne.value;
+      fillColor();
+
+      this.dispatchPriceEvent(sliderOne.value);
+    }
+
+    const slideTwo = () => {
+      if(parseFloat(sliderTwo.value) - parseFloat(sliderOne.value) <= minGap) {
+        sliderTwo.value = parseFloat(sliderOne.value) + minGap;
+      }
+      displayValTwo.textContent = sliderTwo.value;
+      fillColor();
+    }
+
     sliderOne.addEventListener('input', slideOne);
     sliderTwo.addEventListener('input', slideTwo);
 
@@ -71,22 +89,6 @@ export default class DoubleSlider {
     let sliderTrack = parentElement.querySelector('.slider__track');
     let sliderMaxValue = parentElement.getElementsByClassName('slider-1')[0].max;
 
-    function slideOne() {
-      if(parseFloat(sliderTwo.value) - parseFloat(sliderOne.value) <= minGap) {
-        sliderOne.value = parseFloat(sliderTwo.value) - minGap;
-      }
-      displayValOne.textContent = sliderOne.value;
-      fillColor();
-    }
-
-    function slideTwo() {
-      if(parseFloat(sliderTwo.value) - parseFloat(sliderOne.value) <= minGap) {
-        sliderTwo.value = parseFloat(sliderOne.value) + minGap;
-      }
-      displayValTwo.textContent = sliderTwo.value;
-      fillColor();
-    }
-
     function fillColor() {
       let percent1 = (sliderOne.value / sliderMaxValue) * 100;
       let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
@@ -95,5 +97,13 @@ export default class DoubleSlider {
 
     slideOne();
     slideTwo();
+  }
+
+  dispatchPriceEvent (value) {
+    const customEvent = new CustomEvent('slider-selection', {
+      detail: value
+    });
+
+    this.priceElement.dispatchEvent(customEvent);
   }
 }
