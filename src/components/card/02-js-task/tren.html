@@ -10,27 +10,45 @@
   <button id="btn">Click me!</button>
 
   <script>
-    const btnElement = document.querySelector('#btn');
 
 
-    // создадим кастомное действие
-    const myEvent = new CustomEvent('foo-bar-baz', {
-      bubbles: true,
-      detail: [1, 2, 3]
-    });
+  function loger (data) {
+    if (data===true) {console.log("loger:", data)}
+    else {console.error("loger:", data)}
+  };
 
-    // создаем действие клика
-    btnElement.addEventListener ('click', event =>{
-      console.log('event', event);
+  function checkPrise(first, second) {
+    loger(first === second);
+  };
 
-      // отправим дейтсвие далее
-      btnElement.dispatchEvent(myEvent);
-    });
+  checkPrise(10, 10);
+  checkPrise(10, 8);
 
-    // чтобы прочитать отправленное действие dispatchEvent необходимо задать имя 'foo-bar-baz'
-    document.addEventListener('foo-bar-baz', event =>{
-      console.log('foo-bar-baz', event);
-    });
+
+
+
+
+    // const btnElement = document.querySelector('#btn');
+
+
+    // // создадим кастомное действие
+    // const myEvent = new CustomEvent('foo-bar-baz', {
+    //   bubbles: true,
+    //   detail: [1, 2, 3]
+    // });
+
+    // // создаем действие клика
+    // btnElement.addEventListener ('click', event =>{
+    //   console.log('event', event);
+
+    //   // отправим дейтсвие далее
+    //   btnElement.dispatchEvent(myEvent);
+    // });
+
+    // // чтобы прочитать отправленное действие dispatchEvent необходимо задать имя 'foo-bar-baz'
+    // document.addEventListener('foo-bar-baz', event =>{
+    //   console.log('foo-bar-baz', event);
+    // });
 
   </script>
 
