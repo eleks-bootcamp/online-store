@@ -20,7 +20,7 @@ export default class Pagination {
     if (AVal != ap) {
       if (AVal > 0 && AVal <= this.pagingData.totalPages) {
         this.activePage = AVal;
-        this.refresh();
+        this.update(this.pagingData);
         if (this.pageChangedEvent) {
           this.pageChangedEvent.currentPage = this.activePage;
           if (this.element) {
@@ -166,12 +166,12 @@ export default class Pagination {
     return res;
   }
 
-  refresh() {
+  update(pagingData = {}) {
+    this.pagingData = pagingData;
     if (this.element) {
       const elements = this.createElements(this.pagingData);
-      for (const [ind, el] of this.element.childNodes.entries()) {
-        this.element.replaceChild(elements[ind], el);
-      }
+      this.element.innerHTML = '';
+      this.element.append(...elements);
     } else {
       this.element = this.createPagination(this.pagingData);
     }

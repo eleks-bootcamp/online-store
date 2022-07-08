@@ -22,18 +22,24 @@ export default class FiltersList {
     return tmp.firstElementChild;
   }
 
-  #getTemplate() {
+  #getInternalTemplate() {
     let sItemsHTML = '';
     for (const filter of this.#filters) {
       sItemsHTML += this.#getItemTemplate(filter);
     }
 
     return `
-            <form class="filters-panel">
               <h3 class="filters-panel-title">${this.#title}</h3>
               <div class=${FILTERS_BLK_CSS_CLASS}>
                 ${sItemsHTML}
               </div>
+            `
+  }
+
+  #getTemplate() {
+    return `
+            <form class="filters-panel">
+              ${this.#getInternalTemplate()}
             </form>
             `
   }
@@ -63,6 +69,14 @@ export default class FiltersList {
     const checkboxes = filtersWrapper.querySelectorAll('[type = checkbox]');
     for (const checkbox of checkboxes) {
       checkbox.checked = false;
+    }
+  }
+
+  update({title = '', filters = []} = {}) {
+    this.#title = title;
+    this.#filters = filters;
+    if (this.#element) {
+      this.#element.innerHTML = this.#getInternalTemplate();
     }
   }
 }
