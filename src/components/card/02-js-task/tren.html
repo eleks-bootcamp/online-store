@@ -12,20 +12,24 @@
   <script>
 
 
-  function loger (data) {
-    if (data===true) {console.log("loger:", data)}
-    else {console.error("loger:", data)}
-  };
-
-  function checkPrise(first, second) {
-    loger(first === second);
-  };
-
-  checkPrise(10, 10);
-  checkPrise(10, 8);
 
 
+const patch = 'foo-bar-baz';
+const obj = {foo:{bar:{baz:1}}};
 
+function getValue(someObj = {}, somePatch = '') {
+
+const arr = somePatch.split('-');
+let result;
+for (const item of arr) {console.log("item=", item)};
+
+if (result===undefined) {result = someObj[item];}
+else{result = result[item];}
+
+return result;
+}
+
+  console.log(getValue(obj, patch));
 
 
     // const btnElement = document.querySelector('#btn');
