@@ -1,6 +1,6 @@
 "use strict";
 
-import CartsCard from "../product-card/card.js";
+import CartsCard from "../carts-card/carts-card.js";
 
 
 export default class Cart {
@@ -8,7 +8,6 @@ export default class Cart {
     this.data = data;
 
     this.render();
-    this.renderCartsCard();
     this.addEventListener();
   }
 
@@ -35,9 +34,11 @@ export default class Cart {
 
   renderCartsCard() {
     const cards = this.data.map(item => {
-      const card = new CartsCard(item);
+      if (!this.data.includes(item.id)) {
+        const card = new CartsCard(item);
 
-      return card.element;
+        return card.element;
+      }
     });
 
     const body = this.element.querySelector('[data-element="cartList"]');

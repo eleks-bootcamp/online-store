@@ -34,6 +34,7 @@ class OnLineStorePage {
 
     this.initEventListeners();
     this.updateProducts();
+    console.log(this.state.productsInCart);
   }
 
   getTemplate() {
@@ -79,7 +80,7 @@ class OnLineStorePage {
       totalPages
     });
     const cart = new Cart(this.state.productsInCart);
-    
+
     this.components.sideBar = sideBar;
     this.components.doubleSlider = doubleSlider;
     this.components.searchBox = searchBox;
@@ -169,6 +170,7 @@ class OnLineStorePage {
     document.addEventListener('add-product', e => {
       this.state.productsInCart.push(e.detail);
 
+
       const counter = this.element.querySelector('[data-element="counter"]');
       counter.textContent = this.state.productsInCart.length;
     });
@@ -184,7 +186,7 @@ class OnLineStorePage {
     const cartBnt = this.element.querySelector('[data-element="cartBtn"]');
     cartBnt.addEventListener('click', () => {
       cart.classList.remove('hidden');
-
+      this.components.cart.renderCartsCard();
     });
   }
 
