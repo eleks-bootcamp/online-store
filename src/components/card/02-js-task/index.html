@@ -4,60 +4,29 @@
   <meta charset="utf-8">
   <title>Card component</title>
   <link rel="stylesheet" href="/src/components/card/01-css-task/style.css">
+  <link rel="stylesheet" href="/src/components/cards-list/01-css-task/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/src/components/pagination/01-css-task/style.css">
 
 
   <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
+
   </style>
 </head>
 
-<body>
-  <div id="root" class="wrapper"></div>
+  <body>
+    <div id="root" class="wrapper"></div>
 
-  <script type="module">
-    import Card from './index.js';
-    import Pagination from './pagination.js';
+    <script type="module">
 
-    const product = {
-      "id": "76w0hz7015kkr9kjkav",
-      "images": "https://content.rozetka.com.ua/goods/images/big_tile/73891904.jpg",
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.13,
-      "price": 6999,
-      "category": "laptops",
-      "brand": "acer"
-    };
+      import { products } from './products.js';
+      import OnlineStorePage from './index.js';
 
-    const laptop = {
-      "id": "cvr29caokhhkr9kjkav",
-      "images": "https://content1.rozetka.com.ua/goods/images/big_tile/25101152.jpg",
-      "title": "Ноутбук Acer Nitro 5 AN515-55-56WH (NH.Q7PEU.00L) Obsidian Black Суперцена!!!",
-      "rating": 0.53,
-      "price": 28999,
-      "category": "laptops",
-      "brand": "acer"
-    };
+      const page = new OnlineStorePage(products);
+      const root = document.querySelector('#root');
 
+      root.append(page.element);
 
-    const card = new Card(laptop);
-    const pagination = new Pagination ({
-
-    });
-
-    const myRootElement = document.querySelector('#root');
-
-    myRootElement.append(card.componentElement);
-    myRootElement.append(pagination.element);
-
-    pagination.setPage(3);
-    pagination.prevPage();
-    pagination.nextPage();
-
-</script>
-</body>
+    </script>
+  </body>
 </html>
