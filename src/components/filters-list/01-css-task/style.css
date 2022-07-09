@@ -1,4 +1,4 @@
-/* put your styles in this file */
+
 :root {
     --purpure-100:#7E72F2;
   }
@@ -12,7 +12,7 @@
     margin: 20px 0;
 }
 .form-tittle{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 18px;
 }

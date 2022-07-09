@@ -2,9 +2,31 @@
   --transparent-100:rgba(0, 0, 0, 0.133);
   --purpure-100:#7E72F2;
 }
-.wrapper {
+main{
+  max-width: 1320px;
   width: 100%;
-  margin: 100px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-gap:20px;
+
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+section {
+  margin-top:20px;
+  margin-bottom:20px;
+  display: grid;
+  grid-gap: 20px;
 }
 .font-size-13{
   font-size: 0.8125rem;
@@ -14,6 +36,13 @@
 }
 .font-size-15{
   font-size: 0.9375rem;
+}
+.logo{
+  margin:0;
+  color:var(--purpure-100);
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 .prodact-card{
   margin: 0 auto;

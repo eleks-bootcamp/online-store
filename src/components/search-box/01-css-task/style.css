@@ -9,23 +9,23 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
   }
-.os-form-input-search{
+.form-input-search{
     width:100%;
     position: relative;
     box-sizing: border-box;
     display: flex;
     color:#606060;
 }
-input[name="search"]{
+#input-search{
     width:100%;
     padding: 13px 70px 14px 20px;
     border-radius: 8px;
     border: none;
     outline: none;
     box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
-    font-size: 0.875rem;
+    font-size: 1.375rem;
 }
-input[name="search"]::placeholder{
+#input-search::placeholder{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 16px;
