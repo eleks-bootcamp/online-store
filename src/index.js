@@ -21,7 +21,7 @@ class OnlineStorePage {
     lowerRating: 0,
     higherRating: 5,
     search: '',
-    productsInCart: []
+    productsInCart: {}
   };
 
   constructor () {
@@ -168,11 +168,44 @@ class OnlineStorePage {
     });
 
     document.addEventListener('add-product', event => {
-      this.state.productsInCart.push(event.detail);
+      const id = event.detail.id;
 
-      const counter = this.element.querySelector('[data-element="counter"]');
-      counter.textContent = this.state.productsInCart.length;
+      if (this.state.productsInCart[id]) {
+        this.state.productsInCart[id].quantity += 1;
+      } else {
+        this.state.productsInCart[id] = {
+          quantity: 1,
+          product: event.detail
+        };
+      }
+
+      this.renderBtnCounter();
     });
+
+    document.addEventListener('minus-selection', event => {
+      const id = event.detail;
+
+      if (this.state.productsInCart[id] && this.state.productsInCart[id].quantity > 1) {
+        this.state.productsInCart[id].quantity -= 1;
+
+        this.components.cart.renderCartsCards();
+      } else {
+        delete this.state.productsInCart[id];
+
+        this.components.cart.renderCartsCards();
+      }
+
+      this.renderBtnCounter();
+    });
+
+    document.addEventListener('plus-selection', event => {
+      const id = event.detail;
+
+      this.state.productsInCart[id].quantity += 1;
+
+      this.components.cart.renderCartsCards();
+      this.renderBtnCounter();
+    })
 
     const rootElement = document.getElementById('root');
 
@@ -187,7 +220,22 @@ class OnlineStorePage {
 
     cartBtn.addEventListener('click', () => {
       cart.classList.remove('hidden');
+      this.components.cart.renderCartsCards();
     });
+  }
+
+  renderBtnCounter () {
+    const quantity = Object.values(this.state.productsInCart)
+                           .map(item => item.quantity)
+                           .reduce((prev, curr) => prev + curr, 0);
+
+    const counter = this.element.querySelector('[data-element="counter"]');
+
+    if (quantity > 0) {
+      counter.textContent = quantity;
+    } else {
+      counter.textContent = '';
+    }
   }
 
   getUrlWithParams () {
@@ -252,8 +300,6 @@ class OnlineStorePage {
     allInputs.forEach(input => {
       input.checked = false;
     });
-
-    /* this.components.doubleSlider.clearSlider(); */
 
     if (this.state.pageNumber === 1) {
       this.updateProducts();

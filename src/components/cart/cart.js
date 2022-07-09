@@ -7,7 +7,6 @@ export default class Cart {
     this.data = data;
 
     this.render();
-    this.renderCartsCards();
     this.addEventListener();
   }
 
@@ -17,7 +16,7 @@ export default class Cart {
         <div class="cart">
           <i class="cart__close icon-close" data-element="close"></i>
           <ul class="cart__list" data-element="cartList"></ul>
-          <div class="cart__total">Total: 92496</div>
+          <div class="cart__total">Total: 0</div>
           <button class="cart__button-order">ORDER</button>
         </div>
       </div>
@@ -33,8 +32,8 @@ export default class Cart {
   }
 
   renderCartsCards () {
-    const cards = this.data.map(item => {
-      const card = new CartsCard(item);
+    const cards = Object.values(this.data).map(item => {
+      const card = new CartsCard(item.product, item.quantity);
 
       return card.element;
     });
