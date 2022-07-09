@@ -16,7 +16,7 @@ export default class Cart {
         <div class="cart">
           <i class="cart__close icon-close" data-element="close"></i>
           <ul class="cart__list" data-element="cartList"></ul>
-          <div class="cart__total">Total: 0</div>
+          <div class="cart__total" data-element="total">Total: 0</div>
           <button class="cart__button-order">ORDER</button>
         </div>
       </div>
@@ -37,6 +37,13 @@ export default class Cart {
 
       return card.element;
     });
+
+    const sum = Object.values(this.data)
+                      .map(item => item.quantity * item.product.price)
+                      .reduce((prev, curr,) => prev + curr, 0);
+
+    const total = this.element.querySelector('[data-element="total"]');
+    total.textContent = sum;
 
     const body = this.element.querySelector('[data-element="cartList"]');
 
