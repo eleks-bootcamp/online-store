@@ -33,12 +33,10 @@ export default class Cart {
   }
 
   renderCartsCard() {
-    const cards = this.data.map(item => {
-      if (!this.data.includes(item.id)) {
-        const card = new CartsCard(item);
+    const cards = Object.values(this.data).map(item => {
+      const card = new CartsCard(item.product, item.quantity);
 
-        return card.element;
-      }
+      return card.element;
     });
 
     const body = this.element.querySelector('[data-element="cartList"]');

@@ -21,7 +21,7 @@ class OnLineStorePage {
     lowerRating: 0,
     higherRating: 5,
     search: '',
-    productsInCart: []
+    productsInCart: {}
   };
 
   constructor() {
@@ -34,7 +34,6 @@ class OnLineStorePage {
 
     this.initEventListeners();
     this.updateProducts();
-    console.log(this.state.productsInCart);
   }
 
   getTemplate() {
@@ -168,11 +167,23 @@ class OnLineStorePage {
     });
 
     document.addEventListener('add-product', e => {
-      this.state.productsInCart.push(e.detail);
+      const id = e.detail.id;
 
+      if (this.state.productsInCart[id]) {
+        this.state.productsInCart[id].quantity += 1;
+      } else {
+        this.state.productsInCart[id] = {
+          quantity: 1,
+          product: e.detail
+        };
+      }
+
+      const quantity = Object.values(this.state.productsInCart)
+                             .map(item => item.quantity)
+                             .reduce((prev, curr) => prev + curr, 0);
 
       const counter = this.element.querySelector('[data-element="counter"]');
-      counter.textContent = this.state.productsInCart.length;
+      counter.textContent = quantity;
     });
 
     const rootElement = document.getElementById('root');

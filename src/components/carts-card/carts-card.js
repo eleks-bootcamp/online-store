@@ -1,8 +1,9 @@
 "use strict";
 
 export default class CartsCard {
-  constructor(product) {
+  constructor(product, quantity) {
     this.state = product;
+    this.quantity = quantity;
 
     this.render();
   }
@@ -14,10 +15,10 @@ export default class CartsCard {
         <div class="cart__item-descr">${this.state.title}</div>
         <div class="cart__item-count">
           <button class="cart__btn"><i class="icon-minus"></i></button>
-          <span>1</span>
+          <span>${this.quantity}</span>
           <button class="cart__btn"><i class="icon-plus"></i></button>
         </div>
-        <div class="cart__item-price">${this.state.price}</div>
+        <div class="cart__item-price">${this.state.price * this.quantity}</div>
       </li>
     `;
   }
