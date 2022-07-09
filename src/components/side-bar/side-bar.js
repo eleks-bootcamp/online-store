@@ -13,7 +13,7 @@ export default class SideBar {
     this.render();
     this.renderFilters();
     this.renderDoubleSliders();
-    this.addEventListener();
+    this.addEventListeners();
   }
 
   getTemplate() {
@@ -80,7 +80,7 @@ export default class SideBar {
     };
   }
 
-  addEventListener() {
+  addEventListeners() {
     const categoriesWrapper = this.element.querySelector('[data-element="categories"]');
 
     categoriesWrapper.addEventListener('click', e => {

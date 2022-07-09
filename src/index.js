@@ -186,6 +186,27 @@ class OnLineStorePage {
       counter.textContent = quantity;
     });
 
+    document.addEventListener('minus-selection', e => {
+      const id = e.detail;
+
+      if (this.state.productsInCart[id] && this.state.productsInCart[id].quantity > 1) {
+        this.state.productsInCart[id].quantity -= 1;
+        this.components.cart.renderCartsCard();
+      } else {
+        delete this.state.productsInCart[id];
+        this.components.cart.renderCartsCard();
+      }
+    });
+
+    document.addEventListener('plus-selection', e => {
+      const id = e.detail;
+
+      if (this.state.productsInCart[id]) {
+        this.state.productsInCart[id].quantity += 1;
+        this.components.cart.renderCartsCard();
+      }
+    });
+
     const rootElement = document.getElementById('root');
     rootElement.addEventListener('click', e => {
       if (e.target.dataset.element === 'clearFilters') {

@@ -17,7 +17,7 @@ export default class Cart {
         <div class="cart">
           <i class="cart__close icon-close" data-element="close"></i>
           <ul class="cart__list" data-element="cartList"></ul>
-          <div class="cart__total">Total: <span>143991</span></div>
+          <div class="cart__total">Total: <span data-element="total"></span></div>
           <button class="button button_cart">Order</button>
         </div>
       </div>
@@ -43,6 +43,9 @@ export default class Cart {
 
     body.innerHTML = '';
     body.append(...cards);
+
+    const total = this.element.querySelector('[data-element="total"]');
+    // total.textContent =
   }
 
   addEventListener() {

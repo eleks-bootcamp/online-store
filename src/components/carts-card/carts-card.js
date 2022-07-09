@@ -6,6 +6,7 @@ export default class CartsCard {
     this.quantity = quantity;
 
     this.render();
+    this.addEventListeners();
   }
 
   getTemplate() {
@@ -14,9 +15,9 @@ export default class CartsCard {
         <img src="${this.state.images[0]}" alt="notebook" class="cart__item-img">
         <div class="cart__item-descr">${this.state.title}</div>
         <div class="cart__item-count">
-          <button class="cart__btn"><i class="icon-minus"></i></button>
+          <button class="cart__btn" data-element="btnMinus"><i class="icon-minus"></i></button>
           <span>${this.quantity}</span>
-          <button class="cart__btn"><i class="icon-plus"></i></button>
+          <button class="cart__btn" data-element="btnPlus"><i class="icon-plus"></i></button>
         </div>
         <div class="cart__item-price">${this.state.price * this.quantity}</div>
       </li>
@@ -29,5 +30,34 @@ export default class CartsCard {
     element.innerHTML = this.getTemplate();
 
     this.element = element.firstElementChild;
+  }
+
+  addEventListeners() {
+    const btnMinus = this.element.querySelector('[data-element="btnMinus"]');
+    const btnPlus = this.element.querySelector('[data-element="btnPlus"]');
+
+    btnMinus.addEventListener('click', () => {
+      this.dispatchMinusEvent(this.state.id);
+    });
+
+    btnPlus.addEventListener('click', () => {
+      this.dispatchPlusEvent(this.state.id);
+    });
+  }
+
+  dispatchMinusEvent(state) {
+    const customEvent = new CustomEvent('minus-selection', {
+      detail: state
+    });
+
+    document.dispatchEvent(customEvent);
+  }
+
+  dispatchPlusEvent(state) {
+    const customEvent = new CustomEvent('plus-selection', {
+      detail: state
+    });
+
+    document.dispatchEvent(customEvent);
   }
 }
