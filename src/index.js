@@ -178,12 +178,7 @@ class OnLineStorePage {
         };
       }
 
-      const quantity = Object.values(this.state.productsInCart)
-                             .map(item => item.quantity)
-                             .reduce((prev, curr) => prev + curr, 0);
-
-      const counter = this.element.querySelector('[data-element="counter"]');
-      counter.textContent = quantity;
+      this.renderBtnCounter(this.state.productsInCart);
     });
 
     document.addEventListener('minus-selection', e => {
@@ -192,9 +187,11 @@ class OnLineStorePage {
       if (this.state.productsInCart[id] && this.state.productsInCart[id].quantity > 1) {
         this.state.productsInCart[id].quantity -= 1;
         this.components.cart.renderCartsCard();
+        this.renderBtnCounter(this.state.productsInCart);
       } else {
         delete this.state.productsInCart[id];
         this.components.cart.renderCartsCard();
+        this.renderBtnCounter(this.state.productsInCart);
       }
     });
 
@@ -203,7 +200,9 @@ class OnLineStorePage {
 
       if (this.state.productsInCart[id]) {
         this.state.productsInCart[id].quantity += 1;
+        this.renderBtnCounter(this.state.productsInCart);
         this.components.cart.renderCartsCard();
+        this.renderBtnCounter(this.state.productsInCart);
       }
     });
 
@@ -220,6 +219,20 @@ class OnLineStorePage {
       cart.classList.remove('hidden');
       this.components.cart.renderCartsCard();
     });
+  }
+
+  renderBtnCounter(state) {
+    const quantity = Object.values(state)
+                           .map(item => item.quantity)
+                           .reduce((prev, curr) => prev + curr, 0);
+
+    const counter = this.element.querySelector('[data-element="counter"]');
+
+    if (quantity <= 0) {
+      counter.textContent = "";
+    } else {
+      counter.textContent = quantity;
+    }
   }
 
   getUrlWithParams() {
