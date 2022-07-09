@@ -178,7 +178,7 @@ class OnLineStorePage {
         };
       }
 
-      this.renderBtnCounter(this.state.productsInCart);
+      this.renderBtnCounter();
     });
 
     document.addEventListener('minus-selection', e => {
@@ -187,12 +187,12 @@ class OnLineStorePage {
       if (this.state.productsInCart[id] && this.state.productsInCart[id].quantity > 1) {
         this.state.productsInCart[id].quantity -= 1;
         this.components.cart.renderCartsCard();
-        this.renderBtnCounter(this.state.productsInCart);
       } else {
         delete this.state.productsInCart[id];
         this.components.cart.renderCartsCard();
-        this.renderBtnCounter(this.state.productsInCart);
       }
+
+      this.renderBtnCounter();
     });
 
     document.addEventListener('plus-selection', e => {
@@ -200,10 +200,10 @@ class OnLineStorePage {
 
       if (this.state.productsInCart[id]) {
         this.state.productsInCart[id].quantity += 1;
-        this.renderBtnCounter(this.state.productsInCart);
         this.components.cart.renderCartsCard();
-        this.renderBtnCounter(this.state.productsInCart);
       }
+
+      this.renderBtnCounter();
     });
 
     const rootElement = document.getElementById('root');
@@ -221,8 +221,8 @@ class OnLineStorePage {
     });
   }
 
-  renderBtnCounter(state) {
-    const quantity = Object.values(state)
+  renderBtnCounter() {
+    const quantity = Object.values(this.state.productsInCart)
                            .map(item => item.quantity)
                            .reduce((prev, curr) => prev + curr, 0);
 

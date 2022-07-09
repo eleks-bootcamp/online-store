@@ -45,17 +45,17 @@ export default class CartsCard {
     });
   }
 
-  dispatchMinusEvent(state) {
+  dispatchMinusEvent(id) {
     const customEvent = new CustomEvent('minus-selection', {
-      detail: state
+      detail: id
     });
 
     document.dispatchEvent(customEvent);
   }
 
-  dispatchPlusEvent(state) {
+  dispatchPlusEvent(id) {
     const customEvent = new CustomEvent('plus-selection', {
-      detail: state
+      detail: id
     });
 
     document.dispatchEvent(customEvent);
