@@ -39,13 +39,17 @@ export default class Cart {
       return card.element;
     });
 
+    const sum = Object.values(this.data)
+                      .map(item => item.quantity * item.product.price)
+                      .reduce((prev, curr) => prev + curr, 0);
+
+    const total = this.element.querySelector('[data-element="total"]');
+    total.textContent = sum;
+
     const body = this.element.querySelector('[data-element="cartList"]');
 
     body.innerHTML = '';
     body.append(...cards);
-
-    const total = this.element.querySelector('[data-element="total"]');
-    // total.textContent =
   }
 
   addEventListener() {
