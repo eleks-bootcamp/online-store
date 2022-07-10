@@ -11,6 +11,14 @@
 
   <script>
 
+// function Car (make, model, year) {
+//   this.makess = make;
+//   this.modell = model;
+//   this.yearr = year;
+// }
+// let mycar = new Car ("Eagle", "Talon TSI", 1993);
+// console.log(mycar);
+
 
 
 
@@ -19,17 +27,20 @@ const obj = {foo:{bar:{baz:1}}};
 
 function getValue(someObj = {}, somePatch = '') {
 
-const arr = somePatch.split('-');
-let result;
-for (const item of arr) {console.log("item=", item)};
-
-if (result===undefined) {result = someObj[item];}
-else{result = result[item];}
-
-return result;
+  const arr = somePatch.split('-');
+  let result;
+  for (const item of arr) {
+    console.log("item=", item);
+    if (result === undefined) {result = someObj[item];}
+    else{result = result[item];}
+  }
+  return result;
 }
+console.log(getValue(obj, patch));
 
-  console.log(getValue(obj, patch));
+
+
+
 
 
     // const btnElement = document.querySelector('#btn');
