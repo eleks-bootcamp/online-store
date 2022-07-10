@@ -22,21 +22,14 @@
 
 
 
-const patch = 'foo-bar-baz';
-const obj = {foo:{bar:{baz:1}}};
+let user = {
+  firstname: "John",
+  lastname: "Doe",
+  fullname: "John Due",
+};
 
-function getValue(someObj = {}, somePatch = '') {
-
-  const arr = somePatch.split('-');
-  let result;
-  for (const item of arr) {
-    console.log("item=", item);
-    if (result === undefined) {result = someObj[item];}
-    else{result = result[item];}
-  }
-  return result;
-}
-console.log(getValue(obj, patch));
+function getName() {console.log(this.fullname);}
+getName.call(user);
 
 
 
