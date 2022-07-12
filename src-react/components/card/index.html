@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card component react</title>
+  <link rel="stylesheet" href="../../styles/style.min.css">
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id = 'root' style="width: 400px; margin: 100px auto;"></div>
+
+  <script>
+    const exports = {};
+    const product = {
+      "id": "76w0hz7015kkr9kjkav",
+      "images": [
+        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
+        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
+      ],
+      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
+      "rating": 2.89,
+      "price": 15999,
+      "category": "laptops",
+      "brand": "acer"
+    };
+  </script>
+  <script src="./index.js" type = "text/babel"></script>
+
+  <script type="text/babel">
+    const root = document.getElementById('root');
+    const reactRoot = ReactDOM.createRoot(root);
+    reactRoot.render(<Card {...product}/>);
+
+  </script>
+
+</body>
+</html>
