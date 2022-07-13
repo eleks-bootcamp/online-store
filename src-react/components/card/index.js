@@ -1,9 +1,4 @@
 class Card extends React.Component {
-  #product = {};
-  constructor (product = {}) {
-    super();
-    this.#product = product;
-  }
 
   #getRatingIconCssClass(rating = 0) {
     const HALF_STAR_END_RATING_VAL = 4;
@@ -17,7 +12,7 @@ class Card extends React.Component {
   }
 
   render() {
-    const {id, images, title, rating, price, category, brand} = this.#product;
+    const {id, images, title, rating, price, category, brand} = this.props;
     const ratingIconCssClass = this.#getRatingIconCssClass(rating);
     return (
       <div className="card" id={id} data-brand={brand}>
@@ -31,7 +26,7 @@ class Card extends React.Component {
           <span className="card-product-name">{title}</span>
           <span className="card-product-category">{category}</span>
         </div>
-        <div className="card-btn-add-to-cart" /*style="width: 100%; height: 40px"*/>
+        <div className="card-btn-add-to-cart">
           <span>{'Add to card'.toUpperCase()}</span>
         </div>
       </div>
