@@ -25,7 +25,7 @@ export default class Pagination {
   getPages() {
     return `
       <ul class="pagination__list" data-element="pagination">
-        ${new Array(this.totalPages).fill('').map((item, index) => {
+        ${new Array(this.totalPages).fill('').map((_, index) => {
           return this.getPageTemplate(index);
         }).join('')}
       </ul>

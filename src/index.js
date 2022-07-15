@@ -14,6 +14,7 @@ class OnLineStorePage {
   state = {
     pageNumber: 1,
     pageSize: 9,
+    totalElements: 0,
     categories: [],
     brands: [],
     lowerPrice: 0,
@@ -25,7 +26,6 @@ class OnLineStorePage {
   };
 
   constructor() {
-    this.products = [];
     this.components = {};
 
     this.initComponents();
@@ -73,7 +73,7 @@ class OnLineStorePage {
     const sideBar = new SideBar();
     const doubleSlider = new DoubleSlider();
     const searchBox = new SearchBox();
-    const cardsList = new CardsList(this.products);
+    const cardsList = new CardsList();
     const pagination = new Pagination({
       activePageIndex: 0,
       totalPages
@@ -280,6 +280,14 @@ class OnLineStorePage {
   async updateProducts() {
     const url = this.getUrlWithParams();
     const products = await API.loadProducts(url);
+
+    url.searchParams.delete('_page', String(this.state.pageNumber));
+    url.searchParams.delete('_limit', String(this.state.pageSize));
+
+    const totalProducts = await API.loadProducts(url);
+    const totalElements = totalProducts.length;
+
+    console.log(totalElements);
 
     this.components.cardsList.update(products);
   }
