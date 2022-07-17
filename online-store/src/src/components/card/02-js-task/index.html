@@ -1,62 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Card component</title>
+   <!-- <link rel="stylesheet" href="./styles/card.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/pagination.css" />-->
+    <link rel="stylesheet" href="./styles/style.css" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Card component</title>
-  <link rel="stylesheet" href="../01-css-task/style.css">
-  <link rel="stylesheet" href="../../pagination/01-css-task/style.css">
-  <style>
-    .wrapper {
-      width: 400px;
-      margin: 100px auto;
-    }
-  </style>
-</head>
 
-<body>
-  <div id="root" class="wrapper"></div>
+    <style>
+      .wrapper {
+        width: 800px;
+        margin: 100px auto;
+      }
 
-  <script type="module">
-    import Card from './index.js';
-    import Pagination from './pagination.js';
+      .os-product-card {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
 
-    const product = {
-      "id": "76w0hz7015kkr9kjkav",
-      "images": [
-        "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
-        "https://content.rozetka.com.ua/goods/images/big_tile/163399633.jpg"
-      ],
-      "title": "Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal Black",
-      "rating": 2.89,
-      "price": 15999,
-      "category": "laptops",
-      "brand": "acer"
-    }
+  <body>
+    <div id="root" class="wrapper"></div>
 
-    const monitor = {
-      "id": "uz2lnvfkq5kr9kjkav",
-      "images": [
-        "https://content2.rozetka.com.ua/goods/images/big_tile/12330253.jpg"
-      ],
-      "title": "Монитор 23\" Dell P2319H Black (210-APWT)",
-      "rating": 1.51,
-      "price": 5300,
-      "category": "monitors",
-      "brand": "dell"
+    <script type="module">
+      import { products } from './products.js';
+      import OnlineStorePage from './index.js';
 
-    }
+      const page = new OnlineStorePage(products);
+      const root = document.querySelector('#root');
 
-    const card = new Card(product);
-   // const card2 = new Card(monitor);
-   const pagination = new Pagination();
-
-   const someElement = document.querySelector('#root');
-
-    someElement.append(card.componentElement);
-   // root.append(card2.componentElement);
-    someElement.append(pagination.element);
-  </script>
-</body>
-
+      root.append(page.element);
+    </script>
+  </body>
 </html>

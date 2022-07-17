@@ -1,49 +1,73 @@
-export default class Card {
-  constructor(someProduct) {
-    this.state = someProduct;
-    this.myRender();
+import CardsList from './cards-list.js';
+import Pagination from './pagination.js';
+export default class OnlineStorePage {
+  constructor (products = []) {
+    this.pageSize = 3;
+    this.products = products;
+    this.components = {};
+
+    this.initComponents();
+    this.render();
+    this.renderComponents();
+
+    this.initEventListeners();
   }
 
-  getTemplate() {
+  getTemplate () {
     return `
-      <div class="container">
-      <div class="content">
-        <div class="img">
-          <img class='img' src="${this.state.images[0]}">
+      <div>
+        <div data-element="cardsList">
+          <!-- Cards List component -->
         </div>
-        <div class="actions">
-          <button class="star" type="button"> ${this.state.rating} <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M7 0.940965L8.8394 3.87345L8.95364 4.05557L9.16441 4.09795L12.6648 4.80181L10.3013 7.25805L10.1392 7.42652L10.1645 7.65893L10.5264 10.9777L7.18936 9.61224L7 9.53476L6.81064 9.61224L3.47361 10.9777L3.83549 7.65893L3.86083 7.42652L3.69872 7.25805L1.3352 4.80181L4.83559 4.09795L5.04636 4.05557L5.1606 3.87345L7 0.940965Z"
-                stroke="white" />
-            </svg>
-            </button>
-          <p>${this.state.price}</p>
+        <div data-element="pagination">
+          <!-- Pagination component -->
         </div>
-        <p class="info">
-          ${this.state.title}
-        </p>
-        <p class="info2">${this.state.category}</p>
-      </div>
-      <button class="add" type="button">
-        ADD TO CART
-      </button>
       </div>
     `;
   }
 
-  update(data = {}) {
-    this.state = data;
+  initComponents () {
+    const totalPages = Math.ceil(this.products.length / this.pageSize);
 
-    this.componentElement.innerHTML = this.getTemplate();
+    const cardList = new CardsList(this.products.slice(0, this.pageSize));
+    const pagination = new Pagination({
+      activePageIndex: 0,
+      totalPages
+    });
+
+    this.components.cardList = cardList;
+    this.components.pagination = pagination;
   }
 
-  myRender() {
-    const element = document.createElement('div');
+  renderComponents () {
+    const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
+    const paginationContainer = this.element.querySelector('[data-element="pagination"]');
 
-    element.innerHTML = this.getTemplate();
+    cardsContainer.append(this.components.cardList.element);
+    paginationContainer.append(this.components.pagination.element);
+  }
 
-    this.componentElement = element;
+  render () {
+    const wrapper = document.createElement('div');
+
+    wrapper.innerHTML = this.getTemplate();
+
+    this.element = wrapper.firstElementChild;
+  }
+
+  initEventListeners () {
+    this.components.pagination.element.addEventListener('page-changed', event => {
+      const pageIndex = event.detail;
+
+      // [0, 1, 2] | pageIndex = 0 pageSize = 3
+      // [3, 4, 5] | pageIndex = 1 pageSize = 3
+      // [6, 7]    | pageIndex = 2 pageSize = 3
+
+      const start = pageIndex * this.pageSize;
+      const end = start + this.pageSize;
+      const data = this.products.slice(start, end);
+
+      this.components.cardList.update(data);
+    });
   }
 }

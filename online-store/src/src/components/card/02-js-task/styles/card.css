@@ -1,17 +1,4 @@
-body {
-  height: 100vh;
-  width: 100vw;
-  font-family:'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color:#2C2C2C;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  width: 317px;
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,36 +6,42 @@ body {
   border-radius: 10px;
 }
 
-.content {
+.card .content {
   padding: 22px 24px 24px 16px;
   flex-grow: 1;
 }
 
-.actions {
+.card .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.img {
+.card .img {
   height: 200px;
   width: 293px;
   margin-bottom: 22px;
 }
 
-.info {
+.card .img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card .info {
   margin-bottom: 10px;
   font-size: 13px;
   line-height: 16px;
 }
-.info2{
+
+.card .info2 {
   margin-bottom: 10px;
   font-size: 10px;
 }
 
-button {
-  background-color:#7e72f2 ;
+.card button {
+  background-color: #7e72f2;
   border: none;
   color: white;
   cursor: pointer;
@@ -56,11 +49,11 @@ button {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.133);
 }
 
-.star {
+.card .star {
   padding: 8px 11px;
   border-radius: 3px;
 }
 
-.add {
+.card .add {
   height: 40px;
 }
