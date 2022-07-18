@@ -11,7 +11,7 @@ export default class Card {
     const result = `
       <div class="blok-rama">
 
-        <div class="blok-img"><img class="img-dimen" src="${this.state.images [0]}""></div>
+        <div class="blok-img"><img class="img-dimen" src="${this.state.images [0]}"></div>
 
         <div class="blok-zv-cn">
 

@@ -9,7 +9,7 @@ export default class Card {
       getTemplate () {
         const result= `
         <div class="blok-rama">
-    <div class="blok-img"><img class="otstup" src="${this.state.images[0]}""></div>
+    <div class="blok-img"><img class="otstup" src="${this.state.images[0]}"></div>
 
     <div class="blok-zv-cn">
     <div class="blok-zvezda">
