@@ -86,6 +86,13 @@ export default class Pagination {
     this.element = element.firstElementChild;
   }
 
+  update (totalPages) {
+    this.totalPages = totalPages;
+
+    this.render();
+    this.addEventListeners();
+  }
+
   addEventListeners() {
     const prevPageBtn = this.element.querySelector('[data-element="arrow-left"]');
     const nextPageBtn = this.element.querySelector('[data-element="arrow-right"]');
@@ -105,7 +112,6 @@ export default class Pagination {
       if (!pageItem) return;
 
       const { pageIndex } = pageItem.dataset;
-
       this.setPage(parseInt(pageIndex, 10));
     });
   }

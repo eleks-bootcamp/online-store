@@ -67,16 +67,15 @@ class OnLineStorePage {
 
   initComponents() {
     // TODO: remove hardcoded value
-    const totalElements = 100;
-    const totalPages = Math.ceil(totalElements/ this.state.pageSize);
+    // const totalElements = 100;
+    // const totalPages = Math.ceil(totalElements/ this.state.pageSize);
 
     const sideBar = new SideBar();
     const doubleSlider = new DoubleSlider();
     const searchBox = new SearchBox();
     const cardsList = new CardsList();
     const pagination = new Pagination({
-      activePageIndex: 0,
-      totalPages
+      activePageIndex: 0
     });
     const cart = new Cart(this.state.productsInCart);
 
@@ -109,14 +108,22 @@ class OnLineStorePage {
     this.element.append(this.components.cart.element);
   }
 
-  initEventListeners() {
+  renderPagination () {
+    const paginationContainer = this.element.querySelector('[data-element="pagination"]');
+    paginationContainer.innerHTML = '';
+    paginationContainer.append(this.components.pagination.element);
+  }
+
+  initEventListener() {
     this.components.pagination.element.addEventListener('page-changed', e => {
       const pageIndex = e.detail;
       this.state.pageNumber = pageIndex + 1;
 
       this.updateProducts();
     });
+  }
 
+  initEventListeners() {
     this.components.sideBar.element.addEventListener('categories-selection', e => {
       const categories = e.detail;
 
@@ -281,15 +288,22 @@ class OnLineStorePage {
     const url = this.getUrlWithParams();
     const products = await API.loadProducts(url);
 
+    this.components.cardsList.update(products);
+    this.updatePagination();
+  }
+
+  async updatePagination() {
+    const url = this.getUrlWithParams();
     url.searchParams.delete('_page', String(this.state.pageNumber));
     url.searchParams.delete('_limit', String(this.state.pageSize));
 
     const totalProducts = await API.loadProducts(url);
     const totalElements = totalProducts.length;
+    const totalPages = Math.ceil(totalElements / this.state.pageSize);
 
-    console.log(totalElements);
-
-    this.components.cardsList.update(products);
+    this.components.pagination.update(totalPages);
+    this.renderPagination();
+    this.initEventListener();
   }
 
   clearFilters() {
