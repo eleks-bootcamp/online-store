@@ -4,17 +4,17 @@ import { useEffect, useState } from 'react';
 import Brands from './Brands';
 import Categories from './Categories';
 
-const LeftSide = () => {
+const LeftSide = (props) => {
 
     const [brands, setBrands] = useState([])
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        axios('http://online-store.bootcamp.place/api/brands')
+        axios('https://online-store.bootcamp.place/api/brands')
         .then ((res) => {
             setBrands(res.data)
         })
-        axios('http://online-store.bootcamp.place/api/categories')
+        axios('https://online-store.bootcamp.place/api/categories')
         .then ((res) => {
             setCategories(res.data)
         })
@@ -31,7 +31,7 @@ const LeftSide = () => {
                 <p>Categories</p>
                 {
                     categories.map(item =>{
-                        return <Categories categories={item} />
+                        return <Categories categories={item} categoryURL={props.categoryURL} setCategoryURL={props.setCategoryURL} />
                     })
                 }
                 <div className="under_line_decorate"></div>
@@ -41,7 +41,7 @@ const LeftSide = () => {
                 <p>Brands</p>
                 {
                     brands.map(item =>{
-                        return <Brands brand={item} />
+                        return <Brands brand={item} setBrandsURL={props.setBrandsURL} brandsURL={props.brandsURL} />
                     })
                 }
                 <div className="under_line_decorate"></div>

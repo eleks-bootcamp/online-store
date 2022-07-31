@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Pagination from './Pagination';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import useDebounce from './../../Hooks/use-debounce';
 
 
 const RightSide = (props) => {
@@ -11,24 +12,30 @@ const RightSide = (props) => {
     const [cardData, setCardData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
     const [itemsPerPage, setItemsPerPage] = useState(9) 
+    const [valueSeach, setValueSeach] = useState('');
 
+    const brandUrlArr = props.brandsURL.map(item => {
+        const lowerItem = item.toLowerCase();
+        return `&brand=${lowerItem}`
+    })
+    const brandUrlArrStr = brandUrlArr.join('');
+
+    const categoryUrlArr = props.categoryURL.map(item => {
+        const lowerCategoryItem = item.toLowerCase();
+        return `&category=${lowerCategoryItem}`
+    })
+
+    const categoryUrlStr = categoryUrlArr.join('').replace(/ /g, '_');
+    // console.log(categoryUrlStr);
+    const valueSeachdebounce = useDebounce(valueSeach, 500);
+    const BACKEND_URL = `https://online-store.bootcamp.place/api/products?_page=${currentPage}&_limit=${itemsPerPage}&q=${valueSeach}${categoryUrlStr}${brandUrlArrStr}`;
     useEffect(() => {
-        axios(`http://online-store.bootcamp.place/api/products`)
+        axios(BACKEND_URL)
         .then(res => {
             setCardData(res.data)
             // console.log(res.data);
         })
-    }, [])
-
-    const [valueSeach, setValueSeach] = useState('');
-
-    const filteredProduct = cardData.filter(item => {
-        return item.title.toLowerCase().includes(valueSeach.toLowerCase());
-    })
-
-    const lastItemIndex = currentPage * itemsPerPage;
-    const firstItemIndex = lastItemIndex - itemsPerPage;
-    const currentIndex = filteredProduct.slice(firstItemIndex, lastItemIndex)
+    }, [currentPage, valueSeachdebounce, props.brandsURL, props.categoryURL])
 
     const paginate = (pageNuber) => {
         setCurrentPage(pageNuber)
@@ -69,7 +76,7 @@ const RightSide = (props) => {
                 <Container className='p-0'>
                     <Row>                         
                         {
-                            currentIndex.map(item => {
+                            cardData.map(item => {
                                 return (
                                     <Col key={item.id} className='col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4'>
                                         <Card item={item} id={item.id} category={item.category} img={item.images [0]} title={item.title} rate={item.rating} price={item.price} choseProducts={props.choseProducts} setChoseProducts={props.setChoseProducts} setProductCount={props.setProductCount} />
@@ -80,7 +87,7 @@ const RightSide = (props) => {
                 </Container>
             </div>
             <div className="right-side-bottom">
-                <Pagination itemsPerPage={itemsPerPage} totalItem={filteredProduct.length} paginate={paginate} nextPage={nextPage} prevPage={prevPage} />
+                <Pagination itemsPerPage={itemsPerPage} totalItem={100} paginate={paginate} nextPage={nextPage} prevPage={prevPage} />
             </div>
         </div>
     )

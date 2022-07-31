@@ -9,11 +9,11 @@ const MainContent = (props) => {
             <Container className='main-container m-0'>
                 <Row>
                     <Col className='left-side p-0'>
-                        <LeftSide />
+                        <LeftSide setCategoryURL={props.setCategoryURL} categoryURL={props.categoryURL} setBrandsURL={props.setBrandsURL} brandsURL={props.brandsURL} />
                     </Col>
 
                     <Col className='right-side right-margin p-0'>
-                        <RightSide choseProducts={props.choseProducts} setChoseProducts={props.setChoseProducts} setProductCount={props.setProductCount} />
+                        <RightSide categoryURL={props.categoryURL} brandsURL={props.brandsURL} choseProducts={props.choseProducts} setChoseProducts={props.setChoseProducts} setProductCount={props.setProductCount} />
                     </Col>
                 </Row>
             </Container>

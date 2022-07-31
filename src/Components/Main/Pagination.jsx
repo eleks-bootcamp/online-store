@@ -29,19 +29,7 @@ const Pagination = ({ itemsPerPage, totalItem, paginate, nextPage, prevPage }) =
                   </svg>
                 </div>
               </div>
-              
-                {/* <a href="#"><div className="_round-shape active-class active">1</div></a>
-                <a href="#"><div className="_round-shape active-class">2</div></a>
-                <a href="#"><div className="_round-shape active-class">3</div></a>
-                <a href="#"><div className="_round-shape active-class">4</div></a>
-                <a href="#"><div className="_round-shape active-class">5</div></a>
-                <a href="#"><div className="_round-shape active-class">6</div></a>
-                <a href="#"><div className="_round-shape active-class">7</div></a>
-                <a href="#"><div className="_round-shape active-class">8</div></a>
-                <a href="#"><div className="_round-shape active-class">9</div></a>
-                <a href="#"><div className="_round-shape active-class">10</div></a>
-                <a href="#"><div className="_round-shape active-class">11</div></a>
-                <a href="#"><div className="_round-shape active-class">12</div></a> */}
+
                 {
                   pageNuber.map(number => {
                     return (

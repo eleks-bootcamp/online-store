@@ -28,7 +28,7 @@ const Header = (props) => {
       
     const deleteOfProduct = (index) => {
         setChoseProducts(deleteElement(choseProducts, index));
-        setProductCount(prev => prev -= 1) // ТУТ БАГ ТРЕБА ПОФІКСИТИ
+        setProductCount(prev => prev -= 1)
     };
 
     const deleteAll = (index) => {
