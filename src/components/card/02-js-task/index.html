@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="../../../styles/style.min.css">
+  <link rel="stylesheet" href="/src/components/card/01-css-task/style.css">
+  <link rel="stylesheet" href="/src/components/pagination/01-css-task/style.css">
 
   <style>
     .wrapper {
@@ -17,9 +18,10 @@
   <div id="root" class="wrapper"></div>
 
   <script type="module">
-    import Card from './solution/index.js';
+    import Card from './card.js';
+    import Pagination from './pagination.js';
 
-    const product = {
+     const product = {
       "id": "76w0hz7015kkr9kjkav",
       "images": [
         "https://content2.rozetka.com.ua/goods/images/big_tile/163399632.jpg",
@@ -31,10 +33,27 @@
       "category": "laptops",
       "brand": "acer"
     };
+    const pagination = new Pagination();
+
+    const someElement = document.querySelector('#root');
+
+
+    const monitor = {
+      id: "w73oaydowenkr9kjkav",
+      images: [
+      "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+      ],
+      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+      rating: 5,
+      price: 3800,
+      category: "monitors",
+      brand: "benq"
+    };
 
     const card = new Card(product);
 
-    root.append(card.element);
+    someElement.append(card.componentElement);
+    someElement.append(pagination.element);
   </script>
 </body>
 </html>

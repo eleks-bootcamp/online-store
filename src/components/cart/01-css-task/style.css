@@ -86,7 +86,7 @@ a {
 }
 
 .bi {
-padding: 1rem;
+  padding: 1rem;
 }
 
 .total-cart {
@@ -101,10 +101,10 @@ padding: 1rem;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+
 }
 .currency-cart {
-padding: 1rem;
+  padding: 1rem;
 }
 
 .bottom-cart {
