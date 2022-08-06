@@ -1,51 +1,96 @@
-export default class Card {
-    constructor (someProduct) {
-        // this -> {}
-          this.state = someProduct;
-          this.myRender();
 
-      }
+import CardsList from '../../cards-list/02-js-task/cards-list.js';
+import Pagination from '../../pagination/02-js-task/pagination.js'
 
-      getMyTemplate () {
-        return `
-          </div>
-          <div class="product-card">
-            <div class="img-wrapper" style=" background-image: url(${this.state.images[0]})";>
-              
-            </div>
-            <div class="wrapper-content">
-              <div class="offer">
-                <div class="product-rating">
-                  <p class="product-rating-number">${this.state.rating}</p>
-                  <img class="product-rating-star" src="../../../../components/card/img/Star1.svg" alt="star">
-                </div>
-                <p class="product-price">15999</p>
-              </div>
-              <p class="product-description">${this.state.title}</p>
-              <p class="product-categories">${this.state.category}</p>
-            </div>
-            <button class="btn" type="button">Add To Cart</button>
-          </div> 
-          `;
-      }
+const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
+export default class OnLineStorePage {
+  constructor () {
+    this.pageSize = 9;
+    this.products = [];
 
+    this.url = new URL('products', BACKEND_URL);
+    this.url.searchParams.set('_limit', this.pageSize);
+    
+    
+    this.components = {};
 
-    //   update(data = {})  {
-    //     //i need to render new data
-    //     this.state = data;
-    //     this.componentElemet.innerHTML = this.getMyTemplate();
+    this.initComponents();
+    this.myRender();
+    this.renderComponents();
 
-    //     console.log('this.componentElemet', this.componentElemet);
-    //   } 
-
-      myRender () {
-          const element = document.createElement('div');
-
-          element.innerHTML = this.getMyTemplate();
-          
-          this.componentElemet = element 
-      }
+    this.initEventListeners();
+    this.update(1)
   }
+
+  async loadData(pageNumber){
+    this.url.searchParams.set('_page', pageNumber)
+
+    const response = await fetch(this.url);
+    const products = await response.json();
+
+    
+     
+    return products;
+  }
+
+  getMyTemplate () {
+    return `
+    <div>
+      <div data-element="cardsList">
+        <!-- Card component -->        </div>
+        <div data-element="pagination">
+        <!-- Pagination component -->
+      </div>
+    </div>
+    `;
+  };
+
+  
+
+  initComponents() {
+    //TODO : remove hardcode value        this.products.length 
+      const totalElements = 100;
+      const totalPages = Math.ceil(totalElements/ this.pageSize)
+      const cardsList = new CardsList(this.products);
+      const pagination = new Pagination({
+        activePageIndex: 0,
+        totalPages
+      });
+
+      this.components.cardsList = cardsList;
+      this.components.pagination = pagination; 
+  };
+
+  renderComponents () {
+      const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
+      const paginationContainer = this.element.querySelector('[data-element="pagination"]');
+      cardsContainer.append(this.components.cardsList.element);
+      paginationContainer.append(this.components.pagination.element);
+  };
+
+  myRender () {
+      const wrapper = document.createElement('div');
+
+      wrapper.innerHTML = this.getMyTemplate();
+      
+      this.element = wrapper.firstElementChild;
+  };
+
+  initEventListeners() {
+      this.components.pagination.element.addEventListener('page-changed', event => {
+        const pageNumber = event.detail;
+
+      this.update(pageNumber + 1)
+      });
+  };
+
+  async update(pageNumber){
+    const data = await this.loadData(pageNumber)
+
+    this.components.cardsList.update(data)
+  }
+
+};
 
   
 

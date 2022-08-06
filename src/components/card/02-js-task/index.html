@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Card component</title>
-  <link rel="stylesheet" href="../../../../components/card/style.css">
-  <link rel="stylesheet" href="../../../../components\pagination\style.css">
+  <link rel="stylesheet" href="../01-css-task/style.css">
+  <link rel="stylesheet" href="../../pagination/01-css-task/style.css">
+  <link rel="stylesheet" href="../../../../grid/style.css">
+  
 
   <style>
     .wrapper {
@@ -17,53 +19,26 @@
 <body>
 
   <div id="root" class="wrapper">
-
+    <div>
+      
+    </div>
   </div>
 
   <script type="module">
-    import Card from './index.js';
-    import CardList from './cards-list.js';
-    import Pagination from './pagination.js';
-    import { products } from './products.js'
-    
-    
-    const list = new CardList (products);
-    
-    list.renderCards()
+    import OnLineStorePage from './index.js'
 
-    const pagination = new Pagination({
-      activePageIndex: 0
-    });
-
-  const someElement = document.querySelector('#root');
+    
+    
+    
+    const page = new OnLineStorePage();
+    const root = document.querySelector('#root');
    
-   
-   someElement.append(pagination.element);
+    root.append(page.element);
 
-   pagination.setPage(0); 
-   
- 
-
-  
-        
-    
-     
+      
     
 
-
-
-
-
-
-
-
     
-
-   
-
-    const card = new Card(product);
-
-    root.append(card.element);
   </script>
 </body>
 </html>

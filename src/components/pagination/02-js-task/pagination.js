@@ -1,8 +1,10 @@
 export default class Pagination {
-    defaultPagesSize = 12;
-    constructor ({activePageIndex = 0
+    constructor ({
+        activePageIndex = 0,
+        totalPages = 0
     } =  {}) {
         this.activePageIndex = activePageIndex
+        this.totalPages = totalPages
         this.render();
         this.addEventListeners();
         
@@ -26,7 +28,7 @@ export default class Pagination {
     getPages () {
         return `
             <ul class="list-nav" data-element="pagination">
-                ${new Array(this.defaultPagesSize).fill(1).map((item, index) => {
+                ${new Array(this.totalPages).fill(1).map((item, index) => {
                     return this.getPageTemplate(index)
                 }).join('')}
             </ul>
@@ -40,75 +42,86 @@ export default class Pagination {
         <li>
          <button
             class="btn-nav ${isActive }" 
-            data-page-index="${pageIndex}"">
+            data-page-index="${pageIndex}">
             ${pageIndex + 1}
          </button>
          </li>
         `;
     }
  
-setPage(pageIndex = 0) {
-    if (pageIndex === this.activePageIndex) return;
-    if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+    setPage(pageIndex = 0) {
+        if (pageIndex === this.activePageIndex) return;
+        if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
 
-    const activePage = this.element.querySelector(`.btn-nav.active`);
+        this.dispatchEvent(pageIndex)
 
-    if (activePage) {
-        activePage.classList.remove('active')
+        const activePage = this.element.querySelector(`.btn-nav.active`);
+
+        if (activePage) {
+            activePage.classList.remove('active')
+        }
+
+        const nextActivePage = this.element.querySelector(`[data-page-index="${pageIndex}"]`);
+
+        if (nextActivePage) {
+            nextActivePage.classList.add('active');
+        }
+
+        this.activePageIndex = pageIndex;
     }
 
-    const nextActivePage = this.element.querySelector(`[data-page-index="${pageIndex}"]`);
+    prevPage(pageIndex = 0) {
+        const prevPageIndex = this.activePageIndex - 1;
 
-    if (nextActivePage) {
-        nextActivePage.classList.add('active');
+        this.setPage(prevPageIndex);
     }
 
-    this.activePageIndex = pageIndex;
-}
+    nextPage(pageIndex = 0) {
+        const nextPageIndex = this.activePageIndex  + 1;
 
-prevPage(pageIndex = 0) {
-    const prevPageIndex = this.activePageIndex - 1;
+        this.setPage(nextPageIndex);
+    }
 
-    this.setPage(prevPageIndex);
-}
+    render () {
+            const wrapper = document.createElement('div');
 
-nextPage(pageIndex = 0) {
-    const nextPageIndex = this.activePageIndex  + 1;
+            wrapper.innerHTML = this.getMyTemplate();
+            
+            this.element = wrapper; 
+    };
 
-    this.setPage(nextPageIndex);
-}
+    addEventListeners ()  {
+        const prevPageBtn = this.element.querySelector('[data-element="nav-prev"]');
+        const nextPageBtn = this.element.querySelector('[data-element="nav-next"]');
+        const pagesList = this.element.querySelector('[data-element="pagination"]')
 
-render () {
-        const wrapper = document.createElement('div');
+        prevPageBtn.addEventListener('click', event => {
+        this.prevPage()    
+        })
 
-        wrapper.innerHTML = this.getMyTemplate();
+        nextPageBtn.addEventListener('click', event => {
+        this.nextPage()    
+        });
+
+        pagesList.addEventListener('click', event => {
+        const pageItem = event.target.closest('.btn-nav');
+
+        if (!pageItem) return;
+
+        const { pageIndex } = pageItem.dataset;
+
+
         
-        this.element = wrapper; 
-};
 
-addEventListeners ()  {
-    const prevPageBtn = this.element.querySelector('[data-element="nav-prev"]');
-    const nextPageBtn = this.element.querySelector('[data-element="nav-next"]');
-    const pagesList = this.element.querySelector('[data-element="pagination"]')
+        this.setPage(parseInt(pageIndex, 10));
+        });
+    }
 
-    prevPageBtn.addEventListener('click', event => {
-    this.prevPage()    
-    })
+    dispatchEvent (pageIndex){
+        const customEvent = new CustomEvent('page-changed', {
+            detail: pageIndex
+        });
 
-    nextPageBtn.addEventListener('click', event => {
-    this.nextPage()    
-    });
-
-    pagesList.addEventListener('click', event => {
-      const pageItem = event.target.closest('.btn-nav');
-
-    if (!pageItem) return;
-
-    const { pageIndex } = pageItem.dataset;
-
-
-    this.setPage(parseInt(pageIndex));
-    })
-
-};
+        this.element.dispatchEvent(customEvent)
+    }
 };

@@ -96,16 +96,5 @@ export const products = [
       "price": 70999,
       "category": "laptops",
       "brand": "apple"
-    },
-    {
-      "id": "b6rae36v8vvkr9kjkav",
-      "images": [
-        "https://content1.rozetka.com.ua/goods/images/big_tile/169147176.jpg"
-      ],
-      "title": "Ноутбук Apple MacBook Pro 13\" M1 512GB 2020 (Z11C000Z3) Custom Space Gray",
-      "rating": 0.92,
-      "price": 51999,
-      "category": "laptops",
-      "brand": "apple"
     }
   ]
