@@ -4,7 +4,7 @@ export default class Card {
     this.myRender();
   }
 
-  getMyTemplate() {
+  getTemplate() {
     const result = `
     <div class="card">
         <div class="card-1">
@@ -36,21 +36,21 @@ export default class Card {
           </div>
         </div>
       </div>
-    `
+    `;
     return result
   }
 
   update(data = {}) {
     //I need to render new data
     this.state = data;
-    this.componentElement.innerHTML = this.getMyTemplate();
-  };
+    this.element.innerHTML = this.getTemplate();
+  }
 
   myRender(){
-    const element = document.createElement(`div`);
+    const wrapper = document.createElement('div');
 
-    element.innerHTML = this.getMyTemplate();
+    wrapper.innerHTML = this.getTemplate();
 
-    this.componentElement = element;
-  };
+    this.element = wrapper.firstElementChild;
+  }
 }

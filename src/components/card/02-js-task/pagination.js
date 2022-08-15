@@ -1,7 +1,12 @@
 export default class Pagination {
-  constructor ({activePageIndex = 0} = {}){
-    this.activePageIndex = activePageIndex
-    this.defaultPagesSize = 12;
+
+
+  constructor ({
+    activePageIndex = 0,
+    totalPages = 0
+    } = {}){
+    this.activePageIndex = activePageIndex;
+    this.totalPages = totalPages;
     this.render();
     this.addEventListener();
 
@@ -9,27 +14,22 @@ export default class Pagination {
 
     getTemplate () {
        return `
-        <div class="wrapper">
-          <div class="page-link back" data-element="nav-prev">
-           <a href="#">
-             <i class="bi bi-chevron-left"></i>
-           </a>
-          </div>
-           ${this.getPages()}
-          <div class="page-link next" data-element="nav-next">
-            <a href="#">
-              <i class="bi bi-chevron-right"></i>
-            </a>
-          </div>
-         </div>
-
+       <div class="os-pagination">
+          <a href="#" class="page-link back" data-element="nav-prev">
+            <i class="bi bi-chevron-left"></i>
+          </a>
+        ${this.getPages()}
+        <a href="#" class="page-link next" data-element="nav-next">
+           <i class="bi bi-chevron-right"></i>
+          </a>
+       </div>
       `;
     }
 
     getPages () {
       return `
           <ul class="page-list" data-element="pagination">
-            ${new Array(this.defaultPagesSize).fill(1).map((item, index) => {
+            ${new Array(this.totalPages).fill(1).map((item, index) => {
                 return this.getPageTemplate(index)
             }).join(' ')}
           </ul>
@@ -52,7 +52,9 @@ export default class Pagination {
 
   setPage (pageIndex = 0) {
     if (pageIndex === this.activePageIndex) return;
-    if (pageIndex > this.defaultPagesSize - 1 || pageIndex < 0) return;
+    if (pageIndex > this.totalPages - 1 || pageIndex < 0) return;
+
+    this.dispathEvent(pageIndex);
 
     const activePage = this.element.querySelector('.page-link.active');
 
@@ -90,17 +92,6 @@ export default class Pagination {
   addEventListener () {
     const pagesList = this.element.querySelector(`[data-element="pagination"]`);
 
-    pagesList.addEventListener('click', event => {
-      const pageItem = event.target.closest('.page-link');
-
-      if (pageItem === null) return;
-
-      const pageIndex = pageItem.dataset.pageIndex;
-
-      this.setPage(parseInt(pageIndex, 10));
-
-    })
-
     const prevPageBtn = this.element.querySelector('[data-element="nav-prev"]');
 
     prevPageBtn.addEventListener('click', event => {
@@ -112,5 +103,23 @@ export default class Pagination {
     nextPageBtn.addEventListener('click', event => {
       this.nextPage();
     });
+
+    pagesList.addEventListener('click', event => {
+      const pageItem = event.target.closest('.page-link');
+
+      if (!pageItem) return;
+
+      const { pageIndex } = pageItem.dataset;
+
+      this.setPage(parseInt(pageIndex, 10));
+    });
+  }
+
+  dispathEvent (pageIndex) {
+    const customEvent = new CustomEvent('page-changed', {
+      detail: pageIndex
+    });
+
+    this.element.dispatchEvent(customEvent);
   }
 }
