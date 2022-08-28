@@ -3,6 +3,7 @@
 /* put your styles in this file */
 body {
   margin: 0;
+  padding: 0;
   font-family: Montserrat, sans-serif;
 }
 
@@ -16,51 +17,45 @@ body {
   justify-content: center;
 }
 
-a,
-ul {
-  list-style: none;
-  text-decoration: none;
-  color: black;
+.pagination {
+  width: 590px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.pagination {
+.page-link {
+  width: 40px;
   height: 40px;
-  width: 590px;
+  border-radius: 50%;
+  background: #EDEDED;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: .3s;
+  color: #2c2c2c;
 }
 
 .page-list {
+  list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
+  margin: 0;
+
 }
 
-.page-prev,
-.page-link,
-.page-next {
-  height: 40px;
-  width: 40px;
-  background: #EDEDED;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.page-prev {
+.previous {
   margin-right: 15px;
 }
 
-.page-next {
+.next {
   margin-left: 15px;
 }
 
-
-.page-prev:hover,
 .page-link:hover,
-.page-next:hover {
-  background-color: #7e72f2;
+.page-link:active {
+  background: #7E72F2;
   color: #FFFFFF;
-  transition-duration: 0.8s;
+
 }
