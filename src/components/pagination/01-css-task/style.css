@@ -45,14 +45,6 @@ body {
 
 }
 
-.previous {
-  margin-right: 15px;
-}
-
-.next {
-  margin-left: 15px;
-}
-
 .page-link:hover,
 .page-link.active {
   background: #7E72F2;
