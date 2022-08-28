@@ -54,7 +54,7 @@ body {
 }
 
 .page-link:hover,
-.page-link:active {
+.page-link.active {
   background: #7E72F2;
   color: #FFFFFF;
 
