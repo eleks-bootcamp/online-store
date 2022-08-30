@@ -1,1 +1,60 @@
 /* put your styles in this file */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-shop {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.card-shop-main {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+  padding-top: 12px;
+}
+
+.card-shop-img {
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}
+
+.card-shop-mark-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.card-shop-mark {
+  background: #7E72F2;
+  width: 70px;
+  height: 27px;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.card-shop-name {
+  margin: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+  color: #2C2C2C;
+}
+
+.card-shop-button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  margin: 0 auto;
+  background-color: #7E72F2;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  border-radius: 0 0 8px 8px;
+}
