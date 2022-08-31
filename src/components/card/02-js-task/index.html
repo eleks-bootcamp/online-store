@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Card component</title>
-    <link rel="stylesheet" href="../../../styles/style.min.css" />
 
-    <style>
-      .wrapper {
-        width: 800px;
-        margin: 100px auto;
-      }
+<head>
+  <meta charset="utf-8">
+  <title>Card component</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../pagination/01-css-task/style.css">
+  <link rel="stylesheet" href="../../search-box/01-css-task/style.css">
+  <link rel="stylesheet" href="../../filters-list/01-css-task/style.css">
+  <link rel="stylesheet" href="../../double-slider/01-css-task/style.css">
+  <link rel="stylesheet" href="../../side-bar/01-css-task/style.css">
+  <link rel="stylesheet" href="../../cart/01-css-task/style.css">
+  <link rel="stylesheet" href="../01-css-task/style.css">
 
-      .os-product-card {
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
 
-  <body>
-    <div id="root" class="wrapper"></div>
+  <style>
+    
+  </style>
+</head>
 
-    <script type="module">
-      import { products } from './products.js';
-      import OnlineStorePage from './index.js';
+<body>
+  <div id="root" class="container"></div>
 
-      const page = new OnlineStorePage(products);
-      const root = document.querySelector('#root');
+  <script type="module">
+      
+    import OnlineStorePage from "./index.js";
 
-      root.append(page.element);
-    </script>
-  </body>
+    // fetch('https://online-store.bootcamp.place/api/products?_page=1&_limit=12')
+    //   .then(response => response.json())
+    //   .then(products =>{
+         const page = new OnlineStorePage();
+         const root = document.querySelector('#root');
+    
+    root.append(page.element);
+      // });
+
+   
+
+  </script>
+</body>
+
 </html>

@@ -1,1 +1,43 @@
-/* put your styles in this file */
+:root {
+    --transparent-100:rgba(0, 0, 0, 0.133);
+    --purpure-100:#7E72F2;
+  }
+.font-size-13{
+    font-size: 0.8125rem;
+}
+.font-montserrat-400{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.prodact-button-color{
+    background: #7E72F2;
+    color:white;
+ }
+.prodact-button-clear{
+    border-radius:8px;
+    min-height: 2.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.prodact-button-add{
+    background: transparent;
+    border:none;
+    width:80%;
+  }
+.sidebar{
+    width: 280px;
+    height: 100%;
+}
+.sidebar-content{
+    margin-bottom:20px;
+    box-shadow: 0 2px 8px var(--transparent-100);
+    padding:0 20px;
+}
+.delimiter{
+    width:100%;
+    height: 1px;
+    background:#D6D6D6;
+    display: block;
+    margin:30px 0;
+}

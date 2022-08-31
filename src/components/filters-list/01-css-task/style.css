@@ -1,1 +1,66 @@
-/* put your styles in this file */
+
+:root {
+    --purpure-100:#7E72F2;
+  }
+.form-group{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.form-filters-category{
+    width:100%;
+    height:100%;
+    margin: 20px 0;
+}
+.form-tittle{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+.form-checkbox-item{
+    margin: 0 0 10px 0;
+    font-size: 0.875rem;
+}.form-checkbox-item input[type="checkbox"]{
+    display: none;
+}
+.form-checkbox-item input + label{
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 35px;
+}
+.form-checkbox-item input + label::before{
+    content: "";
+    position: absolute;
+    width:20px;
+    height: 17px;
+    top:0;
+    left:0;
+    border:1px solid #979797;
+    border-radius: 3px;
+      
+  }
+  .form-checkbox-item input:checked + label::before{
+    content:"✓";
+    color:#ffffff;
+    position: absolute;
+    width:20px;
+    height: 17px;
+    top:0;
+    left:0;
+    background:var(--purpure-100);
+    border:1px solid var(--purpure-100);
+    border-radius: 3px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  /* Rectangle */
+
+
+
+
+
+    

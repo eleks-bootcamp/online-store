@@ -1,3 +1,65 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-/* put your styles in this file */
+:root {
+  --grey-100:#EDEDED;
+  --purpure-100:#7E72F2;
+  --grey-500:#2C2C2C;
+  --wight:#ffffff;
+}
+a {
+  all: unset;
+}
+.wrapper {
+  margin: 100px auto;
+  width:100%;
+}
+.font-montserrat-400{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.card-pagination {
+  width:100%;
+  margin:20px auto;
+  font-size: 0.875rem;
+}
+.card-pagination, .pagination-block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-pagination {
+  justify-content: center;
+}
+.pagination-block{
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.pagination-item, .pagination-arrow-left, .pagination-arrow-right  {
+  width: 40px;
+  height: 40px;
+  background:var(--grey-100);
+  border-radius:50%;
+  color:var(--grey-500);
+  cursor: pointer;
+  display: block;
+}
+
+.pagination-item:hover,
+.pagination-arrow-left:hover,
+.pagination-arrow-right:hover,
+.pagination-item:hover, .active{
+  background:var(--purpure-100);
+  color: var(--wight);
+}
+.pagination-arrow-left, .pagination-arrow-right, .pagination-item  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-arrow-right{
+  margin-left: 15px;
+}
+.pagination-arrow-left{
+  margin-right: 15px;
+}

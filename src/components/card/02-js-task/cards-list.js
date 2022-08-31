@@ -1,46 +1,47 @@
 import Card from "./card.js";
 
 export default class CardsList {
-  constructor (data = []) {
-    this.data = data;
-    this.render();
-    this.renderCards();
-  }
 
-  getTemplate () {
-    return `
-      <div>
-        <div class="os-products-list" data-element="body">
-          <!-- Cards list -->
+    constructor (data = []) {
+        this.data = data;
+        this.render();
+        this.renderCards();
+    }
+    getTemplate () {
+        return `
+        <div>
+            <div class="products-list" data-element="section">
+                
+            </div>
         </div>
-      </div>
-    `;
-  }
+        `;
+    };
 
-  render () {
-    const wrapper = document.createElement('div');
+     render () {
+        const wrapper = document.createElement('div');
+    
+        wrapper.innerHTML = this.getTemplate();
+        
+        this.element = wrapper.firstElementChild;
+     };
+     renderCards () {
 
-    wrapper.innerHTML = this.getTemplate();
+         const cards = this.data.map(item => {
+             const card = new Card(item);
 
-    this.element = wrapper.firstElementChild;
-  }
+             return card.element;
+         });
 
-  renderCards () {
-    const cards = this.data.map(item => {
-      const card = new Card(item);
+          const section = this.element.querySelector('[data-element="section"]');
+          section.innerHTML = '';
+          section.append(...cards);
+    
+     };
+     update (data = []) {
+        this.data = data;
 
-      return card.element;
-    });
+        this.renderCards();
+     };
+    
 
-    const body = this.element.querySelector('[data-element="body"]');
-
-    body.innerHTML = '';
-    body.append(...cards);
-  }
-
-  update (data = []) {
-    this.data = data;
-
-    this.renderCards();
-  }
 }
