@@ -6,9 +6,11 @@ export default class Search {
     getTemplate(){
         return`
             <!-- SearchBox component -->
-            <form class="wert" action="/action_page.php">
-                <input type="text" class="search-box" placeholder="Search" name="search">
-            </form>`
+            <div data-element="searchBox">
+                <form class="wert" action="/action_page.php">
+                    <input type="text" class="search-box" placeholder="Search" name="search">
+                </form>
+            </div>`
         }
 
     myRender () {

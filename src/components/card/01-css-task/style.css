@@ -15,7 +15,7 @@ body {
       border-radius: 8px;
       padding-top: 0.1px;
 }
-.img-wrapper {
+.product-card-img-wrapper {
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: contain;
@@ -23,6 +23,7 @@ body {
       height: 200px;
       justify-content: center;
       margin: 12px 12px 0;
+      
 }
 .wrapper-content {
       padding: 22px 24px;
@@ -72,4 +73,17 @@ body {
 .btn:hover {
       background: rgb(109,95,240);
       transition:background 0.5s ease;
+}
+.primary-cart {
+      height: 36px;
+      width: 120px;
+      border-radius: 5px;
+
+}
+.bi-cart {
+      display: inline;
+}
+.text-cart-number{
+      display: inline;
+      text-align: center;
 }

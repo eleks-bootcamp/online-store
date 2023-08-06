@@ -10,7 +10,7 @@ export default class CardsList {
   getTemplate () {
     return `
       <div>
-        <div class="os-products-list" data-element="body">
+        <div class="products-list" data-element="body">
           <!-- Cards list -->
         </div>
       </div>

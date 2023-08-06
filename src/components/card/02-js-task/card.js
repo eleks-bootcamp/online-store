@@ -6,30 +6,24 @@ export default class Card {
 
   getTemplate () {
     const result =  `
-      <div class="os-product-card">
-        <div class="os-product-img" style="background-image: url(${this.state.images[0]});"></div>
-
-        <div class="os-product-content">
-          <div class="os-product-price-wrapper">
-            <div class="os-product-rating">
-              <span>${this.state.rating}</span>
-              <i class="bi bi-star"></i>
-            </div>
-
-            <div class="os-product-price">${this.state.price}</div>
-          </div>
-
-          <h5 class="os-product-title">${this.state.title}</h5>
-          <p class="os-product-description">${this.state.category}</p>
-        </div>
-
-        <footer class="os-product-footer">
-          <button class="os-btn-primary" data-element="addToCartBtn">
-            Add To Cart
-          </button>
-        </footer>
+    <div class="product-card">
+    <!-- Card component -->
+      <div class="product-card-img-wrapper" style="background-image: url(${this.state.images[0]})";>
       </div>
-    `;
+    <div class="wrapper-content">
+      <div class="offer">
+        <div class="product-rating">
+          <p class="product-rating-number">${this.state.rating}</p>
+          <img class="product-rating-star" src="../01-css-task/img/Star1.svg" alt="star">
+        </div>
+        <p class="product-price">${this.state.price}</p>
+      </div>
+      <p class="product-description">${this.state.category}</p>
+      <p class="product-categories">${this.state.title}</p>
+    </div>
+    <button class="btn" type="button">Add To Cart</button>
+  </div>
+  `;
 
     return result
   }

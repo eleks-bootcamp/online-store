@@ -1,6 +1,7 @@
 
 import CardsList from '../../cards-list/02-js-task/cards-list.js';
-import Pagination from '../../pagination/02-js-task/pagination.js'
+import Pagination from '../../pagination/02-js-task/pagination.js';
+import Search from '../../search-box/02-js-task/index.js';
 
 const BACKEND_URL = 'https://online-store.bootcamp.place/api/'
 export default class OnLineStorePage {
@@ -36,8 +37,20 @@ export default class OnLineStorePage {
   getMyTemplate () {
     return `
     <div>
+      <div class="header">
+       <div class="logo"></div> <div >
+      </div>
+        <div data-element="searchBox">
+          <!-- SearchBox component -->
+        <div data-element>
+        <div 
+      <div data-element="searchBox">
+        <!-- SearchBox component -->
+      <div>
+
       <div data-element="cardsList">
-        <!-- Card component -->        </div>
+        <!-- Card component -->        
+        </div>
         <div data-element="pagination">
         <!-- Pagination component -->
       </div>
@@ -49,6 +62,7 @@ export default class OnLineStorePage {
 
   initComponents() {
     //TODO : remove hardcode value        this.products.length 
+      const searchBox = new Search ()
       const totalElements = 100;
       const totalPages = Math.ceil(totalElements/ this.pageSize)
       const cardsList = new CardsList(this.products);
@@ -56,14 +70,16 @@ export default class OnLineStorePage {
         activePageIndex: 0,
         totalPages
       });
-
+      this.components.searchBox = searchBox;
       this.components.cardsList = cardsList;
       this.components.pagination = pagination; 
   };
 
   renderComponents () {
+      const searchBoxContainer = this.element.querySelector('[data-element="searchBox"');
       const cardsContainer = this.element.querySelector('[data-element="cardsList"]');
       const paginationContainer = this.element.querySelector('[data-element="pagination"]');
+      searchBoxContainer.append(this.components.searchBox.element)
       cardsContainer.append(this.components.cardsList.element);
       paginationContainer.append(this.components.pagination.element);
   };
