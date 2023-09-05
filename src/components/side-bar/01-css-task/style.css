@@ -1,1 +1,82 @@
-/* put your styles in this file */
+.filters {
+  width: 100%;
+  /* height: 1000px; */
+  padding: 25px 28px 10px 22px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.left-aside {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aside-btn {
+  width: 100%;
+  height: 46px;
+  background-color: #7e72f2;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.filter-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.slider {
+  height: 33px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.slide-line {
+  width: 85%;
+  height: 4px;
+  background-color: #7e72f2;
+}
+.slider-text {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filter-item {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.checkbox > input {
+  height: 15px;
+  width: 15px;
+}
+.checkbox > input:checked {
+  accent-color: #7e72f2;
+}
+
+.filters-line {
+  width: 100%;
+  border: 1px solid #d6d6d6;
+}
+.filter-list{
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="store">
+      <header class="head">
+        <p class="head-name">Online Store</p>
+        <button class="head-btn">
+          <img src="./images/Vector.svg" alt="cart-logo" class="cart-logo" />
+          <p class="btn-text">CART</p>
+        </button>
+      </header>
+
+      <main class="store-map">
+        <aside class="left-aside">
+          <div class="filters">
+            <p class="filter-name">Price</p>
+            <div class="slider">
+              <div class="slide">
+                <img src="./images/slider-left.svg" alt="" />
+                <div class="slide-line"></div>
+                <img src="./images/slider-right.svg" alt="" />
+              </div>
+              <div class="slider-text">
+                <p class="slider-text-left">0 UAH</p>
+                <p class="slider-text-right">85000 UAH</p>
+              </div>
+            </div>
+            <p class="filter-name">Category</p>
+            <ul class="filter-list">
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Monitors</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Laptops</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Video cards</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Gaming keyboards</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Computer mouse</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">SSD</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Sound cards</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">RAM</span>
+                </label>
+              </li>
+            </ul>
+
+            <hr class="filters-line" />
+
+            <p class="filter-name">Brand</p>
+            <ul class="filter-list">
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Asus</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Acer</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Apple</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Dell</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Dynamode</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Gigabyte</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Kingston</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Lenovo</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">Logitech</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">MSI</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">BenQ</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox-text">A4Tech</span>
+                </label>
+              </li>
+            </ul>
+
+            <hr class="filters-line" />
+
+            <p class="filter-name">Rating</p>
+            <div class="slider">
+              <div class="slide">
+                <img src="./images/slider-left.svg" alt="" />
+                <div class="slide-line"></div>
+                <img src="./images/slider-right.svg" alt="" />
+              </div>
+              <div class="slider-text">
+                <p class="slider-text-left">0</p>
+                <p class="slider-text-right">5</p>
+              </div>
+            </div>
+          </div>
+
+          <input class="aside-btn" type="button" value="CLEAR ALL FILTERS" />
+        </aside>
+
+        <div class="items-bar">
+          <input type="text" class="search" />
+
+          <div class="products">
+            <section class="product-item">
+              <img
+                src="./images/Acer-Aspire.svg"
+                alt="Acer-Aspire"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">1.23</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">15999</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Acer Aspire 3 A315-57G-336G (NX.HZREU.01S) Charcoal
+                  Black
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Acer-Aspire.svg"
+                alt="Acer-Aspire"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">1.96</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">21500</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Acer Aspire 7 A715-41G-R9KP (NH.Q8QEU.00L) Charcoal
+                  Black
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Acer-Aspire.svg"
+                alt="Acer-Aspire"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">2.42</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">22999</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Acer Aspire 7 A715-75G-51ZW (NH.Q88EU.00P) Charcoal
+                  Black
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Acer-Nitro.svg"
+                alt="Acer-Nitro"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">0.53</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">28999</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Acer Nitro 5 AN515-55-56WH (NH.Q7PEU.00L) Obsidian
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Acer-Aspire.svg"
+                alt="Acer-Aspire"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">3.2</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">22500</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Acer Aspire 7 A715-75G-57LR (NH.Q87EU.006) Charcoal
+                  Black
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Macbook-air.svg"
+                alt="Macbook_Air"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">1.57</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">33999</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Apple MacBook Air 13" M1 256GB 2020 (MGND3) Gold
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Macbook-pro16.svg"
+                alt="Macbook-pro16"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">1.57</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">81000</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Apple MacBook Pro 16" 512GB 2019 (MVVL2) Silver
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Macbook-pro13A.svg"
+                alt="Macbook-pro13A"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">1.89</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">70999</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Apple MacBook Pro 13" A2251 Retina 1TB 2020 (MWP82)
+                  Silver
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+            <section class="product-item">
+              <img
+                src="./images/Macbook-pro13M.svg"
+                alt="Macbook-pro13M"
+                class="product-img"
+              />
+              <div class="mark-price">
+                <button class="mark-btn">
+                  <p class="mark">0.92</p>
+                  <img src="./images/star-logo.svg" alt="star-logo" />
+                </button>
+                <p class="price">51999</p>
+              </div>
+              <div class="product-text">
+                <p class="product-name">
+                  Ноутбук Apple MacBook Pro 13" M1 512GB 2020 (Z11C000Z3) Custom
+                  Space Gray
+                </p>
+                <p class="product-category">laptops</p>
+              </div>
+              <input type="button" class="add-btn" value="ADD TO CART" />
+            </section>
+          </div>
+
+          <div class="foot">
+            <div class="page">
+              <img class="page-image" src="./images/Left-Arrow.svg" alt="" />
+            </div>
+            <ul class="pages">
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">1</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">2</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">3</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">4</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">5</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">6</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">7</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">8</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">9</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">10</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">11</p>
+                </div>
+              </li>
+              <li class="pages-item">
+                <div class="page">
+                  <p class="page-number">12</p>
+                </div>
+              </li>
+            </ul>
+            <div class="page">
+              <img class="page-image" src="./images/Right-Arrow.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

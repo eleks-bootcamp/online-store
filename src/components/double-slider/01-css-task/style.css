@@ -1,1 +1,26 @@
 /* put your styles in this file */
+.slider {
+  height: 33px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.slide-line {
+  width: 85%;
+  height: 4px;
+  background-color: #7e72f2;
+}
+.slider-text {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
